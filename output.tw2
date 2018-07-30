@@ -1,0 +1,364 @@
+::StoryTitle
+Escape from Juggalo Mountain
+
+::Title Screen <200,101>
+Escape from Juggalo Mountain
+
+[[Begin|Jail Cell (Unlit) - intro]]
+[[Start from The Gutter|The Gutter - Intro]]
+
+::Jail Cell (Unlit) - main <2903,46>
+You awaken in a dim, cramped jail cell. You have no memory of how you got here.
+
+It's small — maybe three feet square, and barely twice that high.
+
+You're seated on a [[flimsy chair|Jail Cell (Unlit) - examine chair]]. A few subtle rays of light from a [[small window|Jail Cell (Unlit) - examine window]] above catch falling dust particles and shine upon a [[small patch of floor|Jail Cell (Unlit) - examine lit floor]] before you. Beyond that, you can't see anything at all.
+
+::Jail Cell (Unlit) - examine chair <2784,220>
+What seemed like a chair is actually more of a small semicircle bench with a large hole in the middle. You peer down, but all you see is black.
+
+::Jail Cell (Unlit) - examine window <2910,222>
+A small window overlooks the tiny jail cell. A slotted grill is bolted over the opening, allowing a few tentative [[beams of light|Jail Cell (Unlit) - examine window - examine beams of light]] to shine into your cell.
+
+::Jail Cell (Unlit) - examine lit floor <3037,223>
+Double-click this passage to edit it.
+
+::Jail Cell (Unlit) - examine window - examine beams of light <2910,372>
+Particles of dust dance in the slits of light that shine into the corner of your cell, down the smooth wall and onto the far corner of the floor.
+
+There, at the end of the beam of light, you spot a [[small object|Jail Cell (Unlit) - examine lighter]] glinting slightly in the dimness.
+
+::Jail Cell (Unlit) - examine lighter <2910,522>
+You reach down and grasp the small object. Its contours feel familiar to your fingers.
+
+**You got the Lighter**
+
+::Jail Cell (Unlit) - intro <200,227>
+When I awoke, everything was darkness. (if: $sniffedAir is true)[
+
+Well...darkness and shit.]
+
+>> [[I blinked my eyes, still heavy from sleep.|Jail Cell (Unlit) - look - fail]]
+>> [[I felt around for something concrete.|Jail Cell (Unlit) - feel]]
+>> [[I sniffed the stagnant air.|Jail Cell (Unlit) - smell]]
+
+::Jail Cell (Unlit) - feel <201,504>
+My arms flopped clumsily at my sides. They felt like rubber.
+
+I slapped around a bit. Felt my legs in front of me—I was sitting on something hard and warm. Plastic?
+
+[I flailed around some more]<trigger1|.
+
+|section2)[Thwack—my arms hit something hard on both sides. Something cool and hard—the walls were close in.
+
+And sticky?
+
+Panic seized me. A scream stuck in my throat, too dry to vocalize.
+
+It was at that moment that I started to really [lose my shit]<trigger2|.]
+
+|section3)[I stood up,
+lost my balance,
+fell backward,
+banged my head,
+and dropped my elbow into [something moist]<trigger3|.]
+
+|section4)[Water—a basin full of it. I sniffed; didn't seem to be anything off about it.
+
+Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
+
+|section5)[No good. Still couldn't see anything. Except...
+
+[>> [a faint beam of moonlight draped across the cell walls.]<trigger5a|]<prompt5a|
+[>> [a glint of metal on the floor.]<trigger5b|]<prompt5b|]
+
+|section6)[The light from the moon snuck in through a small grate above my head. It shined a faint light across the cell walls and onto the corner of the floor, where it caught the glint of something shiny.
+
+I reached forward, snatched it up, and recognized its familiar heft immediately.
+
+<center>//**Lighter obtained**//</center>
+
+I gave it a good flick, and the room sprang into detail around me.
+
+[[* click *|Jail Cell (Lit) - hub]] ]\
+\
+(click: ?trigger1)[(show: ?section2)] \
+(click: ?trigger2)[(show: ?section3)] \
+(click: ?trigger3)[(show: ?section4)] \
+(click: ?trigger4)[(show: ?section5)] \
+(click: ?trigger5a)[(replace: ?prompt5b)[] (show: ?section6)] \
+(click: ?trigger5b)[(replace: ?prompt5a)[] (show: ?section6)]
+
+::Jail Cell (Unlit) - look - fail <30,500>
+My eyelids felt like paperweights. My eyes were as dry as sandpaper. I couldn't see shit.
+
+[[I tried rubbing my face. No good. Fuck.|Jail Cell (Unlit) - hub]]
+
+::Jail Cell (Unlit) - hub <202,344>
+Everything around me was darkness. (if: $sniffedAir is true)[
+
+Well...darkness and shit.]
+
+>> [[I blinked my eyes, still heavy from sleep.|Jail Cell (Unlit) - look - fail]]
+>> [[I felt around for something concrete.|Jail Cell (Unlit) - feel]]
+>> [[I sniffed the stagnant air.|Jail Cell (Unlit) - smell]]
+
+::Jail Cell (Unlit) - smell <362,502>
+Shit. That's all I could pick up on. Someone literally lost their shit in here.
+
+I panicked—I couldn't tell where it was coming from. Like some Edgar Allan Poe thing—a Telltale Shit, lurking under the floor.
+
+>> [[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
+
+(set: $sniffedAir to true)
+
+::Jail Cell (Lit) - hub <201,659>
+The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is 1)[I didn't like what I saw.]
+
+I saw a (if: $triedDoor is 1)[locked ]door right in front of me.
+
+The basin was rooted to the wall on my right, still full of translucent water.
+
+The floor was covered in scattered slips of paper and shreds of cloth.
+
+(if: $triedDoor is 0)[>> [[I tried the door.|Jail Cell (Lit) - door]]]\
+(if: $triedDoor is 1)[>> [[The door to my cell was still locked tight.|Jail Cell (Lit) - door]]]
+(if: $waterDrained is 0)[>> [[I took a closer look at the basin.|Jail Cell (Lit) - basin - full]]]\
+(if: $waterDrained is 1)[>> [[I glanced at the basin again.|Jail Cell (Lit) - basin - empty]]]
+>> [[I picked through the garbage on the floor.|Jail Cell (Lit) - floor]]
+
+::Jail Cell (Lit) - basin - full <70,770>
+(if: $waterDrained is 0)[A small pool of clear-ish water sat still in the basin on my right. There was a single [tap]<tapTrigger| and a [drain lever]<drainTrigger|.]
+\
+|tapSection)[
+Turned the tap. Nothing came out.
+]\
+
+|drainSection)[(if: $waterDrained is 0)[(set: $waterDrained to 1)(set: $hasJailKey to 1)The liquid gurgled down the drain and out to who-knows-where.
+
+At the bottom of the basin was a key.
+
+>> I [[grabbed it|Jail Cell (Lit) - hub]] and took another look around.]]\
+\
+(click: ?tapTrigger)[(show: ?tapSection)]\
+(click: ?drainTrigger)[(show: ?drainSection)]
+
+::Jail Cell (Lit) - door <349,776>
+(if: $hasJailKey is 0)\
+[(if: $triedDoor is 0)[I grabbed the handle and [pulled]<trigger1|.](if: $triedDoor is 1)[The door to my cell was still [locked tight]<trigger1|.]]\
+(if: $hasJailKey is 1)[I slipped the key into the [keyhole]<trigger2|.]\
+\
+|lockedDoorSection)[
+
+(if: $triedDoor is 0)[(set: $triedDoor to 1)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
+
+>> [[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
+\
+|unlockDoorSection)[The key was chipped and rusty. I wriggled it into the lock, forcing it in with my palm.
+
+After a moment, the key slid in.
+
+[[I turned it.|Jail Cell - exit]] ]\
+\
+(click: ?trigger1)[(show: ?lockedDoorSection)]\
+(click: ?trigger2)[(show: ?unlockDoorSection)]
+
+::Jail Cell - exit <345,1001>
+With a soft //thnck//, the lock turned.
+
+I tried to swallow, but my throat was parched.
+My heart was pounding.
+My head was swimming.
+
+>> [[I tried the door.|Outside Port-a-potty]]
+
+::Jail Cell (Lit) - basin - empty <70,885>
+The basin was empty. A reddish stain ran along the edge of the bowl.
+
+>> [[I took another look around.|Jail Cell (Lit) - hub]]
+
+::Outside Port-a-potty <347,1130>
+//To be continued...//
+
+[[Jump to The Gutter|The Gutter - Intro]]
+
+::Jail Cell (Lit) - floor <200,772>
+JOURNAL ENTRY GOES HERE IF WE DECIDE TO INCLUDE IT
+
+::The Gutter - Intro <1156,67>
+Anna was right. That piece of shit was trying to kill me one way or another. I guess I’d known it all along.
+
+I picked [[the least muddy trail towards civilization|The Gutter - Outside - Approach]].
+
+::The Gutter - Outside - Approach <1390,73>
+My body and mind were screaming as [one]<trigger1|.
+
+|section2)[I kept my head down and my hood up. I used all of my energy to move forward through the tarp-covered alleyways of Gatherville.
+
+My gut lurched as I realized I’d need to ask around for more information on Anna. The last thing I wanted to do was [talk to anyone]<trigger2|.]
+
+|section3)[My brain bounced into the darkness of reality, searching for answers. It was still pretty early in the night. Around this time, anyone who knew anything was
+
+[[>>Getting fucked up at the Gutter|The Gutter - Outside - Intro]]
+[[>>Looking to score at the Roach Market|Market scene]]
+[[>>Catching an early show at the Church|Church scene]]]
+
+(click: ?trigger1)[(show: ?section2)]
+(click: ?trigger2)[(show: ?section3)]
+
+::Market scene <1874,87>
+Double-click this passage to edit it.
+
+::Church scene <2120,91>
+Double-click this passage to edit it.
+
+::The Gutter - Outside - Intro <1262,192>
+I stood outside a weathered, flat-roofed wooden building with a flickering [neon sign]<trigger1|.
+
+|section2)[(text-style: 'smear')[The Gutter]<gutterSign|(set: $array to (a: "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'fade-in-out')[The Gutter]]"))(live:0.1s)[(either: ...$array)]
+
+Right below the sign, someone had painted
+
+>> [The last rest stop before the Dark Carnival]<triggerDarkCarnivalSign|
+>> [Derek loves (fuckin) Whitnee]<triggerDerekWhitneeSign|]
+
+|section2a)[The slogan stuck to the place like used gum. Some people just called it the Rest Stop, which helped explain the constant piss smell hanging around.
+
+[[I walked into the sign’s field of light|The Gutter - Outside]].]
+
+|section2b)[This poignant shout-out had been there forever. The (fuckin) was a later addition, though no one was sure if it was from the original artist.
+
+[[I walked into the sign’s field of light|The Gutter - Outside]].]
+
+(click: ?trigger1)[(show: ?section2)]
+(click: ?triggerDarkCarnivalSign)[(set: $gutterSignCarnival to 1)(show: ?section2a)]
+(click: ?triggerDerekWhitneeSign)[(set: $gutterSignDerekWhitnee to 1)(show: ?section2b)]
+
+::The Gutter - Outside <1260,319>
+(if: $justLeftTheGutter is 1)[(set: $justLeftTheGutter to 0)I walked back into the neon light of the Gutter’s sign. I could see:]
+(else:)[In the dim light of the neon sign, I could see:]
+
+>> [[Some old-school juggalos in a heated conversation by the side of the building|The Gutter - Outside - old-school juggalos - part 1]]
+>> [[Ron’s shitheap golf cart|2.3]]
+>> [[The jar|2.4]]
+>> [[The Gutter’s beaten-to-hell block of a front door|3.0]]
+
+(if: $gutterCompleted is 1)[When the night air hit my lungs, the relief was sharper than drinking a cold glass of water after a bong rip. The light of the Gutter’s sign felt like the north star, guiding me forward.]
+
+::2.3 <1265,499>
+Ron drove everywhere in this golf cart. Technically it was the church’s, but he’d been their janitor for so long that he could do whatever with their stuff as long as he kept showing up to clean.
+
+He had the whole thing “tricked” out, including:
+>> [[the wheels|2.3a]]
+>> [[the defense system|2.3b]]
+>> [[the awful horn|2.3c]]
+>> [[the engine|2.3d]]
+
+::2.4 <1803,496>
+Double-click this passage to edit it.
+
+::3.0 <1960,499>
+Double-click this passage to edit it.
+
+::The Gutter - Outside - old-school juggalos - part 1 <755,504>
+A tall, chubby juggalo stroking a long beard and a shorter, musclebound ninja with green Kool-Aid dyed hair were inches away from each other, shouting in agreement as they chainsmoked:
+
+“Sorry to be all deep and serious, but I got a lotta shit on my mind.”
+
+“It breaks my heart dude, but it had to be said. Ninjas today just don’t know.”
+
+“They don’t, man! The Dark Carnival saved my life, dude, and it’s about love. Shit is about family, dude. If these ninjas were out there listening to the shit...”
+
+“Listen to the shit!!”
+
+The shorter ninja started jumping and kicking an unknown assailant at this point. Large picked up on the energy took his hands away from his beard. He started punching one hand into the other to punctuate his points.
+
+“Exactly! If they were listening; like Dark Lotus? “Juggalo Family?” That’s my real shit. That’s what I’m about.”
+
+“It’s all about the money these days. Ninjas out there got on 4,000-dollar hatchet man jerseys and they think they the shit.”
+
+“Had a hole in my shirt the other day and I walk by one of them fancy-ass ninjas. You know what he said?”
+
+“Naw, man. No way! It ain’t about the clothes!”
+
+“He called me a juggahoe. You heard that before? I laughed in his face. I told him it was all family, but I’d beat his ass if that was how he needed to be educated.”
+
+“Too true, man.”
+
+At this, they both took a moment to nod solemnly in unison, as if the two of them could hear a song no one else could.
+
+[[>>I didn’t wanna intrude, so I turned back to the sign’s light by the entrance|The Gutter - Outside]]
+(if: $iHatchet is 1)[>> [[I tried to casually walk past them so I could hear more|The Gutter - Outside - old-school juggalos - part 2]]]
+
+::The Gutter - Outside - old-school juggalos - part 2 <754,644>
+“Yo little ‘lette!” The larger one called out. “That’s a sick fucking hatchet you got. Come over here!”
+
+[[I drew the hatchet and walked over|The Gutter - Outside - old-school juggalos - part 3]]
+
+::The Gutter - Outside - old-school juggalos - part 3 <754,794>
+“Where’d you get that?” the shorter one asked.
+
+[[>>”Family heirloom.”|The Gutter - Outside - old-school juggalos - part 4a]]
+[[>>”Stole it off a couple juggahoes like you.”|The Gutter - Outside - old-school juggalos - part 4b]]
+
+::The Gutter - Outside - old-school juggalos - part 4a <688,945>
+“Damn. Mad respect. Gotta keep it in the family,” the shorter one said as he nodded his head.
+
+“Indeed. Good to see someone in the new generation knows what the fuck is up.” The larger one sagely offered a fist bump.
+
+[[I reached my fist out to reciprocate.|The Gutter - Outside - old-school juggalos - part 5]]
+[[I quickly blurted out, “You seen another little ‘lette around here recently? Maybe in trouble? Her name’s Anna. She’s in a bad way.”|The Gutter - Outside - old-school juggalos - part 6]]
+
+::The Gutter - Outside - old-school juggalos - part 4b <818,945>
+“Awwww shit!” The larger one cracked up as he held the shorter one back.
+
+“What’s this bitch’s deal?” Shorty crowed.
+
+“Dude, she was listening in.” Large said. “Much respect, little ‘lette.”
+
+He reached out his hand for a fist bump.
+
+[[I reached my fist out to reciprocate.|The Gutter - Outside - old-school juggalos - part 5]]
+[[I quickly blurted out, “You seen another little ‘lette around here recently? Maybe in trouble? Her name’s Anna. She’s in a bad way.”|The Gutter - Outside - old-school juggalos - part 6]]
+
+::The Gutter - Outside - old-school juggalos - part 5 <679,1114>
+“You know,” Large said, “I always hated it when my fucking old man would rattle on and hit me with advice, but shit. Guess I’m older than he was now.” He lit a cigarette and inhaled. “Always keep the family at the front of your mind.”
+
+I tried to nod back, conveying a wisdom that I didn’t have yet, and we parted ways.
+
+As I walked back towards the front of the Gutter
+
+>> [I dodged a hole in the ground.]<dodgeTrigger|
+>> [my dumb ass tripped over a hole in the ground.]<tripTrigger|
+
+|dodgeSection)[Hell yeah.]
+|tripSection)[I pushed myself up before the dudes could help me. I believed the shit about family, but tonight I could help myself.]
+
+[[Anyway...|The Gutter - Outside]]
+
+(click: ?dodgeTrigger)[(show: ?dodgeSection)]\
+(click: ?tripTrigger)[(show: ?tripSection)]
+
+::The Gutter - Outside - old-school juggalos - part 6 <821,1114>
+“Aw shit,” Large raised his eyebrows, “sorry to hear that. Me and Kyle been bullshitting out here all night. Haven’t seen anything like that.”
+
+Kyle piped up. “Me and Ben’ll keep an eye out though for sure!”
+
+I thanked them and walked back towards the front of [[The Gutter|The Gutter - Outside]].
+
+::2.3a <1037,639>
+Old Barbie and Ken heads were glued around the rims of each wheel.
+
+(if multitool = 1) I quickly unscrewed a few crucial wheel bolts. (set cartnowheels 1)
+
+::2.3b <1187,639>
+Double-click this passage to edit it.
+
+::2.3c <1337,639>
+Double-click this passage to edit it.
+
+::2.3d <1512,638>
+Double-click this passage to edit it.
+
+::Twee2Settings [twee2]
+@story_start_name = 'Title Screen'
