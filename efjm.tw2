@@ -1,11 +1,28 @@
 ::StoryTitle
-Escape from Juggalo Mountain
+Escape from Juggalo Mountain - twee2 Version
 
 ::Title Screen <200,101>
 Escape from Juggalo Mountain
 
-[[Begin|Jail Cell (Unlit) - intro]]
+[[Begin|Jail Cell (Unlit) - name character]]
 [[Start from The Gutter|The Gutter - Intro]]
+
+::Jail Cell (Unlit) - name character
+Ugh.
+
+Head's pounding. Can't even remember my own name.
+
+Wait. It's...
+
+[[Enter Name >|Jail Cell (Unlit) - character named]]
+
+::Jail Cell (Unlit) - character named
+{
+(set: $name to (prompt: "What is your name?", ""))
+(if: (text: $name)'s length > 1)[Right. My name is $name. And [[I remember being asleep|Jail Cell (Unlit) - intro]].]
+}(else:)[Wait, that's not right.
+
+Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
 
 ::Jail Cell (Unlit) - main <2903,46>
 You awaken in a dim, cramped jail cell. You have no memory of how you got here.
@@ -361,4 +378,5 @@ Double-click this passage to edit it.
 Double-click this passage to edit it.
 
 ::Twee2Settings [twee2]
+Twee2::build_config.story_format = 'Harlowe2'
 @story_start_name = 'Title Screen'
