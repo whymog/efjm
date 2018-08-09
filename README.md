@@ -34,6 +34,12 @@ I recommend using the following command:
 
 `twee2 build src/efjm.tw2 build/efjm.html --format=harlowe2`
 
+Or if you'd like `twee2` to keep an eye out for changes as you make them, you can set it to automatically generate a new build of your game every time you save a file with:
+
+`twee2 watch src/efjm.tw2 build/efjm.html --format=harlowe2`
+
+(Note: This process runs perpetually until you press `^C`, so you may wanna run this in a new terminal window or tab.)
+
 This instructs `twee2` to build the game from the `src/efjm.tw2` file (which imports all other game modules) and outputs it to a separate `build/` directory, which is git-ignored. It also ensures the game is built for the Harlowe2 story format.
 
-If you're unable to get `twee2` to build to Harlowe2 for any reason, you can export to whatever story format you like. However, you'll need to import your HTML-output game into Twine, open it up in the editor, and change the story format there to Harlowe2 and rebuild it before the game will work properly.
+If you're unable to get `twee2` to build to Harlowe2 for any reason, you can export to whatever story format you like. However, you'll need to import your HTML-output game into Twine, open it up in the editor, and change the story format there to Harlowe2 and rebuild it before the game will work properly. This is a bummer, since it means you won't be able to use `twee2 watch` to automatically rebuild your game as you're working on it, but life's full of little compromises.
