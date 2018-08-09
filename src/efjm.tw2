@@ -10,7 +10,11 @@ Escape from Juggalo Mountain
 ::StoryIncludes
 src/s1a_portapotty.tw2
 src/s1b_opening_crawl.tw2
+src/s2a_moms_tent.tw2
+src/s2b_tent_city_chase.tw2
 src/s3a_the_gutter.tw2
+src/s3b_the_roach_market.tw2
+src/s4_the_church.tw2
 
 ::Twee2Settings [twee2]
 Twee2::build_config.story_format = 'Harlowe2'
