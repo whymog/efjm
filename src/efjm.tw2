@@ -1,0 +1,17 @@
+::StoryTitle
+Escape from Juggalo Mountain - twee2 Version
+
+::Title Screen <200,101>
+Escape from Juggalo Mountain
+
+[[Begin|Jail Cell (Unlit) - name character]]
+[[Start from The Gutter|The Gutter - Intro]]
+
+::StoryIncludes
+src/s1a_portapotty.tw2
+src/s1b_opening_crawl.tw2
+src/s3a_the_gutter.tw2
+
+::Twee2Settings [twee2]
+Twee2::build_config.story_format = 'Harlowe2'
+@story_start_name = 'Title Screen'
