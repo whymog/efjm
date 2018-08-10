@@ -10,6 +10,7 @@ To get around this, you'll need to clone the latest version of `twee2` and insta
 
 ```
 git clone https://github.com/Dan-Q/twee2
+cd twee2/
 gem build twee2.gemspec
 gem install twee2-0.5.0.gem
 ```
