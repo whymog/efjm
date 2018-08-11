@@ -1,0 +1,15 @@
+::Opening crawl
+
+The year is 20XX. Wicked clown shit is the new law.
+
+(click: "the new law") [(transition: "dissolve") +(transition-time: 3s)[Years ago, the annual Gathering of the Juggalos festival ran long. Law enforcement’s response was swift and brutal. But the Juggalos held their ground.]]
+
+(click: "the Juggalos held their ground") [(transition: "dissolve") +(transition-time: 3s)[Five months later, 52 police officers and 128 juggalos were dead. No treaty was signed, but a new community was born out of the tenuous ceasefire.]]
+
+(click: "a new community was born out of the tenuous ceasefire")[(transition: "dissolve") +(transition-time: 3s)[You were born into this place, Gatherville, where you live and die by the hatchet. Your best bet for a good time is to find a rude-ass ninja you can trust and get busy making a fucking fool of yourself. You only get one shot before the Dark Carnival comes and Jay-sus ain’t coming to save you.]]
+
+(click: "Jay-sus ain’t coming to save you")[(transition: "dissolve") +(transition-time: 3s)[For Juggalos in Gatherville, getting into the spotlight means everything. Wicked emcees spit verses sharp as hatchets. Wrestlers leave their blood and spit in the ring. All for a shot at catching the eye of the Honchos. They’ve got the cash to make anyone forget about the stuff they’ve seen in Gatherville.]]
+
+(click: "the stuff they’ve seen in Gatherville")[(transition: "dissolve") +(transition-time: 3s)[There are a lot of scrappers and shitheads going for glory, but any of them who wants a permanent spot on top has to pass a final test. One insane act to prove they’ve got the heart to be a legend. They must...]]
+
+(click: "They must")[(transition: "dissolve") +(transition-time: 5s)[[[**ESCAPE FROM JUGGALO MOUNTAIN**|Title Screen]]]]
