@@ -11,7 +11,7 @@ Wait. It's...
 {
 (set: $name to (prompt: "What is your name?", ""))
 (set: $justWokeUp to true)
-(if: (text: $name)'s length > 1)[Right. My name is $name. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
+(if: (text: $name)'s length > 0)[Right. My name is $name. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
 }(else:)[Wait, that's not right.
 
 Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
@@ -38,8 +38,6 @@ I slapped around a bit. Felt my legs in front of me — I was sitting on somethi
 [I flailed around some more]<trigger1|.
 
 |section2)[<em>Thwack</em> — my arms hit something hard on either side. Cool, hard — the walls were close in. And sticky?
-
-And sticky?
 
 Panic seized me. A scream stuck in my throat, too dry to vocalize.
 
@@ -69,13 +67,17 @@ I reached forward, snatched it up, and recognized its familiar heft immediately.
 I gave it a good flick, and the room sprang into detail around me.
 
 [[* click *|Jail Cell (Lit) - hub]] ]\
-\
-(click: ?trigger1)[(show: ?section2)] \
-(click: ?trigger2)[(show: ?section3)] \
-(click: ?trigger3)[(show: ?section4)] \
-(click: ?trigger4)[(show: ?section5)] \
-(click: ?trigger5a)[(replace: ?prompt5b)[] (show: ?section6)] \
+{
+(click: ?trigger1)[(show: ?section2)]
+(click: ?trigger2)[(show: ?section3)]
+(click: ?trigger3)[(show: ?section4)]
+(click: ?trigger4)[(show: ?section5)]
+(click: ?trigger5a)[(replace: ?prompt5b)[] (show: ?section6)]
 (click: ?trigger5b)[(replace: ?prompt5a)[] (show: ?section6)]
+(set: $triedDoor to false)
+(set: $waterDrained to false)
+(set: $hasJailKey to false)
+}
 
 ::Jail Cell (Unlit) - smell <362,502>
 Shit. That’s all I could pick up on. Someone literally lost their shit in here.
@@ -99,15 +101,14 @@ The floor was covered in scattered slips of paper and shreds of cloth.
 (if: $triedDoor is true)[>> [[The door to my cell was still locked tight.|Jail Cell (Lit) - door]]]
 (if: $waterDrained is false)[>> [[I took a closer look at the basin.|Jail Cell (Lit) - basin - full]]]\
 (if: $waterDrained is true)[>> [[I glanced at the basin again.|Jail Cell (Lit) - basin - empty]]]
->> [[I picked through the garbage on the floor.|Jail Cell (Lit) - floor]]
 
 ::Jail Cell (Lit) - door <349,776>
+{
 (if: $hasJailKey is false)\
-[(if: $triedDoor is false)[I grabbed the handle and [pulled]<trigger1|.](if: $triedDoor is true)[The door to my cell was still [locked tight]<trigger1|.]]\
-(if: $hasJailKey is true)[I slipped the key into the [keyhole]<trigger2|.]\
-\
+[(if: $triedDoor is false)[I grabbed the handle and [pulled]<trigger1|.](if: $triedDoor is true)[The door to my cell was still [locked tight]<trigger1|.]]
+(if: $hasJailKey is true)[I slipped the key into the [keyhole]<trigger2|.]
+}
 |lockedDoorSection)[
-
 (if: $triedDoor is false)[(set: $triedDoor to true)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
 
 >> [[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
@@ -128,7 +129,7 @@ After a momentary effort, the key slid in.
 Turned the tap. Nothing came out.
 ]\
 
-|drainSection)[(if: $waterDrained is false)[(set: $waterDrained to true)(set: $hasJailKey to 1)The liquid gurgled down the drain and out to who-knows-where.
+|drainSection)[(if: $waterDrained is false)[(set: $waterDrained to true)(set: $hasJailKey to true)The liquid gurgled down the drain and out to who-knows-where.
 
 At the bottom of the basin was a key.
 
@@ -152,7 +153,18 @@ My head was swimming.
 >> [[I tried the door.|Outside Port-a-potty]]
 
 ::Outside Port-a-potty <347,1130>
-//To be continued...//
+The door lurched open, and I fell face-first into the dirt and gravel. It was so bright, and my balance was gone.
 
-::Jail Cell (Lit) - floor <200,772>
-JOURNAL ENTRY GOES HERE IF WE DECIDE TO INCLUDE IT
+I managed to get my elbows under my shoulders, extend my arms, and push myself up into a seated position.
+
+Rubbing my eyes, I looked around and saw the old familiar gravel path toward Tent City.
+
+(click: "the old familiar gravel path toward Tent City")[(transition: "dissolve") +(transition-time: 3s)[Thank fucking god. I thought I could’ve been anywhere.
+
+Steadying myself, I stood up, tested my footing, and glanced around. Out of the corner of my eye, I saw it – a page that looked like it was torn out of my old journal.]]
+
+(click: "a page")[(transition: "dissolve") +(transition-time: 3s)[It was taped to the inside of the toilet door. If it hadn’t been pitch-fucking-black in there, maybe I would’ve noticed it. But out here, under the floodlights, the bright-pink paper stood out clearly from the sun-drained teal plastic door.
+
+>> [[I snatched it and began to read|Outside - Note]].]]
+
+::Outside - Note
