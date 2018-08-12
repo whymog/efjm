@@ -18,7 +18,5 @@ src/s3b_the_roach_market.tw2
 src/s4_the_church.tw2
 
 ::Twee2Settings [twee2]
-::StoryIFID[twee2]
-Twee2::build_config.story_ifid = '7120244d-89bc-4433-8a3f-f470c4ad2a71'
 Twee2::build_config.story_format = 'Harlowe2'
 @story_start_name = 'Title Screen'
