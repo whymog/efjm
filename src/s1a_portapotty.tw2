@@ -9,9 +9,9 @@ Wait. It's...
 
 ::Jail Cell (Unlit) - character named
 {
-(set: $name to (prompt: "What is your name?", ""))
+(set: $playerName to (prompt: "What is your name?", ""))
 (set: $justWokeUp to true)
-(if: (text: $name)'s length > 0)[Right. My name is $name. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
+(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
 }(else:)[Wait, that's not right.
 
 Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
@@ -168,3 +168,41 @@ Steadying myself, I stood up, tested my footing, and glanced around. Out of the 
 >> [[I snatched it and began to read|Outside - Note]].]]
 
 ::Outside - Note
+The note was signed, but I already knew who wrote it by the loopy lettering of the pink gel-pen on the paper.
+
+<div style="padding-left: 2em; font-style: italic;">Hey,
+
+You just woke up from being blacked the fuck out, so you probably don’t remember how you got here. Well, here’s the deal: I told you that I was sick of this shit, this fucked-up life we’re all living here. I told you I was leaving, one way or another.
+
+And HERE’s the fucked up part: <span style="text-decoration: underline;">You tried to stop me.</span>
+
+$playerName, you’re the only person in this shit town I care about anymore. So when you turned your back on me like that? It fucking hurt.
+
+I put you in here for your own safety. Once you’ve cooled off and sobered up and had a chance to stare at yourself in the mirror for a good long while, I hope you’ll understand why I had to leave.
+
+I don’t have time to get into it now, but I’ll leave a longer letter for you at your place. If you still even give half a shit about me, maybe it’ll finally change your stubborn-ass mind.
+
+I hope I see you again, $playerName, but it sure as hell won’t be here.
+
+XOXO,
+Anna</div>
+
+My hands were shaking as I read the note. Where the fuck did Anna go? What did I do? I drink sometimes, sure, but it’s not like me to black the fuck out.
+
+I was angry.
+(click: "angry")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I was hurt.</span>]]
+(click: "hurt")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 4em;">I was scared.</span>]]
+(click: "scared")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 6em;">I was anxious.</span>]]
+(click: "anxious")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I was tired.</span>]]
+(click: "tired")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I felt like puking.</span>]]
+
+For a moment, I just stood there, numb, clutching the note.
+
+Anna’s the only real friend I’ve got here; the only one who hasn’t seen me as a fly to swat or piece of ass. I can’t just let her leave. Not until I can see her again and set things right.
+
+[[I neatly folded the note and tucked it into my back pocket|Outside - Outro]].
+
+::Outside - Outro
+I didn’t like her using my journal like this, but right then, the only thing on my mind was tracking Anna down.
+
+I was still dizzy but stable enough to walk, so I [[started down the gravel path toward home|Mom's Tent - intro]].
