@@ -44,10 +44,10 @@ Panic seized me. A scream stuck in my throat, too dry to vocalize.
 It was at that moment that I started to really [lose my shit]<trigger2|.]
 
 |section3)[I stood up,
-lost my balance,
-fell backward.
+(click: "stood up")[(transition: "dissolve") +(transition-time: 1s)[<span style="padding-left: 2em;">lost my balance,</span>]]
+(click: "lost my balance")[(transition: "dissolve") +(transition-time: 1s)[<span style="padding-left: 4em;">fell backward.</span>
 
-I banged my head and dropped my elbow into [something moist]<trigger3|.]
+(click: "fell backward")[(transition: "dissolve") +(transition-time: 1s)[I banged my head and dropped my elbow into [something moist]<trigger3|.]]]]]
 
 |section4)[Water - a basin full of it. I sniffed — nothing off about it.
 
@@ -186,21 +186,20 @@ I hope I see you again, $playerName, but it sure as hell won’t be here.
 
 XOXO,
 Anna</div>
-
 My hands were shaking as I read the note. Where the fuck did Anna go? What did I do? I drink sometimes, sure, but it’s not like me to black the fuck out.
 
 I was angry.
-(click: "angry")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I was hurt.</span>]]
-(click: "hurt")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 4em;">I was scared.</span>]]
-(click: "scared")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 6em;">I was anxious.</span>]]
-(click: "anxious")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I was tired.</span>]]
-(click: "tired")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I felt like puking.</span>]]
+(click: "I was angry")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I was hurt.</span>]]
+(click: "I was hurt")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 4em;">I was scared.</span>]]
+(click: "I was scared")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 6em;">I was anxious.</span>]]
+(click: "I was anxious")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 8em;">I was tired.</span>]]
+(click: "I was tired")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 10em;">I felt like puking.</span>
 
 For a moment, I just stood there, numb, clutching the note.
 
 Anna’s the only real friend I’ve got here; the only one who hasn’t seen me as a fly to swat or piece of ass. I can’t just let her leave. Not until I can see her again and set things right.
 
-[[I neatly folded the note and tucked it into my back pocket|Outside - Outro]].
+[[I neatly folded the note and tucked it into my back pocket|Outside - Outro]].]]
 
 ::Outside - Outro
 I didn’t like her using my journal like this, but right then, the only thing on my mind was tracking Anna down.
