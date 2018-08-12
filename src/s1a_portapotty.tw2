@@ -101,6 +101,26 @@ The floor was covered in scattered slips of paper and shreds of cloth.
 (if: $waterDrained is true)[>> [[I glanced at the basin again.|Jail Cell (Lit) - basin - empty]]]
 >> [[I picked through the garbage on the floor.|Jail Cell (Lit) - floor]]
 
+::Jail Cell (Lit) - door <349,776>
+(if: $hasJailKey is false)\
+[(if: $triedDoor is false)[I grabbed the handle and [pulled]<trigger1|.](if: $triedDoor is true)[The door to my cell was still [locked tight]<trigger1|.]]\
+(if: $hasJailKey is true)[I slipped the key into the [keyhole]<trigger2|.]\
+\
+|lockedDoorSection)[
+
+(if: $triedDoor is false)[(set: $triedDoor to true)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
+
+>> [[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
+\
+|unlockDoorSection)[The key was chipped and rusty. I wriggled it into the lock, forcing it in with my palm.
+
+After a momentary effort, the key slid in.
+
+[[I turned it.|Jail Cell - exit]] ]\
+\
+(click: ?trigger1)[(show: ?lockedDoorSection)]\
+(click: ?trigger2)[(show: ?unlockDoorSection)]
+
 ::Jail Cell (Lit) - basin - full <70,770>
 (if: $waterDrained is false)[A small pool of clear-ish water sat still in the basin on my right. There was a single [tap]<tapTrigger| and a [drain lever]<drainTrigger|.]
 \
@@ -108,7 +128,7 @@ The floor was covered in scattered slips of paper and shreds of cloth.
 Turned the tap. Nothing came out.
 ]\
 
-|drainSection)[(if: $waterDrained is false)[(set: $waterDrained to 1)(set: $hasJailKey to 1)The liquid gurgled down the drain and out to who-knows-where.
+|drainSection)[(if: $waterDrained is false)[(set: $waterDrained to true)(set: $hasJailKey to 1)The liquid gurgled down the drain and out to who-knows-where.
 
 At the bottom of the basin was a key.
 
@@ -117,25 +137,10 @@ At the bottom of the basin was a key.
 (click: ?tapTrigger)[(show: ?tapSection)]\
 (click: ?drainTrigger)[(show: ?drainSection)]
 
-::Jail Cell (Lit) - door <349,776>
-(if: $hasJailKey is 0)\
-[(if: $triedDoor is false)[I grabbed the handle and [pulled]<trigger1|.](if: $triedDoor is true)[The door to my cell was still [locked tight]<trigger1|.]]\
-(if: $hasJailKey is 1)[I slipped the key into the [keyhole]<trigger2|.]\
-\
-|lockedDoorSection)[
+::Jail Cell (Lit) - basin - empty <70,885>
+The basin was empty. A reddish stain ran along the edge of the bowl.
 
-(if: $triedDoor is false)[(set: $triedDoor to 1)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
-
->> [[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
-\
-|unlockDoorSection)[The key was chipped and rusty. I wriggled it into the lock, forcing it in with my palm.
-
-After a moment, the key slid in.
-
-[[I turned it.|Jail Cell - exit]] ]\
-\
-(click: ?trigger1)[(show: ?lockedDoorSection)]\
-(click: ?trigger2)[(show: ?unlockDoorSection)]
+>> [[I took another look around.|Jail Cell (Lit) - hub]]
 
 ::Jail Cell - exit <345,1001>
 With a soft //thnck//, the lock turned.
@@ -145,11 +150,6 @@ My heart was pounding.
 My head was swimming.
 
 >> [[I tried the door.|Outside Port-a-potty]]
-
-::Jail Cell (Lit) - basin - empty <70,885>
-The basin was empty. A reddish stain ran along the edge of the bowl.
-
->> [[I took another look around.|Jail Cell (Lit) - hub]]
 
 ::Outside Port-a-potty <347,1130>
 //To be continued...//
