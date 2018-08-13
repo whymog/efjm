@@ -26,7 +26,7 @@ Well...darkness and shit.]]
 >> [[I sniffed the stagnant air.|Jail Cell (Unlit) - smell]]
 
 ::Jail Cell (Unlit) - look - fail <30,500>
-My eyelids felt like paperweights, hanging heavily over eyes that were dry as sandpaper. I couldn’t see shit
+My eyelids felt like paperweights, hanging heavily over eyes that were dry as sandpaper. I couldn’t see shit.
 
 [[I tried rubbing my face. No good.|Jail Cell (Unlit) - hub]]
 
@@ -49,7 +49,7 @@ It was at that moment that I started to really [lose my shit]<trigger2|.]
 
 (click: "fell backward")[(transition: "dissolve") +(transition-time: 1s)[I banged my head and dropped my elbow into [something moist]<trigger3|.]]]]]
 
-|section4)[Water - a basin full of it. I sniffed — nothing off about it.
+|section4)[Water — a basin full of it. I sniffed — nothing off about it.
 
 Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
 
