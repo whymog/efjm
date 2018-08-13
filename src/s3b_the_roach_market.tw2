@@ -82,6 +82,7 @@ I nodded, and made my way deeper into the Roach Market.
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
 > [[Head to the junk heap|RM-junkheap-entrance]]
 
+<!-- If using debug menu shortcuts, prompts player to enter their name before beginning Auntie's gift shop sequence -->
 ::RM-giftshop-entrance-nameprompt
 { (set: $playerName to (prompt: "Enter name:", ""))
 (if: (text: $playerName)'s length > 1)[Right, my name is $playerName. [[Moving on|RM-giftshop-entrance]].<!-- what this code does is check the ending of the custom $playerName string to hopefully pluralize it properly -->{
@@ -176,6 +177,7 @@ I nodded. I’d have to come up with something else. I put my hands in my pocket
 > [[Head back to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)
 > [[Head to the junk heap|RM-junkheap-entrance]]
 
+<!-- If using debug menu shortcuts, prompts player to enter their name before beginning the junk heap sequence -->
 ::RM-junkheap-entrance-nameprompt
 { (set: $playerName to (prompt: "Enter name:", ""))
 (if: (text: $playerName)'s length > 1)[Right, my name is $playerName. [[Moving on|RM-junkheap-entrance]].<!-- what this code does is check the ending of the custom $playerName string to hopefully pluralize it properly -->{
