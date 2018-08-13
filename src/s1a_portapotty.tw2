@@ -62,11 +62,11 @@ Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
 
 I reached forward, snatched it up, and recognized its familiar heft immediately.
 
-<center>//**Lighter obtained**//</center>
+(click: "snatched it up")[ <center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//**Lighter obtained**//</span>]]</center>
 
 I gave it a good flick, and the room sprang into detail around me.
 
-[[`*` click `*`|Jail Cell (Lit) - hub]] ]\
+[[`*` click `*`|Jail Cell (Lit) - hub]] ]]\
 {
 (click: ?trigger1)[(show: ?section2)]
 (click: ?trigger2)[(show: ?section3)]
@@ -91,7 +91,7 @@ I panicked, because I still couldn’t tell where it was. And now, like some Edg
 ::Jail Cell (Lit) - hub <201,659>
 The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true)[I didn't like what I saw.]
 
-I saw a (if: $triedDoor is true)[locked ]door right in front of me. The basin was rooted to the wall on my left, still full of translucent water. And the floor was covered in scattered slips of paper and shreds of cloth.
+There was a (if: $triedDoor is true)[locked ]door right in front of me. The basin was rooted to the wall on my left, still full of translucent water. And the floor was covered in scattered slips of paper and shreds of cloth.
 
 (if: $triedDoor is false)[>> [[I tried the door.|Jail Cell (Lit) - door]]]\
 (if: $triedDoor is true)[>> [[The door to my cell was still locked tight.|Jail Cell (Lit) - door]]]
