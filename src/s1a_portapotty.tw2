@@ -66,14 +66,14 @@ I reached forward, snatched it up, and recognized its familiar heft immediately.
 
 I gave it a good flick, and the room sprang into detail around me.
 
-[[* click *|Jail Cell (Lit) - hub]] ]\
+[[`*` click `*`|Jail Cell (Lit) - hub]] ]\
 {
 (click: ?trigger1)[(show: ?section2)]
 (click: ?trigger2)[(show: ?section3)]
 (click: ?trigger3)[(show: ?section4)]
 (click: ?trigger4)[(show: ?section5)]
-(click: ?trigger5a)[(replace: ?prompt5b)[] (show: ?section6)]
-(click: ?trigger5b)[(replace: ?prompt5a)[] (show: ?section6)]
+(click: ?trigger5a)[(replace: ?prompt5b)[] (replace: ?prompt5a)[a faint beam of moonlight draped across the cell walls.] (show: ?section6)]
+(click: ?trigger5b)[(replace: ?prompt5a)[] (replace: ?prompt5b)[a glint of metal on the floor.] (show: ?section6)]
 (set: $triedDoor to false)
 (set: $waterDrained to false)
 (set: $hasJailKey to false)
@@ -84,18 +84,14 @@ Shit. That’s all I could pick up on. Someone literally lost their shit in here
 
 I panicked, because I still couldn’t tell where it was. And now, like some Edgar Allan Poe thing — there was a Telltale Shit lurking under the floor.
 
->> [[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
+[[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
 
 (set: $sniffedAir to true)
 
 ::Jail Cell (Lit) - hub <201,659>
 The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true)[I didn't like what I saw.]
 
-I saw a (if: $triedDoor is true)[locked ]door right in front of me.
-
-The basin was rooted to the wall on my right, still full of translucent water.
-
-The floor was covered in scattered slips of paper and shreds of cloth.
+I saw a (if: $triedDoor is true)[locked ]door right in front of me. The basin was rooted to the wall on my left, still full of translucent water. And the floor was covered in scattered slips of paper and shreds of cloth.
 
 (if: $triedDoor is false)[>> [[I tried the door.|Jail Cell (Lit) - door]]]\
 (if: $triedDoor is true)[>> [[The door to my cell was still locked tight.|Jail Cell (Lit) - door]]]
@@ -111,7 +107,7 @@ The floor was covered in scattered slips of paper and shreds of cloth.
 |lockedDoorSection)[
 (if: $triedDoor is false)[(set: $triedDoor to true)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
 
->> [[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
+[[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
 \
 |unlockDoorSection)[The key was chipped and rusty. I wriggled it into the lock, forcing it in with my palm.
 
