@@ -9,73 +9,51 @@ Wait. It's...
 
 ::Jail Cell (Unlit) - character named
 {
-(set: $name to (prompt: "What is your name?", ""))
-(if: (text: $name)'s length > 1)[Right. My name is $name. And [[I remember being asleep|Jail Cell (Unlit) - intro]].]
+(set: $playerName to (prompt: "What is your name?", ""))
+(set: $justWokeUp to true)
+(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
 }(else:)[Wait, that's not right.
 
 Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
 
-::Jail Cell (Unlit) - main <2903,46>
-You awaken in a dim, cramped jail cell. You have no memory of how you got here.
+::Jail Cell (Unlit) - hub <202,344>
+(if: $justWokeUp is true)[When I awoke, everything was darkness.(set: $justWokeUp to false)](else:)[Everything around me was darkness. (if: $sniffedAir is true)[
 
-It's small — maybe three feet square, and barely twice that high.
-
-You're seated on a [[flimsy chair|Jail Cell (Unlit) - examine chair]]. A few subtle rays of light from a [[small window|Jail Cell (Unlit) - examine window]] above catch falling dust particles and shine upon a [[small patch of floor|Jail Cell (Unlit) - examine lit floor]] before you. Beyond that, you can't see anything at all.
-
-::Jail Cell (Unlit) - examine chair <2784,220>
-What seemed like a chair is actually more of a small semicircle bench with a large hole in the middle. You peer down, but all you see is black.
-
-::Jail Cell (Unlit) - examine window <2910,222>
-A small window overlooks the tiny jail cell. A slotted grill is bolted over the opening, allowing a few tentative [[beams of light|Jail Cell (Unlit) - examine window - examine beams of light]] to shine into your cell.
-
-::Jail Cell (Unlit) - examine lit floor <3037,223>
-Double-click this passage to edit it.
-
-::Jail Cell (Unlit) - examine window - examine beams of light <2910,372>
-Particles of dust dance in the slits of light that shine into the corner of your cell, down the smooth wall and onto the far corner of the floor.
-
-There, at the end of the beam of light, you spot a [[small object|Jail Cell (Unlit) - examine lighter]] glinting slightly in the dimness.
-
-::Jail Cell (Unlit) - examine lighter <2910,522>
-You reach down and grasp the small object. Its contours feel familiar to your fingers.
-
-**You got the Lighter**
-
-::Jail Cell (Unlit) - intro <200,227>
-When I awoke, everything was darkness. (if: $sniffedAir is true)[
-
-Well...darkness and shit.]
+Well...darkness and shit.]]
 
 >> [[I blinked my eyes, still heavy from sleep.|Jail Cell (Unlit) - look - fail]]
 >> [[I felt around for something concrete.|Jail Cell (Unlit) - feel]]
 >> [[I sniffed the stagnant air.|Jail Cell (Unlit) - smell]]
 
+::Jail Cell (Unlit) - look - fail <30,500>
+My eyelids felt like paperweights, hanging heavily over eyes that were dry as sandpaper. I couldn’t see shit.
+
+[[I tried rubbing my face. No good.|Jail Cell (Unlit) - hub]]
+
 ::Jail Cell (Unlit) - feel <201,504>
 My arms flopped clumsily at my sides. They felt like rubber.
 
-I slapped around a bit. Felt my legs in front of me—I was sitting on something hard and warm. Plastic?
+I slapped around a bit. Felt my legs in front of me — I was sitting on something hard and warm. Plastic?
 
 [I flailed around some more]<trigger1|.
 
-|section2)[Thwack—my arms hit something hard on both sides. Something cool and hard—the walls were close in.
-
-And sticky?
+|section2)[<em>Thwack</em> — my arms hit something hard on either side. Cool, hard — the walls were close in. And sticky?
 
 Panic seized me. A scream stuck in my throat, too dry to vocalize.
 
 It was at that moment that I started to really [lose my shit]<trigger2|.]
 
 |section3)[I stood up,
-lost my balance,
-fell backward,
-banged my head,
-and dropped my elbow into [something moist]<trigger3|.]
+(click: "stood up")[(transition: "dissolve") +(transition-time: 1s)[<span style="padding-left: 2em;">lost my balance,</span>]]
+(click: "lost my balance")[(transition: "dissolve") +(transition-time: 1s)[<span style="padding-left: 4em;">fell backward.</span>
 
-|section4)[Water—a basin full of it. I sniffed; didn't seem to be anything off about it.
+(click: "fell backward")[(transition: "dissolve") +(transition-time: 1s)[I banged my head and dropped my elbow into [something moist]<trigger3|.]]]]]
+
+|section4)[Water — a basin full of it. I sniffed — nothing off about it.
 
 Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
 
-|section5)[No good. Still couldn't see anything. Except...
+|section5)[No good. Still couldn't see anything. Except for...
 
 [>> [a faint beam of moonlight draped across the cell walls.]<trigger5a|]<prompt5a|
 [>> [a glint of metal on the floor.]<trigger5b|]<prompt5b|]
@@ -84,65 +62,70 @@ Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
 
 I reached forward, snatched it up, and recognized its familiar heft immediately.
 
-<center>//**Lighter obtained**//</center>
+(click: "snatched it up")[ <center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//**Lighter obtained**//</span>]]</center>
 
 I gave it a good flick, and the room sprang into detail around me.
 
-[[* click *|Jail Cell (Lit) - hub]] ]\
-\
-(click: ?trigger1)[(show: ?section2)] \
-(click: ?trigger2)[(show: ?section3)] \
-(click: ?trigger3)[(show: ?section4)] \
-(click: ?trigger4)[(show: ?section5)] \
-(click: ?trigger5a)[(replace: ?prompt5b)[] (show: ?section6)] \
-(click: ?trigger5b)[(replace: ?prompt5a)[] (show: ?section6)]
-
-::Jail Cell (Unlit) - look - fail <30,500>
-My eyelids felt like paperweights. My eyes were as dry as sandpaper. I couldn't see shit.
-
-[[I tried rubbing my face. No good. Fuck.|Jail Cell (Unlit) - hub]]
-
-::Jail Cell (Unlit) - hub <202,344>
-Everything around me was darkness. (if: $sniffedAir is true)[
-
-Well...darkness and shit.]
-
->> [[I blinked my eyes, still heavy from sleep.|Jail Cell (Unlit) - look - fail]]
->> [[I felt around for something concrete.|Jail Cell (Unlit) - feel]]
->> [[I sniffed the stagnant air.|Jail Cell (Unlit) - smell]]
+[[`*` click `*`|Jail Cell (Lit) - hub]] ]]\
+{
+(click: ?trigger1)[(show: ?section2)]
+(click: ?trigger2)[(show: ?section3)]
+(click: ?trigger3)[(show: ?section4)]
+(click: ?trigger4)[(show: ?section5)]
+(click: ?trigger5a)[(replace: ?prompt5b)[] (replace: ?prompt5a)[a faint beam of moonlight draped across the cell walls.] (show: ?section6)]
+(click: ?trigger5b)[(replace: ?prompt5a)[] (replace: ?prompt5b)[a glint of metal on the floor.] (show: ?section6)]
+(set: $triedDoor to false)
+(set: $waterDrained to false)
+(set: $hasJailKey to false)
+}
 
 ::Jail Cell (Unlit) - smell <362,502>
-Shit. That's all I could pick up on. Someone literally lost their shit in here.
+Shit. That’s all I could pick up on. Someone literally lost their shit in here.
 
-I panicked—I couldn't tell where it was coming from. Like some Edgar Allan Poe thing—a Telltale Shit, lurking under the floor.
+I panicked, because I still couldn’t tell where it was. And now, like some Edgar Allan Poe thing — there was a Telltale Shit lurking under the floor.
 
->> [[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
+[[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
 
 (set: $sniffedAir to true)
 
 ::Jail Cell (Lit) - hub <201,659>
-The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is 1)[I didn't like what I saw.]
+The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true)[I didn't like what I saw.]
 
-I saw a (if: $triedDoor is 1)[locked ]door right in front of me.
+There was a (if: $triedDoor is true)[locked ]door right in front of me. The basin was rooted to the wall on my left, still full of translucent water. And the floor was covered in scattered slips of paper and shreds of cloth.
 
-The basin was rooted to the wall on my right, still full of translucent water.
+(if: $triedDoor is false)[>> [[I tried the door.|Jail Cell (Lit) - door]]]\
+(if: $triedDoor is true)[>> [[The door to my cell was still locked tight.|Jail Cell (Lit) - door]]]
+(if: $waterDrained is false)[>> [[I took a closer look at the basin.|Jail Cell (Lit) - basin - full]]]\
+(if: $waterDrained is true)[>> [[I glanced at the basin again.|Jail Cell (Lit) - basin - empty]]]
 
-The floor was covered in scattered slips of paper and shreds of cloth.
+::Jail Cell (Lit) - door <349,776>
+{
+(if: $hasJailKey is false)\
+[(if: $triedDoor is false)[I grabbed the handle and [pulled]<trigger1|.](if: $triedDoor is true)[The door to my cell was still [locked tight]<trigger1|.]]
+(if: $hasJailKey is true)[I slipped the key into the [keyhole]<trigger2|.]
+}
+|lockedDoorSection)[
+(if: $triedDoor is false)[(set: $triedDoor to true)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
 
-(if: $triedDoor is 0)[>> [[I tried the door.|Jail Cell (Lit) - door]]]\
-(if: $triedDoor is 1)[>> [[The door to my cell was still locked tight.|Jail Cell (Lit) - door]]]
-(if: $waterDrained is 0)[>> [[I took a closer look at the basin.|Jail Cell (Lit) - basin - full]]]\
-(if: $waterDrained is 1)[>> [[I glanced at the basin again.|Jail Cell (Lit) - basin - empty]]]
->> [[I picked through the garbage on the floor.|Jail Cell (Lit) - floor]]
+[[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
+\
+|unlockDoorSection)[The key was chipped and rusty. I wriggled it into the lock, forcing it in with my palm.
+
+After a momentary effort, the key slid in.
+
+[[I turned it.|Jail Cell - exit]] ]\
+\
+(click: ?trigger1)[(show: ?lockedDoorSection)]\
+(click: ?trigger2)[(show: ?unlockDoorSection)]
 
 ::Jail Cell (Lit) - basin - full <70,770>
-(if: $waterDrained is 0)[A small pool of clear-ish water sat still in the basin on my right. There was a single [tap]<tapTrigger| and a [drain lever]<drainTrigger|.]
+(if: $waterDrained is false)[A small pool of clear-ish water sat still in the basin on my right. There was a single [tap]<tapTrigger| and a [drain lever]<drainTrigger|.]
 \
 |tapSection)[
 Turned the tap. Nothing came out.
 ]\
 
-|drainSection)[(if: $waterDrained is 0)[(set: $waterDrained to 1)(set: $hasJailKey to 1)The liquid gurgled down the drain and out to who-knows-where.
+|drainSection)[(if: $waterDrained is false)[(set: $waterDrained to true)(set: $hasJailKey to true)The liquid gurgled down the drain and out to who-knows-where.
 
 At the bottom of the basin was a key.
 
@@ -151,25 +134,10 @@ At the bottom of the basin was a key.
 (click: ?tapTrigger)[(show: ?tapSection)]\
 (click: ?drainTrigger)[(show: ?drainSection)]
 
-::Jail Cell (Lit) - door <349,776>
-(if: $hasJailKey is 0)\
-[(if: $triedDoor is 0)[I grabbed the handle and [pulled]<trigger1|.](if: $triedDoor is 1)[The door to my cell was still [locked tight]<trigger1|.]]\
-(if: $hasJailKey is 1)[I slipped the key into the [keyhole]<trigger2|.]\
-\
-|lockedDoorSection)[
+::Jail Cell (Lit) - basin - empty <70,885>
+The basin was empty. A reddish stain ran along the edge of the bowl.
 
-(if: $triedDoor is 0)[(set: $triedDoor to 1)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
-
->> [[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
-\
-|unlockDoorSection)[The key was chipped and rusty. I wriggled it into the lock, forcing it in with my palm.
-
-After a moment, the key slid in.
-
-[[I turned it.|Jail Cell - exit]] ]\
-\
-(click: ?trigger1)[(show: ?lockedDoorSection)]\
-(click: ?trigger2)[(show: ?unlockDoorSection)]
+>> [[I took another look around.|Jail Cell (Lit) - hub]]
 
 ::Jail Cell - exit <345,1001>
 With a soft //thnck//, the lock turned.
@@ -180,13 +148,56 @@ My head was swimming.
 
 >> [[I tried the door.|Outside Port-a-potty]]
 
-::Jail Cell (Lit) - basin - empty <70,885>
-The basin was empty. A reddish stain ran along the edge of the bowl.
-
->> [[I took another look around.|Jail Cell (Lit) - hub]]
-
 ::Outside Port-a-potty <347,1130>
-//To be continued...//
+The door lurched open, and I fell face-first into the dirt and gravel. It was so bright, and my balance was gone.
 
-::Jail Cell (Lit) - floor <200,772>
-JOURNAL ENTRY GOES HERE IF WE DECIDE TO INCLUDE IT
+I managed to get my elbows under my shoulders, extend my arms, and push myself up into a seated position.
+
+Rubbing my eyes, I looked around and saw the old familiar gravel path toward Tent City.
+
+(click: "the old familiar gravel path toward Tent City")[(transition: "dissolve") +(transition-time: 3s)[Thank fucking god. I thought I could’ve been anywhere.
+
+Steadying myself, I stood up, tested my footing, and glanced around. Out of the corner of my eye, I saw it – a page that looked like it was torn out of my old journal.]]
+
+(click: "a page")[(transition: "dissolve") +(transition-time: 3s)[It was taped to the inside of the toilet door. If it hadn’t been pitch-fucking-black in there, maybe I would’ve noticed it. But out here, under the floodlights, the bright-pink paper stood out clearly from the sun-drained teal plastic door.
+
+>> [[I snatched it and began to read|Outside - Note]].]]
+
+::Outside - Note
+The note was signed, but I already knew who wrote it by the loopy lettering of the pink gel-pen on the paper.
+
+<div style="padding-left: 2em; font-style: italic;">Hey,
+
+You just woke up from being blacked the fuck out, so you probably don’t remember how you got here. Well, here’s the deal: I told you that I was sick of this shit, this fucked-up life we’re all living here. I told you I was leaving, one way or another.
+
+And HERE’s the fucked up part: <span style="text-decoration: underline;">You tried to stop me.</span>
+
+$playerName, you’re the only person in this shit town I care about anymore. So when you turned your back on me like that? It fucking hurt.
+
+I put you in here for your own safety. Once you’ve cooled off and sobered up and had a chance to stare at yourself in the mirror for a good long while, I hope you’ll understand why I had to leave.
+
+I don’t have time to get into it now, but I’ll leave a longer letter for you at your place. If you still even give half a shit about me, maybe it’ll finally change your stubborn-ass mind.
+
+I hope I see you again, $playerName, but it sure as hell won’t be here.
+
+XOXO,
+Anna</div>
+My hands were shaking as I read the note. Where the fuck did Anna go? What did I do? I drink sometimes, sure, but it’s not like me to black the fuck out.
+
+I was angry.
+(click: "I was angry")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I was hurt.</span>]]
+(click: "I was hurt")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 4em;">I was scared.</span>]]
+(click: "I was scared")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 6em;">I was anxious.</span>]]
+(click: "I was anxious")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 8em;">I was tired.</span>]]
+(click: "I was tired")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 10em;">I felt like puking.</span>
+
+For a moment, I just stood there, numb, clutching the note.
+
+Anna’s the only real friend I’ve got here; the only one who hasn’t seen me as a fly to swat or piece of ass. I can’t just let her leave. Not until I can see her again and set things right.
+
+[[I neatly folded the note and tucked it into my back pocket|Outside - Outro]].]]
+
+::Outside - Outro
+I didn’t like her using my journal like this, but right then, the only thing on my mind was tracking Anna down.
+
+I was still dizzy but stable enough to walk, so I [[started down the gravel path toward home|Mom's Tent - intro]].
