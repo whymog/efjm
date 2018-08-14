@@ -17,6 +17,8 @@ Wait. It's...
 Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
 
 ::Jail Cell (Unlit) - hub <202,344>
+<img src="../src/img/portapotty-dark.png">
+
 (if: $justWokeUp is true)[When I awoke, everything was darkness.(set: $justWokeUp to false)](else:)[Everything around me was darkness. (if: $sniffedAir is true)[
 
 Well...darkness and shit.]]
@@ -89,6 +91,8 @@ I panicked, because I still couldn’t tell where it was. And now, like some Edg
 (set: $sniffedAir to true)
 
 ::Jail Cell (Lit) - hub <201,659>
+<img src="../src/img/portapotty-light.png">
+
 The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true)[I didn't like what I saw.]
 
 There was a (if: $triedDoor is true)[locked ]door right in front of me. The basin was rooted to the wall on my left, still full of translucent water. And the floor was covered in scattered slips of paper and shreds of cloth.
@@ -201,3 +205,16 @@ Anna’s the only real friend I’ve got here; the only one who hasn’t seen me
 I didn’t like her using my journal like this, but right then, the only thing on my mind was tracking Anna down.
 
 I was still dizzy but stable enough to walk, so I [[started down the gravel path toward home|Mom's Tent - intro]].
+
+::ImageStylesheet [stylesheet]
+img {
+  display: block;
+  margin: 0 auto;
+  max-height: 50vh;
+}
+
+@media (max-width: 800px) {
+  img {
+    max-height: 400px;
+  }
+}
