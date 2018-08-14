@@ -12,4 +12,4 @@ The year is 20XX. Wicked clown shit is the new law.
 
 (click: "the stuff they’ve seen in Gatherville")[(transition: "dissolve") +(transition-time: 3s)[There are a lot of scrappers and shitheads going for glory, but any of them who wants a permanent spot on top has to pass a final test. One insane act to prove they’ve got the heart to be a legend. They must...]]
 
-(click: "They must")[(transition: "dissolve") +(transition-time: 5s)[[[**ESCAPE FROM JUGGALO MOUNTAIN**|Mom's Tent intro]]]]
+(click: "They must")[(transition: "dissolve") +(transition-time: 5s)[[[**ESCAPE FROM JUGGALO MOUNTAIN**|Mom's Tent - intro]]]]
