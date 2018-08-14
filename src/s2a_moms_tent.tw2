@@ -1,4 +1,4 @@
-::Mom's Tent intro
+::Mom's Tent - intro
 I stumbled along the old familiar path toward Mom’s tent. My feet moved clumsily under me — I was still feeling fucked up from whatever Anna gave me before locking me in the shitbox.
 
 (click: "locking me in the shitbox") [(transition: "dissolve")[My head was spinning: why did Anna lock me up? No, that’s not even it; more like, why the hell would she ever do something like that? It doesn’t make any sense. She’s like my sister. Isn’t she?]]
@@ -13,55 +13,55 @@ I stumbled along the old familiar path toward Mom’s tent. My feet moved clumsi
 
 (click: "under the floorboards") [(transition: "dissolve")[<span style="padding-left:4em">and a screen door latched shut with a bungee cable.</span>]]
 
-(click: "bungee cable") [(transition: "dissolve")[[[Home Shit Home|Mom's Tent intro 2]]]].
+(click: "bungee cable") [(transition: "dissolve")[[[Home Shit Home|Mom's Tent - intro 2]]]].
 
-::Mom's Tent intro 2
+::Mom's Tent - intro 2
 Mom hadn’t been home much lately, but all the same, I’m not ashamed to admit I nearly turned around and walked the other direction as quick as my legs would take me. The only thing that kept me there was a deep need to find the letter that Anna left for me.
 
 Sun was going down. Ron would no doubt be stumbling in soon. No time like the present.
 
-I stepped forward and [[unlatched the door|Mom's Tent den]].
+I stepped forward and [[unlatched the door|Mom's Tent - den]].
 
-::Mom's Tent den
-Things were different from when I last went home, however long ago that was. For one thing, the TV was off and the couch was empty. But it was clear Mom and Ron had been up to their usual bullshit recently: a fresh pile of cigarette butts littered the TV trays, and Ron’s prized bong still had [[the charred remains of a bowl packed into it|Mom's Tent den 2]].
+::Mom's Tent - den
+Things were different from when I last went home, however long ago that was. For one thing, the TV was off and the couch was empty. But it was clear Mom and Ron had been up to their usual bullshit recently: a fresh pile of cigarette butts littered the TV trays, and Ron’s prized bong still had [[the charred remains of a bowl packed into it|Mom's Tent - den 2]].
 
-::Mom's Tent den 2
+::Mom's Tent - den 2
 I froze in place and listened intently. No noises. Just the tarp walls flapping in the evening breeze.
 
 (click: "No noises") [(transition: "dissolve")[I was alone, praise the fucking lord.]]
 
-(click: "praise the fucking lord") [(transition: "dissolve")[I walked over to the fridge a few feet away and scanned the shelves. Nothing much left — just half a ham sandwich on a paper plate, a twelve-pack of [[sodas|Mom's Tent faygo]] and a lone [[can of beer|Mom's Tent beer]].]]
+(click: "praise the fucking lord") [(transition: "dissolve")[I walked over to the fridge a few feet away and scanned the shelves. Nothing much left — just half a ham sandwich on a paper plate, a twelve-pack of [[sodas|Mom's Tent - faygo]] and a lone [[can of beer|Mom's Tent - beer]].]]
 
-::Mom's Tent faygo
+::Mom's Tent - faygo
 Ah, Redpop. Anna and I had this weirdo friend, Scott, who went absolutely bonkers for this shit. He loved to get turned wayyyy up on the sugar rush and rave about how delicious it was to drink “the blood of the innocent.”
 
 I kinda miss Scott. Wonder how he’s doing out there.
 
-I pulled a can of Redpop out of the box, cracked it open, and took [[a seat at the table|Mom's Tent table]].
+I pulled a can of Redpop out of the box, cracked it open, and took [[a seat at the table|Mom's Tent - table]].
 
-::Mom's Tent beer
+::Mom's Tent - beer
 Ron’s pissy beer of choice: “The Great Milenkale”. It tastes worse than it smells, but given that I literally woke up in a toilet, I wasn’t feeling too choosy.
 
-I snatched a tallboy, cracked it open, and pulled out [[a seat at the kitchen table|Mom's Tent table]].
+I snatched a tallboy, cracked it open, and pulled out [[a seat at the kitchen table|Mom's Tent - table]].
 
-::Mom's Tent table
+::Mom's Tent - table
 Anna’s disappearance was all I could think about, but it felt good to sit still for a moment. I realized suddenly that I ached all over. Come to think of it, what was I doing before I woke up in that nasty-ass bathroom? I strained to picture it, but it was all noise and disruption in my brain — nothing came to me.
 
 I sighed, took another swig, and stared around the room.
 
-[[>>>Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent cigarettes]].
-[[>>>The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent plates]].
-[[>>>Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent notepad]].
+[[>>>Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent - cigarettes]].
+[[>>>The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent - plates]].
+[[>>>Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].
 
-::Mom's Tent cigarettes
+::Mom's Tent - cigarettes
 I saw another heap of stubbed-out cigarettes and a couple of empty fifths stacked in the center of the kitchen table. Mom and Ron must’ve been having another one of their long, idiotic arguments over who-knows-what — or maybe Ron had some of his shithead buddies over to watch this year’s Bloodymania match.
 
 I remembered that time Mom caught Anna and me lighting up outside our tent late at night. Said it was a nasty habit, that it’d mess me up real good if I didn’t quit. What a hypocrite.
 
-::Mom's Tent plates
+::Mom's Tent - plates
 A couple plates with the scraps of leftover barbecue are still sitting on the table. They looked pretty raunchy at this point — like they’d been sitting out a few days. The bones were picked clean, but a couple flies were going to town on the leftover streaks of barbecue sauce.
 
 Wings, huh? Ron’s favorite. Mom must’ve been feeling generous. I’ll never understand why she supports his deadbeat ass.
 
-::Mom's Tent notepad
+::Mom's Tent - notepad
 Mom loves to keep notes. She writes down all kinds of things — keeps track of our finances, plans meals way in advance for those rare occasions where we’re able to make something proper. This page was dated with today’s date.
