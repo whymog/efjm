@@ -1,3 +1,9 @@
+<!-- If using debug menu shortcuts, prompts player to enter their name -->
+::Mom's Tent - name prompt
+{ (set: $playerName to (prompt: "Enter name:", ""))
+(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|Mom's Tent - intro]].]
+}(else:)[No, [[that's not right|Mom's Tent - name prompt]].]
+
 ::Mom's Tent - intro
 I stumbled along the old familiar path toward Mom’s tent. My feet moved clumsily under me — I was still feeling fucked up from whatever Anna gave me before locking me in the shitbox.
 
@@ -13,7 +19,7 @@ I stumbled along the old familiar path toward Mom’s tent. My feet moved clumsi
 
 (click: "under the floorboards") [(transition: "dissolve")[<span style="padding-left:4em">and a screen door latched shut with a bungee cable.</span>]]
 
-(click: "bungee cable") [(transition: "dissolve")[[[Home Shit Home|Mom's Tent - intro 2]]]].
+(click: "bungee cable") [(transition: "dissolve")[[[Home Shit Home.|Mom's Tent - intro 2]]]]
 
 ::Mom's Tent - intro 2
 Mom hadn’t been home much lately, but all the same, I’m not ashamed to admit I nearly turned around and walked the other direction as quick as my legs would take me. The only thing that kept me there was a deep need to find the letter that Anna left for me.
@@ -44,24 +50,99 @@ Ron’s pissy beer of choice: “The Great Milenkale”. It tastes worse than it
 
 I snatched a tallboy, cracked it open, and pulled out [[a seat at the kitchen table|Mom's Tent - table]].
 
-::Mom's Tent - table
-Anna’s disappearance was all I could think about, but it felt good to sit still for a moment. I realized suddenly that I ached all over. Come to think of it, what was I doing before I woke up in that nasty-ass bathroom? I strained to picture it, but it was all noise and disruption in my brain — nothing came to me.
+<!-- If using debug menu shortcuts, prompts player to enter their name -->
+::Mom's Tent - name prompt table
+{ (set: $playerName to (prompt: "Enter name:", ""))
+(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|Mom's Tent - table]].]
+}(else:)[No, [[that's not right|Mom's Tent - name prompt table]].]
 
+::Mom's Tent - table
+Anna’s disappearance was all I could think about, but it felt good to sit still for a moment. I realized suddenly that I ached all over. Come to think of it, what was I doing before I woke up in that nasty-ass bathroom? I strained to picture it, but it was all noise and disruption in my brain — [[nothing came to me|Mom's Tent - table hub]].
+
+(set: $cigarettesViewed to false)
+(set: $platesViewed to false)
+(set: $notepadViewed to false)
+
+::Mom's Tent - table hub
 I sighed, took another swig, and stared around the room.
 
-[[>>>Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent - cigarettes]].
-[[>>>The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent - plates]].
-[[>>>Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].
+(if: $cigarettesViewed is false)[>>[[Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent - cigarettes]].]
+(if: $platesViewed is false)[>>[[The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent - plates]].]
+(if: $notepadViewed is false)[>>[[Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].]
+(if: $tableDetailsSeen is 3)[>>[[I kept staring into the distance until I realized I was looking straight at the support beam|Mom's Tent - support beam]].]
 
 ::Mom's Tent - cigarettes
 I saw another heap of stubbed-out cigarettes and a couple of empty fifths stacked in the center of the kitchen table. Mom and Ron must’ve been having another one of their long, idiotic arguments over who-knows-what — or maybe Ron had some of his shithead buddies over to watch this year’s Bloodymania match.
 
-I remembered that time Mom caught Anna and me lighting up outside our tent late at night. Said it was a nasty habit, that it’d mess me up real good if I didn’t quit. What a hypocrite.
+I remembered that time Mom caught Anna and me lighting up outside our tent late at night. Said it was a nasty habit, that it’d mess me up real good if I didn’t quit. [[What a hypocrite|Mom's Tent - table hub]].
+
+(set: $cigarettesViewed to true)
+(set: $tableDetailsSeen to it +1)
 
 ::Mom's Tent - plates
 A couple plates with the scraps of leftover barbecue are still sitting on the table. They looked pretty raunchy at this point — like they’d been sitting out a few days. The bones were picked clean, but a couple flies were going to town on the leftover streaks of barbecue sauce.
 
-Wings, huh? Ron’s favorite. Mom must’ve been feeling generous. I’ll never understand why she supports his deadbeat ass.
+Wings, huh? Ron’s favorite. Mom must’ve been feeling generous. I’ll never understand why she supports his [[deadbeat ass|Mom's Tent - table hub]].
+
+(set: $platesViewed to true)
+(set: $tableDetailsSeen to it +1)
 
 ::Mom's Tent - notepad
 Mom loves to keep notes. She writes down all kinds of things — keeps track of our finances, plans meals way in advance for those rare occasions where we’re able to make something proper. This page was dated with today’s date.
+
+>>[[I looked aside|Mom's Tent - table hub]]. I wouldn't want her looking through <i>my</i> shit.
+>>As I turned away, I couldn’t help but notice [[my name at the bottom of the page|Mom's Tent - notepad 2]].
+(set: $notepadViewed to true)
+(set: $tableDetailsSeen to it +1)
+
+::Mom's Tent - notepad 2
+It was a to-do list. No real surprises there:
+<span style="padding-left:2em"> - REMEMBER: working extra shifts for Jolene next Sat. & Sun.</span>
+<span style="padding-left:2em"> - Patch ripped wall in L.R.</span>
+<span style="padding-left:2em"> - Talk to Ron about budget (<u>no more</u> wasting money at The Gutter!!)</span>
+
+And sure enough, there was a line item for me. It read:
+<div style="padding-left: 2em; font-style: italic;"> - Talk to $playerName about the house rules — NO MORE SNEAKING OFF WITH ANNA AFTER DARK!</div>
+Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].
+
+::Mom's Tent - support beam
+The support beam separating the kitchen from my tent is looking pretty funky, but it’s still standing. I scan from the bottom up, watching the series of notches and dates go by:
+
+|RON 69/666
+|
+|
+|
+|
+|
+|$playerName 7/20XX
+|
+|
+|
+|$playerName 13/20XX
+|
+|
+|$playerName 9/20XX
+|
+|$playerName 3/20XX
+|
+|
+|$playerName 2/20XX
+
+From looking around the scene, it’s the only proof I ever lived here.
+
+I felt that ball of rage in my gut flare up again. Fuck this place. And fuck the assholes who live here. I’m so beyond done with this shit.
+
+I pound the rest of the watery piss that passes for beer by Ron’s standards, crunch the can, and leave it on the table. They can clean up their own messes here. I’m done with that shit.
+
+Right. Ok. Just gotta [[get my shit together|Mom's Tent - your room]] and get outta here.
+
+::Mom's Tent - your room
+The tarp separating my bed from the kitchen fluttered gently in the draft. Something beyond it caught my eye.
+
+A bare foot. Lying on my bed.
+
+Oh shit. Mom’s still here. I froze and waited what felt like an eternity and listened.
+
+(click: "waited what felt like an eternity and listened")[(transition: "dissolve") +(transition-time: 8s)[Snoring]]
+
+(click: "Snoring")[She’s out, thank god. My head was still murky as hell and a thrumming headache was gaining momentum; the last thing I needed was to be chewed out for something that wasn’t even my fault. Jesus, Anna; why’d you do this to me, anyway?]
