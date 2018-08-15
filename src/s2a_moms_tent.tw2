@@ -1,4 +1,5 @@
 <!-- If using debug menu shortcuts, prompts player to enter their name -->
+
 ::Mom's Tent - name prompt
 { (set: $playerName to (prompt: "Enter name:", ""))
 (if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|Mom's Tent - intro]].]
@@ -29,10 +30,14 @@ Sun was going down. Ron would no doubt be stumbling in soon. No time like the pr
 I stepped forward and [[unlatched the door|Mom's Tent - den]].
 
 ::Mom's Tent - den
-Things were different from when I last went home, however long ago that was. For one thing, the TV was off and the couch was empty. But it was clear Mom and Ron had been up to their usual bullshit recently: a fresh pile of cigarette butts littered the TV trays, and Ron’s prized bong still had [[the charred remains of a bowl packed into it|Mom's Tent - den 2]].
+Things were different from when I last went home, however long ago that was. For one thing, the TV was off and the couch was empty.
+
+But it was clear Mom and Ron had been up to their usual bullshit recently: a fresh pile of cigarette butts littered the TV trays, and Ron’s prized bong still had [[the charred remains of a bowl packed into it|Mom's Tent - den 2]].
 
 ::Mom's Tent - den 2
-I froze in place and listened intently. No noises. Just the tarp walls flapping in the evening breeze.
+I froze in place and listened intently.
+
+(click: "listened intently") [(transition: "dissolve") +(transition-time: 1s)[No noises. Just the tarp walls flapping in the evening breeze.]]
 
 (click: "No noises") [(transition: "dissolve")[I was alone, praise the fucking lord.]]
 
@@ -49,6 +54,8 @@ I pulled a can of Redpop out of the box, cracked it open, and took [[a seat at t
 Ron’s pissy beer of choice: “The Great Milenkale”. It tastes worse than it smells, but given that I literally woke up in a toilet, I wasn’t feeling too choosy.
 
 I snatched a tallboy, cracked it open, and pulled out [[a seat at the kitchen table|Mom's Tent - table]].
+
+(set: $beerDrank to true)
 
 <!-- If using debug menu shortcuts, prompts player to enter their name -->
 ::Mom's Tent - name prompt table
@@ -97,16 +104,15 @@ Mom loves to keep notes. She writes down all kinds of things — keeps track of 
 
 ::Mom's Tent - notepad 2
 It was a to-do list. No real surprises there:
-<span style="padding-left:2em"> - REMEMBER: working extra shifts for Jolene next Sat. & Sun.</span>
-<span style="padding-left:2em"> - Patch ripped wall in L.R.</span>
-<span style="padding-left:2em"> - Talk to Ron about budget (<u>no more</u> wasting money at The Gutter!!)</span>
-
+* REMEMBER: working extra shifts for Jolene next Sat. & Sun.
+* Patch ripped wall in L.R.
+* Talk to Ron about budget (<u>no more</u> wasting money at The Gutter!!)
 And sure enough, there was a line item for me. It read:
-<div style="padding-left: 2em; font-style: italic;"> - Talk to $playerName about the house rules — NO MORE SNEAKING OFF WITH ANNA AFTER DARK!</div>
+* <i>Talk to $playerName about the house rules — NO MORE SNEAKING OFF WITH ANNA AFTER DARK!</i>
 Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].
 
 ::Mom's Tent - support beam
-The support beam separating the kitchen from my tent is looking pretty funky, but it’s still standing. I scan from the bottom up, watching the series of notches and dates go by:
+The support beam separating the kitchen from my tent was looking pretty funky, but it was still standing. I scanned from the bottom up, watching the series of notches and dates go by:
 
 |RON 69/666
 |
@@ -132,9 +138,9 @@ From looking around the scene, it’s the only proof I ever lived here.
 
 I felt that ball of rage in my gut flare up again. Fuck this place. And fuck the assholes who live here. I’m so beyond done with this shit.
 
-I pound the rest of the watery piss that passes for beer by Ron’s standards, crunch the can, and leave it on the table. They can clean up their own messes here. I’m done with that shit.
+I pounded (if: $beerDrank is true)[the rest of the watery piss that passes for beer by Ron’s standards](else:)[the sugary dregs of the Redpop], crunched the can, and left it on the table. They could clean up their own messes here. I was done with that shit.
 
-Right. Ok. Just gotta [[get my shit together|Mom's Tent - your room]] and get outta here.
+Right. Ok. I just had to [[get my shit together|Mom's Tent - your room]] and get outta here.
 
 ::Mom's Tent - your room
 The tarp separating my bed from the kitchen fluttered gently in the draft. Something beyond it caught my eye.
@@ -145,4 +151,137 @@ Oh shit. Mom’s still here. I froze and waited what felt like an eternity and l
 
 (click: "waited what felt like an eternity and listened")[(transition: "dissolve") +(transition-time: 8s)[Snoring]]
 
-(click: "Snoring")[She’s out, thank god. My head was still murky as hell and a thrumming headache was gaining momentum; the last thing I needed was to be chewed out for something that wasn’t even my fault. Jesus, Anna; why’d you do this to me, anyway?]
+(click: "Snoring")[She’s out, thank god. My head was still murky as hell and a thrumming headache was gaining momentum; the last thing I needed was to be chewed out for something that wasn’t even my fault. Jesus, Anna; why’d you do this to me, anyway?
+
+Focusing again, I remembered why I was here. My eyes darted around the room, panic rising in my chest, until I saw it: [[my backpack|Mom's Tent - journal]].]
+
+::Mom's Tent - journal
+I quickly rummaged through my shit to make sure it was how I left it. My journal was there, but the cash was gone. I must’ve had it on me last night when I got drugged. Did someone take it?
+
+Whatever. I grabbed the pack and quietly slipped it over my shoulder.
+
+(click: "slipped it over my shoulder")[ <center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//[[**Journal obtained**|Mom's Tent - poster choice]]//</span>]]</center>]
+
+::Mom's Tent - poster choice
+I looked up from where I’d found the bag and my eyes came to rest on a poster hanging over my bed. It read:
+
+>>(link: "DOUBLE TROUBLE: Wicked Wrestlin’ Federation Invitational")[(set: $wrestling to true)(go-to: "Mom's Tent - looking at mom")]
+>>(link: "Open Mic Battle Royale - TONIGHT ONLY")[(set: $rapping to true)(go-to: "Mom's Tent - looking at mom")]
+
+::Mom's Tent - looking at mom
+I turned to leave, but when I saw my mom’s face something caught in my chest. She looked so calm when she was asleep; nothing at all like the stressed-out megabitch I’d been living with the past few months.
+
+I got that it totally sucked being the breadwinner for us, but it was Ron’s fault that he lost his steady-ass job down at the trailer park for being a drunk piece of shit. If she’d just kicked him to the curb, we’d have been able to get by just fine, the two of us.
+
+I wanted to scream, shake her, yell at her, do something. But the moment passed, and instead I felt [[tears welling up my eyes|Mom's Tent - letter to mom start]].
+
+<!-- If using debug menu shortcuts, prompts player to enter their name -->
+::Mom's Tent - name prompt letter
+{ (set: $playerName to (prompt: "Enter name:", ""))
+(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|Mom's Tent - letter to mom start]].]
+}(else:)[No, [[that's not right|Mom's Tent - name prompt letter]].]
+
+::Mom's Tent - letter to mom start
+Why the hell would she fall asleep in my bed? She’s got her own, and it’s way nicer.
+
+I couldn’t just leave. I needed to at least let her know what’s up.
+
+I turned back to my desk, picked up a pencil, and began to write:
+
+>>(link: "Hey,")[(set: $letterHey to true)(go-to: "Mom's Tent - letter to mom 2")]
+>>[[Hey Mom,|Mom's Tent - letter to mom 2]]
+
+::Mom's Tent - letter to mom 2
+(if: $letterHey is true)[Hey,](else:)[Hey Mom,]
+
+>>(link:"I’m sorry I didn’t make it home last night. Things are messed up, but it’s not my fault.")[(set: $letterApology to true)(go-to: "Mom's Tent - letter to mom 3")]
+>>[[I came home to get some rest, but it turns out my bed was occupied. Thanks a lot.|Mom's Tent - letter to mom 3]]
+
+::Mom's Tent - letter to mom 3
+(if: $letterHey is true)[Hey](else:)[Hey Mom,]
+
+(if: $letterApology is true)[I’m sorry I didn’t make it home last night. Things are messed up, but it’s not my fault.](else:)[I came home to get some rest, but it turns out my bed was occupied. Thanks a lot.]
+
+>>(link:"I’m worried about Anna. She slipped me something and straight-up disappeared on me last night. It’s not like her at all. I’m worried shit’s gone way wrong for her.")[(set: $letterWorried to true)(go-to: "Mom's Tent - letter to mom 4")]
+>>[[I just dropped by to get some of my stuff.|Mom's Tent - letter to mom 4]]
+
+::Mom's Tent - letter to mom 4
+(if: $letterHey is true)[Hey](else:)[Hey Mom,]
+
+(if: $letterApology is true)[I’m sorry I didn’t make it home last night. Things are messed up, but it’s not my fault.](else:)[I came home to get some rest, but it turns out my bed was occupied. Thanks a lot.]
+
+(if: $letterWorried is true)[I’m worried about Anna. She slipped me something and straight-up disappeared on me last night. It’s not like her at all. I’m worried shit’s gone way wrong for her.](else:)[I just dropped by to get some of my stuff.]
+
+>>(link:"I know Anna’s in trouble, and I’ve gotta make sure she’s ok.")[(set: $letterTrouble to true)(go-to: "Mom's Tent - letter to mom 5")]
+(if $beerDrank is true)[>>[[I drank some of Ron’s Milenkale. Be sure to let him know it was me.|Mom's Tent - letter to mom 5]]](else:)[>>[[I drank some of Ron’s Faygo. Be sure to let him know it was me.|Mom's Tent - letter to mom 5|Mom's Tent - letter to mom 5]]]
+
+::Mom's Tent - letter to mom 5
+(if: $letterHey is true)[Hey](else:)[Hey Mom,]
+
+(if: $letterApology is true)[I’m sorry I didn’t make it home last night. Things are messed up, but it’s not my fault.](else:)[I came home to get some rest, but it turns out my bed was occupied. Thanks a lot.]
+
+(if: $letterWorried is true)[I’m worried about Anna. She slipped me something and straight-up disappeared on me last night. It’s not like her at all. I’m worried shit’s gone way wrong for her.](else:)[I just dropped by to get some of my stuff.]
+
+(if: $letterTrouble is true)[I know Anna’s in trouble, and I’ve gotta make sure she’s ok.](else:)[I drank some of Ron’s (if: $beerDrank is true)[Milenkale](else:)[Faygo]. Be sure to let him know it was me.]
+
+>>(link:"I don’t know what’s going to happen, but I’ll be back as soon as I can be.")[(set: $letterBackSoon to true)(go-to: "Mom's Tent - letter to mom 6")]
+>>[[I hope you’ve kicked that asshole to the curb by the time I’m back. You deserve so much better than him.|Mom's Tent - letter to mom 6]]
+
+::Mom's Tent - letter to mom 6
+(if: $letterHey is true)[Hey](else:)[Hey Mom,]
+
+(if: $letterApology is true)[I’m sorry I didn’t make it home last night. Things are messed up, but it’s not my fault.](else:)[I came home to get some rest, but it turns out my bed was occupied. Thanks a lot.]
+
+(if: $letterWorried is true)[I’m worried about Anna. She slipped me something and straight-up disappeared on me last night. It’s not like her at all. I’m worried shit’s gone way wrong for her.](else:)[I just dropped by to get some of my stuff.]
+
+(if: $letterTrouble is true)[I know she’s in trouble, and I’ve gotta make sure she’s ok.](else:)[I drank some of Ron’s (if: $beerDrank is true)[Milenkale](else:)[Faygo]. Be sure to let him know it was me.]
+
+(if: $letterBackSoon is true)[I don’t know what’s going to happen, but I’ll be back as soon as I can be.](else:)[I hope you’ve kicked that asshole to the curb by the time I’m back. You deserve so much better than him.]
+
+>>(link:"Love you,")[(set: $letterLove to true)(go-to: "Mom's Tent - letter to mom end")]
+>>[[Smell ya later,|Mom's Tent - letter to mom end]]
+
+::Mom's Tent - letter to mom end
+(if: $letterHey is true)[Hey](else:)[Hey Mom,]
+
+(if: $letterApology is true)[I’m sorry I didn’t make it home last night. Things are messed up, but it’s not my fault.](else:)[I came home to get some rest, but it turns out my bed was occupied. Thanks a lot.]
+
+(if: $letterWorried is true)[I’m worried about Anna. She slipped me something and straight-up disappeared on me last night. It’s not like her at all. I’m worried shit’s gone way wrong for her.](else:)[I just dropped by to get some of my stuff.]
+
+(if: $letterTrouble is true)[I know she’s in trouble, and I’ve gotta make sure she’s ok.](else:)[I drank some of Ron’s (if: $beerDrank is true)[Milenkale](else:)[Faygo]. Be sure to let him know it was me.]
+
+(if: $letterBackSoon is true)[I don’t know what’s going to happen, but I’ll be back as soon as I can be.](else:)[I hope you’ve kicked that asshole to the curb by the time I’m back. You deserve so much better than him.]
+
+(if: $letterLove is true)[Love you,](else:)[Smell ya later,]
+
+<span style="padding-left:2em">[[**$playerName**|Mom's Tent - Leo enters]]</span>
+
+::Mom's Tent - Leo enters
+There. Good enough. I set the pencil down, shifted my bag onto my shoulders, and got up to leave —
+
+And I heard something that made my heart nearly pop out of my chest.
+
+(click: "something that made my heart nearly pop out of my chest")[(transition: "dissolve")["Hey, $playerName! Heard you turned up again, girl. Don’t you wanna come out and see your main man?"]]
+
+(click: "your main man")[Fuck.]
+
+(click: "Fuck")[Leo.]
+
+(click: "Leo")[I heard the front flap of our tent open up. Fuck. He’s here.]
+
+(click: "He's here"[No time to think; I had to get out, now.]
+
+(click: "get out")[With my hands trembling,
+
+>>(link: "I swiped the multitool off my desk.")[(set: $multitool to true)(go-to: "Mom's Tent - finale")]
+>>(link: "I snatched my trusty hatchet off the floor")[(set: $hatchet to true)(go-to: "Mom's Tent - finale")]
+]
+
+::Mom's Tent - finale
+Fuck. He's right here.
+
+No time to waste. I slashed at the rear tarp, ripping a gnarly hole right through the wall of my room. Loud enough to wake the dead.
+
+(click: "wake the dead")[Mom sat up suddenly, blinked heavily. “$playerName?” she yelped.]
+
+(click: "she yelped")[But I was through, and my feet were moving, thumping hard against the gravel and dirt paths, weaving between the tents, panic stabbing at my brain, no time to think, and I was [[gone, gone, gone|Tent City Chase - intro]].]
