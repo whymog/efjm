@@ -1,0 +1,28 @@
+::Tent City - Intro
+I tore through a patched seam in the back of mom’s tent and felt a twinge of guilt as I broke through. Mom would understand, but Ron would be sure to give her hell while he fixed the busted tarp for the umpteenth time.
+
+Shit. I’d have to try and make up for it later, once I ditched Leo and caught back up with Anna.
+
+(click: "ditched Leo")[I squeezed my way between the backsides of other tents pushed close together, trying to avoid the footpaths that divided Tarp City into wobbly rows. I reached the point where another path crossed perpendicular to Mom’s row, and stopped for a moment before darting across.
+
+“Time to step out of the shadows, sister.”
+
+I froze. I recognized the voice — [[but it wasn't Leo's|Tent City - Three Rings recruiter]].]
+
+::Tent City - Three Rings recruiter
+No, it was that god-fearing ninja who hustled for the so-called “Temple of Three Rings.” He was standing along the side of the path, not four feet away from me. I could see the fistful of church flyers clutched in his left hand. Fuck.
+
+“That’s right sister, I seen you. An’ I also seen the look in your eyes. You think hiding is gonna keep you safe.”
+
+He took a step closer.
+
+(click: "He took a step closer")[“But every soul gots a ticket to the Carnival: non-transferable, non-refundable, non-fuck-with-able."
+
+He paused.
+
+"Only question now is, which show will your soul see?”
+
+>> [[Make an excuse|Tent City - Three Rings recruiter - excuse]]
+>> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]
+>> [[Talk shit|Tent City - Three Rings recruiter - talk shit]]
+>> [[Take tract|Tent City - Three Rings recruiter - take tract]]]
