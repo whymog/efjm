@@ -8,6 +8,7 @@ Shit. I’d have to try and make up for it later, once I ditched Leo and caught 
 “Time to step out of the shadows, sister.”
 
 I froze. I recognized the voice — [[but it wasn't Leo's|Tent City - Three Rings recruiter]].]
+(set: $goodChoices to 0)
 
 ::Tent City - Three Rings recruiter
 No, it was that god-fearing ninja who hustled for the so-called “Temple of Three Rings.” He was standing along the side of the path, not four feet away from me. I could see the fistful of church flyers clutched in his left hand. Fuck.
@@ -26,3 +27,53 @@ He paused.
 >> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]
 >> [[Talk shit|Tent City - Three Rings recruiter - talk shit]]
 >> [[Take tract|Tent City - Three Rings recruiter - take tract]]]
+
+::Tent City - Three Rings recruiter - excuse
+“Uhh, I don’t wanna waste your time, man," I stammered. "My mom keeps me on a pretty short leash. She doesn’t like the look of y’all to begin with, and I’m out past curfew already.”
+
+He leaned in even closer, and I caught the scent of gin-spiked Moon Mist wafting on his breath. “Judge not, sister. That goes double for momma. If she gots worries, why, a night in the Three Rings is just the thing.”
+{
+  (set: $tentChasePartTwo to (random: 1))
+  (if: $tentChasePartTwo is 0)[(set: $nextScene to "Rip's Rydas")]
+  (else:)[(set: $nextScene to "Ornery Kids")]
+}
+[[I mumbled an awkward "thanks" and kept running|Tent City - $nextScene]].
+
+::Tent City - Three Rings recruiter - quote verse
+{
+  (set: $goodChoices to it +1)
+  (set: $tentChasePartTwo to (random: 1))
+  (if: $tentChasePartTwo is 0)[(set: $nextScene to "Rip's Rydas")]
+  (else:)[(set: $nextScene to "Ornery Kids")]
+}
+“'Ring three, the ICP, look if you want but I wouldn't lay a hand on me,'” I sang, jerking my head toward his. “'That's how you get fucked up, I’ll squeeze your windpipe shut.'”
+
+Preacher-man cackled, and he rasped back: “'You can call me a weirdo, call me a freak, call me Don Knotts cuz I'm gettin' knotted every week!' Hah, sister, you know your shit.” He kept laughing as he patted me on the back, waving me on my way. [[I was only too happy to oblige|Tent City - $nextScene]].
+
+::Tent City - Three Rings recruiter - talk shit
+“Oh fuck off, pervert,” I said. “There’s only one kind of dude who hangs out in Tent City alleyways watching for sweet young things riding solo, and this shit’s not for sale.”
+
+He shook his head slowly and sadly. “Just fillin’ my ears with the Magician’s lies, as He whispers them with your tongue. Hate me if you must, sister, but I been stuck in your path for a reason.”
+{
+  (set: $tentChasePartTwo to (random: 1))
+  (if: $tentChasePartTwo is 0)[(set: $nextScene to "Rip's Rydas")]
+  (else:)[(set: $nextScene to "Ornery Kids")]
+}
+[[I groaned, feinted, and dashed away from him|Tent City - $nextScene]].
+
+::Tent City - Three Rings recruiter - take tract
+{
+  (set: $goodChoices to it +1)
+  (set: $tentChasePartTwo to (random: 1))
+  (if: $tentChasePartTwo is 0)[(set: $nextScene to "Rip's Rydas")]
+  (else:)[(set: $nextScene to "Ornery Kids")]
+}
+I snatched a flyer from his hand. “Okay padre, I got my golden ticket to the holy freakshow.” I glanced down at the wobbling, badly Xeroxed sharpie letters. “‘Sunset to sunrise at the Bigtop.’ Sounds… uh, cool.”
+
+Even trying, I could only fake being gung-ho badly, but if he could tell he didn’t show. Just wordlessly grinned at me with his wet, shiny teeth as I [[scampered across the path and back into the shadows|Tent City - $nextScene]].
+
+::Tent City - Rip's Rydas
+Rip's Rydas
+
+::Tent City - Ornery Kids
+Ornery Kids
