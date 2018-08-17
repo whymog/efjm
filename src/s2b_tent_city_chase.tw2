@@ -367,9 +367,164 @@ My multi-tool had a couple of blades, in addition to a pretty tough pair of scis
 It took a few passes, but at last the cable snapped and the lock fell to the ground. The gate squeaked a bit as I eased through it, then [[set off through the next section of the Tarps beyond|Tent City - $tentCityFinale]].
 
 ::Tent City - Neden militia finale
-Bad choices: $badChoices
-Neden militia! Good for you.
+Trying to move as quick as I could without attracting even more attention to myself, at last I could see that only a couple more rows stood between me and the Gutter. It wasn’t exactly safety, but Leo had pissed off the owner one too many times this week, and if he showed his face he knew he was guaranteed to get his teeth pushed in. Besides, Leo knew I how much I hated the place, from all the times he dragged me along for the ride to hang out with his dumbfuck crew. He’d never think to look for me there.
+
+I ducked around a corner—
+
+(click: "ducked around a corner—")[—and was almost bowled over by a short, stocky girl in a leather greaser jacket.
+
+“Yo, what the fuck!” she snapped at me, patting herself down after I half-bodychecked her. “Like for real, what the fuck is your problem?!”
+
+“Watch your step, juggalette,” chimed in another chick somewhere from behind her. “This ain’t your part of the tarps.”
+
+Peering over the girl I ran into, I saw four or five other tough-looking women casually posted up along both sides of the alleyway, each decked out in the same matching jackets. A patch on the shoulder of each had a design like a hornier version of the Starbucks logo, embroidered along the top and bottom with the words “NEDEN MILITIA”.
+
+(click: "NEDEN MILITIA")[Meanwhile the scrappy shorter one didn’t let up an inch on tearing me a new asshole.
+
+“Hey! Hey! Don’t just look at them, lookin’ right over my fuckin’ head. You look at me! Look at me in my eyes!”
+
+>> [[Act cool|Tent City - Neden militia finale - act cool]]
+>> [[Spill guts|Tent City - Neden militia finale - spill guts]]
+>> [[Shoulder through|Tent City - Neden militia finale - shoulder through]]
+>> [[Tell joke|Tent City - Neden militia finale - tell joke]]]]
+{
+  (set: $militiaActedCool to false)
+  (set: $militiaShouldered to false)
+}
+
+::Tent City - Neden militia finale - act cool
+“So, fucking Neden Militia. You guys don’t take no shit from nobody, do you?”
+
+One of the taller ones in the back smiled. “Oh, we take plenty of shit, sister. Even from runts like you.” The group closed in closer now. “You look like someone who’s got nice things in her pockets. Turn ‘em out.”
+
+Shit. I had next to nothing, which they wouldn’t like, and what shit I did have I wasn’t giving up, which they’d like even less.
+
+>> [[Spill guts|Tent City - Neden militia finale - spill guts]]\
+(if: $militiaShouldered is false)[
+>> [[Shoulder through|Tent City - Neden militia finale - shoulder through]]]
+>> [[Tell joke|Tent City - Neden militia finale - tell joke]]
+{
+  (set: $militiaActedCool to true)
+  (set: $badChoices to it +1)
+}
+
+::Tent City - Neden militia finale - spill guts
+I gulped. Out with it, $playerName.
+
+I hooked a thumb over my shoulder. “Somewhere back there is a total fucking creep who thinks I basically belong to him, and he’s getting closer. And right over there, is where he can’t follow me. Not if he values keeping his skull in one piece. And you all…” I looked down at my shoes. “You’re basically the finish line. Once I break through, I’m home free.”
+
+I felt a hand on my shoulder and looked up — it was the short one I’d barreled into. “Gotta give us one thing first.”
+
+I tensed, but nodded.
+
+(click: "I tensed, but nodded")[“The fucker’s name,” she said, and grinned. “More fun to play with a little dickhead when you know what its name is.”
+
+I croaked out “Leo”, and they parted to let me through. I scrambled out of Tent City and [[into the seedier shadows surrounding the Gutter|The Gutter]]. For a second I thought I heard something like a woman singing “Leo-Leo-Leooo!” drifting on the wind, but then it was gone.]
+
+::Tent City - Neden militia finale - shoulder through
+“Whatever,” I mumbled, flipping my hood up and pulling the drawstring tight. I balled up my hands into fists, screwed myself tense, and tried to lead with the spikes sewn into my jacket as I shouldered into the short one blocking my way.
+
+She didn’t budge, or even flinch. She just laughed, and sounded fucking delighted.
+
+“Oh fuck yes, little punky wannabe wants to start some shit? I been waiting for your pansy ass all day, baby.” She squared off and held up her fists like someone capable and eager to use them.
+
+(click: "held up her fists")[I held up my own hands too, in a conciliatory gesture.
+
+“Sorry, sorry — that was fucking stupid. Like, fatally stupid, and that’s… not the kind of stupid I need to be today.”
+\
+(if: $militiaActedCool is false)[
+>> [[Act cool|Tent City - Neden militia finale - act cool]]]
+>> [[Spill guts|Tent City - Neden militia finale - spill guts]]
+>> [[Tell joke|Tent City - Neden militia finale - tell joke]]]
+{
+  (set: $militiaShouldered to true)
+  (set: $badChoices to it +1)
+}
+
+::Tent City - Neden militia finale - tell joke
+“Uhh—” My life flashed before my eyes. I had nothing. I thought of Anna, how she always weaseled us out of facing the music even when we deserved it. How she always knew what to say, how she could even make a fucker like Ron laugh hard enough to half-piss himself.
+
+And then I had it.
+
+“W-why,” I stammered, “why does a juggalo have a hole in the tip of his dick?”
+
+(click: "why does a juggalo have a hole in the tip of his dick?")[The Militia-women looked at each other, confused. They looked back at me; the short one in front narrowed her eyes, and opened her mouth to say something.
+
+I didn’t let her finish. “So his brain can get some oxygen now & then.”
+
+They blinked. For a beat, nothing. No reaction.
+
+(click: "No reaction")[Then the short one in front lost it, and that broke the spell. Suddenly they were all clutching their sides, howling, almost crying. I took a tentative step forward, and the short girl just shook her head. “Get the fuck on out of here, little ‘lette. Get along. Get to [[wherever it is you’re goin’|The Gutter]].”]]
 
 ::Tent City - Leo finale
-Bad choices: $badChoices
-Leo time!
+“Where you at, huh? Where you at? Cut the shit, sis! Where you at?”
+
+//Fuck shit fuck.// There was always somebody hollering about something in the Tarps, but the angry voice I could hear getting closer wasn’t just somebody’s: it was Leo’s.
+
+I’d blown most of my lead trying dead ends and bad ideas, and now I found myself caught in a blind alley — boxed in on three sides by built-up structures that were the closest thing to permanent in the Tarps.
+
+My eyes darted over the alley for anything I might put to use. Whatever I came up with, it was probably going to be my only shot.
+
+>> (link: "I saw something papery hanging from an extension cable slung over the alley, and plenty of debris on the ground")[(set: $leoRevenge to "something papery")(go-to: "Tent City - Leo finale - choice made")]
+>> (link: "I saw a glint of coppery metal on a wall, a half-filled rain-barrel, and a pothole")[(set: $leoRevenge to "something coppery")(go-to: "Tent City - Leo finale - choice made")]
+
+::Tent City - Leo finale - choice made
+Desperate, but it was a plan.
+
+A few quick motions got done what I needed, and not a moment too soon: Leo stepped out from around the corner.
+
+“Finally! Jaysus. Fucking A.” Leo only looked pissed for a second. Then he shook his head, slipping into the guilt routine he always did that meant to put everything back on me. “I try to pay a friendly visit to my girl, and you bolt like I’m the fucking feds? What the hell, $playerName? What the hell?”
+
+For the moment, he kept his distance from me, his body blocking the mouth of the alley.
+
+“I don’t wanna talk about it, Leo. Don’t even ask.”
+
+“Don’t ask? How can I not ask, babe, when you’re acting all crazy like this?” He was eating it up — this was our routine, after all. I’d try to put up boundaries and Leo would come crashing through, the hell with whatever I wanted.
+
+“I can’t, okay? I swore I wouldn’t.” I bit my lip a little, working to hold whatever it was inside.
+
+Now Leo looked intrigued, baited by the suggestion of secrets, promises; anything I might be keeping from him became his new prey. “Oh c’mon, babe. You know you can tell me anything.”
+
+I looked down, then back up at him. “Really?”
+
+“Of course, babe.” He smiled wide, coming closer. “Anything at all.”
+
+“I don’t know…” I tugged at my hoodie. //Just a little bit farther...//
+
+“Maybe you don’t, but I do.” He opened his arms wide as he got within arm’s reach. “C’mon now, c’mon over to Leo.”
+
+Boom! Right where I wanted him. Time to spring into action.
+
+//Shit, [[I hope this works|Tent City - Leo finale - $leoRevenge]].//
+
+::Tent City - Leo finale - something papery
+“Babe, what’s that you got there?” Leo furrowed his brow as he noticed something I held clenched in my fist.
+
+“Oh nothing at all, baby. Just a //rock—//!”
+
+I whipped the rock up at the extension cable high over Leo’s head, and it struck true. Down came the papery nest, and out poured a hundred or so mega-pissed-off wasps.
+
+//Well, shit. It worked.//
+
+Leo was beside himself instantly, flailing and swatting uselessly at the wasps swarming all around him. “Shit! //Shit!// I’m allergic, you dumb fuck!”
+
+“No, really?” I cooed. “I musta forgot. On account of being such a dumb fuck.” I tossed my head in an exaggeratedly girlish way and flashed a dopey grin.
+
+Sadly it was lost on Leo, who was booking it out of the alley, back the way he came and off to who-the-hell-knows-or-gives-a-fuck where. With luck, he’d get off with a few stings to the face and swell up like an ugly balloon. Maybe even a couple solid stings to the dick for good measure.
+
+I [[got the hell out of that alley|The Gutter]] and left Leo and Tent City in my dust.
+
+::Tent City - Leo finale - something coppery
+“Let’s get you out of this dank hole and into someplace nice like the Gutter, okay? Here, let Leo help you over this big nasty-ass puddle.”
+
+Leo took another step toward me— then abruptly tensed, shivered, and froze. His foot was sunk ankle-deep in the pothole, which I’d flooded with water from the rain barrel, then electrified with the end of a frayed copper wire. Veins bulged out of control all over Leo’s body, and his eyelids fluttered rapidly open and closed.
+
+//Well, shit. It worked.//
+
+I counted to five, then jerked the end of the live wire out of the puddle with my boot.
+
+All of Leo’s muscles relaxed simultaneously and he toppled over, his fall only broken by his head hitting the metal rain barrel heavily on the way down. I myself tensed for a moment, not daring to move in case it caused him to move, too.
+
+I prodded him with my foot, and he twitched a little. I could see his chest swelling a little as he breathed. Whatever else he was, he wasn’t dead. A wave of something passed over me, but I wasn’t sure if it was relief or disappointment.
+
+I [[got the hell out of that alley|The Gutter]] and left Leo and Tent City in my dust.
