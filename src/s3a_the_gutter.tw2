@@ -1,79 +1,77 @@
-::The Gutter - Intro <1156,67>
-Anna was right. That piece of shit was trying to kill me one way or another. I guess I’d known it all along.
+<!-- If using debug menu shortcuts, prompts player to enter their name -->
 
-I picked [[the least muddy trail towards civilization|The Gutter - Outside - Approach]].
+::The Gutter - Name prompt
+{ (set: $playerName to (prompt: "Enter name:", ""))
+(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|The Gutter - Outside - Approach]].]
+}(else:)[No, [[that's not right|The Gutter - Name prompt]].]
 
-::The Gutter - Outside - Approach <1390,73>
-My body and mind were screaming as [one]<trigger1|.
+::The Gutter - Outside - Approach
+My body and mind were screaming as one.
 
-|section2)[I kept my head down and my hood up. I used all of my energy to move forward through the tarp-covered alleyways of Gatherville.
+(click: "one")[I kept my head down and my hood up. I used all of my energy to move forward through the tarp-covered alleyways of Gatherville.
 
-My gut lurched as I realized I’d need to ask around for more information on Anna. The last thing I wanted to do was [talk to anyone]<trigger2|.]
+My gut lurched as I realized I’d need to ask around for more information on Anna. The last thing I wanted to do was talk to anyone.]
 
-|section3)[My brain bounced into the darkness of reality, searching for answers. It was still pretty early in the night. Around this time, anyone who knew anything was
+(click: "talk to anyone")[My brain bounced into the darkness of reality, searching for answers. It was still pretty early in the night. Around this time, anyone who knew anything was:
 
-[[>>Getting fucked up at the Gutter|The Gutter - Outside - Intro]]
-[[>>Looking to score at the Roach Market|Market scene]]
-[[>>Catching an early show at the Church|Church scene]]]
+>>[[Getting fucked up at the Gutter|The Gutter - Outside - Intro]]
+>>[[Looking to score at the Roach Market|RM-first-entrance]]
+>>[[Catching an early show at the Church|Church - intro]]]
 
-(click: ?trigger1)[(show: ?section2)]
-(click: ?trigger2)[(show: ?section3)]
+::The Gutter - Outside - Intro
+I stood outside a weathered, flat-roofed wooden building with a flickering neon sign.
 
-::Market scene <1874,87>
-Double-click this passage to edit it.
+(click: "neon sign")[<span class="blinking">The Gutter</span>]
 
-::Church scene <2120,91>
-Double-click this passage to edit it.
+Right below the sign, someone had painted:
 
-::The Gutter - Outside - Intro <1262,192>
-I stood outside a weathered, flat-roofed wooden building with a flickering [neon sign]<trigger1|.
+>>[[The last rest stop before the Dark Carnival|DC sign]]
+>>[[Derek loves (fuckin) Whitnee|Whitnee sign]]
 
-|section2)[(text-style: 'smear')[The Gutter]<gutterSign|(set: $array to (a: "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'none')[The Gutter]]", "(replace: ?gutterSign)[(text-style: 'fade-in-out')[The Gutter]]"))(live:0.1s)[(either: ...$array)]
+::The Gutter - Outside - DC sign
+The slogan stuck to the place like used gum. Some people just called it the Rest Stop, which helped explain the constant piss smell hanging around.
 
-Right below the sign, someone had painted
+[[I walked into the sign’s field of light|The Gutter - Outside hub]].]
 
->> [The last rest stop before the Dark Carnival]<triggerDarkCarnivalSign|
->> [Derek loves (fuckin) Whitnee]<triggerDerekWhitneeSign|]
+::The Gutter - Outside - Whitnee sign
+This poignant shout-out had been there forever. The (fuckin) was a later addition and no one was sure if it was from the original artist.
 
-|section2a)[The slogan stuck to the place like used gum. Some people just called it the Rest Stop, which helped explain the constant piss smell hanging around.
+[[I walked into the sign’s field of light|The Gutter - Outside hub]].]
 
-[[I walked into the sign’s field of light|The Gutter - Outside]].]
+<!-- This makes the blinking neon sign effect work -->
+<style> .blinking {
+  color: transparent;
+	text-shadow:
+		0em    0em 0.02em rgba(255,255,255,0.75),
+		-0.2em 0em 0.5em  rgba(255,255,255,0.5),
+		0.2em  0em 0.5em  rgba(255,255,255,0.5);
+	text-decoration: none;
+  animation: fade-in-out .2s ease-in-out infinite alternate;
+	-webkit-animation: fade-in-out .2s ease-in-out infinite alternate;}
+}
+</style>
 
-|section2b)[This poignant shout-out had been there forever. The (fuckin) was a later addition, though no one was sure if it was from the original artist.
-
-[[I walked into the sign’s field of light|The Gutter - Outside]].]
-
-(click: ?trigger1)[(show: ?section2)]
-(click: ?triggerDarkCarnivalSign)[(set: $gutterSignCarnival to 1)(show: ?section2a)]
-(click: ?triggerDerekWhitneeSign)[(set: $gutterSignDerekWhitnee to 1)(show: ?section2b)]
-
-::The Gutter - Outside <1260,319>
+::The Gutter - Outside hub
 (if: $justLeftTheGutter is 1)[(set: $justLeftTheGutter to 0)I walked back into the neon light of the Gutter’s sign. I could see:]
 (else:)[In the dim light of the neon sign, I could see:]
 
->> [[Some old-school juggalos in a heated conversation by the side of the building|The Gutter - Outside - old-school juggalos - part 1]]
->> [[Ron’s shitheap golf cart|2.3]]
->> [[The jar|2.4]]
->> [[The Gutter’s beaten-to-hell block of a front door|3.0]]
+>> [[Some old-school juggalos in a heated conversation by the side of the building|The Gutter - Outside - Old-school juggalos]]
+>> [[Ron’s shitheap golf cart|The Gutter - Golf cart]]
+>> [[The jar|The Gutter - Jar]]
+>> [[The Gutter’s beaten-to-hell block of a front door|The Gutter - Inside hub]]
 
 (if: $gutterCompleted is 1)[When the night air hit my lungs, the relief was sharper than drinking a cold glass of water after a bong rip. The light of the Gutter’s sign felt like the north star, guiding me forward.]
 
-::2.3 <1265,499>
+::The Gutter - Golf cart
 Ron drove everywhere in this golf cart. Technically it was the church’s, but he’d been their janitor for so long that he could do whatever with their stuff as long as he kept showing up to clean.
 
 He had the whole thing “tricked” out, including:
->> [[the wheels|2.3a]]
->> [[the defense system|2.3b]]
+>> [[the wheels|]]
+>> [[the defense system|]]
 >> [[the awful horn|2.3c]]
 >> [[the engine|2.3d]]
 
-::2.4 <1803,496>
-Double-click this passage to edit it.
-
-::3.0 <1960,499>
-Double-click this passage to edit it.
-
-::The Gutter - Outside - old-school juggalos - part 1 <755,504>
+::The Gutter - Outside - Old-school juggalos
 A tall, chubby juggalo stroking a long beard and a shorter, musclebound ninja with green Kool-Aid dyed hair were inches away from each other, shouting in agreement as they chainsmoked:
 
 “Sorry to be all deep and serious, but I got a lotta shit on my mind.”
@@ -100,8 +98,8 @@ The shorter ninja started jumping and kicking an unknown assailant at this point
 
 At this, they both took a moment to nod solemnly in unison, as if the two of them could hear a song no one else could.
 
-[[>>I didn’t wanna intrude, so I turned back to the sign’s light by the entrance|The Gutter - Outside]]
-(if: $iHatchet is 1)[>> [[I tried to casually walk past them so I could hear more|The Gutter - Outside - old-school juggalos - part 2]]]
+>>[[I didn’t wanna intrude, so I turned back to the sign’s light by the entrance|The Gutter - Outside]]
+(if: $hatchet is true)[>>[[I tried to casually walk past them so I could hear more|The Gutter - Outside - old-school juggalos - part 2]]]
 
 ::The Gutter - Outside - old-school juggalos - part 2 <754,644>
 “Yo little ‘lette!” The larger one called out. “That’s a sick fucking hatchet you got. Come over here!”
@@ -157,18 +155,30 @@ As I walked back towards the front of the Gutter
 
 Kyle piped up. “Me and Ben’ll keep an eye out though for sure!”
 
-I thanked them and walked back towards the front of [[The Gutter|The Gutter - Outside]].
+I thanked them and walked back towards the front of [[The Gutter|The Gutter - Outside hub]].
 
-::2.3a <1037,639>
-Old Barbie and Ken heads were glued around the rims of each wheel.
+::The Gutter - Jar
+A huge mason jar hung on a rusty nail right outside the front door. Above it in individual sticker letters it read:
 
-(if multitool = 1) I quickly unscrewed a few crucial wheel bolts. (set cartnowheels 1)
+(text-style: "outline")[Leave Y ur Mind Here]
 
-::2.3b <1187,639>
-Double-click this passage to edit it.
+It had hung there empty for as long as I could remember.
 
-::2.3c <1337,639>
-Double-click this passage to edit it.
+[[I kept looking around|The Gutter - Outside hub]].
 
-::2.3d <1512,638>
-Double-click this passage to edit it.
+::The Gutter - Inside hub
+
+Inside the Gutter, the usual piss-odor of Gatherville faded away under a heavy cloud of cigarette, hookah, and bong smoke. It was thick enough to sting my eyes. I could barely make out anyone inside.
+
+I waved my hand in front of my face to clear the air.
+
+The crowd was light, so no one even bothered moving the two drunk teenage kids making out right on top of the torn felt of the pool table. The Jukebox for this evening, Donnie, was braying some new tune of his at a mumbling volume in back of the room. The bartender looked a mix of bored and annoyed as he moved between serving a trio of barflies, who were spewing smoke and holding court on their stools.
+
+And alone, down at the end of the bar, sat (link: "Ron")[my fucking stepdad Ron.]
+
+[[I approached the bar.|3.1]]
+[[I sighed and walked over to Ron.|3.2]]
+[[I stood by the pool table and cleared my throat.|3.3]]
+[[I reluctantly moved closer to the Jukebox.|3.4]]
+[[I went straight to the ‘Lette’s Room.|3.5]]
+[[I went back outside.|2.1]]
