@@ -266,7 +266,7 @@ Nothing. Tough crowd.
 (if: $dogsFakedOut is false)[
 >> [[Throw fake-out|Tent City - Pack of stray dogs - throw fake-out]]]
 >> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
-(if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]]
+(if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]
 {
   (set: $badChoices to it +1)
   (set: $dogsGrowledAt to true)
@@ -298,8 +298,13 @@ I frowned and moved closer.
 >> [[Climb over|Tent City - Fence - climb over]]
 >> [[Crawl under|Tent City - Fence - crawl under]]
 >> [[Kick down|Tent City - Fence - kick down]]
->> [[Squeeze through|Tent City - Fence - squeeze through]]
-(if: $multitool is true)[>> [[Snip cable|Tent City - Fence - snip cable]]]]
+>> [[Squeeze through|Tent City - Fence - squeeze through]]\
+(if: $multitool is true)[
+>> [[Snip cable|Tent City - Fence - snip cable]]]]
+{
+  (set: $fenceClimbed to false)
+  (set: $fenceSqueezed to false)
+}
 
 ::Tent City - Fence - climb over
 The fence wasn’t all that tall, and as rusty as the barbed-wire and chain-link looked, its sharpness probably left something to be desired.
@@ -308,16 +313,63 @@ I jammed my boots into the holes in the chain-link, and started making my way up
 
 I hopped down and tried to think of another way.
 
-::Tent City - Fence - crawl under
-(set: $badChoices to it +1)\
+>> [[Crawl under|Tent City - Fence - crawl under]]
+>> [[Kick down|Tent City - Fence - kick down]]\
+(if: $fenceSqueezed is false)[
+>> [[Squeeze through|Tent City - Fence - squeeze through]]]
+(if: $multitool is true)[>> [[Snip cable|Tent City - Fence - snip cable]]]
+{
+  (set: $fenceClimbed to true)
+  (set: $badChoices to it +1)
+}
 
+::Tent City - Fence - crawl under
+{
+  (if: $badChoices < 3)[(set: $tentCityFinale to "Neden militia finale")]
+  (else:)[(set: $tentCityFinale to "Leo finale")]
+}\
+People miss what’s right under their feet all the time. Scanning the bottom of the fence, I spotted what I was looking for almost right away: a sandy patch bisected by the chain-link.
+
+I scrambled over to it, and dug my hands in to see how deep the sand went. Six or eight inches down, and I still felt nothing but sand in my fingers. Perfect. I screwed my eyes shut tight as I messily scooped a trench out of the sand, kicking up a shit-ton of dust, but plenty of grit still worked into my eyes. When I could feel the gap was big enough, I inched under the chain-link, and finally cleared out my eyes on the other side. I did my best to kick the sand around again and cover my tracks, then [[set off deeper into the Tarps|Tent City - $tentCityFinale]].
 
 ::Tent City - Fence - kick down
-(set: $badChoices to it +1)\
+{
+  (if: $badChoices < 3)[(set: $tentCityFinale to "Neden militia finale")]
+  (else:)[(set: $tentCityFinale to "Leo finale")]
+}\
+Whoever had put up this fence did a decent job making it look like a dangerous mess, but they would have done better to put a little more effort into the post-holes. The floor of the basin where Gatherville squatted was hard clay packed tight: a true pain in the ass to dig. Most of the juggalos I knew wouldn’t put up with it; I figured the posts only sat barely deep enough to keep the fence mostly upright.
 
+I gave the closest post a kick, and sure enough I could see the dirt starting to churn already. I rabbit-kicked the post until it was shoved up out of the dirt, leaning almost flat and pulling the whole section of fence down with it. I stepped carefully over the barbed-wire, and then [[I was gone|Tent City - $tentCityFinale]].
 
 ::Tent City - Fence - squeeze through
+The cable from the bike lock wasn’t wound as tightly as it should have been. Tugging at it, it was able to make enough slack to create a gap that looked wide enough to squeeze through.
 
+I tensed and tried to make myself as thin as I could, but it didn’t matter: it was my bony bits that held me back. I was able to force myself almost all the way through, but no way was my head gonna fit. Eventually I had to give up and admit that the gap only looked wide enough to squeeze through.
+\
+(if: $fenceClimbed is false)[
+>> [[Climb over|Tent City - Fence - climb over]]]
+>> [[Crawl under|Tent City - Fence - crawl under]]
+>> [[Kick down|Tent City - Fence - kick down]]\
+(if: $multitool is true)[
+>> [[Snip cable|Tent City - Fence - snip cable]]]
+{
+  (set: $fenceSqueezed to true)
+  (set: $badChoices to it +1)
+}
 
 ::Tent City - Fence - snip cable
-(set: $badChoices to it +1)\
+{
+  (if: $badChoices < 3)[(set: $tentCityFinale to "Neden militia finale")]
+  (else:)[(set: $tentCityFinale to "Leo finale")]
+}\
+My multi-tool had a couple of blades, in addition to a pretty tough pair of scissors/wire-cutters. I sawed through the plastic coating of the cable first with one of the blades, then went to work on the cable itself.
+
+It took a few passes, but at last the cable snapped and the lock fell to the ground. The gate squeaked a bit as I eased through it, then [[set off through the next section of the Tarps beyond|Tent City - $tentCityFinale]].
+
+::Tent City - Neden militia finale
+Bad choices: $badChoices
+Neden militia! Good for you.
+
+::Tent City - Leo finale
+Bad choices: $badChoices
+Leo time!
