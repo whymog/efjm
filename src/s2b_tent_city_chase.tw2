@@ -73,7 +73,46 @@ I snatched a flyer from his hand. “Okay padre, I got my golden ticket to the h
 Even trying, I could only fake being gung-ho badly, but if he could tell he didn’t show. Just wordlessly grinned at me with his wet, shiny teeth as I [[scampered across the path and back into the shadows|Tent City - $nextScene]].
 
 ::Tent City - Rip's Rydas
-Rip's Rydas
+I tried to blend in as I made my way through one of the tidier sections of the tarps. People in these rows were nosy and suspicious of anything that looked like trouble.
+
+(click: "looked like trouble")[Sure enough, down the street I spotted a goon from the neighborhood’s foot patrol, Rip’s Rydas. He’d zeroed in on me and was making a beeline my way. He hadn’t even made it halfway over to me, and already I could see the dude’s gin blossoms were looking red & angry.
+
+>> [[Beg for help|Tent City - Rip's Rydas - beg for help]]
+>> [[Ask directions|Tent City - Rip's Rydas - ask directions]]
+>> [[Play trick|Tent City - Rip's Rydas - play trick]]
+>> [[Just bolt|Tent City - Rip's Rydas - just bolt]]
+
+::Tent City - Rip's Rydas - beg for help
+“Oh, thank fucking J. Listen man, you gotta help me. I’m trying to ditch this psycho loser who’s chasing my ass like a fucking dog.”
+
+“Oh yeah?” the Ryda said, gripping his nightstick. “This creepazoid gots a name, ‘lette?”
+
+“Leo, and he—”
+
+“What, Leo? Big Leo?” he interrupted, getting defensive. “I know that Leo; he ain’t a psycho loser! I means, maybe he’s messed up on something — you knows how he is. Youse wait here with me, and when Leo shows up we gets this shit figured out.”
+
+I protested, but the Ryda held his ground. Fortunately, I was faster, and I [[broke away running|Tent City - Pack of stray dogs]].
+
+::Tent City - Rip's Rydas - ask directions
+“I’m all turned around in here, man,” I said. “These ain’t my tarps, and I just need to get outta here to the Gutter.”
+
+“Nahhh,” he said, standing a couple paces away. “Youse can’t get to the Gutter from here; them rows is all fucked up. I mean, youse could go back around them hippie tents in Mirkwood, and then maybe cut through the Boneyard, but then again they’s dug that shit-ditch through there so instead youse hafta—”
+
+My mind blanked out completely. Jesus, getting this guy started was clearly a mistake.
+
+I held up a finger and smiled before [[ducking to the side and running as fast as my legs could carry me|Tent City - Pack of stray dogs]].
+
+::Tent City - Rip's Rydas - play trick
+(set: $goodChoices to it +1)\
+I screwed up my face into something I hoped conveyed pure terror. “Oh, shit! Look over there!”
+
+The big oaf spun to look in the direction I pointed, and by the time he spun back, [[I’d ghosted|Tent City - Pack of stray dogs]]. All the homies on this row just had to be sleepin’ easy with this dude on the case.
+
+::Tent City - Rip's Rydas - just bolt
+(set: $goodChoices to it +1)\
+“What am I even doing?” I wondered aloud.
+
+I broke into a sprint and [[tore off straight by him|Tent City - Pack of stray dogs]]. He offered a wheezy “Hey!” as I raced by, but by the time my brain put the sound back together in my head, he was eating a three-course meal of my dust.
 
 ::Tent City - Ornery Kids
 Ornery Kids
