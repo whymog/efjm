@@ -80,7 +80,7 @@ I tried to blend in as I made my way through one of the tidier sections of the t
 >> [[Beg for help|Tent City - Rip's Rydas - beg for help]]
 >> [[Ask directions|Tent City - Rip's Rydas - ask directions]]
 >> [[Play trick|Tent City - Rip's Rydas - play trick]]
->> [[Just bolt|Tent City - Rip's Rydas - just bolt]]
+>> [[Just bolt|Tent City - Rip's Rydas - just bolt]]]
 
 ::Tent City - Rip's Rydas - beg for help
 “Oh, thank fucking J. Listen man, you gotta help me. I’m trying to ditch this psycho loser who’s chasing my ass like a fucking dog.”
@@ -115,4 +115,59 @@ The big oaf spun to look in the direction I pointed, and by the time he spun bac
 I broke into a sprint and [[tore off straight by him|Tent City - Pack of stray dogs]]. He offered a wheezy “Hey!” as I raced by, but by the time my brain put the sound back together in my head, he was eating a three-course meal of my dust.
 
 ::Tent City - Ornery Kids
-Ornery Kids
+I kept pushing through the tents, making my way to a run-down section I knew was mostly abandoned. Fewer people meant fewer chances to have my location given away.
+
+The tents around me were charred and partly melted, the traces of a campfire that had gotten wildly out of hand a few weeks back. With the area deserted, I moved out onto the path and broke into a jog to try and make better time than Leo could, wherever he was.
+
+I was halfway through when I almost tripped over a shiny tin can sitting on a block of wood in the middle of the path. I kicked it off into the debris of a ruined shack on the left, and a handful of shiny stones spun out of it as it sailed through the air.
+
+(click: "it sailed through the air")[In response, I heard a cartoonish owl call sound out from a burnt-out tent on my right, and a dozen kids flooded out of the blackened hovels to surround me.
+
+“That was for our game, assface!” one of the kids in front said. “Now we gotta start all over.”
+
+>> [[Boss around|Tent City - Ornery Kids - boss around]]
+>> [[Play along|Tent City - Ornery Kids - play along]]
+>> [[Act dumb|Tent City - Ornery Kids - act dumb]]
+>> [[Tattle tale|Tent City - Ornery Kids - tattle tale]]]
+
+::Tent City - Ornery Kids - boss around
+“Just scram, pipsqueaks,” I said, walking right up to the kid in front. “Grown-up coming through.”
+
+The kid in front crossed his arms and didn’t budge. “You don’t scare us. There’s just one of you, and we know how to mess you up.” He looked to a couple of the kids behind him. “Go get the can set up again while we deal with this juggaho.”
+
+I flipped the bird at the little punk and [[started running again|Tent City - Pack of stray dogs]].
+
+::Tent City - Ornery Kids - play along
+(set: $goodChoices to it +1)\
+“Wait, don’t tell me you guys were playing ghost ninja?” I said, trying to sound shocked. “That game is for babies! I figured somebody was playing skull-kick, and thought I’d take a crack.”
+
+“No. What’s skull-kick?” asked a different kid, a girl. “It sounds stupid,” chimed in the ‘assface’ kid.
+
+“Doesn’t matter now, does it? Anyway, skull-kick is pretty dangerous, and I didn’t realize you guys were so little. If you guys were playing ghost ninja, that means I need to go on a time-out for spilling the can, right?”
+
+(click: "time-out")[“Yeah, it’s over there.” The same girl pointed further down the path, to where a small wooden crate sat overturned, with “STUPID” spray-painted on it. “You gotta go sit on the Stupid Stool.”
+
+I nodded, and made my way over to the crate. I sat down and watched as the kids went hunting for the can and the shiny colored stones for each team. They looked my way a couple times; I did my best to look bored as I tossed gravel at a broken TV. When they started squabbling over how many stones to put back in the can, I saw my moment and [[slipped away|Tent City - Pack of stray dogs]], back into the cover of the tents around us.]
+
+::Tent City - Ornery Kids - act dumb
+(set: $goodChoices to it +1)\
+“Oh, geez. That was your can? Sorry, I just thought it was trash. Wait—” I interrupted myself, “You can play a game with a can?” I hammed it up as much as I could, acting like I hadn’t played and invented dozens of can-games when I was little.
+
+“Pshh, grown-ups don’t know anything,” sighed another kid. “You can use a can for all kinds of games, dumbo! Look: two teams, both of ‘em hide, and you try to throw in your rocks without the other team seein’ ya.” The girl demonstrated by hiding behind a bunch of charred lumbering and arcing some stones toward the wooden plank where the can had sat.
+
+“Wow. That’s so cool! Just rocks and a can.” I shook my head. “I had no idea. Well, I gotta keep going. Is it alright if I tell that game to some kids I know?”
+
+“Sure, I guess,” the girl said, looking confused. “There’s kids who don’t know how to play ghost ninja?”
+
+“Haha, fuckin’ lame!” shouted the boy who’d called me ‘assface’. “You should tell those kids to come play us, we’ll cream ‘em!”
+
+The kids started laughing and describing the ways they’d embarrass and defeat the kids I knew (nonexistent) in graphic detail. As soon as it seemed like they forgot about me entirely, I [[peaced out|Tent City - Pack of stray dogs]] before any of them could think to notice me again.
+
+::Tent City - Ornery Kids - tattle tale
+“Start over? Nuh-uh, I think it’s bedtime, kiddos.” I singled out a girl close-by. “Does your mom know you’re out here, at this time of night? Because if she doesn’t, she’s gonna in about two minutes.”
+
+The little girl stuck her chin out. “My mommy’s dead, assface. We play out here all the time, Daddy has his friends over and they tell us to shoo.”
+
+“Yeah!” agreed the other kid, the boy who’d piped up first. “Now how about you pick up your ass and go get that can?”
+
+I heaved an exaggerated sigh, stomped over to the can, hucked it straight at assface-kid's head, and [[started running again|Tent City - Pack of stray dogs]].
