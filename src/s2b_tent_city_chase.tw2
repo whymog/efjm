@@ -226,9 +226,12 @@ I tore a belt loop on my pants, forcing my way through a tumble of scrap wood An
 >> [[Growl savagely|Tent City - Pack of stray dogs - growl savagely]]
 >> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
 (if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]]
+{
+  (set: $dogsFakedOut to false)
+  (set: $dogsGrowledAt to false)
+}
 
 ::Tent City - Pack of stray dogs - yank flank
-(set: $badChoices to it +1)\
 The poor fuckers looked so hungry, it was hard not to feel bad for them. It was pushing my luck, but I sprinted into the middle of the still spread-out pack to where the hunk of meat hung from the roof, and tore it free.
 
 I chucked it over toward the mouth of tunnel I’d just crawled out of. The dogs fell on it instantly. While they were tearing the meat to ribbons with gusto, I smiled. For a second I’d let myself imagine it was Leo.
@@ -242,7 +245,15 @@ A couple of heads turned, but otherwise none of them moved. In another second, a
 
 Shit.
 
-I hauled ass away from the dogs. After a few terrifying moments, I got my bearings and [[kept running|Tent City - Fence]].
+>> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]\
+(if: $dogsGrowledAt is false)[
+>> [[Growl savagely|Tent City - Pack of stray dogs - growl savagely]]]
+>> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
+(if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]
+{
+  (set: $badChoices to it +1)
+  (set: $dogsFakedOut to true)
+}
 
 ::Tent City - Pack of stray dogs - growl savagely
 These mutts all looked and acted pretty feral. Probably all of them were the great-grandpups of labradors that got ambitious enough to try humping a coyote or whatever. I decided to try speaking their language.
@@ -251,10 +262,17 @@ I dropped to all fours, snarled, then gave ‘em my best howl. “Arrrooooouuuuu
 
 Nothing. Tough crowd.
 
-A couple of the dogs started advancing on me again. I backed off slowly, then [[booked it down the nearest alleyway|Tent City - Fence]].
+>> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]\
+(if: $dogsFakedOut is false)[
+>> [[Throw fake-out|Tent City - Pack of stray dogs - throw fake-out]]]
+>> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
+(if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]]
+{
+  (set: $badChoices to it +1)
+  (set: $dogsGrowledAt to true)
+}
 
 ::Tent City - Pack of stray dogs - speak softly
-(set: $badChoices to it +1)\
 “You pups look like you’ve seen some rough days,” I said softly, gathering myself into a crouch and holding out my hand toward the nearest dog, palm down. “Yeah? Is that right?”
 
 I held still for what felt like an agonizingly long time. I was only too aware that Leo was still out in the tarps somewhere, on my trail.
@@ -262,7 +280,6 @@ I held still for what felt like an agonizingly long time. I was only too aware t
 At last, the dog took a few steps closer to sniff my hand, then nuzzled & licked it. The mood of the pack shifted to match that of my new friend, and I found myself surrounded by dozens of wagging tails and lolling tongues happily letting me [[pass on my way|Tent City - Fence]].
 
 ::Tent City - Pack of stray dogs - brandish axe
-(set: $badChoices to it +1)\
 “Hey! Mutts! You know what this is?” I slipped my axe off the belt loop it hung from and held it high, catching some stray light and glinting.
 
 “This is my way of saying ‘Don’t fuck with me.’”
