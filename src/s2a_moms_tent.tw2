@@ -50,6 +50,8 @@ I kinda miss Scott. Wonder how he’s doing out there.
 
 I pulled a can of Redpop out of the box, cracked it open, and took [[a seat at the table|Mom's Tent - table]].
 
+(set: $faygoDrank to true)
+
 ::Mom's Tent - beer
 Ron’s pissy beer of choice: “The Great Milenkale”. It tastes worse than it smells, but given that I literally woke up in a toilet, I wasn’t feeling too choosy.
 
@@ -73,10 +75,10 @@ Anna’s disappearance was all I could think about, but it felt good to sit stil
 ::Mom's Tent - table hub
 I sighed, took another swig, and stared around the room.
 
+{(if: $tableDetailsSeen is 3)[>>[[I kept staring into the distance until I realized I was looking straight at the support beam|Mom's Tent - support beam]].]}
 (if: $cigarettesViewed is false)[>>[[Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent - cigarettes]].]
 (if: $platesViewed is false)[>>[[The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent - plates]].]
 (if: $notepadViewed is false)[>>[[Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].]
-(if: $tableDetailsSeen is 3)[>>[[I kept staring into the distance until I realized I was looking straight at the support beam|Mom's Tent - support beam]].]
 
 ::Mom's Tent - cigarettes
 I saw another heap of stubbed-out cigarettes and a couple of empty fifths stacked in the center of the kitchen table. Mom and Ron must’ve been having another one of their long, idiotic arguments over who-knows-what — or maybe Ron had some of his shithead buddies over to watch this year’s Bloodymania match.
@@ -158,15 +160,22 @@ Focusing again, I remembered why I was here. My eyes darted around the room, pan
 ::Mom's Tent - journal
 I quickly rummaged through my shit to make sure it was how I left it. My journal was there, but the cash was gone. I must’ve had it on me last night when I got drugged. Did someone take it?
 
-Whatever. I grabbed the pack and quietly slipped it over my shoulder.
+No sign of the letter Anna said she'd leave either. Whatever. Not like I should trust the word of the person who locked me in a shitter anyway. I grabbed the pack and quietly slipped it over my shoulder.
 
 (click: "slipped it over my shoulder")[ <center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//[[**Journal obtained**|Mom's Tent - poster choice]]//</span>]]</center>]
 
 ::Mom's Tent - poster choice
 I looked up from where I’d found the bag and my eyes came to rest on a poster hanging over my bed. It read:
 
->>(link: "DOUBLE TROUBLE: Wicked Wrestlin’ Federation Invitational")[(set: $wrestling to true)(go-to: "Mom's Tent - looking at mom")]
->>(link: "Open Mic Battle Royale - TONIGHT ONLY")[(set: $rapping to true)(go-to: "Mom's Tent - looking at mom")]
+>>(link: "DOUBLE TROUBLE: Wicked Wrestlin’ Federation Invitational")[(set: $isWrestler to true)(go-to: "Mom's Tent - poster thoughts")]
+>>(link: "Open Mic Battle Royale - TONIGHT ONLY")[(set: $isRapper to true)(go-to: "Mom's Tent - poster thoughts")]
+
+::Mom's Tent - poster thoughts
+I gazed up at the poster and a sepia tone layed itself over my heart. I remembered meeting Anna (if: $isRapper is true)[on the mic](else:)[in the ring] and it made my heart sing and hurt in equal measure.
+
+When we were all about performing, didn't care what any fucker thought, those were better days. How did we even get here?
+
+God dammit. [[I had to find that girl|Mom's Tent - looking at mom]].
 
 ::Mom's Tent - looking at mom
 I turned to leave, but when I saw my mom’s face something caught in my chest. She looked so calm when she was asleep; nothing at all like the stressed-out megabitch I’d been living with the past few months.
@@ -213,7 +222,7 @@ I turned back to my desk, picked up a pencil, and began to write:
 (if: $letterWorried is true)[I’m worried about Anna. She slipped me something and straight-up disappeared on me last night. It’s not like her at all. I’m worried shit’s gone way wrong for her.](else:)[I just dropped by to get some of my stuff.]
 
 >>(link:"I know Anna’s in trouble, and I’ve gotta make sure she’s ok.")[(set: $letterTrouble to true)(go-to: "Mom's Tent - letter to mom 5")]
-(if $beerDrank is true)[>>[[I drank some of Ron’s Milenkale. Be sure to let him know it was me.|Mom's Tent - letter to mom 5]]](else:)[>>[[I drank some of Ron’s Faygo. Be sure to let him know it was me.|Mom's Tent - letter to mom 5|Mom's Tent - letter to mom 5]]]
+(if: $beerDrank is true)[>>[[I drank some of Ron’s Milenkale. Be sure to let him know it was me|Mom's Tent - letter to mom 5]].](else:)[>>[[I drank some of Ron’s Faygo. Be sure to let him know it was me|Mom's Tent - letter to mom 5]].]
 
 ::Mom's Tent - letter to mom 5
 (if: $letterHey is true)[Hey](else:)[Hey Mom,]
@@ -269,16 +278,20 @@ And I heard something that made my heart nearly pop out of my chest.
 
 (click: "Leo")[I heard the front flap of our tent open up. Fuck. He’s here.]
 
-(click: "He's here"[No time to think; I had to get out, now.]
+(click: "He’s here")[No time to think; I had to get out, now.]
 
 (click: "get out")[With my hands trembling,
 
->>(link: "I swiped the multitool off my desk.")[(set: $multitool to true)(go-to: "Mom's Tent - finale")]
->>(link: "I snatched my trusty hatchet off the floor")[(set: $hatchet to true)(go-to: "Mom's Tent - finale")]
+>>(link: "I swiped the multitool off my desk.")[(set: $multitool to true)(go-to: "Mom's Tent - tool obtained")]
+>>(link: "I snatched my trusty hatchet off the floor")[(set: $hatchet to true)(go-to: "Mom's Tent - tool obtained")]
 ]
 
+::Mom's Tent - tool obtained
+{(if: $multitool is true)[<center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//[[**Multitool obtained**|Mom's Tent - finale]]//</span>]]</center>]
+(else:)[<center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//[[**Hatchet obtained**|Mom's Tent - finale]]//</span>]]</center>]}
+
 ::Mom's Tent - finale
-Fuck. He's right here.
+Fuck. As soon as I gripped the (if: $multitool is true)[tool](else:)[hatchet's handle] I could hear his loud searching noises approaching the tarp.
 
 No time to waste. I slashed at the rear tarp, ripping a gnarly hole right through the wall of my room. Loud enough to wake the dead.
 
