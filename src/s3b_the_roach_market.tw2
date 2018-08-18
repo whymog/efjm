@@ -1,18 +1,18 @@
 <!-- If using debug menu shortcuts, prompts player to enter their name before beginning initial Roach Market sequence -->
 ::RM-first-entrance-nameprompt
 { (set: $playerName to (prompt: "Enter name:", ""))
-(if: (text: $playerName)'s length > 1)[Right, my name is $playerName. [[Moving on|RM-first-entrance]].<!-- what this code does is check the ending of the custom $playerName string to hopefully pluralize it properly -->{
+(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|RM-first-entrance]].<!-- what this code does is check the ending of the custom $playerName string to hopefully append the correct pluralization to it -->{
   (if: $playerName's last is "s")[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else:)[
-    (set: $playerNames to ($playerName + "s"))
+    (set: $playerNamePlural to ($playerName + "s"))
   ]
 }]
 }(else:)[No, [[that's not right|RM-first-entrance-nameprompt]].]
@@ -32,6 +32,16 @@ As I made my way back into the Roach Market, I could see Dopeman Dan was no long
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
 > [[Head to the junk heap|RM-junkheap-entrance]]
 
+<!-- Short scene if the player decides to return to The Stash while still exploring the Roach Market -->
+::RM-DopemanDan-return
+There was no sign of Dan. He probably had either passed out, or left briefly on one of his “snack quests” to the nearby landfill.
+
+I thought about poking my nose into The Stash for a free score on my own terms... then remembered all the folks in Gatherville who’d tried the same thing and lost a finger to Dan’s hatchet in the bargain. Better not push my luck.
+
+> [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
+> [[Head to the junk heap|RM-junkheap-entrance]]
+> [[Head to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)<br>
+
 ::RM-DopemanDan-greeting
 “Hey, $playerName!” Dan called out. “Yo yo yo, slow down girl! Dopeman Dan got sumthin’ with your name on it.” He was on his feet and in my way in a flash; surprisingly quick for a guy who was, at the very least, perpetually half-stoned.
 
@@ -40,14 +50,20 @@ As I made my way back into the Roach Market, I could see Dopeman Dan was no long
 ::RM-DopemanDan-blocks-path
 “Whoa whoa whoa, what’s the damage, $playerName? What I done to deserve this, other than be the number-one hookup for anything and everything this side of Gatherville?” Dan said. “You cuss out Santa like that too, when he come down your chimney?”
 
-"Who the hell you ever seen got a tarp with a chimney, Dan?" I sassed back. Then I sighed. “Dan, whatever you’re slinging— just leave me the fuck alone, dude. Jaysus.”
+"Who the hell you ever seen got a tarp with a chimney, Dan?" I sassed back. Then I sighed. “Dan, whatever you’re slinging— just leave me the fuck alone, dude. Jaysus.”(click: "Jaysus")[
+  (transition: "dissolve") +(transition-time: 3s)[
+  Dan rolled his eyes. “Look, ‘lette, I ain’t lyin’. Dopeman’s got some shit with your name on it, see?” He fished a brown paper bag out of his pocket and dangled it in front of me.
 
-Dan rolled his eyes. “Look, ‘lette, I ain’t lyin’. Dopeman’s got some shit with your name on it, see?” He fished a brown paper bag out of his pocket and dangled it in front of me. <i><b>PICKUP: $playerName</b></i> was written on it in black marker. “And I never known nobody to turn down shit that was already paid for.”
+  <i><b>PICKUP: $playerName</b></i>
 
-“Uhh, that isn’t mine, dude. Must be some other $playerName came by here. [[Go bug them, okay?|RM-DopemanDan-choice]]”
+  was written on it in black marker. “And I never known nobody to turn down shit that was already paid for.”
+
+  “Uhh, that isn’t mine, dude. Must be some other $playerName came by here. [[Go bug them, okay?|RM-DopemanDan-choice]]”
+  ]
+]
 
 ::RM-DopemanDan-choice
-“Nah nah nah, it’s you, girl. Just how many $playerNames you think I know? Anyway, I know you didn’t buy this shit; Anna did. Said she’d send you by to pick it up, and here you are, so—” he thrust the bag toward my arms— “pick this shit <i>up</i>, girl. Leave Dopeman Dan in peace, all right? Goddamn!”
+“Nah nah nah, it’s you, girl. Just how many $playerNamePlural you think I know? Anyway, I know you didn’t buy this shit; Anna did. Said she’d send you by to pick it up, and here you are, so—” he thrust the bag toward my arms— “pick this shit <i>up</i>, girl. Leave Dopeman Dan in peace, all right? Goddamn!”
 
 > [[“Fine, great. I’ll play drug mule for you and Anna, just leave me alone.”|RM-DopemanDan-leave-alone]]
 > [[“That doesn’t sound like Anna, but whatever. Hand ‘em over. Free drugs is free drugs.”|RM-DopemanDan-free-drugs]]
@@ -69,77 +85,108 @@ Dan cackled. “Hell yeah! Now you’re talking words Dopeman understands.” He
 
 I unrolled the top and peeked inside. “Wow. This is, uh, a pretty full bag.”
 
-“Yeah, dawg. I figure she was either getting herself set up for a sweet-ass month or one fuckin’ buckwild night.”
+“Yeah, dawg. I figure she was either getting herself set up for a sweet-ass month or one fuckin’ buckwild night.”(click: "buckwild night")[
+  (transition: "dissolve") +(transition-time: 3s)[
+  I was about to ask Dan if this was a regular thing for Anna, but then I thought better of it. I didn’t want him to think he had anything to say about her that I didn’t already know.
 
-I was about to ask Dan if this was a regular thing for Anna, but then I thought better of it. I didn’t want him to think he had anything to say about her that I didn’t already know.
+  “Well, cool, man. With a haul like this, I bet she’d never notice if a little went missing.” I winked at him.
 
-“Well, cool, man. With a haul like this, I bet she’d never notice if a little went missing.” I winked at him.
+  Dan tapped the side of his nose with his finger. “Trip in peace, my ‘lette. Dopeman ain’t never snitched on nobody.”
 
-Dan tapped the side of his nose with his finger. “Trip in peace, my ‘lette. Dopeman ain’t never snitched on nobody.”
+  I nodded, and made my way deeper into the Roach Market.
 
-I nodded, and made my way deeper into the Roach Market.
-
-> [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
-> [[Head to the junk heap|RM-junkheap-entrance]]
+  > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
+  > [[Head to the junk heap|RM-junkheap-entrance]]
+  ]
+]
 
 <!-- If using debug menu shortcuts, prompts player to enter their name before beginning Auntie's gift shop sequence -->
 ::RM-giftshop-entrance-nameprompt
 { (set: $playerName to (prompt: "Enter name:", ""))
 (if: (text: $playerName)'s length > 1)[Right, my name is $playerName. [[Moving on|RM-giftshop-entrance]].<!-- what this code does is check the ending of the custom $playerName string to hopefully pluralize it properly -->{
   (if: $playerName's last is "s")[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else:)[
-    (set: $playerNames to ($playerName + "s"))
+    (set: $playerNamePlural to ($playerName + "s"))
   ]
 }]
 }(else:)[No, [[that's not right|RM-giftshop-entrance-nameprompt]].]
 
 ::RM-giftshop-entrance
-{(set: $spokeToToe to true) <!-- forcing this to true for initial testing -->
-(if: $giftshopVisited is true)[
-<!-- alternate intro if revisiting the gift shop scene -->I was back in Auntie’s: her combination gift shop, living room, and bedroom, with cheap wire racks all around. Auntie was plopped in the middle of it all just like before, watching TV from her recliner. I think <i>Big Money Rustlas</i> was on. She loved the oldies.
-]
-(else:)[
-<!-- gift shop intro on first visit -->
-  (set: $giftshopVisited to true)
-Auntie’s “gift shop” was also her living room. And bedroom, I guess, since she usually fell asleep in the threadbare recliner she had set up in a clearing in the middle of everything. She kept the merchandise in cheap wire shelves standing in neat rows all around her, and she kept herself plopped in a chair watching a flickery TV. She had an end table on her right side, where a lamp with a yellowing shade sat on an honest-to-god white doily.
-<br><br>
-It didn’t feel like a home, and it didn’t really seem like a store either. I guess it was something new Auntie invented.
-]}{(if: $spokeToToe is true and $gameOfChance is 0)[
-<!-- if the player HAS talked to Toe & knows they need to get a game of chance -->Looking around the racks, I saw three good possibilities to help me win Toe over:
+{
+  (set: $spokeToToe to true) <!-- forcing this to true for initial testing -->
+  (if: $giftshopVisited is true)[
+    <!-- alternate intro if revisiting the gift shop scene -->I was back in Auntie’s: her combination gift shop, living room, and bedroom, with cheap wire racks all around. Auntie was plopped in the middle of it all just like before, watching TV from her recliner. I think <i>Big Money Rustlas</i> was on. She loved the oldies.<br>(click: " oldies")[
+      (transition: "dissolve") +(transition-time: 3s)[
+          (display: "RM-giftshop-entrance-part2")
+      ]
+    ]
+  ]
+  (else:)[
+    <!-- gift shop intro on first visit -->
+    (set: $giftshopVisited to true)
+    Auntie’s “gift shop” was also her living room. And bedroom, I guess, since she usually fell asleep in the threadbare recliner she had set up in a clearing in the middle of everything. She kept the merchandise in cheap wire shelves standing in neat rows all around her, and she kept herself plopped in a chair watching a flickery TV. She had an end table on her right side, where a lamp with a yellowing shade sat on an honest-to-god white doily.
+    <br><br>
+    It didn’t feel like a home, and it didn’t really seem like a store either. I guess it was something new Auntie invented.<br>(click: " invented")[
+      (transition: "dissolve") +(transition-time: 3s)[
+          (display: "RM-giftshop-entrance-part2")
+      ]
+    ]
+  ]
+}
+
+::RM-giftshop-entrance-part2
+{
+  (if: $spokeToToe is true and $gameOfChance is 0)[
+    (display: "RM-giftshop-gamedescriptions")
+  ]
+  (else-if: ($spokeToToe is true and $gameOfChance is "dice set") or ($spokeToToe is true and $gameOfChance is "dominoes") or ($spokeToToe is true and $gameOfChance is "pen-knife"))[
+    (display: "RM-giftshop-tradecomplete")
+  ]
+  (else:)[
+    (display: "RM-giftshop-deadend")
+  ]
+}
+
+::RM-giftshop-gamedescriptions
+<!-- if the player HAS talked to Toe & knows they need to get a game of chance -->{Looking around the racks, I saw three good possibilities to help me win Toe over:
 <br><br>
 A dice set.<br> (click: "dice set")[<div style="margin-left: 50px;">Toe had a couple games stashed behind the counter, but drunks always made off with the dice. Anna & I used to play liar’s dice, and Toe was a shitty liar when he knew he was being watched. Easy pickings.</div>]
 Some dominoes.<br> (click: "dominoes")[<div style="margin-left: 50px;">I wasn’t sure if Toe had ever seen dominoes— or even knew how to play. Advantage: me.</div>]
 A pen knife.<br> (click: "pen knife")[<div style="margin-left: 50px;">When Ron got drunk enough, sometimes he used to challenge me to games of five-finger fillet. Mostly I think he just wanted a way see me bleed that he could blame on me being stupid.
 
 But like I said: he <i>used to</i> do that. I practiced to spite the asshole, and I got good enough to beat him every time. The last time he tried to keep up with me, he ended up with a left thumb that never worked quite right ever again.</div>]
-<br><br>
-I didn’t really have much to trade with. You could find a soft-spot in Auntie sometimes, but it was tricky. I knew I better play it safe and just ask for one thing.(click: "just ask for one thing")[(transition: "dissolve") +(transition-time: 3s)[
-<br><br>
-I set my sights on the…<br>
-> [[Dice set.|RM-giftshop-start-trade]](click: "Dice set.")[(set:$gameOfChance to "dice set")]<br>
-> [[Dominoes.|RM-giftshop-start-trade]](click: "Dominoes.")[(set:$gameOfChance to "dominoes")]<br>
-> [[Pen-knife.|RM-giftshop-start-trade]](click: "Pen-knife.")[(set:$gameOfChance to "pen-knife")]]]]
-(else-if: ($spokeToToe is true and $gameOfChance is "dice set") or ($spokeToToe is true and $gameOfChance is "dominoes") or ($spokeToToe is true and $gameOfChance is "pen-knife"))[
-<br><br>She was also hollering at me without turning around as soon as I set foot inside.
-<br><br>
+<br>
+I didn’t really have much to trade with. You could find a soft spot in Auntie sometimes, but it was tricky. I knew I better play it safe and only ask for one thing.(click: " one thing")[
+  (transition: "dissolve") +(transition-time: 3s)[
+    <br>
+    I set my sights on the…<br>
+    > [[Dice set.|RM-giftshop-start-trade]](click: "Dice set.")[(set:$gameOfChance to "dice set")]<br>
+    > [[Dominoes.|RM-giftshop-start-trade]](click: "Dominoes.")[(set:$gameOfChance to "dominoes")]<br>
+    > [[Pen-knife.|RM-giftshop-start-trade]](click: "Pen-knife.")[(set:$gameOfChance to "pen-knife")]
+  ]
+]}
+
+::RM-giftshop-tradecomplete
+She was also hollering at me without turning around as soon as I set foot inside.
+
 “You already got what ya came for, $playerName, now git! No window-shoppin’ for folks with nothin’ to trade. Besides, this right here is my favorite part.” Auntie let out a low chuckle as <i>`[insert randomly rolled event from Big Money Rustlas here]`</i>.
-<br><br>
-> [[Head back to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)<br>
+
+> [[Head to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)
 > [[Head to the junk heap|RM-junkheap-entrance]]
-]
-(else:)[
+> [[Head to The Stash|RM-DopemanDan-return]]
+
+::RM-giftshop-deadend
 <!-- if the player has NOT talked to Toe yet, or doesn't know they need to get a game of chance -->I didn’t really have much to trade with. I could maybe swing one thing if I sweet-talked Auntie a bit, but I didn’t want to cash that chip in until I had to.
 <br><br>
 Nothing jumped out at me that I just needed to have, so I wandered the racks for a few minutes, window shopping in silence — which suited Auntie just fine. I don’t think she even moved once in her chair.
-]}
 
 ::RM-giftshop-start-trade
 “Hey Auntie. Weird question: could I borrow the $gameOfChance you got here? I don’t need it for very long. Just to prove a point to a dick.” I considered for a moment. “Well, not a dick, I guess. A Toe.”
@@ -156,7 +203,7 @@ and felt around. “Um, I’ve got a wooden nickel left for the dinner bell late
 
 “Honey, that’s too pretty a bauble to just be giving away for some beat-up ol’ $gameOfChance. Best ya keep it. Or at least, save it for the day ya make a trade ‘n ya need it somethin’ terrible.”
 
-“Besides,” she continued, squinting through her lenses, “looks like it got <i>‘to $playerName’</i> engraved on it. Auntie needs things she can sell to more than just the $playerNames of Tent City, y’hear?”
+“Besides,” she continued, squinting through her lenses, “looks like it got <i>‘to $playerName’</i> engraved on it. Auntie needs things she can sell to more than just the $playerNamePlural of Tent City, y’hear?”
 
 I nodded. I’d have to come up with something else. I put my hands in my pockets and felt around.(click:"felt around")[(transition: "dissolve") +(transition-time: 3s)[
 
@@ -176,22 +223,23 @@ I nodded. I’d have to come up with something else. I put my hands in my pocket
 
 > [[Head back to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)
 > [[Head to the junk heap|RM-junkheap-entrance]]
+> [[Head to The Stash|RM-DopemanDan-return]]
 
 <!-- If using debug menu shortcuts, prompts player to enter their name before beginning the junk heap sequence -->
 ::RM-junkheap-entrance-nameprompt
 { (set: $playerName to (prompt: "Enter name:", ""))
 (if: (text: $playerName)'s length > 1)[Right, my name is $playerName. [[Moving on|RM-junkheap-entrance]].<!-- what this code does is check the ending of the custom $playerName string to hopefully pluralize it properly -->{
   (if: $playerName's last is "s")[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
-    (set: $playerNames to ($playerName + "es"))
+    (set: $playerNamePlural to ($playerName + "es"))
   ]
   (else:)[
-    (set: $playerNames to ($playerName + "s"))
+    (set: $playerNamePlural to ($playerName + "s"))
   ]
 }]
 }(else:)[No, [[that's not right|RM-junkheap-entrance-nameprompt]].]
@@ -207,12 +255,13 @@ Everybody wanted or needed something from the heap sooner or later, and only rea
 
 ::RM-junkheap-stuff
 Dead car batteries—
-Rusty hatchets left outside the night before a surprise storm—
-Bent folding chairs sporting dried bloodstains—
-Old-school Psychopathic t-shirts and Hatchet Gear ninjas had gotten too fat or skinny for—
-Rows and rows of cracked commemorative bongs with airbrushed Wicked Clown artwork (“<i>Violent J, 1972-20XX, Rest In Paint</i>”).
+<div style="margin-left: 20px;">Rusty hatchets left outside the night before a surprise storm—
+<div style="margin-left: 20px;">Bent folding chairs sporting dried bloodstains—
+<div style="margin-left: 20px;">Old-school Psychopathic t-shirts and Hatchet Gear ninjas had gotten too fat or skinny for—
+<div style="margin-left: 20px;">Rows and rows of cracked commemorative bongs with airbrushed Wicked Clown artwork (“<i>Violent J, 1972-20XX, Rest In Paint</i>”)</div></div></div></div>
+Then I got to the big table in the back corner, with a handwritten sign set on it labeled “<b>GOOD SHIT, YO</b>” in black-marker block letters — the one that started it all. Some rando stealth-ass ninja set up the very first table in the middle of the night with a bunch of dope shit, and that same table had been reserved for the cream of the shit-crop ever since.
 
-Then I got to the big table in the back corner, with a handwritten sign set on it labeled “<b>GOOD SHIT, YO</b>” in black-marker block letters — the one that started it all. Some rando stealth-ass ninja set up the very first table with a bunch of dope shit in the middle of the night, and that same table had been reserved for the cream of the shit-crop ever since. Scrawled in pencil along the bottom of the sign was the table’s motto: “<i>Leave good shit, take good shit.</i>”
+Scrawled in pencil along the bottom of the sign was the table’s motto: “<i>Leave good shit, take good shit.</i>”
 
 [[I took a look at today’s spread...|RM-junkheap-goodshit]]
 
