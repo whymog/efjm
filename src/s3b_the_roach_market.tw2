@@ -110,34 +110,34 @@ I nodded, and made my way deeper into the Roach Market.
 <!-- gift shop intro on first visit -->
   (set: $giftshopVisited to true)
 Auntie’s “gift shop” was also her living room. And bedroom, I guess, since she usually fell asleep in the threadbare recliner she had set up in a clearing in the middle of everything. She kept the merchandise in cheap wire shelves standing in neat rows all around her, and she kept herself plopped in a chair watching a flickery TV. She had an end table on her right side, where a lamp with a yellowing shade sat on an honest-to-god white doily.
-<p>
+<br><br>
 It didn’t feel like a home, and it didn’t really seem like a store either. I guess it was something new Auntie invented.
 ]}{(if: $spokeToToe is true and $gameOfChance is 0)[
 <!-- if the player HAS talked to Toe & knows they need to get a game of chance -->Looking around the racks, I saw three good possibilities to help me win Toe over:
-<p>
+<br><br>
 A dice set.<br> (click: "dice set")[<div style="margin-left: 50px;">Toe had a couple games stashed behind the counter, but drunks always made off with the dice. Anna & I used to play liar’s dice, and Toe was a shitty liar when he knew he was being watched. Easy pickings.</div>]
 Some dominoes.<br> (click: "dominoes")[<div style="margin-left: 50px;">I wasn’t sure if Toe had ever seen dominoes— or even knew how to play. Advantage: me.</div>]
 A pen knife.<br> (click: "pen knife")[<div style="margin-left: 50px;">When Ron got drunk enough, sometimes he used to challenge me to games of five-finger fillet. Mostly I think he just wanted a way see me bleed that he could blame on me being stupid.
 
 But like I said: he <i>used to</i> do that. I practiced to spite the asshole, and I got good enough to beat him every time. The last time he tried to keep up with me, he ended up with a left thumb that never worked quite right ever again.</div>]
-<p>
+<br><br>
 I didn’t really have much to trade with. You could find a soft-spot in Auntie sometimes, but it was tricky. I knew I better play it safe and just ask for one thing.(click: "just ask for one thing")[(transition: "dissolve") +(transition-time: 3s)[
-<p>
+<br><br>
 I set my sights on the…<br>
 > [[Dice set.|RM-giftshop-start-trade]](click: "Dice set.")[(set:$gameOfChance to "dice set")]<br>
 > [[Dominoes.|RM-giftshop-start-trade]](click: "Dominoes.")[(set:$gameOfChance to "dominoes")]<br>
 > [[Pen-knife.|RM-giftshop-start-trade]](click: "Pen-knife.")[(set:$gameOfChance to "pen-knife")]]]]
 (else-if: ($spokeToToe is true and $gameOfChance is "dice set") or ($spokeToToe is true and $gameOfChance is "dominoes") or ($spokeToToe is true and $gameOfChance is "pen-knife"))[
-<p>She was also hollering at me without turning around as soon as I set foot inside.
-<p>
+<br><br>She was also hollering at me without turning around as soon as I set foot inside.
+<br><br>
 “You already got what ya came for, $playerName, now git! No window-shoppin’ for folks with nothin’ to trade. Besides, this right here is my favorite part.” Auntie let out a low chuckle as <i>`[insert randomly rolled event from Big Money Rustlas here]`</i>.
-<p>
+<br><br>
 > [[Head back to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)<br>
 > [[Head to the junk heap|RM-junkheap-entrance]]
 ]
 (else:)[
 <!-- if the player has NOT talked to Toe yet, or doesn't know they need to get a game of chance -->I didn’t really have much to trade with. I could maybe swing one thing if I sweet-talked Auntie a bit, but I didn’t want to cash that chip in until I had to.
-<p>
+<br><br>
 Nothing jumped out at me that I just needed to have, so I wandered the racks for a few minutes, window shopping in silence — which suited Auntie just fine. I don’t think she even moved once in her chair.
 ]}
 
