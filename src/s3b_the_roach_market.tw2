@@ -192,10 +192,10 @@ Nothing jumped out at me that I just needed to have, so I wandered the racks for
 “Hey Auntie. Weird question: could I borrow the $gameOfChance you got here? I don’t need it for very long. Just to prove a point to a dick.” I considered for a moment. “Well, not a dick, I guess. A Toe.”
 
 “Hmmm,” Auntie said, scratching her chin in an exaggerated way without moving her eyes away from the TV. “Hmm. I don’t call this my gift shop because I’m giving it all away, dearie. What’s $playerName brought for Auntie?”
-
-> I put my hand to my neck—(click:"I put my hand to my neck—")[(transition: "dissolve") +(transition-time: 3s)[
+<!-- the replace code below will disappear the other option, as soon as either is clicked -->
+[> I put my hand to my neck—]<necklaceOption|(click:"I put my hand to my neck—")[(replace: ?woodenNickelOption)[](transition: "dissolve") +(transition-time: 3s)[
 & tugged out a thin gold chain with a dangling charm. “Well, I’ve got this necklace Anna gave me when we were kids. She said it was [[real gold|RM-giftshop-trade-necklace]].”]]
-> I put my hands in my pockets—(click:"I put my hands in my pockets—")[(transition: "dissolve") +(transition-time: 3s)[
+[> I put my hands in my pockets—]<woodenNickelOption|(click:"I put my hands in my pockets—")[(replace: ?necklaceOption)[](transition: "dissolve") +(transition-time: 3s)[
 and felt around. “Um, I’ve got a wooden nickel left for the dinner bell later. I heard it was sloppy joes, so I was gonna [[take a pass anyway|RM-giftshop-trade-nickel]].”]]
 
 ::RM-giftshop-trade-necklace
@@ -254,16 +254,17 @@ Everybody wanted or needed something from the heap sooner or later, and only rea
 [[I quickly skimmed through the dregs—|RM-junkheap-stuff]]
 
 ::RM-junkheap-stuff
-Dead car batteries—
-<div style="margin-left: 20px;">Rusty hatchets left outside the night before a surprise storm—
-<div style="margin-left: 20px;">Bent folding chairs sporting dried bloodstains—
-<div style="margin-left: 20px;">Old-school Psychopathic t-shirts and Hatchet Gear ninjas had gotten too fat or skinny for—
-<div style="margin-left: 20px;">Rows and rows of cracked commemorative bongs with airbrushed Wicked Clown artwork (“<i>Violent J, 1972-20XX, Rest In Paint</i>”)</div></div></div></div>
+[Dead car batteries—]<junkList1|(click: ?junkList1)
+[<div style="margin-left: 20px;">[Rusty hatchets left outside the night before a surprise storm—]<junkList2| </div>(click: ?junkList2)
+[<div style="margin-left: 40px;">[Bent folding chairs sporting dried bloodstains—]<junkList3| </div>(click: ?junkList3)
+[<div style="margin-left: 60px;">[Old-school Psychopathic t-shirts and Hatchet Gear ninjas had gotten too fat or skinny for—]<junkList4| </div>(click: ?junkList4)
+[<div style="margin-left: 80px;">[Rows and rows of cracked commemorative bongs with airbrushed Wicked Clown artwork (“<i>Violent J, 1972-20XX, Rest In Paint</i>”)]<junkList5| </div>(click: ?junkList5)[(transition: "dissolve") +(transition-time: 3s)[
 Then I got to the big table in the back corner, with a handwritten sign set on it labeled “<b>GOOD SHIT, YO</b>” in black-marker block letters — the one that started it all. Some rando stealth-ass ninja set up the very first table in the middle of the night with a bunch of dope shit, and that same table had been reserved for the cream of the shit-crop ever since.
 
 Scrawled in pencil along the bottom of the sign was the table’s motto: “<i>Leave good shit, take good shit.</i>”
 
 [[I took a look at today’s spread...|RM-junkheap-goodshit]]
+]]]]]]
 
 ::RM-junkheap-goodshit
 There was a [[small tin|RM-junkheap-tin]] with a hand-painted Hatchetman logo, a couple old [[video games|RM-junkheap-games]], a worn-down [[jewelry box|RM-junkheap-jewelry]], a stack of [[yellowing zines|RM-junkheap-zines]], some [[puppets|RM-junkheap-puppets]], a case of [[cassette tapes|RM-junkheap-tapes]], and a box of [[dog-eared paperback books|RM-junkheap-books]]. None of it looked like anything I needed, but then again I’ve always loved pawing through other people’s stuff.
