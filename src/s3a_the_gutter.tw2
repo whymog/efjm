@@ -257,7 +257,7 @@ I squinted through the Gutter's signature haze, trying to spot my next destinati
 >>[[I sighed and walked over to Ron|The Gutter - Ron]].
 >>[[I stood by the pool table and cleared my throat|The Gutter - Pool table]].
 >>[[I reluctantly moved closer to the Jukebox|The Gutter - Jukebox]].
->>[[I went straight to the ‘Lette’s Room|The Gutter - Bathroom]].
+>>(if: $bathroomVisited is true)[](else:)[[[I went straight to the ‘Lette’s room|The Gutter - Bathroom]].]
 >>(link: "I went back outside")[(set: $justLeftTheGutter to true)(go-to: "The Gutter - Outside hub")].
 
 ::The Gutter - Bar
@@ -270,6 +270,99 @@ I squinted through the Gutter's signature haze, trying to spot my next destinati
 ::The Gutter - Jukebox
 
 ::The Gutter - Bathroom
+Fuck this place, fuck this smoke, fuck these people.
+
+I tromped through the bar's blue clouds and gave the door to the 'Lettes room two sharp raps before barreling in. With a crowd like the one out there, it was pretty unlikely that anyone was inside.
+
+And yup — as I turned the handle and swung the door, the bathroom stood empty. I closed the door tight behind me and kicked the stopper in under the bottom edge.
+
+Next best thing to a lock if you were cheap as fuck. And anyway, bartender still needed to be able to make sure ninjas weren't getting [[wet and wild on the fucking shitter|The Gutter - Bathroom - Puke timer]].
+
+::The Gutter - Bathroom - Puke timer
+As soon as I turned away from the door, I (live: 1s)[(if: time > 8s)[$dissolve[[[started puking into the toilet|The Gutter - Bathroom - Toilet puke]]]]
+\(else:)[$dissolve[[[started puking on myself|The Gutter - Bathroom - Sink puke]](stop:)]]].
+
+(set: $mirrorSeen to false)(set: $toiletflashbackSeen to false)(set: $bathroomVisited to true)
+
+::The Gutter - Bathroom - Toilet puke
+I barely propped the toilet lid open fast enough to hit the mark. I barfed a strong, hateful stream into the bowl.
+
+When I was finished I was gasping, like I’d been punched in the gut. This night was all too much. Anna gone, maybe dead already. I’ve been drugged, chased, and now I’ve gotta ask my questions with puke on my breath.
+
+I wiped my mouth with the back of my hand. When this was over, I was gonna need a high the length of I-55 to deal.
+
+::The Gutter - Bathroom - Sink puke
+I spewed all over the floor, splashing on my feet, before I finally found the sink. I nearly filled it up with whatever needed out of me.
+
+When I was finished I was gasping, like I’d been punched in the gut. This night was all too much. Anna gone, maybe dead already. I’ve been drugged, chased, and now I’ve gotta ask my questions with puke on my shoes.
+
+I wiped my mouth with the back of my hand. When this was over, I was gonna need a high the length of I-55 to deal.
+
+(display: "The Gutter - Bathroom - Menu")
+
+(set: $sinkPuke to true)
+
+::The Gutter - Bathroom - Menu
+>>[[I headed back out into the din and dipshits|The Gutter - Inside hub]]
+(if: $mirrorSeen is false)[>>[[I was drawn to my reflection in the mirror|The Gutter - Bathroom - Mirror]].]
+(if: $toiletflashbackSeen is false)[>>[[I sat on the toilet to catch my breath|The Gutter - Bathroom - Toilet flashback]].]
+
+::The Gutter - Bathroom - Mirror
+(set: $mirrorSeen as true)
+I gripped the edges of the counter a bit tighter. My face looked unfamiliar. The stranger’s eyes were weary, like they’d been hung with weights.
+
+“Hey. $playerName," the mirror stranger said, "You look pretty fucked up. Like somebody dosed you.”
+
+(click: "dosed")[$dissolve["Yeah, well. How about we skip the obvious and you give me a goddamn hand here?"]]
+
+(click: "give me a goddamn hand")[$dissolve[“A hand? HA! That’s richer than the fuckos in those nice trailers," The face got even nastier, contorting and screaming at me like a high wind.
+
+"How about you stop sobbing in the potty and find your friend? Are you gonna crumble this time you no-good bitch? You fucking idiot! How are you gonna handle when it all comes down? When the rubber hits the road?”]]
+
+(click: "rubber hits the road")[$dissolve[My jaw slacked and my lip quivered. I held my hand up and watched it tremble for a moment. But then, like Jay-sus settling the bubbles in a shook up bottle of Rock N Rye, my muscles went calm.]]
+
+(click: "calm")[$dissolve[I fixed myself into a battle stance and roared back, “I handle fine. I handle better! I ride steady and smooth like a ‘65 Cutlass at midnight with the headlights off and I’m COMING]]
+
+(click: "COMING")[THROUGH]
+
+(click: "THROUGH")[YOUR]
+
+(click: "YOUR")[FUCKING HOUSE!]
+
+(click: "FUCKING HOUSE!")[$dissolve[I heard a crunching at the edge of my perception.]]
+
+(click: "crunching")[$dissolve[I looked down to see the sink starting to shift out of the wall. I had to scramble to keep it in place.(if: $sinkPuke is true)[A bit of my puke sloshed onto my hand from the sink. Ugh.] I hadn’t realized how hard I’d been gripping it.]]
+
+(click: "gripping it")[$dissolve[The mirror stranger got me riled. She sure was a bitch, but she’s dead on. Funny how she’s fucking right as can be.
+
+(display: "The Gutter - Bathroom - Menu")]]
+
+::The Gutter - Bathroom - Toilet flashback
+(set: $toiletflashbackSeen as true)
+I sat down for a second. Just needed to clear my head. But, like everything else tonight, what I wanted didn’t happen. My ass pancaked onto the flimsy, plastic seat while my brain slipped beyond me, into the past.
+
+(click: "into the past")[$dissolve[I’m eleven years old. Anna and I are dancing while my mom watches from a lawn chair. It’s a summer day when it feels like you’re racing around a band of the sunshine that’s never gonna flatten out and end.]]
+
+(click: "flatten out and end")[$dissolve[Anna tugs me over to this group of guys that she’s been talking to. Leo and his dad, some others. We take our boombox over and do this dance routine we’ve been practicing for a few days, nothing fancy, but we really worked at it and it’s kinda long. There are a few parts where we pick each other up.]]
+
+(click: "really worked at it")[$dissolve[While we’re dancing, I don’t feel anything. I don’t feel the eyes. I don’t hear any hoots, if anyone was even drunk enough to hoot at two eleven year olds. We just twirl and twirl in infinity. I remember thinking: “I hope this lasts forever.”]]
+
+(click: "forever")[$dissolve[And it ends, of course. We’re both breathing heavily and beaming. The guys clap and Leo’s dad waddles over doing a bad copy of our smiles. He says, “y’all are gonna be heartbreakers one of these days.”]]
+
+(click: "one of these days")[$dissolve[He pinches my cheek, pats my ass. His hands leave long, dark smudges of machine oil. I try to pull away, but he catches me.]]
+
+(click: "catches me")[$dissolve[He says, “Hope you’re nothing like your mother, darling” and loses his balance. He falls ass backwards and his beer’s in the air arcing like a sputtering hose. Everyone busts out laughing, especially Anna.]]
+
+(click: "especially Anna")[$dissolve[Later, I asked Anna how she could laugh. I was so scared, I told her. We shouldn’t hang around those guys anymore. “Nah,” she said, “that’s what it’s gonna be like. You gotta get used to it.”]]
+
+(click: "get used to it")[$dissolve[It wasn’t until years later that I realized that Anna had kicked that motherfucker’s legs out.
+
+(display: "The Gutter - Bathroom - Menu")]]
+
+::The Gutter - Bathroom - Second visit
+I locked myself in the 'Lette's room again with the door stopper. I took a moment to just close my eyes and breathe. Each second of silence was as refreshing and sweet as a big scoop of vanilla ice cream.
+
+(display: "The Gutter - Bathroom - Menu")
 
 ::The Gutter - Name prompt ending
 { (set: $playerName to (prompt: "Enter name:", ""))
@@ -280,7 +373,6 @@ I squinted through the Gutter's signature haze, trying to spot my next destinati
 (set: $hatchet to true)(set: $multitool to true)
 
 ::The Gutter - Ending
-
 When the night air hit my lungs, the relief was sharper than drinking a cold glass of water after a bong rip. The light of the Gutter’s sign felt like the glow of the north star, revealing my path forward.
 
 >>[[I heard the noise of a familiar assclown behind me and turned to look|The Gutter - Ron's cart finale]].
