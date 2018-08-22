@@ -1,5 +1,5 @@
 ::Tent City - Intro
-I tore through a patched seam in the back of mom’s tent and felt a twinge of guilt as I broke through. Mom would understand, but Ron would be sure to give her hell while he fixed the busted tarp for the umpteenth time.
+I felt a twinge of guilt as I broke through the tarp. Mom would understand, but Ron would be sure to give her hell while he fixed the busted tarp for the umpteenth time.
 
 Shit. I’d have to try and make up for it later, once I ditched Leo and caught back up with Anna.
 
@@ -49,14 +49,15 @@ I sighed. Clearly he wasn't buying my bullshit.
 }
 
 ::Tent City - Three Rings recruiter - quote verse
-“'Ring three, the ICP, look if you want but I wouldn't lay a hand on me,'” I sang, jerking my head toward his. “'That's how you get fucked up, I’ll squeeze your windpipe shut.'”
-
-Preacher-man cackled, and he rasped back: “'You can call me a weirdo, call me a freak, call me Don Knotts cuz I'm gettin' knotted every week!' Hah, sister, you know your shit.” He kept laughing as he patted me on the back, waving me on my way. [[I was only too happy to oblige|Tent City - $nextScene]].
 {
   (set: $tentChasePartTwo to (random: 1))
   (if: $tentChasePartTwo is 0)[(set: $nextScene to "Rip's Rydas")]
   (else:)[(set: $nextScene to "Ornery Kids")]
 }
+“'Ring three, the ICP, look if you want but I wouldn't lay a hand on me,'” I sang, jerking my head toward his. “'That's how you get fucked up, I’ll squeeze your windpipe shut.'”
+
+Preacher-man cackled, and he rasped back: “'You can call me a weirdo, call me a freak, call me Don Knotts cuz I'm gettin' knotted every week!' Hah, sister, you know your shit.” He kept laughing as he patted me on the back, waving me on my way. [[I was only too happy to oblige|Tent City - $nextScene]].
+
 
 ::Tent City - Three Rings recruiter - talk shit
 “Oh fuck off, pervert,” I said. “There’s only one kind of dude who hangs out in Tent City alleyways watching for sweet young things riding solo, and this shit’s not for sale.”
@@ -73,14 +74,15 @@ He shook his head slowly and sadly. “Just fillin’ my ears with the Magician�
 }
 
 ::Tent City - Three Rings recruiter - take tract
-I snatched a flyer from his hand. “Okay padre, I got my golden ticket to the holy freakshow.” I glanced down at the wobbling, badly Xeroxed sharpie letters. “‘Sunset to sunrise at the Bigtop.’ Sounds… uh, cool.”
-
-Even trying, I could only fake being gung-ho badly, but if he could tell he didn’t show. Just wordlessly grinned at me with his wet, shiny teeth as I [[scampered across the path and back into the shadows|Tent City - $nextScene]].
 {
   (set: $tentChasePartTwo to (random: 1))
   (if: $tentChasePartTwo is 0)[(set: $nextScene to "Rip's Rydas")]
   (else:)[(set: $nextScene to "Ornery Kids")]
 }
+I snatched a flyer from his hand. “Okay padre, I got my golden ticket to the holy freakshow.” I glanced down at the wobbling, badly Xeroxed sharpie letters. “‘Sunset to sunrise at the Bigtop.’ Sounds… uh, cool.”
+
+Even trying, I could only fake being gung-ho badly, but if he could tell he didn’t show. Just wordlessly grinned at me with his wet, shiny teeth as I [[scampered across the path and back into the shadows|Tent City - $nextScene]].
+
 
 ::Tent City - Rip's Rydas
 I tried to blend in as I made my way through one of the tidier sections of the tarps. People in these rows were nosy and suspicious of anything that looked like trouble.
@@ -219,7 +221,7 @@ I knew a few shortcuts here & there, back from when I was a little kid and looki
 
 I tore a belt loop on my pants, forcing my way through a tumble of scrap wood Anna & I had shaped into a crude tunnel as kids. As I inched my way out, I stopped short at the sign of movement.
 
-(click: "the sign of movement")[A bunch of rangy dogs were circling in a clearing where the backsides of a half-dozen tents all faced one another. A ramshackle fort made of broken pallets and covered in kids’ graffiti sat in the center, and a flank of meat dangled from a nail in a roof-beam, just out of reach of the dogs. They turned at the sound of me dragging myself out of the tunnel, and after a moment of hesitation, began trying to closing in on me instead.
+(click: "the sign of movement")[A bunch of rangy dogs were circling in a clearing where the backsides of a half-dozen tents all faced one another. A ramshackle fort made of broken pallets and covered in kids’ graffiti sat in the center, and a flank of meat dangled from a nail in a roof-beam, just out of reach of the dogs. They turned at the sound of me dragging myself out of the tunnel, and after a moment of hesitation, began closing in on me instead.
 
 >> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]
 >> [[Throw fake-out|Tent City - Pack of stray dogs - throw fake-out]]
