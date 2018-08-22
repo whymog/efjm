@@ -1,0 +1,15 @@
+::Stylesheet [stylesheet]
+tw-story {
+  /* Override default container styles here */
+  /* padding: 30px 40px 30px 140px; */
+}
+
+img {
+  max-height: 60vh;
+}
+
+@media (max-width: 800px) {
+  img {
+    max-height: 400px;
+  }
+}

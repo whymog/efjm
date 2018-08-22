@@ -14,6 +14,9 @@ Escape from Juggalo Mountain
 [[Jump to The Gutter - Outside hub|The Gutter - Name prompt outside hub]]
 [[Jump to The Gutter - Inside hub|The Gutter - Name prompt inside]]
 [[Jump to The Gutter - Ending|The Gutter - Name prompt ending]]
+[[Jump to the Roach Market|RM-first-entrance-nameprompt]]
+[[Jump to Auntie’s gift shop|RM-giftshop-entrance-nameprompt]]
+[[Jump to the junk heap|RM-junkheap-entrance-nameprompt]]
 
 ::StoryIncludes
 src/s1a_portapotty.tw2
@@ -23,6 +26,7 @@ src/s2b_tent_city_chase.tw2
 src/s3a_the_gutter.tw2
 src/s3b_the_roach_market.tw2
 src/s4_the_church.tw2
+src/css.tw2
 
 ::Twee2Settings [twee2]
 Twee2::build_config.story_format = 'Harlowe2'
