@@ -2,13 +2,26 @@
 
 ::The Gutter - Name prompt
 { (set: $playerName to (prompt: "Enter name:", ""))
-(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|The Gutter - Outside - Approach]].]
+(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|The Gutter - Outside approach]].{
+  (if: $playerName's last is "s")[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else:)[
+    (set: $playerNamePlural to ($playerName + "s"))
+  ]
+}]
 }(else:)[No, [[that's not right|The Gutter - Name prompt]].]
 
 (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
 (set: $hatchet to true)(set: $multitool to true)
 
-::The Gutter - Outside - Approach
+::The Gutter - Outside approach
 My body and mind were screaming as one.
 
 (click: "one")[$dissolve[I kept my head down and my sweatshirt hood up. I used all of my energy to move forward through the tarp-covered alleyways of Gatherville.
@@ -17,11 +30,13 @@ My gut lurched as I realized I’d need to ask around for more information on An
 
 (click: "talk to anyone else")[$dissolve[I pulled my screaming brain into the harsh light of reality, searching for answers through a veil of emotion. It was still pretty early in the night. Around this time, anyone who knew anything was:
 
->>[[Getting fucked up at the Gutter|The Gutter - Outside - Intro]]
+>>[[Getting fucked up at the Gutter|The Gutter - Outside intro]]
 >>[[Looking to score at the Roach Market|RM-first-entrance]]
 >>[[Catching an early show at the Church|Church - intro]]]]
 
-::The Gutter - Outside - Intro
+(set: $gutterOutside to "intro")(set: $spokeToToe to false)(set: $roachEntrance to "first")
+
+::The Gutter - Outside intro
 I stood outside a weathered, flat-roofed wooden building with a flickering neon sign.
 <!--This calls one of the three neon sign designs randomly every second. -->
 \
@@ -67,7 +82,7 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 }
 </style>
 <!--These are the variables that need to be set for the Outside hub passages to work properly-->
-(set: $oldSchoolJuggalosSeen to false)(set: $jarSeen to false)(set: $justLeftTheGutter to false)(set: $golfCartSeen to false)(set: $cartPartsSeen to 0)(set: $wheelsSeen to false)(set: $engineSeen to false)(set: $defenseSeen to false)(set: $hornSeen to false)(set: $gutterStatus to "intro")
+(set: $oldSchoolJuggalosSeen to false)(set: $jarSeen to false)(set: $justLeftTheGutter to false)(set: $golfCartSeen to false)(set: $cartPartsSeen to 0)(set: $wheelsSeen to false)(set: $engineSeen to false)(set: $defenseSeen to false)(set: $hornSeen to false)(set: $gutterStatus to "intro")(set: $gutterOutside to "hub")
 
 ::The Gutter - Name prompt outside hub
 { (set: $playerName to (prompt: "Enter name:", ""))
@@ -84,7 +99,7 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 
 >>[[The Gutter’s beaten-to-hell block of a front door|The Gutter - Inside $gutterStatus]]
 >>[[The paved path to The Church|The Church - intro]]
->>[[The dirt road to the Roach Market|RM-first-entrance]]
+>>[[The dirt road to the Roach Market|RM-$roachEntrance-entrance]]
 (if: $oldSchoolJuggalosSeen is false)[>>[[Some old-school juggalos in a heated conversation by the side of the building|The Gutter - Outside - Old-school juggalos]]]
 (if: $golfCartSeen is false)[>>[[Ron’s shitheap golf cart|The Gutter - Golf cart]]]
 (if: $jarSeen is false)[>>[[The jar|The Gutter - Jar]]]
@@ -253,7 +268,7 @@ And alone, down at the end of the bar, sat (link: "Ron.")[my fucking stepdad Ron
 >>[[I went straight to the ‘Lette’s Room|The Gutter - Bathroom]].
 >>(link: "I went back outside")[(set: $justLeftTheGutter to true)(go-to: "The Gutter - Outside hub")].]]
 
-(set: $poolTableAttemptMade to false)(set: $donnieSongDone to false)(set: $bathroomVisited to false)(set: $teensOnTable to true)(set: $talkedToRon to false)(set: $toeBeaten to false)(set: $barStatus to "intro")(set: $gutterStatus to "hub")
+(set: $poolTableAttemptMade to false)(set: $donnieSongDone to false)(set: $bathroomVisited to false)(set: $teensOnTable to true)(set: $talkedToRon to false)(set: $toeBeaten to false)(set: $barStatus to "intro")(set: $gutterStatus to "hub")(set: $gameofChance to 0)
 <!--Used this to make a more powerful blur text effect -->
 <style>
 .blur {
@@ -310,7 +325,7 @@ He said nothing.
 
 (click: "nothing")[$dissolve[I waited. Still not a fucking peep.]]
 
-(click: "peep")[(if: (text: $gameOfChance)'s length > 0)[$dissolve[I [[pulled out the $gameOfChance|The Gutter - Bar - Toe game start]]].]
+(click: "peep")[(if: (text: $gameOfChance)'s length > 1)[$dissolve[I [[pulled out the $gameOfChance|The Gutter - Bar - Toe game start]]].]
 \(else:)[$dissolve[...I got [[bored|The Gutter - Inside hub]].]]]
 
 (set: $spokeToToe to true)
@@ -342,7 +357,7 @@ Toe pulled a couple of cups from below the bar. He held his own on the first cou
 
 (set: $toeBeaten to true)
 
-::The Gutter - Bar - Toe knife
+::The Gutter - Bar - Toe pen knife
 Toe laughed heartily as he went to fetch a “blood rag”.
 
 As he turned away, I whispered to Darryl: “I heard someone say you didn’t know how to make a fart noise with your mouth. Weird.” Then, I ducked back to the game.
@@ -662,9 +677,9 @@ Donnie frantically hooked in his laptop and cued up the chorus. It blasted out t
 ::The Gutter - Jukebox - Believin choices
 Donnie’s eyes lit up and he stared straight at me. “Maybe? Did she take the midnight train going anywhere?”
 
-I replied, yeah, she took the midnight train with a friend:
-[A city boy born and raised in South Detroit.]<believinChoice1|
-[[[Grimace, the purple nightmare from McDonaldLand.|The Gutter - Jukebox - Song failure]]]<believinWrong1|
+I replied, "Yeah, she took the midnight train with a friend:
+[A city boy born and raised in South Detroit."]<believinChoice1|
+[[[Grimace, the purple nightmare from McDonaldLand."|The Gutter - Jukebox - Song failure]]]<believinWrong1|
 
 (click: ?believinChoice1)[(replace: ?believinWrong1)[$dissolve[“I know her then.” Donnie replied. “I met her in a smoky room. There was a singer and the smell of wine and cheap perfume.”
 

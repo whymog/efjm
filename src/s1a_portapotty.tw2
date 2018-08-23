@@ -11,10 +11,25 @@ Wait. It's...
 {
 (set: $playerName to (prompt: "What is your name?", ""))
 (set: $justWokeUp to true)
-(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
+(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I remember being asleep|Jail Cell (Unlit) - hub]].{
+  (if: $playerName's last is "s")[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else:)[
+    (set: $playerNamePlural to ($playerName + "s"))
+  ]
+}]
 }(else:)[Wait, that's not right.
 
 Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
+
+(set: $dissolve to (transition: 'dissolve') + (transition-time: 3s)
 
 ::Jail Cell (Unlit) - hub <202,344>
 <img src="../src/img/portapotty-dark.png">
@@ -204,4 +219,4 @@ Anna’s the only real friend I’ve got here; the only one who hasn’t seen me
 ::Outside - Outro
 I didn’t like her using my journal like this, but right then, the only thing on my mind was tracking Anna down.
 
-I was still dizzy but stable enough to walk, so I [[started down the gravel path toward home|Mom's Tent - intro]].
+I was still dizzy but stable enough to walk, so I [[started down the gravel path toward home|Opening crawl]].
