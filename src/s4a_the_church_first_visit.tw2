@@ -1,0 +1,111 @@
+::The Church - First visit - Name prompt
+{ (set: $playerName to (prompt: "Enter name:", ""))
+(if: (text: $playerName)'s length > 0)[Right, my name is $playerName. [[Moving on|The Church - First visit - Intro]].<!-- what this code does is check the ending of the custom $playerName string to hopefully append the correct pluralization to it -->{
+  (if: $playerName's last is "s")[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
+    (set: $playerNamePlural to ($playerName + "es"))
+  ]
+  (else:)[
+    (set: $playerNamePlural to ($playerName + "s"))
+  ]
+}]
+}(else:)[No, [[that's not right|The Church - First visit - Name prompt]].]
+
+::The Church - First visit - Intro
+The Church was an imposing mess of a building that some crazy ninja had cobbled together out of a few shipping containers. The light spilling out the messy windows was jagged.
+
+There wasn’t anything going on yet today, but it seemed like they were preparing for something tonight. There was always something at the Church. Some ninja or another trying to pump himself up the ranks to the mountain.
+
+(click: "always something at the Church")[$dissolve[It couldn’t hurt to look around for signs of Anna.
+
+>>[[I went to see what I could spy through the window|The Church - First visit - Window]].
+>>[[I walked up to the front door|The Church - First visit - Front door]].
+>>[[I decided to try the back door|The Church - First visit - Back door]].
+\]]
+
+(set: $dissolve to (transition: 'dissolve') + (transition-time: 3s)) (set: $churchStatus to "Hub")(set: $churchInvestigated to 0)(set: $churchBackDoorSeen to false)(set: $churchFrontDoorSeen to false)(set: $churchWindowSeen to false)
+
+::The Church - First visit - Hub
+(if: $churchInvestigated is 3)[There was nothing else to see at the Church and the show hadn't started quite yet.
+
+[[I headed back to The Gutter|The Gutter - Outside $gutterOutside]].
+[[I headed for the Roach Market|RM-$roachEntrance-entrance]].]
+\(set: $checkedChurch to true)
+\(else:)[I kept looking around the Church for any useful information.
+
+(if: $churchWindowSeen is false)[>>[[I went to see what I could spy through the window|The Church - First visit - Window]].]
+(if: $churchFrontDoorSeen is false)[>>[[I walked up to the front door|The Church - First visit - Front door]].]
+(if: $churchBackDoorSeen is false)[>>[[I decided to try the back door|The Church - First visit - Back door]].]]
+
+::The Church - First visit - Window
+I could see some people setting up the stage and the bleachers inside, but I couldn’t tell what they had planned for tonight. It just looked like a lot of frantic movement.
+
+(click: "frantic movement")[$dissolve[Moon Mystic, the constantly glad handing emcee, was leading the setup with his booming voice. That fucker was a living megaphone.
+
+I could see the venue’s manager, Kiki, off to the side checking things off on her clipboard. If I was gonna throw a raging party or plan the perfect murder, I’d call Kiki either way.
+
+They ran a tight ship. These folks were putting on a show, but they were also guarding a throne.]]
+
+(click: "guarding a throne")[$dissolve[It was obvious they weren’t starting up quite yet. I had some time.
+
+But, there’s no harm in trying to [[find a way in early|The Church - First visit - Hub]].]]
+
+(set: $churchInvestigated to it +1)(set: $churchWindowSeen to true)
+
+::The Church - First visit - Front door
+The janky front doors, one used to be a wooden folding table and the other was the side of a port-a-potty, were chained shut. There was a show bill taped to the door.
+
+(click: "show bill")[$dissolve[//TONITE
+SURPRISE DEATH MATCH
+ALL COMERS WELCOME
+R U MOUNTAIN READY?
+“Your bill is your ticket. Your word is a weapon.”//
+
+[[I snatched the bill from the door|The Church - First visit - Hub]]. A lot of people would be here tonight and someone would know something useful.]]
+
+(set: $churchInvestigated to it +1)(set: $churchFrontDoorSeen to true)
+
+::The Church - First visit - Back door
+The back door was the oldest, rustiest part of the building. It looked pretty feeble, but when I tried the handle it wouldn’t budge.
+
+I tried rattling the door around.
+
+(click:"I tried rattling the door around")[$dissolve[I could shake the door quite a bit, so it wasn’t rusted shut, but it was definitely locked. Well… shit.
+
+[[I kicked the dumbass door|The Church - First visit - Kick back door]].
+\]]
+
+::The Church - First visit - Kick back door
+The door bounced me back and my ass fell into a cleaning bucket. I braced for the splash of juicy floor water, but I just heard the crinkling of paper.
+
+I pulled the bucket off and turned around to see what was inside.
+
+(click: "what was inside")[$dissolve[It was a note, but the handwriting was terrible. I tried squinting to make out the text, which never helps, but it did feel right. When I made out the first line, my heart sank.
+
+Someone had given my dipshit step dad a job again. God dammit. With the first line acting as an expectation-lowering rosetta stone, I deciphered the rest of [[the note|The Church - First visit - Ron letter]].
+\]]
+
+::The Church - First visit - Ron letter
+<div style="padding-left: 2em;">//Dear Ron,
+
+This is also Ron hehe what’s up good buddy?? :) Anyway, don’t forget to come unlock the door 2nite so that fukkin’ straglers can come in to the chalenge the champs 2nite.
+
+(click: "champs 2nite")[$dissolve[I no u wont buddy but the boss said rite a note. Keep this on u at all times!!!]]
+
+(click: "at all times")[$dissolve[EVEN WHEN U GO TO BAR!! Prove to the boss ug ot this one man!!
+
+Love,
+[Ron]<finalRon|]]//</div>
+
+(click: ?finalRon)[$dissolve[On the other side of the note Ron had written a bunch of tally marks under the words “WERK BEERZ”, I guess in an attempt to judge when he’d had too many.
+
+There were 10+ tally marks and the words “UH OH” kind of scribbled afterwards.
+
+I threw the note back in the bucket and wiped my hand on my pants for a full minute. If that fucker had the keys, then there was [[no way I was getting in|The Church - First visit - Hub]].]]
+
+(set: $churchInvestigated to it +1)(set: $churchBackDoorSeen to true)
