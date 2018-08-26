@@ -1,21 +1,3 @@
-::Jail Cell (Unlit) - name character
-Ugh.
-
-Head's pounding. Can't even remember my own name.
-
-Wait. It's...
-
-[[Enter Name >|Jail Cell (Unlit) - character named]]
-
-::Jail Cell (Unlit) - character named
-{
-(set: $playerName to (prompt: "What is your name?", ""))
-(set: $justWokeUp to true)
-(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
-}(else:)[Wait, that's not right.
-
-Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
-
 ::Jail Cell (Unlit) - hub <202,344>
 <img src="../src/img/portapotty-dark.png">
 
@@ -62,13 +44,11 @@ Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
 
 |section6)[The light from the moon snuck in through a small grate above my head. It shined a faint light across the cell walls and onto the corner of the floor, where it caught the glint of something shiny.
 
-I reached forward, snatched it up, and recognized its familiar heft immediately.
+I reached forward, snatched it up, and recognized its familiar heft immediately.]
 
 (click: "snatched it up")[ <center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//**Lighter obtained**//</span>]]</center>
 
-I gave it a good flick, and the room sprang into detail around me.
-
-[[`*` click `*`|Jail Cell (Lit) - hub]] ]]\
+I gave it a good [[*flick*|Jail Cell (Lit) - room lights up]], and the room sprang into detail around me.]\
 {
 (click: ?trigger1)[(show: ?section2)]
 (click: ?trigger2)[(show: ?section3)]
@@ -79,7 +59,15 @@ I gave it a good flick, and the room sprang into detail around me.
 (set: $triedDoor to false)
 (set: $waterDrained to false)
 (set: $hasJailKey to false)
+(set: $roomTransitionDone to false)
 }
+
+::Jail Cell (Lit) - room lights up
+<img src="../src/img/portapotty-light.png">
+
+My surroundings came into focus around me. Reflexively, I stood up and [[turned to look in the mirror|Jail Cell (Lit) - name character]].
+
+<!-- will fix this animation stuff later -->
 
 ::Jail Cell (Unlit) - smell <362,502>
 Shit. That’s all I could pick up on. Someone literally lost their shit in here.
@@ -89,6 +77,26 @@ I panicked, because I still couldn’t tell where it was. And now, like some Edg
 [[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
 
 (set: $sniffedAir to true)
+
+::Jail Cell (Lit) - name character
+I stared into the mirror and nearly had a heart attack.
+
+I saw a face I didn't recognize staring back at me:
+
+a teenage girl, her hair a colossal mess, her t-shirt stained and jeans ripped.
+
+It was me, looking at my reflection in a dull plastic mirror mounted on the wall in front of me.
+
+I struggled to [[remember my name|Jail Cell (Lit) - naming complete]].
+
+::Jail Cell (Lit) - naming complete
+{
+(set: $playerName to (prompt: "What is your name?", ""))
+(set: $justWokeUp to true)
+(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I need to get out of here|Jail Cell (Lit) - hub]].]
+}(else:)[Wait, that's not right.
+
+Hold on. [[My name is...|Jail Cell (Lit) - naming complete]]]
 
 ::Jail Cell (Lit) - hub <201,659>
 <img src="../src/img/portapotty-light.png">
