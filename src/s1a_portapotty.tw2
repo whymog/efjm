@@ -1,21 +1,3 @@
-::Jail Cell (Unlit) - name character
-Ugh.
-
-Head's pounding. Can't even remember my own name.
-
-Wait. It's...
-
-[[Enter Name >|Jail Cell (Unlit) - character named]]
-
-::Jail Cell (Unlit) - character named
-{
-(set: $playerName to (prompt: "What is your name?", ""))
-(set: $justWokeUp to true)
-(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I remember being asleep|Jail Cell (Unlit) - hub]].]
-}(else:)[Wait, that's not right.
-
-Hold on. [[My name is...|Jail Cell (Unlit) - character named]]]
-
 ::Jail Cell (Unlit) - hub <202,344>
 <img src="../src/img/portapotty-dark.png">
 
@@ -68,7 +50,7 @@ I reached forward, snatched it up, and recognized its familiar heft immediately.
 
 I gave it a good flick, and the room sprang into detail around me.
 
-[[`*` click `*`|Jail Cell (Lit) - hub]] ]]\
+[[`*` click `*`|Jail Cell (Lit) - name character]] ]]\
 {
 (click: ?trigger1)[(show: ?section2)]
 (click: ?trigger2)[(show: ?section3)]
@@ -89,6 +71,24 @@ I panicked, because I still couldn’t tell where it was. And now, like some Edg
 [[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
 
 (set: $sniffedAir to true)
+
+::Jail Cell (Lit) - name character
+As soon as I stood up, I nearly had a heart attack.
+
+I saw someone staring back at me: a teenage girl, her hair a colossal mess, her t-shirt stained and jeans ripped.
+
+It was me, looking at my reflection in a dull plastic mirror mounted on the wall in front of me.
+
+I struggled to [[remember my name|Jail Cell (Lit) - naming complete]].
+
+::Jail Cell (Lit) - naming complete
+{
+(set: $playerName to (prompt: "What is your name?", ""))
+(set: $justWokeUp to true)
+(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I need to get out of here|Jail Cell (Lit) - hub]].]
+}(else:)[Wait, that's not right.
+
+Hold on. [[My name is...|Jail Cell (Lit) - naming complete]]]
 
 ::Jail Cell (Lit) - hub <201,659>
 <img src="../src/img/portapotty-light.png">
