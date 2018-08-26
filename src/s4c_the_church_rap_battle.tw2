@@ -36,7 +36,7 @@ Steve and I circled each other warily. Moon Mystic piped up, “Alright $stageNa
 
 >>["I’ll go first. I’m sick of looking at this dude already."]<playerFirst|
 >>["I’ll go second. This goofy motherfucker needs all the help he can get."]<steveFirst|
->>[[“I didn’t even answer, just started into a blistering rap about dogs.”|The Church - Rap battle - First verses dog rap]]
+>>[[I didn’t even answer – just started into a blistering rap about dogs.|The Church - Rap battle - First verses dog rap]]
 
 (click: ?playerFirst)[(go-to: "The Church - Rap battle - First verses player first")]
 (click: ?steveFirst)[(go-to: "The Church - Rap battle - First verses steve first")]
@@ -224,7 +224,7 @@ Steve blubbered and wavered during his second verse like a jellyfish having an a
 [(live: 1s)[(if: time > 1s)[$dissolve[//Yo I’m Steve here to tear this shit apart
 I sneak in your front door like a fart//(stop:)]]]]
 [(live: 1s)[(if: time > 3s)[$dissolve[//You ain’t want me, but you need me
-Everyday I’m all over that shit baby//(stop:)]]]]
+Every day I’m all over that shit baby//(stop:)]]]]
 
 [(live: 1s)[(if: time > 5s)[$dissolve[//Smack it real nice, get up in them jeans
 Hold my head down girl, call me machine//(stop:)]]]]
@@ -276,12 +276,12 @@ All I wanna see is your back now show me//(stop:)]]]]
 I had to respond to what was in my heart, and what was moving the crowd, so I kept rapping about dogs.
 
 [(live: 1s)[(if: time > 1s)[$dissolve[//I wish I had a puppy when I was growing up
-I’d love to have a flopsy, friendly lil mutt//(stop:)]]]]
+I’d love to have a flopsy, friendly li'l mutt//(stop:)]]]]
 [(live: 1s)[(if: time > 3s)[$dissolve[//It’d be huge now, with an empty gut
 Waiting for my command to eat Steve’s nuts//(stop:)]]]]
 
 [(live: 1s)[(if: time > 5s)[$dissolve[//Yo I’m wild for any dog, especially the shih-tzu’s
-Dogs look at Steve like, “You shit outside too dude?”//(stop:)]]]]
+Dogs look at Steve like, “You shit outside too, dude?”//(stop:)]]]]
 [(live: 1s)[(if: time > 7s)[$dissolve[//I gotta step it back, I’m bein’ kinda rude
 I’d never let my dog look at Steve or eat his food//(stop:)]]]]
 
@@ -303,12 +303,12 @@ Shoutin’ shut the fuck up Steve, you don’t know me//(stop:)]]]]
 ::The Church - Rap battle - Victory player first
 It was clear that the crowd had been with me from the start. I could read the energy. As Steve’s homies filed out, a fired up group of ‘lettes stormed the stage and started chanting my name. Some of them were new faces, others I knew and had even heard talk shit. I didn’t care. All were welcome in my temple now that I had made it to the top.
 
-Moon Mystic approached Steve and I, holding both our hands, but I didn’t even wait for him. I raised my own hand and screamed, “YOUR CHAMPION [STAGE NAME]!” Moon Mystic laughed and nodded as [[the crowd stomped in unison|The Church - Mountain intro]].
+Moon Mystic approached Steve and I, holding both our hands, but I didn’t even wait for him. I raised my own hand and screamed, “YOUR CHAMPION $stageName!” Moon Mystic laughed and nodded as [[the crowd stomped in unison|The Church - Mountain intro]].
 
 ::The Church - Rap battle - Victory player second
 Moon Mystic approached Steve and I, holding both of our hands. I knew Steve and I had gone back and forth, but I wasn’t nervous.
 
-The crowd was like a wave, lifting me up. Moon Mystic raised my hand. “Your champion [STAGE NAME]!” As he said it, the crowd [[repeated it back and built a mighty chant|The Church - Mountain intro]].
+The crowd was like a wave, lifting me up. Moon Mystic raised my hand. “Your champion $stageName!” As he said it, the crowd [[repeated it back and built a mighty chant|The Church - Mountain intro]].
 
 ::The Church - Rap battle - Victory dog raps
 Steve's verse was about how basketball shorts are good for airing out sweaty nuts or something, but the dog crowd weren’t having it. Some of the larger dogs were trying to climb up on stage and snipping at Steve’s feet when he got too close to the edge.
@@ -327,7 +327,7 @@ We hung backstage for a while, recapping the greatest hits of the match and talk
 ::The Church - Mountain ceremony
 The spotlight hit me as Moon Mystic’s assistants, decked in traditional neon green and black robes, lifted me up in an aluminum lawn chair. I bathed in the light and the crowd’s adoration as Moon Mystic read the rites over an open bottle of his namesake.
 
-(click: "an open bottle of his namesake")[$dissolve[“Take and drink. This is that good shit. May the haters take and eat unclean ass. You are the champ, and a ninja, and the most bomb-ass motherfucker forever and ever amen.” The crowd responded with a hearty amen. Moon Mystic dumped a beige powder into the bottle of Faygo and let it fizz a bit before offering it up to me.]]
+(click: "an open bottle of his namesake")[$dissolve[“Take and drink. This is that good shit. May the haters take and eat unclean ass. You are the champ, and a ninja, and the most bomb-ass motherfucker forever and ever, amen.” The crowd responded with a hearty amen. Moon Mystic dumped a beige powder into the bottle of Faygo and let it fizz a bit before offering it up to me.]]
 
 (click: "offering it up to me")[$dissolve[I drank heavily until the Moon Mist ran down my chin and my throat. It tasted so sweet and fresh, even though I knew they’d probably saved this bottle for years. As I lost consciousness, I could hear the crowd chanting [[“Juggalo Mountain! Juggalo Mountain! Juggalo Mountain!”|The Church - Mountain ending choice]]]]
 
@@ -335,9 +335,14 @@ The spotlight hit me as Moon Mystic’s assistants, decked in traditional neon g
 I knew even then that no one had finished the mountain since the Honchos had put it in place. I wouldn’t really start caring until I got into that son of a bitch. Anna was waiting for me somewhere in there and nothing had stopped me yet.
 
 What I didn't know was that:
->>[[this was the beginning of the longest night of my life. My last night in Gatherville.|EFJM - Credits]]
->>[[Anna was waiting for me too — waiting to kill me.|EFJM - Credits]]
->>[[Anna and I were already done. I would have to betray my best friend.|EFJM - Credits]]
->>[[Ron was my real dad and later that night he’d cut my hand off. What a fucking piece of shit.|EFJM - Credits]]
->>[[this story was constructed in the past tense so that the dumbass dude writing this could do a crazy reveal where I’m like the president now or some shit. Haha get fucked.|EFJM - Credits]]
->>[[the world outside Gatherville was even worse. Jeff Bezos was the president and his powerful drones could only give you oral sex or cut off your head and they charged the same amount of money for either.|EFJM - Credits]]
+>>[[this was the beginning of the longest night of my life. My last night in Gatherville.|EFJM - ending]]
+>>[[Anna was waiting for me too — waiting to kill me.|EFJM - ending]]
+>>[[Anna and I were already done. I would have to betray my best friend.|EFJM - ending]]
+>>[[Ron was my real dad and later that night he’d cut my hand off. What a fucking piece of shit.|EFJM - ending]]
+>>[[this story was constructed in the past tense so that the dumbass dude writing this could do a crazy reveal where I’m like the president now or some shit. Haha get fucked.|EFJM - ending]]
+>>[[the world outside Gatherville was even worse. Jeff Bezos was the president and his powerful drones could only give you oral sex or cut off your head and they charged the same amount of money for either.|EFJM - ending]]
+
+::EFJM - ending
+<center>//TO BE CONTINUED//</center>
+
+[(live: 1s)[(if: time > 5s)[$dissolve[(display: "EFJM - Credits")(stop:)]]]]
