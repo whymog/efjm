@@ -1,0 +1,348 @@
+::The Church - Rap battle name prompt
+{ (set: $stageName to (prompt: "Enter name:", ""))
+(if: (text: $stageName)'s length > 0)[Right, I go by $stageName. [[Moving on|The Church - Rap battle]].]
+}(else:)[No, [[that's not right|The Church - Rap battle name prompt]].]
+
+(set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
+
+::The Church - Rap battle
+Moon Mystic’s voice boomed over the PA. “Where my juggalos at tonight?! Where my fine juggalettes? All my down ass ninjas in the house go woop woop!”
+
+(click: "woop woop")[$dissolve[The crowd responded with a hearty “WOOP WOOP!”
+
+“Alright, alright, alright, we about to go into the final freestyle battle of the night. This is what all you crazy dedicated ninjas out there have been sitting at the edge of your seat begging me for. This is what the bloodthirsty motherfuckers out there desire. This is...”
+
+Moon Mystic paused for maximum drama.]]
+
+(click: "paused")[$dissolve[“A MOUNTAIN FIGHT!”
+
+As the words left his lips, the whole crowd stood up and collectively lost their mind. The guy at the sound booth mixed a bunch of record scratches and crazy airhorn noises together.
+
+“Now, it’s time for the combatants. Defending the title, blocking the path, it’s your champion. The dirty diggler, the mouth of a thousand corpses, it’s Smooth Lips Steve!”]]
+
+(click: "Smooth Lips Steve")[$dissolve[Steve jumped out in full face paint, looking ready for a pick up game of basketball. He swung his arms down from the stage amiably, [[high-fiving his homies|The Church - Rap Battle player intro]].]]
+
+::The Church - Rap Battle player intro
+Moon Mystic’s voice boomed again, “And now, the fighter. Going for the mountain after an unprecedented year-long absence from the stage. She’s the little ‘lette, the fiercest female on the mic, it’s [$stageName]<clickName|!!
+
+(click: ?clickName)[$dissolve[The crowd was totally silent as I walked out on stage. I had no face paint. I was just wearing my torn-ass jeans and a beat up Milenko shirt. I probably still smelled like the port-a-potty and looked like I’d crawled out of tent city after a weekend bender. But my face was absolute granite. I didn’t move a muscle, wouldn’t give an inch.
+
+As I moved to pick my mic up from where it was coiled on the stage floor, some stupid-ass juggalo in the crowd called out, “Yo, I ain’t ever seen this bitch. She ain’t got it!” Steve popped a mile-wide grin and there was some laughter in the crowd.]]
+
+(click: "laughter in the crowd")[$dissolve[I quickly snatched up the mic and blasted back, “Yeah ninja, that ain’t a surprise. Looks to me like a lot of ‘lettes try to avoid you all together.” An immediate “OOOOOOH” from the crowd was my delicious reward. Steve’s grin dropped and he picked his mic up as well. [[Time to do some fuckin' raps|The Church - Rap battle - First verses]].]]
+
+::The Church - Rap battle - First verses
+Steve and I circled each other warily. Moon Mystic piped up, “Alright $stageName, as the challenger, you pick who goes first.”
+
+>>["I’ll go first. I’m sick of looking at this dude already."]<playerFirst|
+>>["I’ll go second. This goofy motherfucker needs all the help he can get."]<steveFirst|
+>>[[I didn’t even answer – just started into a blistering rap about dogs.|The Church - Rap battle - First verses dog rap]]
+
+(click: ?playerFirst)[(go-to: "The Church - Rap battle - First verses player first")]
+(click: ?steveFirst)[(go-to: "The Church - Rap battle - First verses steve first")]
+
+::The Church - Rap battle - First verses player first
+As soon as I stopped speaking, the venom started flowing out of me.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//This is my enemy?
+You’re kidding me//(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[//Oh, I see
+The dude currently
+going through puberty//(stop:)]]]]
+
+[(live: 1s)[(if: time > 5s)[$dissolve[//Come on Steve
+you’re a pity//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//Spittin’ rhymes out your baby teeth
+How’d it get this shitty?//(stop:)]]]]
+[(live: 1s)[(if: time > 9s)[$dissolve[//Did your Mom leave?
+Nah she’s right there
+Unfortunately//(stop:)]]]]
+
+[(live: 1s)[(if: time > 11s)[$dissolve[//You know she love me
+It’s not a sex thing//(stop:)]]]]
+[(live: 1s)[(if: time > 13s)[$dissolve[//She just hates her son
+He’s a shitty one
+And he’s so dumb
+And he’s so stunned//(stop:)]]]]
+[(live: 1s)[(if: time > 15s)[$dissolve[//Cause I’m on one
+And I got guns
+On this word run
+I’m the word son//(stop:)]]]]
+[(live: 1s)[(if: time > 17s)[$dissolve[//And I’m not done
+Till the day’s won
+And you’re out stunned
+Fuck your lame puns//(stop:)]]]]
+[(live: 1s)[(if: time > 19s)[$dissolve[//This is so fun
+Watching you lunge
+Miss the main punch
+You ain’t got a hunch//(stop:)]]]]
+[(live: 1s)[(if: time > 21s)[$dissolve[//You just ain’t much
+You’re gonna limp out man
+[[Here’s your fuckin’ crutch|The Church - Rap battle - First verses steve response]]//(stop:)]]]]
+
+(set: $playerRapsFirst to true)
+
+::The Church - Rap battle - First verses steve response
+Steve looked taken aback by my flow for a second, but he shook it off and dug into his response.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//Oh I need a crutch, yeah that’s a joke
+I can’t wait to touch myself as I watch you choke//(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[//You get that picture bitch, I had to say it
+Do you get the idea or do I need to spray it?//(stop:)]]]]
+
+[(live: 1s)[(if: time > 5s)[$dissolve[//Haha, I really crack myself up
+Gonna drag you from the back of my brand new truck//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//I’m the wicked shit and a real good fuck
+You can call me for a good line if you’re ever feelin’ stuck
+Yo baby, what’s up? I’m the triple A, premium cut//(stop:)]]]]
+
+[(live: 1s)[(if: time > 9s)[$dissolve[//You think you on fire, you’re just cold as ice
+How far you think girls get when they ain’t nice?//(stop:)]]]]
+[(live: 1s)[(if: time > 11s)[$dissolve[//Slow down sweetie, go your own pace
+You gonna wear yourself out in a man’s race//(stop:)]]]]
+[(live: 1s)[(if: time > 13s)[$dissolve[//Let’s just embrace, give me good face
+I can be your big daddy and we’ll play it straight//(stop:)]]]]
+
+[(live: 1s)[(if: time > 15s)[$dissolve[//So drop the mic chick, stop the bitch schtick
+Get with this criminal with the huge dick//(stop:)]]]]
+
+[(live: 1s)[(if: time > 17s)[$dissolve[A ‘lette in the crowd made a huge puking noise and everyone laughed as we [[moved into round two|The Church - Rap battle - Second verses player]].(stop:)]]]]
+
+::The Church - Rap battle - First verses steve first
+Steve grinned like a farting clown and ripped into an odious flow.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//Yo I’m all man, sizzlin’ in the pan
+This the old school jam from the bar band
+Can you feel my cold hands in your new pants?//(stop:)]]]]
+
+[(live: 1s)[(if: time > 3s)[$dissolve[//Whoops sorry baby, was that a shock
+I’m already underneath the covers down to just my socks//(stop:)]]]]
+
+[(live: 1s)[(if: time > 5s)[$dissolve[//You seem like a special broad, let’s get it on
+I’d love to see you silent in a nice thong//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//I can go strong, all night long
+I ain’t gonna need a classic song to get you gone//(stop:)]]]]
+
+[(live: 1s)[(if: time > 9s)[$dissolve[//This is bitch work, taking you out
+I even got some time for some shout outs//(stop:)]]]]
+[(live: 1s)[(if: time > 11s)[$dissolve[//What up Shondra? Hey Katie, what’s good?
+Give me a ring next time I’m in your hood//(stop:)]]]]
+
+[(live: 1s)[(if: time > 13s)[$dissolve[//How much time we got left? Was that enough?
+I guess now I gotta sit through your mic fluff//(stop:)]]]]
+[(live: 1s)[(if: time > 15s)[$dissolve[//You throwing glitter girl? Gonna do a twirl?
+When you’re out of breath, hit me up, I can rock your world//(stop:)]]]]
+
+[(live: 1s)[(if: time > 17s)[$dissolve[Steve did an absolutely dork-ass bow after his verse and doffed his cap. I smacked it out of his hand and [[launched into my response|The Church - Rap battle - First verses player response]].
+(stop:)]]]]
+
+(set: $steveRapsFirst to true)
+
+::The Church - Rap battle - First verses player response
+[(live: 1s)[(if: time > 1s)[$dissolve[//I’m the real motherfucker, coldest villain
+I’m chillin, temp down in the whole building//(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[//Steve’s hot, I guess
+Heat comin’ from gettin’ lies off his chest//(stop:)]]]]
+[(live: 1s)[(if: time > 5s)[$dissolve[//Heat comin’ from his stank ass breath
+Only chance he ever had of talkin’ me to death//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//Fuck a cleaver, fuck a mallet
+You smell this nasty shit on his palate?//(stop:)]]]]
+[(live: 1s)[(if: time > 9s)[$dissolve[//Dude’s deadly, hella wealthy
+Got the rare mouth bacteria he’s selling//(stop:)]]]]
+
+[(live: 1s)[(if: time > 11s)[$dissolve[//What’d you do dude?
+Eat a dog poop?
+Chew your dad’s shoes?
+Lick some trash food?//(stop:)]]]]
+[(live: 1s)[(if: time > 13s)[$dissolve[//Ain’t mean to be rude
+Just brush up soon
+Cause I won’t lose
+You’re a huge stooge//(stop:)]]]]
+
+[(live: 1s)[(if: time > 15s)[$dissolve[//I’m getting the sense that you’re not really that strong
+I’m on the fence, how ‘bout you model that thong?//(stop:)]]]]
+
+[(live: 1s)[(if: time > 17s)[$dissolve[A rowdy group of ‘lettes in the audience all hooted at my last line. Seemed like the audience was feeling me as we [[moved into round two|The Church - Rap battle - Second verses steve]].
+(stop:)]]]]
+
+::The Church - Rap battle - First verses dog rap
+I’m not really sure why, but I could just feel the goofiest instinct take hold and I had to go with my gut.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//Dogs ruuuuuule up in this bitch
+Man, I fuckin’ love dogs!!//(stop:)]]]]
+
+[(live: 1s)[(if: time > 3s)[$dissolve[//My friend had a puppy when I was growin’ up
+Her father liked to kick it, that was fucked up//(stop:)]]]]
+[(live: 1s)[(if: time > 5s)[$dissolve[//If I could hug that dog or any fuckin’ dog
+I’d hug it and I’d love it until the world was gone//(stop:)]]]]
+
+[(live: 1s)[(if: time > 7s)[$dissolve[//Hah, let me break it down for ya//(stop:)]]]]
+[(live: 1s)[(if: time > 8s)[$dissolve[//I really like pugs and pomeranians
+As far as shepherds, make mine Albanian//(stop:)]]]]
+[(live: 1s)[(if: time > 10s)[$dissolve[//I like the beagles and the basset hounds
+I like it when they make their little slobber sounds//(stop:)]]]]
+[(live: 1s)[(if: time > 12s)[$dissolve[//
+I like a motherfuckin’ labrador and I’m even down with poodles
+You can have your humidor, give me a golden doodle//(stop:)]]]]
+[(live: 1s)[(if: time > 14s)[$dissolve[//I like it when a big old dog sits right in my lap
+Or when it puts its paws on my head like a hat//(stop:)]]]]
+[(live: 1s)[(if: time > 16s)[$dissolve[//I’m a motherfuckin’ juggalo until the day I die
+And on the day I bite the dust, I pray a dog is by my side//(stop:)]]]]
+
+[(live: 1s)[(if: time > 18s)[$dissolve[As I looked up, a whole section of ‘lettes in the audience was going nuts hooting and hollering. That’s right! It was dog night. Hell yeah. They mostly had real meaty looking breeds, pitbulls and dobermans and shit, and [[the pups were going wild too|The Church - Rap battle - First verses dog rap response]].
+(stop:)]]]]
+
+::The Church - Rap battle - First verses dog rap response
+Steve looked panicked by the huge dogs and intimidated by my out-of-nowhere verse, but he collected a fake smirk on his face and got into his flow.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//Yo, who this crazy bitch that’s only rapping bout bitches
+I’m right here, pay attention or get stitches//(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[//I’m the most precious and the absolute richest
+This is the how I live and all my hoes know what this dick is//(stop:)]]]]
+
+[(live: 1s)[(if: time > 5s)[$dissolve[//This lady crazy and I think you all know it
+Didn’t think she’d open up her mouth and blow it//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//Not that I’m complaining, I don’t need help to blow up
+I’m already number 1 and I don’t gotta challenge no one//(stop:)]]]]
+
+[(live: 1s)[(if: time > 9s)[$dissolve[//This is bitch work, taking you out
+I even got some time for some shout outs//(stop:)]]]]
+[(live: 1s)[(if: time > 11s)[$dissolve[//What up Shondra? Hey Katie, what’s good?
+Give me a ring next time I’m in your hood//(stop:)]]]]
+
+[(live: 1s)[(if: time > 13s)[$dissolve[//How much time we got left? Was that enough?
+I guess now I gotta sit through your mic fluff//(stop:)]]]]
+[(live: 1s)[(if: time > 15s)[$dissolve[//What up dog girl? Got your mind swirled?
+When you’re out of breath, hit me up, I’ll still rock your world//(stop:)]]]]
+
+[(live: 1s)[(if: time > 17s)[$dissolve[Some of Steve’s boys made loud noises, but the dogs were curiously silent after Steve’s verse. We [[moved into round two|The Church - Rap battle - Second verses dogs]].
+(stop:)]]]]
+
+::The Church - Rap battle - Second verses steve
+Steve blubbered and wavered during his second verse like a jellyfish having an asthma attack.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//Yo I’m Steve here to tear this shit apart
+I sneak in your front door like a fart//(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[//You ain’t want me, but you need me
+Every day I’m all over that shit baby//(stop:)]]]]
+
+[(live: 1s)[(if: time > 5s)[$dissolve[//Smack it real nice, get up in them jeans
+Hold my head down girl, call me machine//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//Get the tongue propeller, I’m a nice feller
+They call me old yeller, I’m a real sweller//(stop:)]]]]
+
+[(live: 1s)[(if: time > 9s)[$dissolve[//Yo I’m all real, like a done deal
+Grab a hold of these buns, they hard steel
+I’m the primo shit talker, real walker//(stop:)]]]]
+[(live: 1s)[(if: time > 11s)[$dissolve[//No texas ranger, but you gettin’ stranger
+I can hear your tired rhymes gettin’ fainter//(stop:)]]]]
+
+[(live: 1s)[(if: time > 13s)[$dissolve[//Why you runnin’ baby? Just took out my knife.
+Better hurry it up, if you value life//(stop:)]]]]
+[(live: 1s)[(if: time > 15s)[$dissolve[//Cause you heard of me, girl I’m Smooth Lips Steve
+If you wanna live, best get on your knees//(stop:)]]]]
+
+[(live: 1s)[(if: time > 17s)[$dissolve[(if: $playerRapsFirst is true)[A dude I thought was Steve’s homie made a huge fart noise with his mouth. It was [[time for results|The Church - Rap battle - Victory player first]].]
+\(else:)[I had to scoff at that lame-ass attempt and a few people noticed. I heard some “ooohs” as I [[went into my response|The Church - Rap battle - Second verses player]].]
+(stop:)]]]]
+
+::The Church - Rap battle - Second verses player
+I could feel my grip on the mic bending the metal as I howled my final verse straight at the heart of this absolute piece of shit and all of the absolute pieces of shit everywhere and forever.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//I’m the woman in the mirror
+Gripping on your neck//(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[//Already found the artery
+No use flinching to protect//(stop:)]]]]
+
+[(live: 1s)[(if: time > 5s)[$dissolve[//I’m all out of questions and I never had respect
+You on a throne of shit and I ain’t gonna genuflect//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//Had the worst dream ever, woke up in terror
+You were spitting dumb shit in my face forever//(stop:)]]]]
+
+[(live: 1s)[(if: time > 9s)[$dissolve[//Shut the fuck up homie, you don’t know me
+I’m the absolute number one and only//(stop:)]]]]
+[(live: 1s)[(if: time > 11s)[$dissolve[//I guess I could use your head next time I go bowling
+That’s the only way you roll with me//(stop:)]]]]
+[(live: 1s)[(if: time > 13s)[$dissolve[//Otherwise you stay lonely
+Fuck that, I’d never let Steve blow me//(stop:)]]]]
+[(live: 1s)[(if: time > 15s)[$dissolve[//I don’t want leftovers, Fuck you show pony
+All I wanna see is your back now show me//(stop:)]]]]
+
+[(live: 1s)[(if: time > 17s)[$dissolve[(if: $steveRapsFirst is true)[I could feel the power coursing through me and it matched the audience’s roar of approval. [[What a perfect time for the results|The Church - Rap battle - Victory player second]].]
+\(else:)[I could feel the power coursing through me and it matched the audience’s roar of approval. [[Time for Steve’s verse. Ugh|The Church - Rap battle - Second verses steve]].]
+(stop:)]]]]
+
+::The Church - Rap battle - Second verses dogs
+I had to respond to what was in my heart, and what was moving the crowd, so I kept rapping about dogs.
+
+[(live: 1s)[(if: time > 1s)[$dissolve[//I wish I had a puppy when I was growing up
+I’d love to have a flopsy, friendly li'l mutt//(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[//It’d be huge now, with an empty gut
+Waiting for my command to eat Steve’s nuts//(stop:)]]]]
+
+[(live: 1s)[(if: time > 5s)[$dissolve[//Yo I’m wild for any dog, especially the shih-tzu’s
+Dogs look at Steve like, “You shit outside too, dude?”//(stop:)]]]]
+[(live: 1s)[(if: time > 7s)[$dissolve[//I gotta step it back, I’m bein’ kinda rude
+I’d never let my dog look at Steve or eat his food//(stop:)]]]]
+
+[(live: 1s)[(if: time > 9s)[$dissolve[//Listen, I love giant dogs and little dogs
+When I see them, my heart just clogs//(stop:)]]]]
+[(live: 1s)[(if: time > 11s)[$dissolve[//Up with all the loving, I’m almost crying
+But then I gotta laugh cause Steve on stage dying//(stop:)]]]]
+
+[(live: 1s)[(if: time > 13s)[$dissolve[//Shout out to my terriers and their tiny carriers
+Shout out to the bulldogs and the chihuahuas
+You can pull up a seat and sip on mi agua//(stop:)]]]]
+[(live: 1s)[(if: time > 15s)[$dissolve[//
+Shout out to the dachshunds and all the little homies
+Shoutin’ shut the fuck up Steve, you don’t know me//(stop:)]]]]
+
+[(live: 1s)[(if: time > 17s)[$dissolve[The dog crowd had been standing during the whole verse and now they were rushing towards the stage. Steve was looking pretty sweaty, but he said, “Fuck that weird shit. I’m doing my thing,” and [[launched into his next verse|The Church - Rap battle - Victory dog raps]].
+(stop:)]]]]
+
+::The Church - Rap battle - Victory player first
+It was clear that the crowd had been with me from the start. I could read the energy. As Steve’s homies filed out, a fired up group of ‘lettes stormed the stage and started chanting my name. Some of them were new faces, others I knew and had even heard talk shit. I didn’t care. All were welcome in my temple now that I had made it to the top.
+
+Moon Mystic approached Steve and I, holding both our hands, but I didn’t even wait for him. I raised my own hand and screamed, “YOUR CHAMPION $stageName!” Moon Mystic laughed and nodded as [[the crowd stomped in unison|The Church - Mountain intro]].
+
+::The Church - Rap battle - Victory player second
+Moon Mystic approached Steve and I, holding both of our hands. I knew Steve and I had gone back and forth, but I wasn’t nervous.
+
+The crowd was like a wave, lifting me up. Moon Mystic raised my hand. “Your champion $stageName!” As he said it, the crowd [[repeated it back and built a mighty chant|The Church - Mountain intro]].
+
+::The Church - Rap battle - Victory dog raps
+Steve's verse was about how basketball shorts are good for airing out sweaty nuts or something, but the dog crowd weren’t having it. Some of the larger dogs were trying to climb up on stage and snipping at Steve’s feet when he got too close to the edge.
+
+He lost his composure almost immediately as a weirdly large beagle bounded on stage howling and charging at him. He ran backstage, mic and all, screaming at an ear-splitting frequency.
+
+From backstage he announced into the mic, “For my own safety, I’ve decided to end tonight’s performance. We’ll try this again at a later date.”
+
+The crowd was like a banshee, booing and clapping and shrieking all at once. Moon Mystic approached me and raised my hand. [[“Your champion $stageName!”|The Church - Mountain intro]]
+
+::The Church - Mountain intro
+My eyes shone with the energy of victory. As I walked backstage, I could see Kiki jumping and waiting to hug me. As I reached her, I fell into her arms with exhaust and delight.
+
+We hung backstage for a while, recapping the greatest hits of the match and talking strategy, until I got called to the stage for [[the ceremony|The Church - Mountain ceremony]]. As Kiki squeezed me one last time, she said “Good luck on the mountain, Double L. You’re gonna be amazing.” Then I was gone, but her strength still flowed through me like pure caffeine.
+
+::The Church - Mountain ceremony
+The spotlight hit me as Moon Mystic’s assistants, decked in traditional neon green and black robes, lifted me up in an aluminum lawn chair. I bathed in the light and the crowd’s adoration as Moon Mystic read the rites over an open bottle of his namesake.
+
+(click: "an open bottle of his namesake")[$dissolve[“Take and drink. This is that good shit. May the haters take and eat unclean ass. You are the champ, and a ninja, and the most bomb-ass motherfucker forever and ever, amen.” The crowd responded with a hearty amen. Moon Mystic dumped a beige powder into the bottle of Faygo and let it fizz a bit before offering it up to me.]]
+
+(click: "offering it up to me")[$dissolve[I drank heavily until the Moon Mist ran down my chin and my throat. It tasted so sweet and fresh, even though I knew they’d probably saved this bottle for years. As I lost consciousness, I could hear the crowd chanting [[“Juggalo Mountain! Juggalo Mountain! Juggalo Mountain!”|The Church - Mountain ending choice]]]]
+
+::The Church - Mountain ending choice
+I knew even then that no one had finished the mountain since the Honchos had put it in place. I wouldn’t really start caring until I got into that son of a bitch. Anna was waiting for me somewhere in there and nothing had stopped me yet.
+
+What I didn't know was that:
+>>[[this was the beginning of the longest night of my life. My last night in Gatherville.|EFJM - ending]]
+>>[[Anna was waiting for me too — waiting to kill me.|EFJM - ending]]
+>>[[Anna and I were already done. I would have to betray my best friend.|EFJM - ending]]
+>>[[Ron was my real dad and later that night he’d cut my hand off. What a fucking piece of shit.|EFJM - ending]]
+>>[[this story was constructed in the past tense so that the dumbass dude writing this could do a crazy reveal where I’m like the president now or some shit. Haha get fucked.|EFJM - ending]]
+>>[[the world outside Gatherville was even worse. Jeff Bezos was the president and his powerful drones could only give you oral sex or cut off your head and they charged the same amount of money for either.|EFJM - ending]]
+
+::EFJM - ending
+<center>//TO BE CONTINUED//</center>
+
+[(live: 1s)[(if: time > 5s)[$dissolve[(display: "EFJM - Credits")(stop:)]]]]

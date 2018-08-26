@@ -20,6 +20,8 @@ Escape from Juggalo Mountain
 [[Jump to the Roach Market|RM-first-entrance-nameprompt]]
 [[Jump to Auntie’s gift shop|RM-giftshop-entrance-nameprompt]]
 [[Jump to the junk heap|RM-junkheap-entrance-nameprompt]]
+[[Jump to The Church - First visit|The Church - First visit - Name prompt]]
+[[Jump to The Church - Rap battle|The Church - Rap battle name prompt]]
 
 ::StoryIncludes
 src/s1a_portapotty.tw2
@@ -28,9 +30,30 @@ src/s2a_moms_tent.tw2
 src/s2b_tent_city_chase.tw2
 src/s3a_the_gutter.tw2
 src/s3b_the_roach_market.tw2
-src/s4_the_church.tw2
+src/s4a_the_church_first_visit.tw2
+src/s4b_the_church_second_visit.tw2
+src/s4c_the_church_rap_battle.tw2
+src/s4d_the_church_wrestling_match.tw2
 src/css.tw2
 
 ::Twee2Settings [twee2]
 Twee2::build_config.story_format = 'Harlowe2'
 @story_start_name = 'Title Screen'
+
+::EFJM - Credits
+Thanks for playing our weird game!
+
+**Created by**
+Nick Cummings
+Nathan Harrison
+Ben Morgan
+
+**Art by**
+Sarah Morgan
+
+**Special Thanks**
+Meemaw and Pep Pep
+
+**Playtesters**
+Violent J
+Shaggy 2 Dope
