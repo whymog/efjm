@@ -22,13 +22,11 @@
 (set: $hatchet to true)(set: $multitool to true)
 
 ::The Gutter - Outside approach
-My body and mind were screaming as one.
+This was already too much shit for just one day. I kept my head down and my hood up, using what was left of my energy to keep moving. My boots trudged onward through the tarp-covered alleyways of Gatherville.
 
-(click: "one")[$dissolve[I kept my head down and my sweatshirt hood up. I used all of my energy to move forward through the tarp-covered alleyways of Gatherville.
+(click: "boots trudged onward")[$dissolve[My gut lurched as I realized I still needed to ask around for more information on Anna. The last thing I wanted to do was talk to anyone but her.]]
 
-My gut lurched as I realized I’d need to ask around for more information on Anna. The last thing I wanted to do was talk to anyone else.]]
-
-(click: "talk to anyone else")[$dissolve[I pulled my screaming brain into the harsh light of reality, searching for answers through a veil of emotion. It was still pretty early in the night. Around this time, anyone who knew anything was:
+(click: "anyone but her")[$dissolve[I swallowed that feeling out of necessity, and fought to keep it and everything else down in my roiling gut. It was still pretty early in the night. Around this time, anyone who knew anything was:
 
 >>[[Getting fucked up at the Gutter|The Gutter - Outside intro]]
 >>[[Looking to score at the Roach Market|RM-first-entrance]]
@@ -152,7 +150,7 @@ At this, they both took a moment to nod solemnly in unison, as if the two of the
 
 “Indeed. Good to see someone in the new generation knows what the fuck is up.” The larger one sagely offered a fist bump.
 
->>[[I reached my fist out to reciprocate.|The Gutter - Outside - Old-school juggalos 5]]
+>>[[I reached my fist out to reciprocate|The Gutter - Outside - Old-school juggalos 5]].
 >>[[I quickly blurted out, “You seen another little ‘lette around here recently? Maybe in trouble? Her name’s Anna. She’s in a bad way.”|The Gutter - Outside - Old-school juggalos 6]]
 
 ::The Gutter - Outside - Old-school juggalos 4b
@@ -164,7 +162,7 @@ At this, they both took a moment to nod solemnly in unison, as if the two of the
 
 He reached out his hand for a fist bump.
 
->>[[I reached my fist out to reciprocate.|The Gutter - Outside - Old-school juggalos 5]]
+>>[[I reached my fist out to reciprocate|The Gutter - Outside - Old-school juggalos 5]].
 >>[[I quickly blurted out, “You seen another little ‘lette around here recently? Maybe in trouble? Her name’s Anna. She’s in a bad way.”|The Gutter - Outside - Old-school juggalos 6]]
 
 ::The Gutter - Outside - Old-school juggalos 5
@@ -282,7 +280,7 @@ I squinted through the Gutter's signature haze, trying to spot my next destinati
 
 {(if: $toeBeaten is false)[>>[[I approached the bar|The Gutter - Bar $barStatus]].]}
 >>(if: $talkedToRon is true)[[[I walked over to challenge my dipshit step dad to a pool game|The Gutter - Ron - Pool request]]]
-\(else:)[[[I sighed and walked over to Ron|The Gutter - Ron]].]
+\(else:)[[[I sighed and walked over to Ron|The Gutter - Ron]]].
 >>(if: $teensOnTable is false)[[[I checked out the pool table|The Gutter - Pool table - Clear]]]
 \(else-if: $poolTableAttemptMade is true)[[[For some reason, I decided to check on the teens getting frisky on the pool table|The Gutter - Pool table - Second approach]]]
 \(else:)[[[I stood by the pool table and cleared my throat|The Gutter - Pool table - First approach]]].
@@ -571,7 +569,7 @@ I passed Ron his beer and he chugged it with abandon. It wasn’t fun to watch a
 ::The Gutter - Ron - Pool victory
 Ron was so shitfaced that he couldn’t hold the cue right. I took my time, letting him get even more drunk and exhausted. When I sank the eight ball, Ron collapsed on the table.
 
-I used a pool cue to prop his body up and grab the letter from his pocket. I noticed his keys jangling on his side too.
+I poked him hard in the tit with a pool cue to prop his body up, and grabbed the letter from his pocket. I noticed his keys jangling on his side too.
 
 (link: "I took Ron’s keys, even the one to his shitty golf cart, and headed for the exit")[(set: $cartKeyTaken to true)(go-to: "The Gutter - Ending")].
 (link: "I took the key to the Church door, but left the key to Ron’s shitty golf cart. I made a beeline for the exit")[(set: $cartKeyTaken to false)(go-to: "The Gutter - Ending")].
@@ -835,7 +833,7 @@ I stood planning my next move in the crisp night air just outside of The Gutter'
 
 {(if: $gutterEndScenesViewed is 2)[[[I headed for the Church with all the grim determination I could muster|Church - Intro post-letter]].]}
 {(if: $golfCartWreckViewed is false)[>>[[I heard the noise of a familiar assclown behind me and turned to look|The Gutter - Ron's cart finale]].]}
-{(if: $annaLetterRead is false)[>>[[I ripped the envelope from my pocket and devoured Anna’s letter|The Gutter - Anna's letter]].]}
+{(if: $annaLetterRead is false)[>>[[I ripped the envelope from my pocket and unfolded Anna’s letter|The Gutter - Anna's letter]].]}
 
 ::The Gutter - Ron's cart finale
 My eyes caught Ron's lumpy shape staggering through the darkness towards his discount battle wagon. This was too good to miss, so I posted up behind a tree with a good view and peeped out.
@@ -860,7 +858,7 @@ When Ron attempted to start the car, thick smoke poured out of the engine and in
 ::The Gutter - Ron's car finale - No damage
 Ron revved the engine and then started madly honking on the horn. I watched him spin out, try to do a donut, turn the cart over, push the cart back up, start the cart again, and then speed off into the night at a blistering 12mph.
 
-As Ron’s cart crested a hill, it clipped a large rock. I saw the cart rise and flip beautifully like an angel underwater. If I could have one image to ruminate on for the rest of my life, I would choose this one.
+As Ron’s cart crested a hill, it clipped a large rock. I watched the cart pirouette in beautiful slow-motion, like an angel underwater. If I could have one image to ruminate on for the rest of my life, I would choose this one.
 
 [[I headed off into the night|The Gutter - Ending hub]] towards a future that could only disappoint me in comparison.
 
@@ -894,12 +892,22 @@ You know what, I might die and I don’t even care. In the end, it’s my risk a
 
 I know it’s stupid to think I’ll see you on the other side one day sis. But, if we both make it out one day, you’ll always have a place with me. I love you so goddamn much that it makes me sick.
 
-Anna]]</div>]
+[[Anna|The Gutter - Letter choice]]]]</div>]
 
-(click: "Anna")[$dissolve[It took me a while to stop sobbing. I folded the letter carefully and put it in my pocket.
+::The Gutter - Letter choice
+[>>[It took me a while to stop sobbing. I folded the letter carefully and put it in my pocket.]<sobbing|
+>>[I clenched my jaw tight and dug my fingernails into my arm until the threat of tears passed.]<clenching|]<letterchoice|
+
+(click: ?sobbing)[(replace: ?letterchoice)[$dissolve[It took me a while to stop sobbing. I folded the letter carefully and put it in my pocket.
 
 I couldn’t believe how bad I’d fucked up. If I’d known she was really leaving, I never would’ve tried to make her stay.
 
-[[I had to find her. And I had to do it before she left me behind forever|The Gutter - Ending hub]].]]
+[[I had to find her. And I had to do it before she left me behind forever|The Gutter - Ending hub]].]]]
+
+(click: ?clenching)[(replace: ?letterchoice)[$dissolve[I clenched my jaw tight and dug my fingernails into my arm until the threat of tears passed.
+
+I couldn’t believe how far apart we'd grown. If I’d known she was really leaving, I would've taken this more seriously. We weren't really as unhappy as she described, were we?
+
+[[I had to find her to know for sure. The only person I could talk to about how I was feeling was about to leave for good|The Gutter - Ending hub]].]]]
 
 (set: $annaLetterRead to true)(set: $gutterEndScenesViewed to it +1)
