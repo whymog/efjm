@@ -39,3 +39,21 @@ src/css.tw2
 ::Twee2Settings [twee2]
 Twee2::build_config.story_format = 'Harlowe2'
 @story_start_name = 'Title Screen'
+
+::EFJM - Credits
+Thanks for playing our weird game!
+
+**Created by**
+Nick Cummings
+Nathan Harrison
+Ben Morgan
+
+**Art by**
+Sarah Morgan
+
+**Special Thanks**
+Meemaw and Pep Pep
+
+**Playtesters**
+Violent J
+Shaggy 2 Dope
