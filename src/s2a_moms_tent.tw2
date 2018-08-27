@@ -6,7 +6,7 @@
 }(else:)[No, [[that's not right|Mom's Tent - name prompt]].]
 
 ::Mom's Tent - intro
-I stumbled along the old familiar path toward Mom’s tent. My feet moved clumsily under me — I was still feeling fucked up.
+[(live: 2s)[(if: time > 2s)[$dissolve[I stumbled along the old familiar path toward Mom’s tent. My feet moved clumsily under me — I was still feeling fucked up.(stop:)]]]]
 
 (click: "fucked up") [(transition: "dissolve")[My head was spinning: why did Anna lock me up? No, that’s not even it; more like, why the hell would she ever do something like that? It doesn’t make any sense. She’s like my sister. Isn’t she?]]
 
