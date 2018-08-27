@@ -3,8 +3,6 @@
 (if: (text: $stageName)'s length > 0)[Right, I go by $stageName. [[Moving on|The Church - Rap battle]].]
 }(else:)[No, [[that's not right|The Church - Rap battle name prompt]].]
 
-(set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
-
 ::The Church - Rap battle
 Moon Mystic’s voice boomed over the PA. “Where my juggalos at tonight?! Where my fine juggalettes? All my down ass ninjas in the house go woop woop!”
 

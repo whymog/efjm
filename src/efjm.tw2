@@ -5,10 +5,11 @@ Escape from Juggalo Mountain - twee2 Version
 Escape from Juggalo Mountain
 
 [[Begin|Jail Cell (Unlit) - hub]]
-[[Start from Outside Port-a-potty|Outside Port-a-potty]]
+- [[Start from Outside Port-a-potty|Outside Port-a-potty]]
 [[Opening Crawl|Opening crawl]]
-[[Start from Mom's Tent - table|Mom's Tent - name prompt table]]
-[[Start from Mom's Tent - letter|Mom's Tent - name prompt letter]]
+[[Start from Mom's Tent - intro|Mom's Tent - name prompt]]
+- [[Mom's Tent - table|Mom's Tent - name prompt table]]
+- [[Mom's Tent - letter|Mom's Tent - name prompt letter]]
 [[Start from the Chase|Tent City - Intro]]
 - [[Chase 2a: Rip's Rydas|Tent City - Rip's Rydas]]
 - [[Chase 2b: Ornery Kids|Tent City - Ornery Kids]]
@@ -22,7 +23,11 @@ Escape from Juggalo Mountain
 [[Jump to the junk heap|RM-junkheap-entrance-nameprompt]]
 [[Jump to The Church - First visit|The Church - First visit - Name prompt]]
 [[Jump to The Church - Rap battle|The Church - Rap battle name prompt]]
-(set: $justWokeUp to true)
+{
+  (set: $justWokeUp to true)
+  (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
+  (set: $monospace to (css: 'font-family: "Courier New", "Courier", monospace'))
+}
 
 ::StoryIncludes
 src/s1a_portapotty.tw2
