@@ -26,7 +26,7 @@ This was already too much shit for just one day. I kept my head down and my hood
 
 (click: "boots trudged onward")[$dissolve[My gut lurched as I realized I still needed to ask around for more information on Anna. The last thing I wanted to do was talk to anyone but her.]]
 
-(click: "anyone but her")[$dissolve[I swallowed that feeling out of necessity, and fought to keep it and everything else down in my roiling gut. It was still pretty early in the night. Around this time, anyone who knew anything was:
+(click: "anyone but her")[$dissolve[I swallowed that feeling out of necessity and fought to keep it and everything else down in my roiling gut. It was still pretty early in the night. Around this time, anyone who knew anything was:
 
 >>[[Getting fucked up at the Gutter|The Gutter - Outside intro]]
 >>[[Looking to score at the Roach Market|RM-first-entrance]]
@@ -38,10 +38,10 @@ This was already too much shit for just one day. I kept my head down and my hood
 I stood outside a weathered, flat-roofed wooden building with a flickering neon sign.
 <!--This calls one of the three neon sign designs randomly every second. -->
 \
-(click: "neon sign")[(live: 1s)[(either: $guttersign1, $guttersign2, $guttersign3)]
+(click: "neon sign")[(live: .4s)[(either: $gutterSign1, $gutterSign2, $gutterSign3)]
 <!--This makes the following passage dissolve in under the sign after the player has been in the passage for 5 seconds. -->
 \
-[(live: 1s)[(if: time > 10s)[$dissolve[Right below the sign, someone had painted:(stop:)]]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[Right below the sign, someone had painted:(stop:)]]]]]
 \
 <!--This replaces both clickable options when the player chooses a sign, but keeps the sign text they chose. -->
 (click: "someone had painted")[$dissolve[[>>The last rest stop before the Dark Carnival](click:"The last rest stop before the Dark Carnival")[(replace: ?gutterSubSign)[//The last rest stop before the Dark Carnival//
@@ -55,7 +55,7 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 
 [[I walked into the sign’s field of light|The Gutter - Outside hub]].]]]]<gutterSubSign|
 <!-- This makes the blinking neon sign effect work -->
-(set: $guttersign1 to "<span class='neon'><span class='blinking'>THE</span> GUTTER</span>")(set: $guttersign2 to "<span class='neon'>THE <span class='blinking2'>G</span>UTTER</span>")(set: $guttersign3 to "<span class='neon'>THE GUTT<span class='blinking3'>ER</span></span>")
+(set: $gutterSign1 to "<span class='neon'><span class='blinking'>THE</span> GUTTER</span>")(set: $gutterSign2 to "<span class='neon'>THE <span class='blinking2'>G</span>UTTER</span>")(set: $gutterSign3 to "<span class='neon'>THE GUTT<span class='blinking3'>ER</span></span>")
 <style> .neon {
   font-size: 2em;
   font-family: copperplate;
@@ -97,13 +97,18 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 
 >>[[The Gutter’s beaten-to-hell block of a front door|The Gutter - Inside $gutterStatus]]
 >>[[The paved path to The Church|The Church - intro]]
->>[[The dirt road to the Roach Market|RM-$roachEntrance-entrance]]
-(if: $oldSchoolJuggalosSeen is false)[>>[[Some old-school juggalos in a heated conversation by the side of the building|The Gutter - Outside - Old-school juggalos]]]
-(if: $golfCartSeen is false)[>>[[Ron’s shitheap golf cart|The Gutter - Golf cart]]]
-(if: $jarSeen is false)[>>[[The jar|The Gutter - Jar]]]
+>>[[The dirt road to the Roach Market|RM-$roachEntrance-entrance]]\
+(if: $jarSeen is false)[
+>>[[The jar|The Gutter - Jar]]]\
+(if: $oldSchoolJuggalosSeen is false)[
+>>[[Some old-school juggalos in a heated conversation by the side of the building|The Gutter - Outside - Old-school juggalos]]]\
+(if: $golfCartSeen is false)[
+>>[[Ron’s shitheap golf cart|The Gutter - Golf cart]]]
 
 ::The Gutter - Outside - Old-school juggalos
-A tall, chubby juggalo stroking a long beard and a shorter, musclebound ninja with green Kool-Aid dyed hair were inches away from each other, shouting in agreement as they chainsmoked:
+The two juggalos both had full face paint, so I knew they were out for a wild night.
+
+There was a tall, chubby juggalo stroking a long beard and a shorter, musclebound ninja with green Kool-Aid dyed hair. They were inches away from each other, shouting in agreement as they chainsmoked.
 
 “Sorry to be all deep and serious, but I got a lotta shit on my mind.”
 
@@ -115,15 +120,15 @@ A tall, chubby juggalo stroking a long beard and a shorter, musclebound ninja wi
 
 (click: "Listen to the shit")[$dissolve[The shorter ninja started jumping and kicking an unknown assailant at this point. Large picked up on the energy and took his hands away from his beard. He started punching one hand into the other to punctuate his points.
 
-“Exactly! If they were listening; like Dark Lotus? '//Juggalo Family//'? That’s my real shit. That’s what I’m about.”
+“Exactly! If they were listening – like Dark Lotus? 'Juggalo Family'? That’s my real shit. That’s what I’m about.”
 
-“It’s all about the money these days. Ninjas out there got on 4,000-dollar hatchet man jerseys and they think they the shit.”]]
+“It’s all about the money these days. Ninjas out there got on $4,000 hatchet man jerseys and they think they the shit.”]]
 
 (click: "they think they the shit")[$dissolve[“Had a hole in my shirt the other day and I walk by one of them fancy-ass ninjas. You know what he said?”
 
 “Naw, man. No way! It ain’t about the clothes!”
 
-“He called me a juggahoe. You heard that before? I laughed in his face. I told him it was all family, but I’d beat his ass if that was how he needed to be educated.”
+“He called me a jugga//hoe//. You heard that before? I laughed in his face. I told him it was all family, but I’d beat his ass if that was how he needed to be educated.”
 
 “Too true, man.”
 
@@ -190,13 +195,13 @@ I thanked them and walked back towards the front of [[The Gutter|The Gutter - Ou
 
 ::The Gutter - Golf cart
 {(if: $cartPartsSeen is 4)[I figured I'd done enough damage to the cart, so I decided to keep looking around. But man, [[fuck Ron’s shitty cart|The Gutter - Outside hub]].]}
-\(if: $cartPartsSeen is <4)[Ron drove everywhere in this beaten-to-hell golf cart. I had no idea how he'd gotten it in the first place, especially since he couldn't hold down a job longer than six months. But, he loved to roll around the tarps showing it off every time he added another dumbass accessory to the thing.
+\(if: $cartPartsSeen is <4)[Ron drove everywhere in this beaten-to-hell golf cart. I had no idea how he'd gotten it in the first place, especially since he couldn't hold down a job longer than six months. But he loved to roll around the tarps showing it off every time he added another dumbass accessory to the thing.
 
 He had almost everything “tricked” out, including:
-(if: $wheelsSeen is false)[>>[[the wheels|The Gutter - Golf cart - Wheels]]]
-(if: $defenseSeen is false)[>>[[the defense system|The Gutter - Golf cart - Defense]]]
-(if: $hornSeen is false)[>>[[the awful horn|The Gutter - Golf cart - Horn]]]
-(if: $engineSeen is false)[>>[[the engine|The Gutter - Golf cart - Engine]]]]
+(if: $wheelsSeen is false)[>>[[the wheels|The Gutter - Golf cart - Wheels]]](else:)[The wheels, now loosened for added thrills.]
+(if: $defenseSeen is false)[>>[[the defense system|The Gutter - Golf cart - Defense]]](else:)[The defense system, which I'd reconfigured for optimal ass-damage.]
+(if: $hornSeen is false)[>>[[the awful horn|The Gutter - Golf cart - Horn]]](else:)[The horn, which I'd modified for increased stealth.]
+(if: $engineSeen is false)[>>[[the engine|The Gutter - Golf cart - Engine]]](else:)[The engine, now optimized for fuel inefficiency.]]
 
 (set: $golfCartSeen to true)
 
@@ -210,7 +215,7 @@ Old clown-painted Barbie and Ken heads were glued around the rims of each wheel.
 ::The Gutter - Golf cart - Defense
 Ron had removed the entire protective top shell of the car for clearer 360° views, and he had duct-taped barbed wire around the frame in odd places.
 
-(if: $multitool is true)[I used the blade of the multitool to cut the tape and carefully set the wire in a pile in the driver’s seat. I crossed my fingers for [[total ass destruction|The Gutter - Golf cart]].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I used the blade of the multitool to cut the tape and carefully set the wire in a pile in the driver’s seat. I crossed my fingers for [[Total Ass Destruction|The Gutter - Golf cart]].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $defenseSeen to true)
 
@@ -252,28 +257,64 @@ Inside the Gutter, the usual piss-odor of Gatherville faded away under a heavy c
 
 [I waved my hand in front of my face to clear the air.]<waveHand|
 
-[<span class="blur">The crowd was light, so no one even bothered moving the two drunk teens making out right on top of the torn felt of the pool table. The Jukebox for this evening was braying some new tune of his at a weirdly low volume in back of the room. The bartender looked a mix of bored and annoyed as he moved between serving a trio of barflies, who were spewing smoke and holding court on their stools.
+[<div id="blur">(display: "The Gutter - Inside blur text")</div>]<blurryGutterText|
+\(click: ?waveHand)[(replace: ?blurryGutterText)[<div id= "reveal">(display: "The Gutter - Inside blur text")</div>]]
 
-And alone, down at the end of the bar, sat Ron.</span>]<blurryGutterText|
-\(click: ?waveHand)[(replace: ?blurryGutterText)[The crowd was light, so no one even bothered moving the two drunk teens making out right on top of the torn felt of the pool table. The Jukebox for this evening was braying some new tune of his at a weirdly low volume in back of the room. The bartender looked a mix of bored and annoyed as he moved between serving a trio of barflies, who were spewing smoke and holding court on their stools.
+(set: $poolTableAttemptMade to false)(set: $donnieSongDone to false)(set: $bathroomVisited to false)(set: $teensOnTable to true)(set: $talkedToRon to false)(set: $toeBeaten to false)(set: $barStatus to "intro")(set: $gutterStatus to "hub")(set: $gameofChance to 0)
+<!--Used this to make a blur text effect and the animation of the blurring slowly removing after click-->
+<style>
+#blur {
+  color: transparent;
+  	text-shadow: 0em 0em 2em #FFF;
+    font-weight: normal ;
+}
 
-And alone, down at the end of the bar, sat (link: "Ron.")[my fucking stepdad Ron.]
+ #blur tw-link {
+  font-weight: normal;
+  color: transparent;
+}
+
+#reveal {
+    animation:
+      blurring
+      2s
+      ease-out
+      0s
+      alternate
+      1
+      none
+      running;
+}
+@keyframes blurring {
+  0% {
+    color: transparent;
+    	text-shadow: 0em 0em 2em #FFF;
+  }
+  30%  {
+    color: transparent;
+    	text-shadow: 0em 0em 1em #FFF;
+  }
+  70% {
+    color: transparent;
+    	text-shadow: 0em 0em .5em #FFF;
+  }
+  100% {
+      text-shadow: 0em 0em 0em #FFF;
+  }
+}
+</style>
+
+::The Gutter - Inside blur text
+The crowd was light, so no one even bothered moving the two drunk teens making out right on top of the torn felt of the pool table. The Jukebox for this evening was braying some new tune of his at a weirdly low volume in back of the room. The bartender looked a mix of bored and annoyed as he moved between serving a couple of barflies, who were spewing smoke and holding court on their stools.
+
+And alone, down at the end of the bar, sat (link: "Ron")[my fucking stepdad Ron].
 
 >>[[I approached the bar|The Gutter - Bar intro]].
 >>[[I sighed and walked over to Ron|The Gutter - Ron]].
 >>[[I stood by the pool table and cleared my throat|The Gutter - Pool table - First approach]].
 >>[[I reluctantly moved closer to the Jukebox|The Gutter - Jukebox - Intro]].
 >>[[I went straight to the ‘Lette’s Room|The Gutter - Bathroom]].
->>(link: "I went back outside")[(set: $justLeftTheGutter to true)(go-to: "The Gutter - Outside hub")].]]
-
-(set: $poolTableAttemptMade to false)(set: $donnieSongDone to false)(set: $bathroomVisited to false)(set: $teensOnTable to true)(set: $talkedToRon to false)(set: $toeBeaten to false)(set: $barStatus to "intro")(set: $gutterStatus to "hub")(set: $gameofChance to 0)
-<!--Used this to make a more powerful blur text effect -->
-<style>
-.blur {
-  color: transparent;
-  	text-shadow: 0em 0em 0.7em #FFF;
-}
-</style>
+>>(link: "I went back outside")[(set: $justLeftTheGutter to true)(go-to: "The Gutter - Outside hub")].
 
 ::The Gutter - Inside hub
 I squinted through the Gutter's signature haze, trying to spot my next destination.
@@ -293,26 +334,26 @@ I squinted through the Gutter's signature haze, trying to spot my next destinati
 ::The Gutter - Bar intro
 The bar was a big plank laid on top of some empty kegs with a couple of stools scattered around it. But if you pour alcohol and lay down a plank, someone’s gonna plop their ass down in front of it.
 
-Toe, the bartender, was huge and bald, built like a statue, and he could fold his gigantic, disapproving arms tighter than anyone I'd ever seen.
+Toe, the bartender, was huge and bald, built like a statue, and he had painted a permanent, dark frown on his face.
 
 He wasn't great for conversation, but he sure knew the names of all the alchohol and how to mix them with Faygo.
 
-Belinda and Darryl, regulars I knew from Ron's awful stories and visits to pull my mom outta here, were posted up at the bar getting blitzed.
+Belinda and Darryl, regulars I knew from Ron's awful stories and visits to pull my mom outta here, were posted up at the bar getting blitzed. They were here so often that they didn't even paint up before a wild night out anymore.
 
-[[I sat down on an empty stool and looked straight at the bartender|The Gutter - Bar - Toe]].
-[[I sidled up next to Belinda|The Gutter - Bar - Belinda]].
-[[I grabbed a seat next to Darryl|The Gutter - Bar - Darryl]].
-[[None of these fucks were helpful. I decided to look around the bar again|The Gutter - Inside hub]].
+>>[[I sat down on an empty stool and looked straight at the bartender|The Gutter - Bar - Toe]].
+>>[[I sidled up next to Belinda|The Gutter - Bar - Belinda]].
+>>[[I grabbed a seat next to Darryl|The Gutter - Bar - Darryl]].
+>>[[None of these fucks were helpful. I decided to look around the bar again|The Gutter - Inside hub]].
 
 (set: $barStatus to "hub")
 
 ::The Gutter - Bar hub
 Everyone at the bar was where I had left them. I got the feeling this bunch weren't reliable for much but staying right here as often as possible.
 
-[[I sat down on an empty stool and looked straight at the bartender|The Gutter - Bar - Toe]].
-[[I sidled up next to Belinda|The Gutter - Bar - Belinda]].
-[[I grabbed a seat next to Darryl|The Gutter - Bar - Darryl]].
-[[None of these fucks were helpful. I decided to look around the bar again|The Gutter - Inside hub]].
+>>[[I sat down on an empty stool and looked straight at the bartender|The Gutter - Bar - Toe]].
+>>[[I sidled up next to Belinda|The Gutter - Bar - Belinda]].
+>>[[I grabbed a seat next to Darryl|The Gutter - Bar - Darryl]].
+>>[[None of these fucks were helpful. I decided to look around the bar again|The Gutter - Inside hub]].
 
 ::The Gutter - Bar - Toe
 "No kids," Toe offered the second my ass touched stool.
@@ -381,10 +422,12 @@ Belinda was a sweet lady who loved her spot at the bar more than anything else. 
 
 I grabbed a bar stool next to her, carefully judging my distance from the whiskey, and got to the point:
 
->>[[I reached for Belinda’s whiskey|The Gutter - Bar - Belinda whiskey]].
+>>[[I reached for Belinda’s whiskey|The Gutter - Bar - Belinda whiskey]].\
+(if: $talkedToRon is true)[
+>>[[“Hypothetical question: If you had to trick that dipshit Ron into telling you something, how would you do it? Bonus points for humiliation or bruises.”|The Gutter - Bar - Belinda ron]]]\
+(if: $checkedChurch is true)[
+>>[[“What’s the deal with the Church side door? Are they not taking new challengers these days?”|The Gutter - Bar - Belinda church]]]
 >>[[I had no business here. I took a look around at the other bar patrons|The Gutter - Bar hub]].
-(if: $talkedToRon is true)[>>[[“Hypothetical question: If you had to trick that dipshit Ron into telling you something, how would you do it? Bonus points for humiliation or bruises.”|The Gutter - Bar - Belinda ron]]]
-(if: $checkedChurch is true)[>>[[“What’s the deal with the Church side door? Are they not taking new challengers these days?”|The Gutter - Bar - Belinda church]]]
 
 ::The Gutter - Bar - Belinda whiskey
 Belinda swiveled her head like a death cyborg on kill mode. “Darlin’, I like you more than most. So, I’ll give you this one chance.”
@@ -409,7 +452,7 @@ Belinda chuckled. “That stupid piece of shit? One time he lorded a fresh puzzl
 ::The Gutter - Bar - Death
 I did one joke too many and I died like an idiot. Belinda blew my brains across the bar. Ron laughed. Ugh.
 
-As my spirit approached the outskirts of the Dark Carnival, a hooded figure came out to greet me. He pulled his hood down. It was a skeleton of Shaggy 2 Dope and he had a message:
+As my spirit approached the outskirts of the Dark Carnival, a hooded figure came out to greet me. He pulled his hood down. It was the skeleton of Shaggy 2 Dope and he had a message:
 
 “You dumbass bitch. This isn’t how the game ends! Get back in there and don’t go doin’ stupid shit again.”
 
@@ -442,7 +485,7 @@ Darryl’s eyes widened and he gulped. He let his vision linger on the edge of t
 
 Darryl cleared his throat, as if he’d just spoken several sentences by accident.
 
-“Oh, and last night I had a sexy dream about the mom from Family Guy. Don’t tell nobody.”
+“Oh, and last night I had a sexy dream about the mom from //Family Guy//. Don’t tell nobody.”
 
 [[I made a mental note to never ask Darryl a personal question again|The Gutter - Bar - Darryl]].
 
@@ -462,23 +505,29 @@ As he was turning away he let out a low rumble. “It’s all true.”
 ::The Gutter - Bar - Darryl ron
 “That’s between me, Ron, and the packet of hot sauce he tried to shove down my trousers as a prank.” Darryl said plainly.
 
-“Oh, dangit.” Darryl shook his head. “I goofed.”
+“Oh, dangit.” Darryl shook his head. "I told."
 
-[[I laughed very loud at Darryl’s goof|The Gutter - Bar - Darryl]].
+[[I laughed very loud at Darryl’s mistake|The Gutter - Bar - Darryl]].
 
 ::The Gutter - Ron
 Sitting down next to Ron at the bar seemed weird. I just stood behind him instead, stuck for a moment on what to say.
 
->>[["Hey. Fuck you, Ron."|The Gutter - Ron - Fuck you]]
+That's when I noticed the letter. There was an envelope stuffed into his grimy shirt pocket and I could see the edge of a name – my fucking name – in Anna's handwriting. I was instantly furious, but I tried to keep it together as I turned to address Ron.
+
+[>>[["Hey. Fuck you, Ron. Gimme the letter."|The Gutter - Ron - Fuck you]]
 >>[["Uh, Ron, can I talk to you out back?"|The Gutter - Ron - Request to talk]]
->>[[I pretended to shake Ron’s hand, then pulled back at the last second to fix my hair. “Too slow, fucko,” I said as I walked away smiling. It never gets old|The Gutter - Inside hub]].
+>>[I pretended to shake Ron’s hand.]<pretendShake|]<ronIntroChoices|
+
+(click: ?pretendShake)[(replace: ?ronIntroChoices)[I pretended to shake Ron's hand.
+
+But, I pulled back at the last second to fix my hair. “Too slow, fucko,” I said as I [[walked away smiling|The Gutter - Inside hub]]. It never gets old.]]
 
 ::The Gutter - Ron - Request to talk
 Ron was tipping back the last of his beer as I spoke.
 
 "Hahhhhhhh…. Hell naw! Unless this fuck got a tap for me out there," he said, gesturing at the bartender with his beer mug.
 
-I sighed. [["Oh fuck you, Ron."|The Gutter - Ron - Fuck you]]
+I sighed. [["Oh fuck you, Ron. Gimme the letter."|The Gutter - Ron - Fuck you]]
 I tossed up my hands. [[“Fuck this. Not worth it.”|The Gutter - Inside hub]]
 
 ::The Gutter - Ron - Fuck you
@@ -488,9 +537,9 @@ I tossed up my hands. [[“Fuck this. Not worth it.”|The Gutter - Inside hub]]
 
 Ron turned on his stool and squinted at me out of the corner of his eye.
 
-"Hm. Might be. Might be." He eyed me levelly. "Might be that this—" he patted a rough-looking envelope sticking out of his shirt pocket "—is something I could pass on to ya." He leaned toward me. I caught the reek of spilt beer and stale cigarettes on his clothes.
+"Hm. Might be. Might be." He eyed me levelly. "Might be that this—" he pulled the envelope out of his pocket and waved it near my face "—is something I could pass on to ya." He leaned toward me. I caught the reek of spilt beer and stale cigarettes on his clothes.
 
-(link: "...")[$dissolve["Well?" I said.
+(link: "...")[$dissolve["Well?" I said. I knew I'd have to play along with this fuckwad until I got the letter.
 
 (display: "The Gutter - Ron - Pool request")]]
 
@@ -499,8 +548,8 @@ Ron turned on his stool and squinted at me out of the corner of his eye.
 ::The Gutter - Ron - Pool request
 "Well, what the hell you got for your fucking shithead papa Ron, hm?" He looked over at the pool table as he spoke, like the table had an itch he needed to scratch.
 
-“Wanna play a game?” I asked through clenched teeth.
-[I shrugged. [[Whatever|The Gutter - Inside hub]].]<whatever|
+>>“Wanna play a game?” I asked through clenched teeth.
+>>[I shrugged. [[Whatever|The Gutter - Inside hub]].]<whatever|
 
 (click: "play a game")[(if: $teensOnTable is true)[(replace: ?whatever)[$dissolve[“You wanna play on top of those little horn dawgs?" Ron gestured to the horny teens on the table with his beer.
 
@@ -509,9 +558,9 @@ Ron turned on his stool and squinted at me out of the corner of his eye.
 It made me want to pay someone to permanently hold his eyelids open.
 
 [[I walked away seething|The Gutter - Inside hub]].]]]
-\(else-if: $teensOnTable is false)[$dissolve[“Sure, why the hell not? I’d love to whoop your arrogant ass.” Ron motioned to Toe, who shambled over.
+\(else-if: $teensOnTable is false)[(replace: ?whatever)[$dissolve[“Sure, why the hell not? I’d love to whoop your arrogant ass.” Ron motioned to Toe, who shambled over.
 
-“Give us the pool set.”]]]
+“Give us the pool set.”]]]]
 
 (click: "pool set")[(if: $toeBeaten is false)[$dissolve[Toe shook his head and walked back to the other side of the bar. Ron just shrugged and took a swig of beer.
 
@@ -523,16 +572,16 @@ It made me want to pay someone to permanently hold his eyelids open.
 ::The Gutter - Ron - Pool game
 As we were prepping the table, Ron spoke up. “What’s the wager?”
 
-[[“Let’s start small. Loser buys a drink.”|The Gutter - Ron - Pool game start]]
-[[“If I win, you give me that fucking letter.”|The Gutter - Ron - Pool game early letter wager]]
+>>[[“Let’s start small. Loser buys a drink.”|The Gutter - Ron - Pool game start]]
+>>[[“If I win, you give me that fucking letter.”|The Gutter - Ron - Pool game early letter wager]]
 
 ::The Gutter - Ron - Pool game start
 “Sounds good to me.” Ron chuckled. “I’m mighty thirsty.” Ron took the first shot without asking and proceeded to sink two striped balls right away. God dammit.
 
 Unlike everything else in life, Ron wasn’t a slouch at pool. Still, he was overconfident and already sauced, so I could tell that the game was mine if I wanted.
 
-[[I botched a couple shots and let Ron win|The Gutter - Ron - Let him win]].
-[[I carefully planned every shot and then laughed at Ron while I sunk the eight ball|The Gutter - Ron - Won too soon]].
+>>[[I botched a couple shots and let Ron win|The Gutter - Ron - Let him win]].
+>>[[I carefully planned every shot and then laughed at Ron while I sunk the eight ball|The Gutter - Ron - Won too soon]].
 
 ::The Gutter - Ron - Pool game early letter wager
 “Ain’t no way, kiddo. That personal love letter is just too dang important to your daddy Ron to give up.”
@@ -544,8 +593,8 @@ Ron did an awful dance around the table. Then, he climbed the table and did seve
 
 To speed things up and keep conversation at a minimum, I went to the bar to get his drink. I hailed Toe and said:
 
-[[“Strongest thing you’ve got.”|The Gutter - Ron - Strong drink]]
-[[“One beer. Extra piss.”|The Gutter - Ron - Weak drink]]
+>>[[“Strongest thing you’ve got.”|The Gutter - Ron - Strong drink]]
+>>[[“One beer. Extra piss.”|The Gutter - Ron - Weak drink]]
 
 ::The Gutter - Ron - Won too soon
 Ron stared at me dumbfounded. I got a little too jazzed and slapped the pool stick out of his hand while shouting “whose house?!” I did a chicken dance that I’m not proud of, but it felt amazing in the moment.
@@ -569,34 +618,36 @@ I passed Ron his beer and he chugged it with abandon. It wasn’t fun to watch a
 ::The Gutter - Ron - Pool victory
 Ron was so shitfaced that he couldn’t hold the cue right. I took my time, letting him get even more drunk and exhausted. When I sank the eight ball, Ron collapsed on the table.
 
-I poked him hard in the tit with a pool cue to prop his body up, and grabbed the letter from his pocket. I noticed his keys jangling on his side too.
+I poked him hard in the tit with a pool cue to prop his body up and grabbed the letter from his pocket. I noticed his keys jangling on his side too.
 
-(link: "I took Ron’s keys, even the one to his shitty golf cart, and headed for the exit")[(set: $cartKeyTaken to true)(go-to: "The Gutter - Ending")].
-(link: "I took the key to the Church door, but left the key to Ron’s shitty golf cart. I made a beeline for the exit")[(set: $cartKeyTaken to false)(go-to: "The Gutter - Ending")].
+>>(link: "I took Ron’s keys, even the one to his shitty golf cart, and headed for the exit")[(set: $cartKeyTaken to true)(go-to: "The Gutter - Ending")].
+>>(link: "I took the key to the Church door, but left the key to Ron’s shitty golf cart. I made a beeline for the exit")[(set: $cartKeyTaken to false)(go-to: "The Gutter - Ending")].
 
 ::The Gutter - Pool table - First approach
 The teens didn’t move an inch. In fact, they seemed to be rounding first base.
 
 [I coughed.]<poolTableCough|
 [[[I turned back and let the kids have their fun|The Gutter - Inside hub]].]<poolTableExit1|
-\(click: ?poolTableCough)[(replace: ?poolTableExit1)[$dissolve[They were still ignoring me. Clothes were coming off and the only benefit was that I got to see a tattoo of a hatchet man dressed as Jesus pissing on Satan.
+\(click: ?poolTableCough)[(replace: ?poolTableExit1)[$dissolve[
+They were still ignoring me. Clothes were coming off and the only benefit was that I got to see a tattoo of a hatchet man dressed as Jesus pissing on Satan.
 
 [I kicked the leg of the goddamn table.]<poolTableKick|
 [[[I turned back. They were getting pretty close to just fucking at this point|The Gutter - Inside hub]].]<poolTableExit2|]]]
-\(click: ?poolTableKick)[(replace: ?poolTableExit2)[$dissolve["What's your fucking problem, sis?" one of the teens said, in-between tongue thrusts. "Go ruin somebody else's shit.”]]]
+\(click: ?poolTableKick)[(replace: ?poolTableExit2)[$dissolve[
+"What's your fucking problem, sis?" one of the teens said, in-between tongue thrusts. "Go ruin somebody else's shit.”]]]
 
-(click: "ruin")[$dissolve[(set: $poolTableAttemptMade to true)[I frowned in a way that made me feel very old. [[Guess these horny ass kids weren’t moving for me|The Gutter - Inside hub]].]]]
+(click: "ruin")[$dissolve[(set: $poolTableAttemptMade to true)[I frowned in a way that made me feel very old. [[Guess these horny-ass kids weren’t moving for me|The Gutter - Inside hub]].]]]
 
 ::The Gutter - Pool table - Second approach
 Those teens were still twisting tongues and dry humping like the world was ending. I had to respect their stamina at the very least. This wasn't something I could [[interrupt by myself|The Gutter - Inside hub]].
 
 ::The Gutter - Pool table - Clear
-Though a residual funk hung over it, the table was finally clear and [[ready for a game|The Gutter - Inside hub]].
+Though a residual funk hung over it, it didn't look like anything new had seeped into the felt. The table was finally clear and [[ready for a game|The Gutter - Inside hub]].
 
 ::The Gutter - Jukebox - Intro
 The Jukebox was whichever punkass MC that the Honchos had decided needed to prove their salt that week. They were supposed to take requests, learn to serve the family, but most people ignored the Jukeboxes.
 
-The kid on shift today looked like he was on break. He was just fiddling with an old laptop that crunched instead of clicked. I headed his way, but my shoulders did the aw-shit slump when he turned around and I realized it was [[Donnie|The Gutter - Jukebox - Donnie]].
+The kid on shift today looked like he was on break. He was just fiddling with an old laptop with keys that crunched instead of clicked. I headed his way, but my shoulders did the aw-shit slump when he turned around and I realized it was [[Donnie|The Gutter - Jukebox - Donnie]].
 
 ::The Gutter - Jukebox - Donnie
 Donnie was always doing the weirdest shit. The kid barely talked, but when he did it was to quote a song. He’d get stuck on something for months at a time and couldn’t get let it go.
@@ -605,10 +656,10 @@ Anna thought he was alright, but he gave me a weird vibe. Did he hate me? Did he
 
 I couldn’t quite remember which song he was stuck on these days. Donnie was into all kinds of shit and I usually tried to give him a wide berth.
 
-[[“What’s up Donnie?”|The Gutter - Jukebox - Song choice]]
+[[“What’s up, Donnie?”|The Gutter - Jukebox - Song choice]]
 
 ::The Gutter - Jukebox - Song choice
-Donnie stared at his laptop. The only sound was the crunch of the trackpad and the ambient hum of the other dipshits in the bar. I had to try something else.
+Donnie stared at his laptop. The only sound was the crunch of the keys and the ambient hum of the other dipshits in the bar. I had to try something else.
 
 >>[[“Hey Donnie, guess who just got back today?”|The Gutter - Jukebox - Boys choices]]
 >>[[“Donnie, have you seen my friend Anna? She’s a good girl. Loves her mama. Loves Jesus and America too.”|The Gutter - Jukebox - Free fallin choices]]
@@ -629,12 +680,14 @@ Donnie’s eyes lit up and he stared straight at me. “Them wild eyed boys that
 I agreed,
 [“Yeah, they haven’t changed and hadn’t much to say.”]<boysChoice1|
 [[[“Yeah, those guys are cool. They punched my stepdad and spit on him.”|The Gutter - Jukebox - Song failure]]]<boysWrong1|
-(click: ?boysChoice1)[(replace: ?boysWrong1)[$dissolve[“Man, I still think them cats are crazy.” Donnie replied.
+(click: ?boysChoice1)[(replace: ?boysWrong1)[$dissolve[
+“Man, I still think them cats are crazy.” Donnie replied.
 
 I continued,
 [“You know, they were asking if you were around, how you were doing, and if you could be found.”]<boysChoice2|
 [[[“Me too. Those guys are nuts! I’m glad we agree.”|The Gutter - Jukebox - Song failure]]]<boysWrong2|]]]
-(click: ?boysChoice2)[(replace: ?boysWrong2)[$dissolve[Donnie was practically jumping. “Did you tell them I was living downtown? Driving all the old men crazy?!”
+(click: ?boysChoice2)[(replace: ?boysWrong2)[$dissolve[
+Donnie was practically jumping. “Did you tell them I was living downtown? Driving all the old men crazy?!”
 
 We both burst out screaming in unison,
 
@@ -653,13 +706,15 @@ I responded, “Ahh, you know her…”
 [“She gets sick of those long days, living in Reseda.”]<freeFallinChoice1|
 [[[“She loves going to the mall and the Babysitter’s Club novel series.”|The Gutter - Jukebox - Song failure]]]<freeFallinWrong1|
 
-(click: ?freeFallinChoice1)[(replace: ?freeFallinWrong1)[$dissolve[“Is there a freeway running through the yard there?” Donnie replied.
+(click: ?freeFallinChoice1)[(replace: ?freeFallinWrong1)[$dissolve[
+“Is there a freeway running through the yard there?” Donnie replied.
 
 I shook my head,
 [“You’re a bad boy, Donnie. You don’t even miss her.”]<freeFallinChoice2|
 [[[“You’re a bad boy, Donnie. You’re the baddest boy in Reseda.”|The Gutter - Jukebox - Song failure]]]<freeFallinWrong2|]]]
 
-(click: ?freeFallinChoice2)[(replace: ?freeFallinWrong2)[$dissolve[Donnie was practically jumping. “I’m a bad boy for breakin’ her heart!”
+(click: ?freeFallinChoice2)[(replace: ?freeFallinWrong2)[$dissolve[
+Donnie was practically jumping. “I’m a bad boy for breakin’ her heart!”
 
 We both screamed in unison,
 
@@ -679,13 +734,15 @@ I replied, "Yeah, she took the midnight train with a friend:
 [A city boy born and raised in South Detroit."]<believinChoice1|
 [[[Grimace, the purple nightmare from McDonaldLand."|The Gutter - Jukebox - Song failure]]]<believinWrong1|
 
-(click: ?believinChoice1)[(replace: ?believinWrong1)[$dissolve[“I know her then.” Donnie replied. “I met her in a smoky room. There was a singer and the smell of wine and cheap perfume.”
+(click: ?believinChoice1)[(replace: ?believinWrong1)[$dissolve[
+“I know her then.” Donnie replied. “I met her in a smoky room. There was a singer and the smell of wine and cheap perfume.”
 
 “Sounds familiar,” I smiled:
 [“I heard you shared the night and it went on and on and on.”]<believinChoice2|
 [[[“I heard Grimace was singing in that room and his wail pierced the barrier between heaven, hell, and our middle existence.”|The Gutter - Jukebox - Song failure]]]<believinWrong2|]]]
 
-(click: ?believinChoice2)[(replace: ?believinWrong2)[$dissolve[Donnie was vibrating up and down, filled with pure energy. We both skipped straight to the best part and screamed in unison:
+(click: ?believinChoice2)[(replace: ?believinWrong2)[$dissolve[
+Donnie was vibrating up and down, filled with pure energy. We both skipped straight to the best part and screamed in unison:
 
 [["DON’T STOP BELIEVIN’!"|The Gutter - Jukebox - Believin end]]]]]
 
@@ -723,8 +780,8 @@ And yup — as I turned the handle and swung the door, the bathroom stood empty.
 
 Next best thing to a lock if you were cheap as fuck. And anyway, bartender still needed to be able to make sure ninjas weren't getting wet and wild on the fucking shitter.
 
-(click: "wet and wild on the fucking shitter")[As soon as I turned away from the door, I (live: 1s)[(if: time < 20s)[$dissolve[[[started puking into the toilet|The Gutter - Bathroom - Toilet puke]]]]
-\(else-if: time > 20s)[$dissolve[[[started puking on myself|The Gutter - Bathroom - Sink puke]](stop:)]]].]
+(click: "wet and wild on the fucking shitter")[As soon as I turned away from the door, I (live: 2s)[(if: time < 20s)[$dissolve[[[started puking into the toilet.|The Gutter - Bathroom - Toilet puke]]]]
+\(else-if: time > 20s)[$dissolve[[[started puking on myself.|The Gutter - Bathroom - Sink puke]](stop:)]]]]
 
 (set: $mirrorSeen to false)(set: $toiletflashbackSeen to false)(set: $bathroomVisited to true)
 
@@ -749,33 +806,41 @@ I wiped my mouth with the back of my hand. When this was over, I was gonna need 
 (set: $sinkPuke to true)
 
 ::The Gutter - Bathroom - Menu
->>[[I headed back out into the din and dipshits|The Gutter - Inside hub]]
-(if: $mirrorSeen is false)[>>[[I was drawn to my reflection in the mirror|The Gutter - Bathroom - Mirror]].]
-(if: $toiletflashbackSeen is false)[>>[[I sat on the toilet to catch my breath|The Gutter - Bathroom - Toilet flashback]].]
+>>[[I headed back out into the din and dipshits|The Gutter - Inside hub]]\
+(if: $mirrorSeen is false)[
+>>[[I was drawn to my reflection in the mirror|The Gutter - Bathroom - Mirror]].]\
+(if: $toiletflashbackSeen is false)[
+>>[[I sat on the toilet to catch my breath|The Gutter - Bathroom - Toilet flashback]].]
 
 ::The Gutter - Bathroom - Mirror
-(set: $mirrorSeen to true)
+(set: $mirrorSeen to true)\
 I gripped the edges of the counter a bit tighter. My face looked unfamiliar. The stranger’s eyes were weary, like they’d been hung with weights.
 
-//“Hey. $playerName," the mirror stranger said, "You look pretty fucked up. Like somebody dosed you.”//
+Was this what Anna wanted me to see in the mirror? Could this person looking back at me hold it together long enough to find her?
 
-(click: "dosed")[$dissolve["Yeah, well. How about we skip the obvious and you give me a goddamn hand here?"]]
+I looked up suddenly when I heard a voice.
 
-(click: "give me a goddamn hand")[$dissolve[//“A hand? HA! That’s richer than the fuckos in those nice trailers,"// The face got even nastier, contorting and screaming at me like a high wind.
+“Hey $playerName," the stranger in the mirror said, "You look pretty fucked up. Like somebody dosed you.”
 
-//"How about you stop sobbing in the potty and find your friend? Are you gonna crumble this time you no-good bitch? You fucking idiot! How are you gonna handle when it all comes down? When the rubber hits the road?”//]]
+(click: "dosed")[$dissolve["Yeah, well. How about we skip the obvious and you give me a goddamn hand here?" I replied.]]
 
-(click: "rubber hits the road")[$dissolve[My jaw slacked and my lip quivered. I held my hand up and watched it tremble for a moment. But then, like Jay-sus settling the bubbles in a shook up bottle of Rock N Rye, my muscles went calm.]]
+(click: "give me a goddamn hand")[$dissolve[The stranger laughed, “A hand? HA! That’s richer than the fuckos in those nice trailers." The face got even nastier, contorting its mouth into a demonic scowl.]]
 
-(click: "calm")[$dissolve[I fixed myself into a battle stance and roared back, “I handle fine. I handle better! I ride steady and smooth like a ‘65 Cutlass at midnight with the headlights off and I’m COMING]]
+(click: "demonic scowl")[$dissolve[It screamed at me like a high wind assaults a tarp, "How about you stop sobbing in the potty and find your friend? Are you gonna crumble this time, you no-good bitch? You fucking idiot! How are you gonna handle when it all comes down? When the rubber hits the road?”]]
 
-(click: "COMING")[THROUGH]
+(click: "rubber hits the road")[$dissolve[My jaw slacked and my mouth went dry. I held my hand up and watched it tremble for a moment. But then, like Jaysus settling the bubbles in a shook-up bottle of Rock N' Rye, my muscles went calm.]]
+
+(click: "calm")[$dissolve[As I found my footing, I felt the strength roll up my legs and through my whole body.
+
+I roared back, “I handle fine. I handle better! I ride steady and smooth like a ‘65 Cutlass at midnight with the headlights off and I’m CUTTING]]
+
+(click: "CUTTING")[THROUGH]
 
 (click: "THROUGH")[YOUR]
 
-(click: "YOUR")[FUCKING]
+(click: "YOUR")[(transition: "shudder")[FUCKING]]
 
-(click: "FUCKING")[B U L L S H I T]
+(click: "FUCKING")[(transition: "shudder")[B U L L S H I T]]
 
 (click: "B U L L S H I T")[$dissolve[I heard a crunching at the edge of my perception.]]
 
@@ -786,27 +851,38 @@ I gripped the edges of the counter a bit tighter. My face looked unfamiliar. The
 (display: "The Gutter - Bathroom - Menu")]]
 
 ::The Gutter - Bathroom - Toilet flashback
-(set: $toiletflashbackSeen to true)
-I sat down for a second. Just needed to clear my head. But, like everything else tonight, what I wanted didn’t happen. My ass pancaked onto the flimsy, plastic seat while my brain slipped beyond me, into the past.
+(set: $toiletflashbackSeen to true)\
+I sat down for a second. Just needed to clear my head. But, like everything else tonight, what I wanted didn’t happen. My ass pancaked onto the flimsy plastic seat while my brain slipped beyond me, into the past.
 
-(click: "into the past")[$dissolve[I’m eleven years old. Anna and I are dancing while my mom watches from a lawn chair. It’s a summer day when it feels like you’re racing around a band of the sunshine that’s never gonna flatten out and end.]]
+<div class="flashback">(click: "into the past")[$dissolve[I’m eleven years old. Anna and I are dancing while my mom watches from a lawn chair. It’s a summer day where it feels like you’re racing around a band of sunshine that’s never gonna flatten out and end.]]
 
-(click: "flatten out and end")[$dissolve[Anna tugs me over to this group of guys that she’s been talking to. Leo and his dad, some others. We take our boombox over and do this dance routine we’ve been practicing for a few days, nothing fancy, but we really worked at it and it’s kinda long. There are a few parts where we pick each other up.]]
+(click: "flatten out and end")[$dissolve[Anna tugs me over to this group of guys that she’s been talking to. Leo and his dad, some others. We take our boombox over and do this dance routine we’ve been practicing for a few days, nothing fancy, but we really worked at it and it’s kinda long. There's even a part where Anna lifts me.]]
 
-(click: "really worked at it")[$dissolve[While we’re dancing, I don’t feel anything. I don’t feel the eyes. I don’t hear any hoots, if anyone was even drunk enough to hoot at two eleven year olds. We just twirl and twirl in infinity. I remember thinking: “I hope this lasts forever.”]]
+(click: "really worked at it")[$dissolve[While we’re dancing, I don’t feel anything. I don’t feel the eyes. I don’t hear any hoots, if anyone was even drunk enough to hoot at two eleven year olds. We just twirl and twirl in infinity. I remember thinking:
+
+//I hope this lasts forever.//]]
 
 (click: "forever")[$dissolve[And it ends, of course. We’re both breathing heavily and beaming. The guys clap and Leo’s dad waddles over doing a bad copy of our smiles. He says, “Y’all are gonna be heartbreakers one of these days.”]]
 
 (click: "one of these days")[$dissolve[He pinches my cheek, pats my ass. His hands leave long, dark smudges of machine oil. I try to pull away, but he catches me.]]
 
-(click: "catches me")[$dissolve[He says, “Hope you’re nothing like your mother, darling” and loses his balance. He falls ass backwards and his beer’s in the air arcing like a sputtering hose. Everyone busts out laughing, especially Anna.]]
+(click: "catches me")[$dissolve[He says, “Hope you’re nothing like your mother, darling” and loses his balance. He falls ass-backwards spilling his beer into the air like a sputtering hose. Everyone busts out laughing, especially Anna.]]
 
-(click: "especially Anna")[$dissolve[Later, I asked Anna how she could laugh. I was so scared, I told her. We shouldn’t hang around those guys anymore. “Nah,” she said, “that’s what it’s gonna be like. You gotta get used to it.”]]
+(click: "especially Anna")[$dissolve[Later, I asked Anna how she could laugh. I was so scared, I told her. We shouldn’t hang around those guys anymore.
 
-(click: "get used to it")[$dissolve[It wasn’t until years later that I realized that Anna had kicked that motherfucker’s legs out.
+“Nah,” she said, “that’s what it’s gonna be like. You gotta get used to it.”]]
 
-(display: "The Gutter - Bathroom - Menu")]]
+(click: "get used to it")[$dissolve[It wasn’t until years later that I realized that Anna had kicked that motherfucker’s legs out.]]</div>
 
+(click: "I realized")[(display: "The Gutter - Bathroom - Menu")]
+
+<style>
+.flashback
+{
+  padding-left: 2em;
+  font-style: italic;
+}
+</style>
 ::The Gutter - Bathroom - Second visit
 I locked myself in the 'Lette's room again with the door stopper. I took a moment to just close my eyes and breathe. Each second of silence was as refreshing and sweet as a big scoop of vanilla ice cream.
 
@@ -824,16 +900,19 @@ I locked myself in the 'Lette's room again with the door stopper. I took a momen
 When the night air hit my lungs, the relief was sharper than drinking a cold glass of water after a bong rip. The light of the Gutter’s sign felt like the glow of the north star, revealing my path forward.
 
 >>[[I heard the noise of a familiar assclown behind me and turned to look|The Gutter - Ron's cart finale]].
->>[[I ripped the envelope from my pocket and devoured Anna’s letter|The Gutter - Anna's letter]].
+>>[[I ripped the envelope from my pocket and quickly unfolded Anna’s letter|The Gutter - Anna's letter]].
 
 (set: $gutterEndScenesViewed to 0)(set: $golfCartWreckViewed to false)(set: $annaLetterRead to false)
 
 ::The Gutter - Ending hub
 I stood planning my next move in the crisp night air just outside of The Gutter's halo of dirty light.
-
-{(if: $gutterEndScenesViewed is 2)[[[I headed for the Church with all the grim determination I could muster|Church - Intro post-letter]].]}
-{(if: $golfCartWreckViewed is false)[>>[[I heard the noise of a familiar assclown behind me and turned to look|The Gutter - Ron's cart finale]].]}
-{(if: $annaLetterRead is false)[>>[[I ripped the envelope from my pocket and unfolded Anna’s letter|The Gutter - Anna's letter]].]}
+\
+(if: $gutterEndScenesViewed is 2)[
+[[I headed for the Church with all the grim determination I could muster|Church - Intro post-letter]].]\
+(if: $golfCartWreckViewed is false)[
+>>[[I heard the noise of a familiar assclown behind me and turned to look|The Gutter - Ron's cart finale]].]\
+(if: $annaLetterRead is false)[
+>>[[I ripped the envelope from my pocket and quickly unfolded Anna’s letter|The Gutter - Anna's letter]].]
 
 ::The Gutter - Ron's cart finale
 My eyes caught Ron's lumpy shape staggering through the darkness towards his discount battle wagon. This was too good to miss, so I posted up behind a tree with a good view and peeped out.
@@ -872,31 +951,32 @@ Out of options, Ron tried to kick one of the wheels of the car but got his foot 
 ::The Gutter - Anna's letter
 The letter was thick with Ron’s beer sweat stench, but I didn’t care. As soon as I saw her handwriting my eyes welled up and my fists clenched.
 
-(click: "saw her handwriting")[<div style="padding-left: 2em; font-style: italic;">[$dissolve[$playerName,
+[<div style="padding-left: 2em; font-style: italic;">[(live: 1s)[(if: time > 3s)[$dissolve[$playerName,
 
 God damn sis. I’m so fucking sorry. If you’re feeling how I think you’re feeling right now, just know that I feel the same or worse. That shit I bought from Dan should wear off in a few hours.
 
-I’m the worst kind of backstabber. Trust that Judas never looked this fresh though. ;)
+I’m the worst kind of backstabber. Trust that Judas never looked this fresh though. ;)(stop:)]]]]
 
-I just didn’t know what else to do. I realized after we talked that we didn’t want the the same things. That’s OK. I still love you. But, I’ve gotta leave.]]
+[(live: 1s)[(if: time > 15s)[$dissolve[I just didn’t know what else to do. I realized after we talked that we didn’t want the the same things. That’s OK. I still love you. But I’ve gotta leave.
 
-(click: "gotta leave")[$dissolve[I can’t take another beating or groping or whistle or side-eyed glance or ass pat or hair pull or cat call. I can’t eat another Twinkie and call it dinner because the meal coins got messed up again. I can’t spend another week scrapping for the book I want, only to find it torn up and covered in dick drawings.
+I can’t take another beating or groping or whistle or side-eyed glance or ass pat or hair pull or cat call. I can’t eat another Twinkie and call it dinner because the meal coins got messed up again. I can’t spend another week scrapping for the book I want, only to find it torn up and covered in dick drawings.(stop:)]]]]
 
-Please understand. I hope you understand. I hate this place more than any other place on Earth. I hope it burns down. I’d press the button to nuke it from orbit. I mean, if you weren’t there.
+[(live: 1s)[(if: time > 22s)[$dissolve[Please understand. I hope you understand. I hate this place more than any other place on Earth. I hope it burns down. I’d press the button to nuke it from orbit. I mean, if you weren’t there.
 
-Fuck. Why is it so hard to leave? We spent all those nights raging, and stirring ourselves to howling, and dreaming of a better life, so why is it so hard to find the energy to get out of this vortex of shit?]]
+Fuck. Why is it so hard to leave? We spent all those nights raging, and stirring ourselves to howling, and dreaming of a better life, so why is it so hard to find the energy to get out of this vortex of shit?(stop:)]]]]
 
-(click: "vortex of shit")[$dissolve[They had us playing a rigged game the whole time. You know the mountain? Their fucking stupid path to an imaginary top. I found a different way through and I’m peacing outta this bitch. I hope they think I died up there, another stupid bitch crawling for the crown.
+[(live: 1s)[(if: time > 29s)[$dissolve[They had us playing a rigged game the whole time. You know the mountain? Their fucking stupid path to an imaginary top. I found a different way through and I’m peacing outta this bitch. I hope they think I died up there, another stupid bitch crawling for the crown.
 
 You know what, I might die and I don’t even care. In the end, it’s my risk and I couldn’t drag you down with me. You can call me crazy or selfish or whatever, just know that it’s not nearly as bad as what I’m calling myself.
 
-I know it’s stupid to think I’ll see you on the other side one day sis. But, if we both make it out one day, you’ll always have a place with me. I love you so goddamn much that it makes me sick.
+I know it’s stupid to think I’ll see you on the other side one day, sis. But if we both make it out one day, you’ll always have a place with me. I love you so goddamn much that it makes me sick.(stop:)]]]]
 
-[[Anna|The Gutter - Letter choice]]]]</div>]
+[(live: 1s)[(if: time > 36s)[$dissolve[It's always love,
+[[Anna|The Gutter - Letter choice]](stop:)]]]]</div>]
 
 ::The Gutter - Letter choice
-[>>[It took me a while to stop sobbing. I folded the letter carefully and put it in my pocket.]<sobbing|
->>[I clenched my jaw tight and dug my fingernails into my arm until the threat of tears passed.]<clenching|]<letterchoice|
+[>>[It took me a while to stop sobbing. I folded the letter solemnly and put it in my pocket.]<sobbing|
+>>[I clenched my jaw tight and dug my fingernails into my arm. I was so furious at being betrayed and left alone.]<clenching|]<letterchoice|
 
 (click: ?sobbing)[(replace: ?letterchoice)[$dissolve[It took me a while to stop sobbing. I folded the letter carefully and put it in my pocket.
 
@@ -904,9 +984,11 @@ I couldn’t believe how bad I’d fucked up. If I’d known she was really leav
 
 [[I had to find her. And I had to do it before she left me behind forever|The Gutter - Ending hub]].]]]
 
-(click: ?clenching)[(replace: ?letterchoice)[$dissolve[I clenched my jaw tight and dug my fingernails into my arm until the threat of tears passed.
+(click: ?clenching)[(replace: ?letterchoice)[$dissolve[I clenched my jaw tight and dug my fingernails into my arm. I was so furious at being betrayed and left alone.
 
-I couldn’t believe how far apart we'd grown. If I’d known she was really leaving, I would've taken this more seriously. We weren't really as unhappy as she described, were we?
+I couldn’t believe how far apart we'd grown. And now she'd //drugged me//? That was fucked up. If I’d known she was really leaving, I would've taken this more seriously. We weren't really as unhappy as she described, were we?
+
+Did I really even know my best friend at all? Would the person I knew really leave me behind after one mistake?
 
 [[I had to find her to know for sure. The only person I could talk to about how I was feeling was about to leave for good|The Gutter - Ending hub]].]]]
 
