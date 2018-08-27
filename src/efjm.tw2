@@ -26,7 +26,7 @@ Escape from Juggalo Mountain
 {
   (set: $justWokeUp to true)
   (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
-  (set: $monospace to (css: 'font-family: "Courier New", "Courier", monospace'))
+  (set: $monospace to (css: 'font-family: "VT323", "Courier New", "Courier", monospace; font-size: 36px; color: #33BB44;'))
 }
 
 ::StoryIncludes
