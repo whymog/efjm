@@ -32,7 +32,7 @@ This was already too much shit for just one day. I kept my head down and my hood
 >>[[Looking to score at the Roach Market|RM-first-entrance]]
 >>[[Catching an early show at the Church|The Church - First visit - Intro]]]]
 
-(set: $gutterOutside to "intro")(set: $spokeToToe to false)(set: $roachEntrance to "first")
+(set: $gutterOutside to "intro")(set: $spokeToToe to false)(set: $roachEntrance to "first")(set: $churchStatus to "Intro")
 
 ::The Gutter - Outside intro
 I stood outside a weathered, flat-roofed wooden building with a flickering neon sign.
@@ -80,7 +80,9 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 }
 </style>
 <!--These are the variables that need to be set for the Outside hub passages to work properly-->
-(set: $oldSchoolJuggalosSeen to false)(set: $jarSeen to false)(set: $justLeftTheGutter to false)(set: $golfCartSeen to false)(set: $cartPartsSeen to 0)(set: $wheelsSeen to false)(set: $engineSeen to false)(set: $defenseSeen to false)(set: $hornSeen to false)(set: $gutterStatus to "intro")(set: $gutterOutside to "hub")
+(set: $oldSchoolJuggalosSeen to false)(set: $jarSeen to false)(set: $justLeftTheGutter to false)(set: $gutterStatus to "intro")(set: $gutterOutside to "hub")
+<!--These are the variables just for the golf cart-->
+(set: $golfCartSeen to false)(set: $cartPartsSeen to 0)(set: $wheelsSeen to false)(set: $engineSeen to false)(set: $defenseSeen to false)(set: $hornSeen to false)(set: $wheelDamage to false)(set: $defenseDamage to false)(set: $engineDamage to false)(set: $hornDamage to false)
 
 ::The Gutter - Name prompt outside hub
 { (set: $playerName to (prompt: "Enter name:", ""))
@@ -88,15 +90,18 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 }(else:)[No, [[that's not right|The Gutter - Name prompt outside hub]].]
 
 (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
-(set: $hatchet to true)(set: $multitool to true)
-(set: $oldSchoolJuggalosSeen to false)(set: $jarSeen to false)(set: $justLeftTheGutter to false)(set: $golfCartSeen to false)(set: $cartPartsSeen to 0)(set: $wheelsSeen to false)(set: $engineSeen to false)(set: $defenseSeen to false)(set: $hornSeen to false)(set: $gutterStatus to "intro")
+(set: $hatchet to true)
+<!--These are the variables that need to be set for the Outside hub passages to work properly-->
+(set: $oldSchoolJuggalosSeen to false)(set: $jarSeen to false)(set: $justLeftTheGutter to false)(set: $gutterStatus to "intro")(set: $gutterOutside to "hub")
+<!--These are the variables just for the golf cart-->
+(set: $golfCartSeen to false)(set: $cartPartsSeen to 0)(set: $wheelsSeen to false)(set: $engineSeen to false)(set: $defenseSeen to false)(set: $hornSeen to false)(set: $wheelDamage to false)(set: $defenseDamage to false)(set: $engineDamage to false)(set: $hornDamage to false)
 
 ::The Gutter - Outside hub
 (if: $justLeftTheGutter is true)[(set: $justLeftTheGutter to false)I walked back into the dim neon light of the Gutter’s sign. I could see:]
 \(else:)[In the dim light of the neon sign, I could see:]
 
 >>[[The Gutter’s beaten-to-hell block of a front door|The Gutter - Inside $gutterStatus]]
->>[[The paved path to The Church|The Church - First visit - Intro]]
+>>[[The paved path to The Church|The Church - First visit - $churchStatus]]
 >>[[The dirt road to the Roach Market|RM-$roachEntrance-entrance]]\
 (if: $jarSeen is false)[
 >>[[The jar|The Gutter - Jar]]]\
@@ -198,38 +203,38 @@ I thanked them and walked back towards the front of [[The Gutter|The Gutter - Ou
 \(if: $cartPartsSeen is <4)[Ron drove everywhere in this beaten-to-hell golf cart. I had no idea how he'd gotten it in the first place, especially since he couldn't hold down a job longer than six months. But he loved to roll around the tarps showing it off every time he added another dumbass accessory to the thing.
 
 He had almost everything “tricked” out, including:
-(if: $wheelsSeen is false)[>>[[the wheels|The Gutter - Golf cart - Wheels]]](else:)[The wheels, now loosened for added thrills.]
-(if: $defenseSeen is false)[>>[[the defense system|The Gutter - Golf cart - Defense]]](else:)[The defense system, which I'd reconfigured for optimal ass-damage.]
-(if: $hornSeen is false)[>>[[the awful horn|The Gutter - Golf cart - Horn]]](else:)[The horn, which I'd modified for increased stealth.]
-(if: $engineSeen is false)[>>[[the engine|The Gutter - Golf cart - Engine]]](else:)[The engine, now optimized for fuel inefficiency.]]
+(if: $wheelsSeen is false)[>>[[the wheels|The Gutter - Golf cart - Wheels]]](else-if: $wheelDamage is true)[The wheels, now loosened for added thrills.]
+(if: $defenseSeen is false)[>>[[the defense system|The Gutter - Golf cart - Defense]]](else-if: $defenseDamage is true)[The defense system, which I'd reconfigured for optimal ass-damage.]
+(if: $hornSeen is false)[>>[[the awful horn|The Gutter - Golf cart - Horn]]](else-if: $hornDamage is true)[The horn, which I'd modified for increased stealth.]
+(if: $engineSeen is false)[>>[[the engine|The Gutter - Golf cart - Engine]]](else-if: $engineDamage is true)[The engine, now optimized for fuel inefficiency.]]
 
 (set: $golfCartSeen to true)
 
 ::The Gutter - Golf cart - Wheels
 Old clown-painted Barbie and Ken heads were glued around the rims of each wheel. The face painting was... oddly detailed.
 
-(if: $multitool is true)[I used the multitool to unscrew a few crucial wheel bolts. Just a (link: "little goof")[(set: $cartDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I used the multitool to unscrew a few crucial wheel bolts. Just a (link: "little goof")[(set: $wheelDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $wheelsSeen to true)
 
 ::The Gutter - Golf cart - Defense
 Ron had removed the entire protective top shell of the car for clearer 360° views, and he had duct-taped barbed wire around the frame in odd places.
 
-(if: $multitool is true)[I used the blade of the multitool to cut the tape and carefully set the wire in a pile in the driver’s seat. I crossed my fingers for [[Total Ass Destruction|The Gutter - Golf cart]].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I used the blade of the multitool to cut the tape and carefully set the wire in a pile in the driver’s seat. I crossed my fingers for (link: "Total Ass Destruction")[(set: $defenseDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $defenseSeen to true)
 
 ::The Gutter - Golf cart - Horn
 The horn played a sample of Violent J screaming //“WHAT IS A JUGGALO?!”// at an ear-piercing volume.
 
-(if: $multitool is true)[I quickly used the multitool blade to cut the line leading from the horn to the old mp3 player. [[Haha, eat shit Ron|The Gutter - Golf cart]].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I quickly used the multitool blade to cut the line leading from the horn to the old mp3 player. (link: "Haha eat shit Ron")[(set: $hornDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $hornSeen to true)
 
 ::The Gutter - Golf cart - Engine
 It was just way too loud and Ron called it a “Hemi” pretty often.
 
-(if: $multitool is true)[I used the multitool blade to poke holes in the hoses until some fluid leaked out. [[Oops|The Gutter - Golf cart]].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I used the multitool blade to poke holes in the hoses until some fluid leaked out. (link: "Oops")[(set: $engineDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $engineSeen to true)
 
@@ -365,7 +370,7 @@ He said nothing.
 (click: "nothing")[$dissolve[I waited. Still not a fucking peep.]]
 
 (click: "peep")[(if: (text: $gameOfChance)'s length > 1)[$dissolve[I [[pulled out the $gameOfChance|The Gutter - Bar - Toe game start]]].]
-\(else:)[$dissolve[...I got [[bored|The Gutter - Inside hub]].]]]
+\(else:)[$dissolve[...I got [[bored|The Gutter - Bar hub]].]]]
 
 (set: $spokeToToe to true)
 
@@ -549,19 +554,20 @@ Ron turned on his stool and squinted at me out of the corner of his eye.
 "Well, what the hell you got for your fucking shithead papa Ron, hm?" He looked over at the pool table as he spoke, like the table had an itch he needed to scratch.
 
 >>“Wanna play a game?” I asked through clenched teeth.
->>[I shrugged. [[Whatever|The Gutter - Inside hub]].]<whatever|
+[>>I shrugged. [[Whatever|The Gutter - Inside hub]].]<whatever|
 
-(click: "play a game")[(if: $teensOnTable is true)[(replace: ?whatever)[$dissolve[“You wanna play on top of those little horn dawgs?" Ron gestured to the horny teens on the table with his beer.
+(click: "play a game")[(if: $teensOnTable is true)[(replace: ?whatever)[$dissolve[
+“You wanna play on top of those little horn dawgs?" Ron gestured to the horny teens on the table with his beer.
 
 "No thanks. I don’t like to mix pleasure and pleasure, if you know what I mean.” Ron winked and belched.
 
 It made me want to pay someone to permanently hold his eyelids open.
 
 [[I walked away seething|The Gutter - Inside hub]].]]]
-\(else-if: $teensOnTable is false)[(replace: ?whatever)[$dissolve[“Sure, why the hell not? I’d love to whoop your arrogant ass.” Ron motioned to Toe, who shambled over.
+\(else-if: $teensOnTable is false)[(replace: ?whatever)[$dissolve[
+“Sure, why the hell not? I’d love to whoop your arrogant ass.” Ron motioned to Toe, who shambled over.
 
 “Give us the pool set.”]]]]
-
 (click: "pool set")[(if: $toeBeaten is false)[$dissolve[Toe shook his head and walked back to the other side of the bar. Ron just shrugged and took a swig of beer.
 
 [[I sighed and walked away too|The Gutter - Inside hub]].]]
@@ -806,7 +812,7 @@ I wiped my mouth with the back of my hand. When this was over, I was gonna need 
 (set: $sinkPuke to true)
 
 ::The Gutter - Bathroom - Menu
->>[[I headed back out into the din and dipshits|The Gutter - Inside hub]]\
+>>[[I headed back out into the din and dipshits|The Gutter - Inside hub]].\
 (if: $mirrorSeen is false)[
 >>[[I was drawn to my reflection in the mirror|The Gutter - Bathroom - Mirror]].]\
 (if: $toiletflashbackSeen is false)[
@@ -908,7 +914,7 @@ When the night air hit my lungs, the relief was sharper than drinking a cold gla
 I stood planning my next move in the crisp night air just outside of The Gutter's halo of dirty light.
 \
 (if: $gutterEndScenesViewed is 2)[
-[[I headed for the Church with all the grim determination I could muster|Church - Intro post-letter]].]\
+[[I headed for the Church with all the grim determination I could muster|The Church - Second visit - Intro]].]\
 (if: $golfCartWreckViewed is false)[
 >>[[I heard the noise of a familiar assclown behind me and turned to look|The Gutter - Ron's cart finale]].]\
 (if: $annaLetterRead is false)[
