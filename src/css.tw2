@@ -1,7 +1,14 @@
 ::Stylesheet [stylesheet]
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 tw-story {
   /* Override default container styles here */
   /* padding: 30px 40px 30px 140px; */
+}
+
+tw-link,
+tw-link.visited {
+  color: rgb(65, 105, 225);
 }
 
 img {

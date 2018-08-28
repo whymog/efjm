@@ -19,14 +19,18 @@
 
 <!-- Scene for the first time a player visits the Roach Market -->
 ::RM-first-entrance
+<img src="../src/img/stash.png">
 Going into the Roach Market, the first thing everybody walks by is “The Stash”: Dopeman Dan’s head shop and drug emporium.
 
 It was a primo spot, and Dan went so far as to sleep there every night to make sure nobody tried to push him out. After keeping that up for so many years, it was hard to say which was more true: that Dan smelled like The Stash, or that The Stash smelled like Dan.
 
 Today he was half-dozing in a camp chair out front, but he [[perked up as I went by|RM-DopemanDan-greeting]].
 
+(set: $roachEntrance to "later")
+
 <!-- Scene for the second and any subsequent returns to the Roach Market sequence -->
 ::RM-later-entrance
+<img src="../src/img/stash.png">
 As I made my way back into the Roach Market, I could see Dopeman Dan was no longer half-dozing in his camp chair out front: he was straight up sawin’ logs. So much the better; I didn’t want anything from The Stash anyway.
 
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
@@ -34,13 +38,14 @@ As I made my way back into the Roach Market, I could see Dopeman Dan was no long
 
 <!-- Short scene if the player decides to return to The Stash while still exploring the Roach Market -->
 ::RM-DopemanDan-return
-There was no sign of Dan. He probably had either passed out, or left briefly on one of his “snack quests” to the nearby landfill.
+<img src="../src/img/stash.png">
+There was no sign of Dan. He probably had either passed out behind his tent, or left briefly on one of his “snack quests” to the nearby landfill.
 
 I thought about poking my nose into The Stash for a free score on my own terms... then remembered all the folks in Gatherville who’d tried the same thing and lost a finger to Dan’s hatchet in the bargain. Better not push my luck.
 
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
 > [[Head to the junk heap|RM-junkheap-entrance]]
-> [[Head to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)<br>
+> [[Head to The Gutter|The Gutter - Outside $gutterOutside]]
 
 ::RM-DopemanDan-greeting
 “Hey, $playerName!” Dan called out. “Yo yo yo, slow down girl! Dopeman Dan got sumthin’ with your name on it.” He was on his feet and in my way in a flash; surprisingly quick for a guy who was, at the very least, perpetually half-stoned.
@@ -121,7 +126,6 @@ I unrolled the top and peeked inside. “Wow. This is, uh, a pretty full bag.”
 
 ::RM-giftshop-entrance
 {
-  (set: $spokeToToe to true) <!-- forcing this to true for initial testing -->
   (if: $giftshopVisited is true)[
     <!-- alternate intro if revisiting the gift shop scene -->I was back in Auntie’s: her combination gift shop, living room, and bedroom, with cheap wire racks all around. Auntie was plopped in the middle of it all just like before, watching TV from her recliner. I think <i>Big Money Rustlas</i> was on. She loved the oldies.<br>(click: " oldies")[
       (transition: "dissolve") +(transition-time: 3s)[
@@ -147,7 +151,7 @@ I unrolled the top and peeked inside. “Wow. This is, uh, a pretty full bag.”
   (if: $spokeToToe is true and $gameOfChance is 0)[
     (display: "RM-giftshop-gamedescriptions")
   ]
-  (else-if: ($spokeToToe is true and $gameOfChance is "dice set") or ($spokeToToe is true and $gameOfChance is "dominoes") or ($spokeToToe is true and $gameOfChance is "pen-knife"))[
+  (else-if: ($spokeToToe is true and $gameOfChance is "dice set") or ($spokeToToe is true and $gameOfChance is "dominoes") or ($spokeToToe is true and $gameOfChance is "pen knife"))[
     (display: "RM-giftshop-tradecomplete")
   ]
   (else:)[
@@ -168,9 +172,9 @@ I didn’t really have much to trade with. You could find a soft spot in Auntie 
   (transition: "dissolve") +(transition-time: 3s)[
     <br>
     I set my sights on the…<br>
-    > [[Dice set.|RM-giftshop-start-trade]](click: "Dice set.")[(set:$gameOfChance to "dice set")]<br>
+    > [[Dice set.|RM-giftshop-start-trade]](click: "Dice set.")[(set:$gameOfChance to "dice")]<br>
     > [[Dominoes.|RM-giftshop-start-trade]](click: "Dominoes.")[(set:$gameOfChance to "dominoes")]<br>
-    > [[Pen-knife.|RM-giftshop-start-trade]](click: "Pen-knife.")[(set:$gameOfChance to "pen-knife")]
+    > [[Pen knife.|RM-giftshop-start-trade]](click: "Pen knife.")[(set:$gameOfChance to "pen knife")]
   ]
 ]}
 
@@ -179,14 +183,18 @@ She was also hollering at me without turning around as soon as I set foot inside
 
 “You already got what ya came for, $playerName, now git! No window-shoppin’ for folks with nothin’ to trade. Besides, this right here is my favorite part.” Auntie let out a low chuckle as <i>`[insert randomly rolled event from Big Money Rustlas here]`</i>.
 
-> [[Head to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)
+> [[Head back to The Gutter|The Gutter - Outside $gutterOutside]]
 > [[Head to the junk heap|RM-junkheap-entrance]]
 > [[Head to The Stash|RM-DopemanDan-return]]
 
 ::RM-giftshop-deadend
 <!-- if the player has NOT talked to Toe yet, or doesn't know they need to get a game of chance -->I didn’t really have much to trade with. I could maybe swing one thing if I sweet-talked Auntie a bit, but I didn’t want to cash that chip in until I had to.
-<br><br>
+
 Nothing jumped out at me that I just needed to have, so I wandered the racks for a few minutes, window shopping in silence — which suited Auntie just fine. I don’t think she even moved once in her chair.
+
+> [[Head to the junk heap|RM-junkheap-entrance]]
+> [[Head to The Stash|RM-DopemanDan-return]]
+> [[Head to The Gutter|The Gutter - Outside $gutterOutside]]
 
 ::RM-giftshop-start-trade
 “Hey Auntie. Weird question: could I borrow the $gameOfChance you got here? I don’t need it for very long. Just to prove a point to a dick.” I considered for a moment. “Well, not a dick, I guess. A Toe.”
@@ -221,7 +229,7 @@ I nodded. I’d have to come up with something else. I put my hands in my pocket
 
 <i>Not for long</i>, I thought as I pressed the wooden nickel into Auntie’s open palm. <i>Next stop, Toe</i>.
 
-> [[Head back to The Gutter|The-Gutter-start]] (<i>note: not a real link atm</i>)
+> [[Head back to The Gutter|The Gutter - Outside $gutterOutside]]
 > [[Head to the junk heap|RM-junkheap-entrance]]
 > [[Head to The Stash|RM-DopemanDan-return]]
 
@@ -251,7 +259,12 @@ It was easy enough to pick through: whenever the heap ran out of flat surfaces, 
 
 Everybody wanted or needed something from the heap sooner or later, and only real assholes violated that pact and made a mess of it.
 
-[[I quickly skimmed through the dregs—|RM-junkheap-stuff]]
+(if: $junkHeapSeen is true)[I didn't see anything new since my last visit:
+>>[[But I just wanted to skim through again.|RM-junkheap-stuff]]
+>>[[So I headed to The Stash.|RM-DopemanDan-return]]
+>>[[So I headed to The Gutter.|The Gutter - Outside $gutterOutside]]
+>>[[So I headed to Auntie’s gift shop.|RM-giftshop-entrance]]
+](else:)[[[I quickly skimmed through the dregs—|RM-junkheap-stuff]]]
 
 ::RM-junkheap-stuff
 [Dead car batteries—]<junkList1|(click: ?junkList1)
@@ -264,12 +277,15 @@ Then I got to the big table in the back corner, with a handwritten sign set on i
 Scrawled in pencil along the bottom of the sign was the table’s motto: “<i>Leave good shit, take good shit.</i>”
 
 [[I took a look at today’s spread...|RM-junkheap-goodshit]]
+
 ]]]]]]
 
 ::RM-junkheap-goodshit
 There was a [[small tin|RM-junkheap-tin]] with a hand-painted Hatchetman logo, a couple old [[video games|RM-junkheap-games]], a worn-down [[jewelry box|RM-junkheap-jewelry]], a stack of [[yellowing zines|RM-junkheap-zines]], some [[puppets|RM-junkheap-puppets]], a case of [[cassette tapes|RM-junkheap-tapes]], and a box of [[dog-eared paperback books|RM-junkheap-books]]. None of it looked like anything I needed, but then again I’ve always loved pawing through other people’s stuff.
 
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
+
+(set: $junkHeapSeen to true)
 
 ::RM-junkheap-tin
 When I popped the tin open, there were a bunch of Psychopathic Records trading cards inside, nestled in a foam lining that kept them from bouncing around too much. They looked good as new. Damn, some of them were even signed. Not really my thing, though; mom’s tent was decorated with enough religious shit already.
