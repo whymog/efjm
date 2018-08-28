@@ -59,24 +59,24 @@ Moon Mystic picked up the mic and [[handed it to me with a reluctant grin.|wrest
 
 ::wrestle-player-speech
 I didn’t even blink at Carol or give her a second of my attention before I popped my crazy eye and stood up on the ropes, mic gripped like a brick of rage.
-[<br>Listen up you crazy motherfuckers,]<promoLine1a|(click:?promoLine1a)[(replace: ?promoLine1b)[](display: "wrestle-player-speech-2")]]
-[All my down-ass ninjas gather ‘round,]<promoLine1b|(click:?promoLine1b)[(replace: ?promoLine1a)[](display: "wrestle-player-speech-2")]]
+[<br>Listen up you crazy motherfuckers,]<promoLine1a|(click:?promoLine1a)[(replace: ?promoLine1b)[](display: "wrestle-player-speech-2")]
+[All my down-ass ninjas gather ‘round,]<promoLine1b|(click:?promoLine1b)[(replace: ?promoLine1a)[](display: "wrestle-player-speech-2")]
 
 ::wrestle-player-speech-2
-[<br>I’m here to take the mountain and I’m not backing down!]<promoLine2a|(click:?promoLine2a)[(replace: ?promoLine2b)[](display: "wrestle-player-speech-3")]]
-[I’m gonna paddle up a river of Carol’s blood straight to the mountain!]<promoLine2b|(click:?promoLine2b)[(replace: ?promoLine2a)[](display: "wrestle-player-speech-3")]]
+[<br>I’m here to take the mountain and I’m not backing down!]<promoLine2a|(click:?promoLine2a)[(replace: ?promoLine2b)[](display: "wrestle-player-speech-3")]
+[I’m gonna paddle up a river of Carol’s blood straight to the mountain!]<promoLine2b|(click:?promoLine2b)[(replace: ?promoLine2a)[](display: "wrestle-player-speech-3")]
 
 ::wrestle-player-speech-3
-[<br>In case you all forgot who I was,]<promoLine3a| (click:?promoLine3a)[(replace: ?promoLine3b)[](display: "wrestle-player-speech-4")]]
-[//`*`sustained howl`*`//]<promoLine3b|(click:?promoLine3b)[(replace: ?promoLine3a)[](display: "wrestle-player-speech-4")]]
+[<br>In case you all forgot who I was,]<promoLine3a| (click:?promoLine3a)[(replace: ?promoLine3b)[](display: "wrestle-player-speech-4")]
+[//`*`sustained howl`*`//]<promoLine3b|(click:?promoLine3b)[(replace: ?promoLine3a)[](display: "wrestle-player-speech-4")]
 
 ::wrestle-player-speech-4
-[<br>I’m the one who they tried to retire for being too fuckin’ crazy!]<promoLine4a| (click:?promoLine4a)[(replace: ?promoLine4b)[](display: "wrestle-player-speech-5")]]
-[I’m the juggalette who shits down the throats of my enemies!]<promoLine4b|(click:?promoLine4b)[(replace: ?promoLine4a)[](display: "wrestle-player-speech-5")]]
+[<br>I’m the one who they tried to retire for being too fuckin’ crazy!]<promoLine4a| (click:?promoLine4a)[(replace: ?promoLine4b)[](display: "wrestle-player-speech-5")]
+[I’m the juggalette who shits down the throats of my enemies!]<promoLine4b|(click:?promoLine4b)[(replace: ?promoLine4a)[](display: "wrestle-player-speech-5")]
 
 ::wrestle-player-speech-5
-[<br>If anyone tries to fuck with me,]<promoLine5a| (click:?promoLine5a)[(replace: ?promoLine5b)[](display: "wrestle-player-speech-6")]]
-[//`*`pick up a chair and throw it across the ring`*`//]<promoLine5b|(click:?promoLine5b)[(replace: ?promoLine5a)[](display: "wrestle-player-speech-6")]]
+[<br>If anyone tries to fuck with me,]<promoLine5a| (click:?promoLine5a)[(replace: ?promoLine5b)[](display: "wrestle-player-speech-6")]
+[//`*`pick up a chair and throw it across the ring`*`//]<promoLine5b|(click:?promoLine5b)[(replace: ?promoLine5a)[](display: "wrestle-player-speech-6")]
 
 ::wrestle-player-speech-6
 [<br>I WILL EAT YOUR CLOTHES AND YOUR BODY AND YOUR SOUL!]<promoLine6a| (click:?promoLine6a)[(replace: ?promoLine6b)[]$dissolve[(display: "wrestle-end-player-speech")]]
