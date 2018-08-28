@@ -45,7 +45,7 @@ There wasn’t anything going on yet today, but it seemed like they were prepari
 ::The Church - First visit - Window
 I could see some people setting up the stage and the bleachers inside, but I couldn’t tell what they had planned for tonight. It just looked like a lot of frantic movement.
 
-(click: "frantic movement")[$dissolve[Moon Mystic, the constantly glad handing emcee, was leading the setup with his booming voice. That fucker was a living megaphone.
+(click: "frantic movement")[$dissolve[Moon Mystic, the constantly glad-handing emcee, was leading the setup with his booming voice. That fucker was a living megaphone.
 
 I could see the venue’s manager, Kiki, off to the side checking things off on her clipboard. If I was gonna throw a raging party or plan the perfect murder, I’d call Kiki either way.
 
@@ -87,7 +87,7 @@ I pulled the bucket off and turned around to see what was inside.
 
 (click: "what was inside")[$dissolve[It was a note, but the handwriting was terrible. I tried squinting to make out the text, which never helps, but it did feel right. When I made out the first line, my heart sank.
 
-Someone had given my dipshit step dad a job again. God dammit. With the first line acting as an expectation-lowering rosetta stone, I deciphered the rest of [[the note|The Church - First visit - Ron letter]].
+Someone had given my dipshit stepdad a job again. God dammit. With the first line acting as an expectation-lowering Rosetta stone, I deciphered the rest of [[the note|The Church - First visit - Ron letter]].
 \]]
 
 ::The Church - First visit - Ron letter

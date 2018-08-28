@@ -1,17 +1,17 @@
 ::Opening crawl
-$monospace[The year is 20XX. Wicked clown shit is the new law.
+$monospace[(live: 1s)[(if: time > 1s)[$dissolve[The year is 20XX. Wicked clown shit is the new law.(stop:)]]]
 
-[(live: 3s)[(if: time > 3s)[$dissolve[Years ago, the annual Gathering of the Juggalos festival ran long. Law enforcement’s response was swift and brutal. But the Juggalos held their ground.(stop:)]]]]
+[(live: 3s)[(if: time > 6s)[$dissolve[Years ago, the annual Gathering of the Juggalos festival ran long. Law enforcement’s response was swift and brutal. But the Juggalos held their ground.(stop:)]]]]
 
-[(live: 3s)[(if: time > 8s)[$dissolve[Five months later, 52 police officers and 128 juggalos were dead. No treaty was signed, but a new community emerged out of the tenuous ceasefire.(stop:)]]]]
+[(live: 3s)[(if: time > 11s)[$dissolve[Five months later, 52 police officers and 128 juggalos were dead. No treaty was signed, but a new community emerged out of the tenuous ceasefire.(stop:)]]]]
 
-[(live: 3s)[(if: time > 16s)[$dissolve[You were born into this place, Gatherville, where you live and die by the hatchet. Your best bet for a good time is to find a rude-ass ninja you can trust and get busy making a fucking fool of yourself. You only get one shot before the Dark Carnival comes and Jay-sus ain’t coming to save you.(stop:)]]]]
+[(live: 3s)[(if: time > 19s)[$dissolve[You were born into this place, Gatherville, where you live and die by the hatchet. Your best bet for a good time is to find a rude-ass ninja you can trust and get busy making a fucking fool of yourself. You only get one shot before the Dark Carnival comes and Jay-sus ain’t coming to save you.(stop:)]]]]
 
-[(live: 3s)[(if: time > 24s)[$dissolve[For Juggalos in Gatherville, getting into the spotlight means everything. Wicked emcees spit verses sharp as hatchets. Wrestlers leave their blood and spit in the ring. It's all for a shot at catching the eye of the Honchos, living comfy in their ivory trailers. They’ve got the cash to make anyone forget about the shit they’ve seen in Gatherville.(stop:)]]]]
+[(live: 3s)[(if: time > 27s)[$dissolve[For Juggalos in Gatherville, getting into the spotlight means everything. Wicked emcees spit verses sharp as hatchets. Wrestlers leave their blood and spit in the ring. It's all for a shot at catching the eye of the Honchos, living comfy in their ivory trailers. They’ve got the cash to make anyone forget about the shit they’ve seen in Gatherville.(stop:)]]]]
 
-[(live: 3s)[(if: time > 31s)[$dissolve[There are a lot of scrappers and shitheads going for glory, but any one of them who wants a permanent spot on top has to pass a final test. One insane act to prove they’ve got the heart to be a legend. They must...(stop:)]]]]
+[(live: 3s)[(if: time > 34s)[$dissolve[There are a lot of scrappers and shitheads going for glory, but any one of them who wants a permanent spot on top has to pass a final test. One insane act to prove they’ve got the heart to be a legend. They must...(stop:)]]]]
 
-[(live: 3s)[(if: time > 40s)[$dissolve[[[**ESCAPE FROM JUGGALO MOUNTAIN**|Act 1 Title Card]](stop:)]]]]]
+[(live: 3s)[(if: time > 43s)[$dissolve[[[**ESCAPE FROM JUGGALO MOUNTAIN**|Act 1 Title Card]](stop:)]]]]]
 
 ::Act 1 Title Card
 =><=

@@ -19,6 +19,7 @@
 
 <!-- Scene for the first time a player visits the Roach Market -->
 ::RM-first-entrance
+<img src="../src/img/stash.png">
 Going into the Roach Market, the first thing everybody walks by is “The Stash”: Dopeman Dan’s head shop and drug emporium.
 
 It was a primo spot, and Dan went so far as to sleep there every night to make sure nobody tried to push him out. After keeping that up for so many years, it was hard to say which was more true: that Dan smelled like The Stash, or that The Stash smelled like Dan.
@@ -29,6 +30,7 @@ Today he was half-dozing in a camp chair out front, but he [[perked up as I went
 
 <!-- Scene for the second and any subsequent returns to the Roach Market sequence -->
 ::RM-later-entrance
+<img src="../src/img/stash.png">
 As I made my way back into the Roach Market, I could see Dopeman Dan was no longer half-dozing in his camp chair out front: he was straight up sawin’ logs. So much the better; I didn’t want anything from The Stash anyway.
 
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
@@ -36,6 +38,7 @@ As I made my way back into the Roach Market, I could see Dopeman Dan was no long
 
 <!-- Short scene if the player decides to return to The Stash while still exploring the Roach Market -->
 ::RM-DopemanDan-return
+<img src="../src/img/stash.png">
 There was no sign of Dan. He probably had either passed out behind his tent, or left briefly on one of his “snack quests” to the nearby landfill.
 
 I thought about poking my nose into The Stash for a free score on my own terms... then remembered all the folks in Gatherville who’d tried the same thing and lost a finger to Dan’s hatchet in the bargain. Better not push my luck.
