@@ -77,14 +77,14 @@ Anna’s disappearance was all I could think about, but it felt good to sit stil
 ::Mom's Tent - table hub
 I sighed, took another swig, and stared around the room.
 \
-(if: $tableDetailsSeen is 3)[
+[(live: 1s)[(if: time > 2s)[$dissolve[(if: $tableDetailsSeen is 3)[
 >>[[I kept staring into the distance until I realized I was looking straight at the support beam|Mom's Tent - support beam]].]\
 (if: $cigarettesViewed is false)[
 >>[[Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent - cigarettes]].]\
 (if: $platesViewed is false)[
 >>[[The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent - plates]].]\
 (if: $notepadViewed is false)[
->>[[Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].]
+>>[[Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].](stop:)]]]]
 
 ::Mom's Tent - cigarettes
 I saw another heap of stubbed-out cigarettes and a couple of empty fifths stacked in the center of the kitchen table. Mom and Ron must’ve been having another one of their long, idiotic arguments over who-knows-what — or maybe Ron had some of his shithead buddies over to watch this year’s Bloodymania match.
@@ -289,7 +289,7 @@ And I heard something that made my heart nearly pop out of my chest.
 (click: "get out")[With my hands trembling,
 
 >>(link: "I swiped the multitool off my desk.")[(set: $multitool to true)(go-to: "Mom's Tent - tool obtained")]
->>(link: "I snatched my trusty hatchet off the floor")[(set: $hatchet to true)(go-to: "Mom's Tent - tool obtained")]
+>>(link: "I snatched my trusty hatchet off the floor.")[(set: $hatchet to true)(go-to: "Mom's Tent - tool obtained")]
 ]
 
 ::Mom's Tent - tool obtained

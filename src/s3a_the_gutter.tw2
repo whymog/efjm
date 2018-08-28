@@ -30,7 +30,7 @@ This was already too much shit for just one day. I kept my head down and my hood
 
 >>[[Getting fucked up at the Gutter|The Gutter - Outside intro]]
 >>[[Looking to score at the Roach Market|RM-first-entrance]]
->>[[Catching an early show at the Church|Church - intro]]]]
+>>[[Catching an early show at the Church|The Church - First visit - Intro]]]]
 
 (set: $gutterOutside to "intro")(set: $spokeToToe to false)(set: $roachEntrance to "first")
 
@@ -96,7 +96,7 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 \(else:)[In the dim light of the neon sign, I could see:]
 
 >>[[The Gutter’s beaten-to-hell block of a front door|The Gutter - Inside $gutterStatus]]
->>[[The paved path to The Church|The Church - intro]]
+>>[[The paved path to The Church|The Church - First visit - Intro]]
 >>[[The dirt road to the Roach Market|RM-$roachEntrance-entrance]]\
 (if: $jarSeen is false)[
 >>[[The jar|The Gutter - Jar]]]\

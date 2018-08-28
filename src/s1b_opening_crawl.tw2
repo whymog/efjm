@@ -1,5 +1,5 @@
 ::Opening crawl
-$monospace[(live: 3s)[(if: time > 1s)[$dissolve[The year is 20XX. Wicked clown shit is the new law.(stop:)]]]
+$monospace[(live: 1s)[(if: time > 1s)[$dissolve[The year is 20XX. Wicked clown shit is the new law.(stop:)]]]
 
 [(live: 3s)[(if: time > 6s)[$dissolve[Years ago, the annual Gathering of the Juggalos festival ran long. Law enforcement’s response was swift and brutal. But the Juggalos held their ground.(stop:)]]]]
 
