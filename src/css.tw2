@@ -6,6 +6,11 @@ tw-story {
   /* padding: 30px 40px 30px 140px; */
 }
 
+tw-link,
+tw-link.visited {
+  color: rgb(65, 105, 225);
+}
+
 img {
   max-height: 60vh;
 }
