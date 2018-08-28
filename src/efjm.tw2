@@ -28,6 +28,9 @@ Escape from Juggalo Mountain
 - [[The Church - Second visit|The Church - Second visit - Name prompt]]
 - [[The Church - Green room hub|The Church - Second visit - Green room]]
 - [[The Church - Rap battle|The Church - Rap battle name prompt]]
+[[Start at The Church - Wrestling match|wrestle-opening-nameprompt]]
+- [[Jump to The Church - Player's wrasslin' hype speech|wrestle-player-speech-nameprompt]]
+- [[Jump to The Church - Choose ur weapon|wrestle-weapon-round]]
 {
   (set: $justWokeUp to true)
   (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
