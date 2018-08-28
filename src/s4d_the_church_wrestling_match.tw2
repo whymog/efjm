@@ -25,7 +25,7 @@ Moon Mystic’s megaphone-friendly gravitas filled the ring. “And now… [[int
 [$dissolve[
 “It’s //Carol of the Caves!//”
 
-As Moon Mystic finished, an enormous, muscled woman roared out onto the stage all at once like a bull charging. She had a leopard print loincloth on and a big, nasty burlap sack that looked [worryingly full]<worryinglyFull|.
+As Moon Mystic finished, an enormous, muscled woman roared out onto the stage all at once like a bull charging. She wore a ragged one-shoulder leopard-print tunic and carred a big nasty burlap sack that looked [worryingly full]<worryinglyFull|.
 
 (click:?worryinglyFull)[$dissolve[“And in this corner…
 
@@ -59,24 +59,24 @@ Moon Mystic picked up the mic and [[handed it to me with a reluctant grin.|wrest
 
 ::wrestle-player-speech
 I didn’t even blink at Carol or give her a second of my attention before I popped my crazy eye and stood up on the ropes, mic gripped like a brick of rage.
-[<br>Listen up you crazy motherfuckers,]<promoLine1a|(click:?promoLine1a)[(replace: ?promoLine1b)[]$dissolve[(display: "wrestle-player-speech-2")]]
-[All my down-ass ninjas gather ‘round,]<promoLine1b|(click:?promoLine1b)[(replace: ?promoLine1a)[]$dissolve[(display: "wrestle-player-speech-2")]]
+[<br>Listen up you crazy motherfuckers,]<promoLine1a|(click:?promoLine1a)[(replace: ?promoLine1b)[](display: "wrestle-player-speech-2")]]
+[All my down-ass ninjas gather ‘round,]<promoLine1b|(click:?promoLine1b)[(replace: ?promoLine1a)[](display: "wrestle-player-speech-2")]]
 
 ::wrestle-player-speech-2
-[<br>I’m here to take the mountain and I’m not backing down!]<promoLine2a|(click:?promoLine2a)[(replace: ?promoLine2b)[]$dissolve[(display: "wrestle-player-speech-3")]]
-[I’m gonna paddle up a river of Carol’s blood straight to the mountain!]<promoLine2b|(click:?promoLine2b)[(replace: ?promoLine2a)[]$dissolve[(display: "wrestle-player-speech-3")]]
+[<br>I’m here to take the mountain and I’m not backing down!]<promoLine2a|(click:?promoLine2a)[(replace: ?promoLine2b)[](display: "wrestle-player-speech-3")]]
+[I’m gonna paddle up a river of Carol’s blood straight to the mountain!]<promoLine2b|(click:?promoLine2b)[(replace: ?promoLine2a)[](display: "wrestle-player-speech-3")]]
 
 ::wrestle-player-speech-3
-[<br>In case you all forgot who I was,]<promoLine3a| (click:?promoLine3a)[(replace: ?promoLine3b)[]$dissolve[(display: "wrestle-player-speech-4")]]
-[//`*`sustained howl`*`//]<promoLine3b|(click:?promoLine3b)[(replace: ?promoLine3a)[]$dissolve[(display: "wrestle-player-speech-4")]]
+[<br>In case you all forgot who I was,]<promoLine3a| (click:?promoLine3a)[(replace: ?promoLine3b)[](display: "wrestle-player-speech-4")]]
+[//`*`sustained howl`*`//]<promoLine3b|(click:?promoLine3b)[(replace: ?promoLine3a)[](display: "wrestle-player-speech-4")]]
 
 ::wrestle-player-speech-4
-[<br>I’m the one who they tried to retire for being too fuckin’ crazy!]<promoLine4a| (click:?promoLine4a)[(replace: ?promoLine4b)[]$dissolve[(display: "wrestle-player-speech-5")]]
-[I’m the juggalette who shits down the throats of my enemies!]<promoLine4b|(click:?promoLine4b)[(replace: ?promoLine4a)[]$dissolve[(display: "wrestle-player-speech-5")]]
+[<br>I’m the one who they tried to retire for being too fuckin’ crazy!]<promoLine4a| (click:?promoLine4a)[(replace: ?promoLine4b)[](display: "wrestle-player-speech-5")]]
+[I’m the juggalette who shits down the throats of my enemies!]<promoLine4b|(click:?promoLine4b)[(replace: ?promoLine4a)[](display: "wrestle-player-speech-5")]]
 
 ::wrestle-player-speech-5
-[<br>If anyone tries to fuck with me,]<promoLine5a| (click:?promoLine5a)[(replace: ?promoLine5b)[]$dissolve[(display: "wrestle-player-speech-6")]]
-[//`*`pick up a chair and throw it across the ring`*`//]<promoLine5b|(click:?promoLine5b)[(replace: ?promoLine5a)[]$dissolve[(display: "wrestle-player-speech-6")]]
+[<br>If anyone tries to fuck with me,]<promoLine5a| (click:?promoLine5a)[(replace: ?promoLine5b)[](display: "wrestle-player-speech-6")]]
+[//`*`pick up a chair and throw it across the ring`*`//]<promoLine5b|(click:?promoLine5b)[(replace: ?promoLine5a)[](display: "wrestle-player-speech-6")]]
 
 ::wrestle-player-speech-6
 [<br>I WILL EAT YOUR CLOTHES AND YOUR BODY AND YOUR SOUL!]<promoLine6a| (click:?promoLine6a)[(replace: ?promoLine6b)[]$dissolve[(display: "wrestle-end-player-speech")]]
@@ -180,50 +180,58 @@ I watched the sack closely as it rotated and, when it was by Carol’s legs, I m
 ::wrestle-first-round-KO
 When I regained consciousness, I was surrounded by total darkness. I felt my body to make sure I was still intact — all good there — and slowly stood up. A small lantern suddenly illuminated the darkness. A skeletal Violent J, clothed in black and neon green robes, poked his face into the light.
 
-“You got snaked!” he screamed. “I was just starting to enjoy that shit! Are you kidding me? You gotta get back in there, sis.”
+//“You got **snaked!**”// he shrieked. //“I was just starting to enjoy that shit! Are you kidding me? You gotta get back in there, sis.”//
 
 With that, he snapped his bony fingers and I blacked out again. [[When I woke up, I was back in the ring.|wrestle-first-round]]
 
 ::wrestle-weapon-round
-The spotlight moved to a table on the concrete floor right outside of the ring. Carol and I rushed over as the crowd hooted. I eyed the [[table]]’s contents carefully and grabbed:
+The spotlight moved to a table on the concrete floor right outside the ring. Carol and I rushed over as everyone in the crowd hooted and hollered to push for their weapon of choice. I eyed the table[[’|wrestle-weapon-table]]s contents carefully and grabbed:
 
->>[[a bat with the tip covered in barbed wire|4.3a]]
->>[[a very firm metal folding chair|4.3b]]
->>[[the big fuckin’ ladder next to the table|4.3c]]
+>>[[a bat with the tip covered in barbed wire|wrestle-weapon-bat]]
+>>[[a very firm metal folding chair|wrestle-weapon-chair]]
+>>[[the big fuckin’ ladder next to the table|wrestle-weapon-ladder]]
 
-::4.3a
-I grabbed the badass looking bat and shimmied back under the ropes into the ring. Carol spent a long time browsing the options on the table, but ended up with a metal trash can lid. I thought it was an odd choice. Maybe she’d never had to go this far into a match? Anna and I would always demand weapons in every practice until Kiki banned us for knocking the Church’s doors down to many times.
+::wrestle-weapon-bat
+I grabbed the badass-looking bat and shimmied back under the ropes into the ring. Carol spent a long time browsing the options on the table, but ended up with a metal trash can lid. I thought it was an odd choice. Maybe she’d never had to go this far into a match? Anna and I would always demand weapons in every practice until Kiki banned us for knocking the Church’s doors down to many times.
 
-Carol bull rushed me with the trash can lid held up like a shield, but I timed my swing perfectly. My whole body shook at the impact and Carol practically flew back across the ring. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count.|4.4]]
+Carol bull rushed me with the trash can lid held up like a shield, but I timed my swing perfectly. My whole body shook at the impact and Carol practically flew back across the ring. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]
 
-::4.3b
+::wrestle-weapon-chair
 I grabbed the metal folding chair and shimmied back under the ropes into the ring. Carol spent a long time browsing the options on the table, but ended up with a traffic cone. I thought it was an odd choice. Maybe she’d never had to go this far into a match? Anna and I would always demand weapons in every practice until Kiki banned us for knocking the Church’s doors down to many times.
 
-Carol rushed me swinging the traffic cone, but I held the chair up to defend and pushed her back and off her balance. As she wobbled, I swept her legs with the chair. I could hear a crack as the metal chair hit her knees. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count.|4.4]]
+Carol rushed me swinging the traffic cone, but I held the chair up to defend and pushed her back and off her balance. As she wobbled, I swept her legs with the chair. I could hear a crack as the metal chair hit her knees. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]
 
-::4.3c
+::wrestle-weapon-ladder
 I grabbed the huge fuckin’ ladder and, with some effort, hucked it into the ring and shimmed in after. I quickly began setting up the ladder. Carol spent a long time browsing the options on the table, but ended up with a fluorescent light tube. I thought it was an odd choice. Maybe she’d never had to go this far into a match? Anna and I would always demand weapons in every practice until Kiki banned us for knocking the Church’s doors down to many times.
 
 As Carol approached me menacingly with the tube, I began climbing the ladder. Carol saw an opportunity as I reached the top and swung at the ladder, toppling it. I knew I only had one shot at this. As the ladder fell, I jumped and extended my elbow. The swirl of dust and glass from the tube glittered around me as my elbow plummeted down onto Carol and nailed her to the mat. She didn’t get up.
 
-[[I quickly pinned her shoulders as Moon Mystic began to count.|4.4]]
+[[I quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]
 
-::4.3e
-I swept all of the items off the table and picked up the table itself. I hefted it proudly into the ring and began setting it up. Carol spent a long time browsing the options that were now piled on the ground, but ended up with a staple gun. I thought it was an odd choice. Maybe she’d never had to go this far into a match? Anna and I would always demand weapons in every practice until Kiki banned us for knocking the Church’s doors down to many times.
+::wrestle-weapon-table
+//Man, **FUCK** your system! Can't keep $stageName on a leash!!//
+
+I swept everything onto the floor and picked up the table itself.
+
+I hefted it proudly into the ring and began setting it up. Carol spent a long time browsing the options that were now piled on the ground, but ended up with a staple gun. I thought it was an odd choice. Maybe she’d never had to go this far into a match? Anna and I would always demand weapons in every practice until Kiki banned us for knocking the Church’s doors down to many times.
 
 As Carol rushed me with the gun, I slapped it down onto the table. The gun jammed, cause those fuckers always do, but Carol didn’t let go. She seemed to think she could pull the gun back out. I circled to her back and body slammed her straight through the table with a satisfying crunch. When we landed in a pile of table fibers, Carol didn’t get up.
 
-[[I quickly pinned her shoulders as Moon Mystic began to count.|4.4]]
+[[I quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]
 
-::4.4 (Victory)
-[“One!”]
+::wrestle-victory
+[**“One!”**]<wrestleCount1| (click:?wrestleCount1)[$dissolve[
 
-I pinned Carol with all my strength, praying she wouldn’t move.
+I held Carol down with all my strength, praying she wouldn’t kick out.
 
-[“Two!”]
+[**“Two!”**]<wrestleCount2| (click:?wrestleCount2)[$dissolve[
 
-The second stretched for an eternity.
+The lone second stretched for an eternity.
 
-[“Three!”] Moon Mystic screamed the final number of the count and my whole brain lit up like a jackpot.
+[**“Three!”**]<wrestleCount3| (click:?wrestleCount3)[$dissolve[ Moon Mystic hollered the end of the count, and my brain lit up like a slot machine hitting all 7s.
 
-After counting Carol out, Moon Mystic approached me and went to grab my hand. I didn’t even let him get there. I raised my own hand and screamed, “YOUR CHAMPION [STAGE NAME]!” The crowd’s roar was like a wave, lifting me up. Moon Mystic laughed and nodded as [[the crowd stomped in unison.|5.0]]
+Carol still lay flopped on the mat, as limp and greasy as her own bag of turnips.
+
+Moon Mystic jogged over from ringside, ducked through the ropes, and made to grab my hand as he reached me. I didn’t even let him get there. I snatched the mic from his hand, raised up my own fist, and howled, //“YOURRR CHAMPION: **$stageName!**”//
+
+The crowd’s roar rolled like a wave, lifting me up. Moon Mystic just laughed, clapping and nodding his head as [[the crowd stomped a rhythm as one.|The Church - Mountain intro]]]]]]]]

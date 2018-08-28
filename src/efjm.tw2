@@ -24,6 +24,8 @@ Escape from Juggalo Mountain
 [[Start at The Church - Rap battle|The Church - Rap battle name prompt]]
 [[Start at The Church - Wrestling match|wrestle-opening-nameprompt]]
 - [[Jump to The Church - Player's wrasslin' hype speech|wrestle-player-speech-nameprompt]]
+- [[Jump to The Church - Choose ur weapon|wrestle-weapon-round]]
+(set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
 
 ::StoryIncludes
 src/s1a_portapotty.tw2
