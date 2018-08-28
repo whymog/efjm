@@ -908,7 +908,7 @@ When the night air hit my lungs, the relief was sharper than drinking a cold gla
 I stood planning my next move in the crisp night air just outside of The Gutter's halo of dirty light.
 \
 (if: $gutterEndScenesViewed is 2)[
-[[I headed for the Church with all the grim determination I could muster|Church - Intro post-letter]].]\
+[[I headed for the Church with all the grim determination I could muster|The Church - Second visit - Intro]].]\
 (if: $golfCartWreckViewed is false)[
 >>[[I heard the noise of a familiar assclown behind me and turned to look|The Gutter - Ron's cart finale]].]\
 (if: $annaLetterRead is false)[

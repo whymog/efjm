@@ -343,4 +343,4 @@ What I didn't know was that:
 ::EFJM - ending
 <center>//TO BE CONTINUED//</center>
 
-[(live: 1s)[(if: time > 5s)[$dissolve[(display: "EFJM - Credits")(stop:)]]]]
+[(live: 1s)[(if: time > 3s)[$dissolve[(display: "EFJM - Credits")(stop:)]]]]
