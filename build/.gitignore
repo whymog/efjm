@@ -2,3 +2,5 @@
 *
 # Except this file
 !.gitignore
+# And the hosted version of the game
+!efjm.html
