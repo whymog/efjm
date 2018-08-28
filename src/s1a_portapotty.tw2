@@ -90,12 +90,26 @@ I struggled to [[remember my name|Jail Cell (Lit) - naming complete]].
 
 ::Jail Cell (Lit) - naming complete
 {
-(set: $playerName to (prompt: "What is your name?", ""))
-(set: $justWokeUp to true)
-(if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I need to get out of here|Jail Cell (Lit) - hub]].]
-}(else:)[Wait, that's not right.
-
-Hold on. [[My name is...|Jail Cell (Lit) - naming complete]]]
+  (set: $justWokeUp to true)
+  (set: $playerName to (prompt: "What is your name?", ""))
+  (if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I need to get out of here|Jail Cell (Lit) - hub]].
+    <!-- what this code does is check the ending of the custom $playerName string to hopefully append the correct pluralization to it -->
+    {
+      (if: $playerName's last is "s")[
+        (set: $playerNamePlural to ($playerName + "es"))
+      ]
+      (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
+        (set: $playerNamePlural to ($playerName + "es"))
+      ]
+      (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
+        (set: $playerNamePlural to ($playerName + "es"))
+      ]
+      (else:)[
+        (set: $playerNamePlural to ($playerName + "s"))
+      ]
+    }]
+  (else:)[Wait, [[that's not right|Jail Cell (Lit) - naming complete]].]
+}
 
 ::Jail Cell (Lit) - hub <201,659>
 <img src="../src/img/portapotty-light.png">
