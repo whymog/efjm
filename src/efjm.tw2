@@ -24,8 +24,10 @@ Escape from Juggalo Mountain
 [[Jump to the Roach Market|RM-first-entrance-nameprompt]]
 [[Jump to Auntie’s gift shop|RM-giftshop-entrance-nameprompt]]
 [[Jump to the junk heap|RM-junkheap-entrance-nameprompt]]
-[[Jump to The Church - First visit|The Church - First visit - Name prompt]]
-[[Jump to The Church - Rap battle|The Church - Rap battle name prompt]]
+[[The Church|The Church - First visit - Name prompt]]
+- [[The Church - Second visit|The Church - Second visit - Name prompt]]
+- [[The Church - Green room hub|The Church - Second visit - Green room]]
+- [[The Church - Rap battle|The Church - Rap battle name prompt]]
 {
   (set: $justWokeUp to true)
   (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
