@@ -112,12 +112,12 @@ Mom loves to keep notes. She writes down all kinds of things — keeps track of 
 
 ::Mom's Tent - notepad 2
 It was a to-do list. No real surprises there:
-* REMEMBER: working extra shifts for Jolene next Sat. & Sun.
+[(live: 1s)[(if: time > 2s)[$dissolve[* REMEMBER: working extra shifts for Jolene next Sat. & Sun.
 * Patch ripped wall in L.R.
 * Talk to Ron about budget (<u>no more</u> wasting money at The Gutter!!)
 And sure enough, there was a line item for me. It read:
 * <i>Talk to $playerName about the house rules — NO MORE SNEAKING OFF WITH ANNA AFTER DARK!</i>
-Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].
+Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].(stop:)]]]]
 
 ::Mom's Tent - support beam
 The support beam separating the kitchen from my tent was looking pretty funky, but it was still standing. I scanned from the bottom up, watching the series of notches and dates go by:
