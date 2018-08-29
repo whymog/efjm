@@ -316,31 +316,3 @@ He lost his composure almost immediately as a weirdly large beagle bounded on st
 From backstage he announced into the mic, “For my own safety, I’ve decided to end tonight’s performance. We’ll try this again at a later date.”
 
 The crowd was like a banshee, booing and clapping and shrieking all at once. Moon Mystic approached me and raised my hand. [[“Your champion $stageName!”|The Church - Mountain intro]]
-
-::The Church - Mountain intro
-My eyes shone with the energy of victory. As I walked backstage, I could see Kiki jumping and waiting to hug me. As I reached her, I fell into her arms with exhaust and delight.
-
-We hung backstage for a while, recapping the greatest hits of the match and talking strategy, until I got called to the stage for [[the ceremony|The Church - Mountain ceremony]]. As Kiki squeezed me one last time, she said “Good luck on the mountain, Double L. You’re gonna be amazing.” Then I was gone, but her strength still flowed through me like pure caffeine.
-
-::The Church - Mountain ceremony
-The spotlight hit me as Moon Mystic’s assistants, decked in traditional neon green and black robes, lifted me up in an aluminum lawn chair. I bathed in the light and the crowd’s adoration as Moon Mystic read the rites over an open bottle of his namesake.
-
-(click: "an open bottle of his namesake")[$dissolve[“Take and drink. This is that good shit. May the haters take and eat unclean ass. You are the champ, and a ninja, and the most bomb-ass motherfucker forever and ever, amen.” The crowd responded with a hearty amen. Moon Mystic dumped a beige powder into the bottle of Faygo and let it fizz a bit before offering it up to me.]]
-
-(click: "offering it up to me")[$dissolve[I drank heavily until the Moon Mist ran down my chin and my throat. It tasted so sweet and fresh, even though I knew they’d probably saved this bottle for years. As I lost consciousness, I could hear the crowd chanting [[“Juggalo Mountain! Juggalo Mountain! Juggalo Mountain!”|The Church - Mountain ending choice]]]]
-
-::The Church - Mountain ending choice
-I knew even then that no one had finished the mountain since the Honchos had put it in place. I wouldn’t really start caring until I got into that son of a bitch. Anna was waiting for me somewhere in there and nothing had stopped me yet.
-
-What I didn't know was that:
->>[[this was the beginning of the longest night of my life. My last night in Gatherville.|EFJM - ending]]
->>[[Anna was waiting for me too — waiting to kill me.|EFJM - ending]]
->>[[Anna and I were already done. I would have to betray my best friend.|EFJM - ending]]
->>[[Ron was my real dad and later that night he’d cut my hand off. What a fucking piece of shit.|EFJM - ending]]
->>[[this story was constructed in the past tense so that the dumbass dude writing this could do a crazy reveal where I’m like the president now or some shit. Haha get fucked.|EFJM - ending]]
->>[[the world outside Gatherville was even worse. Jeff Bezos was the president and his powerful drones could only give you oral sex or cut off your head and they charged the same amount of money for either.|EFJM - ending]]
-
-::EFJM - ending
-<center>//TO BE CONTINUED//</center>
-
-[(live: 1s)[(if: time > 5s)[$dissolve[(display: "EFJM - Credits")(stop:)]]]]
