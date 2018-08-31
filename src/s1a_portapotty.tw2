@@ -1,5 +1,5 @@
 ::Jail Cell (Unlit) - hub <202,344>
-<img src="../src/img/portapotty-dark.png">
+<img src="./img/portapotty-dark.png">
 
 (if: $justWokeUp is true)[When I finally came to, everything was darkness.(set: $justWokeUp to false)](else:)[Everything around me was darkness. (if: $sniffedAir is true)[
 
@@ -62,7 +62,7 @@ I gave it a good [[*flick*|Jail Cell (Lit) - room lights up]], and the room spra
 }
 
 ::Jail Cell (Lit) - room lights up
-<img src="../src/img/portapotty-light.png">
+<img src="./img/portapotty-light.png">
 
 My surroundings came into focus around me. Reflexively, I stood up and [[turned to look in the mirror|Jail Cell (Lit) - name character]].
 
@@ -112,7 +112,7 @@ I stared into the mirror and nearly had a heart attack.
 }
 
 ::Jail Cell (Lit) - hub <201,659>
-<img src="../src/img/portapotty-light.png">
+<img src="./img/portapotty-light.png">
 
 The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true)[I didn't like what I saw.]
 
