@@ -97,6 +97,7 @@ This poignant shout-out had been there forever. The (fuckin) was a later additio
 (set: $golfCartSeen to false)(set: $cartPartsSeen to 0)(set: $wheelsSeen to false)(set: $engineSeen to false)(set: $defenseSeen to false)(set: $hornSeen to false)(set: $wheelDamage to false)(set: $defenseDamage to false)(set: $engineDamage to false)(set: $hornDamage to false)
 
 ::The Gutter - Outside hub
+<img src="./img/the_gutter.png">
 (if: $justLeftTheGutter is true)[(set: $justLeftTheGutter to false)I walked back into the dim neon light of the Gutter’s sign. I could see:]
 \(else:)[In the dim light of the neon sign, I could see:]
 
@@ -199,14 +200,21 @@ Kyle piped up. “Me and Ben’ll keep an eye out though for sure!”
 I thanked them and walked back towards the front of [[The Gutter|The Gutter - Outside hub]].
 
 ::The Gutter - Golf cart
-{(if: $cartPartsSeen is 4)[I figured I'd done enough damage to the cart, so I decided to keep looking around. But man, [[fuck Ron’s shitty cart|The Gutter - Outside hub]].]}
-\(if: $cartPartsSeen is <4)[Ron drove everywhere in this beaten-to-hell golf cart. I had no idea how he'd gotten it in the first place, especially since he couldn't hold down a job longer than six months. But he loved to roll around the tarps showing it off every time he added another dumbass accessory to the thing.
+Ron drove everywhere in this beaten-to-hell golf cart. I had no idea how he'd gotten it in the first place, especially since he couldn't hold down a job longer than six months. But he loved to roll around the tarps showing it off every time he added another dumbass accessory to the thing.
 
 He had almost everything “tricked” out, including:
-(if: $wheelsSeen is false)[>>[[the wheels|The Gutter - Golf cart - Wheels]]](else-if: $wheelDamage is true)[The wheels, now loosened for added thrills.]
-(if: $defenseSeen is false)[>>[[the defense system|The Gutter - Golf cart - Defense]]](else-if: $defenseDamage is true)[The defense system, which I'd reconfigured for optimal ass-damage.]
-(if: $hornSeen is false)[>>[[the awful horn|The Gutter - Golf cart - Horn]]](else-if: $hornDamage is true)[The horn, which I'd modified for increased stealth.]
-(if: $engineSeen is false)[>>[[the engine|The Gutter - Golf cart - Engine]]](else-if: $engineDamage is true)[The engine, now optimized for fuel inefficiency.]]
+
+(if: $wheelsSeen is false)[>>[[the wheels|The Gutter - Golf cart - Wheels]]]\
+\(else-if: $wheelDamage is true)[- The wheels, now loosened for added thrills.]
+(if: $defenseSeen is false)[>>[[the defense system|The Gutter - Golf cart - Defense]]]\
+\(else-if: $defenseDamage is true)[- The defense system, which I'd reconfigured for optimal ass-damage.]
+(if: $hornSeen is false)[>>[[the awful horn|The Gutter - Golf cart - Horn]]]\
+\(else-if: $hornDamage is true)[- The horn, which I'd modified for increased stealth.]
+(if: $engineSeen is false)[>>[[the engine|The Gutter - Golf cart - Engine]]]\
+\(else-if: $engineDamage is true)[- The engine, now optimized for fuel inefficiency.]
+
+(if: $cartPartsSeen is < 4)[(if: $multitool is true)[My hand gripped the multitool in my pocket and my mind danced with all of the ways I could help Ron improve his dream ride.](else:)[I figured I could at least take a look at the monster Ron had dragged from his awful brain into this world.]]
+\(else-if: $cartPartsSeen is 4)[I figured I'd (if: $multitool is true)[done enough damage to](else:)[looked long enough at] the cart, so I decided to keep looking around. But man, [[fuck Ron’s shitty cart|The Gutter - Outside hub]].]
 
 (set: $golfCartSeen to true)
 
@@ -367,10 +375,10 @@ Everyone at the bar was where I had left them. I got the feeling this bunch were
 
 He said nothing.
 
-(click: "nothing")[$dissolve[I waited. Still not a fucking peep.]]
+(click: "nothing")[$dissolve[I passed the time staring at a dusty, empty shelf behind Toe labeled "GAMES". Still not a fucking peep.]]
 
 (click: "peep")[(if: (text: $gameOfChance)'s length > 1)[$dissolve[I [[pulled out the $gameOfChance|The Gutter - Bar - Toe game start]]].]
-\(else:)[$dissolve[...I got [[bored|The Gutter - Bar hub]].]]]
+\(else:)[$dissolve[...I got [[bored.|The Gutter - Bar hub]]]]]
 
 (set: $spokeToToe to true)
 
@@ -479,7 +487,9 @@ Darryl shook his head. “Eh, he never says much. About the only thing he ever d
 
 “What kind of games?” I asked.
 
-“Oh, anything. He had a collection, but some little shits recently stole most of it. It’s gotten to the point where he’s only got the stuff for pool and he won’t give it up to anybody.”
+“Oh, anything. He had a collection, but some little shits recently stole most of it. Probably it's all getting sold off at The Gutter, but Toe doesn't get out much.
+
+It’s gotten to the point where he’s only got the stuff for pool and he won’t give it up to anybody.”
 
 [[I took note of Darryl’s observations|The Gutter - Bar - Darryl]].
 
