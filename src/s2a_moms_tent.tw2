@@ -112,12 +112,12 @@ Mom loves to keep notes. She writes down all kinds of things — keeps track of 
 
 ::Mom's Tent - notepad 2
 It was a to-do list. No real surprises there:
-[(live: 1s)[(if: time > 2s)[$dissolve[* REMEMBER: working extra shifts for Jolene next Sat. & Sun.
-* Patch ripped wall in L.R.
-* Talk to Ron about budget (<u>no more</u> wasting money at The Gutter!!)
+- REMEMBER: working extra shifts for Jolene next Sat. & Sun.
+- Patch ripped wall in L.R.
+- Talk to Ron about budget (<u>no more</u> wasting money at The Gutter!!)
 And sure enough, there was a line item for me. It read:
-* //Talk to $playerName about the house rules — NO MORE SNEAKING OFF WITH ANNA AFTER DARK!//
-Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].(stop:)]]]]
+- //Talk to $playerName about the house rules — NO MORE SNEAKING OFF WITH ANNA AFTER DARK!//
+Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].
 
 ::Mom's Tent - support beam
 The support beam separating the kitchen from my tent was looking pretty funky, but it was still standing. I scanned from the bottom up, watching the series of notches and dates go by:
@@ -146,7 +146,7 @@ From looking around the scene, it’s the only proof I ever lived here.
 
 I felt that ball of rage in my gut flare up again. Fuck this place. And fuck the assholes who live here. I’m so beyond done with this shit.
 
-I pounded (if: $beerDrank is true)[the rest of the watery piss that passes for beer by Ron’s standards](else:)[the sugary dregs of the Redpop], crunched the can, and left it on the table. They could clean up their own messes here. I was done with that shit.
+I pounded (if: $beerDrank is true)[the rest of the watery piss that passes for beer by Ron’s standards](else:)[the sugary dregs of the Redpop], crunched the can, and left it on the table. If they ever got around to cleaning, they could clean up one more mess.
 
 Right. Ok. I just had to [[get my shit together|Mom's Tent - your room]] and get outta here.
 
@@ -168,10 +168,21 @@ I quickly rummaged through my shit to make sure it was how I left it. My journal
 
 No sign of the letter Anna said she'd leave either. Whatever. Not like I should trust the word of the person who locked me in a shitter anyway. I grabbed the pack and quietly slipped it over my shoulder.
 
-(click: "slipped it over my shoulder")[ <center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//[[**Journal obtained**|Mom's Tent - poster choice]]//</span>]]</center>]
+(click: "slipped it over my shoulder")[ <center>[(transition: "pulse")[<span style="display: block; white-space: nowrap;">//[[**Journal obtained**|Mom's Tent - map]]//</span>]]</center>]
+
+::Mom's Tent - map
+In the folds of the journal, I could see [a piece of paper]<paperReveal|.
+
+(click: ?paperReveal)[$dissolve[It was [the map that I had drawn]<mapReveal| when I was just starting to go out on my own.]]
+
+(click: ?mapReveal)[$dissolve[MAP IMG GOES HERE
+
+Damn, this place used to seem so huge and exciting, like our own wicked-ass playground.
+
+It looked so sad and small now. Every place seemed like somewhere I might [[never meet Anna at again|Mom's Tent - poster choice]].]]
 
 ::Mom's Tent - poster choice
-I looked up from where I’d found the bag and my eyes came to rest on a poster hanging over my bed. It read:
+I put the map away and looked up at my room again. My eyes came to rest on a poster hanging over my bed. It read:
 
 >>(link: "DOUBLE TROUBLE: Wicked Wrestlin’ Federation Invitational")[(set: $isWrestler to true)(go-to: "Mom's Tent - poster thoughts")]
 >>(link: "Open Mic Battle Royale - TONIGHT ONLY")[(set: $isRapper to true)(go-to: "Mom's Tent - poster thoughts")]

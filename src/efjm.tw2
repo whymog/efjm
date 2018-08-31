@@ -5,32 +5,9 @@ Escape from Juggalo Mountain - twee2 Version
 Escape from Juggalo Mountain
 
 [[Begin|Jail Cell (Unlit) - hub]]
-- [[Start from Outside Port-a-potty|Outside Port-a-potty]]
-[[Opening Crawl|Opening crawl]]
-[[Start from Mom's Tent - intro|Mom's Tent - name prompt]]
-- [[Mom's Tent - table|Mom's Tent - name prompt table]]
-- [[Mom's Tent - letter|Mom's Tent - name prompt letter]]
-[[Start from the Chase|Tent City - Intro]]
-- [[Chase 2a: Rip's Rydas|Tent City - Rip's Rydas]]
-- [[Chase 2b: Ornery Kids|Tent City - Ornery Kids]]
-- [[Chase 3: Dogs|Tent City - Pack of stray dogs]]
-- [[Chase 4: Fence|Tent City - Fence]]
-- [[Chase Good Finale: Neden militia|Tent City - Neden militia finale]]
-- [[Chase Bad Finale: Leo showdown|Tent City - Leo finale]]
-[[The Gutter|The Gutter - Name prompt]]
-[[Jump to The Gutter - Outside hub|The Gutter - Name prompt outside hub]]
-[[Jump to The Gutter - Inside hub|The Gutter - Name prompt inside]]
-[[Jump to The Gutter - Ending|The Gutter - Name prompt ending]]
-[[Jump to the Roach Market|RM-first-entrance-nameprompt]]
-[[Jump to Auntie’s gift shop|RM-giftshop-entrance-nameprompt]]
-[[Jump to the junk heap|RM-junkheap-entrance-nameprompt]]
-[[The Church|The Church - First visit - Name prompt]]
-- [[The Church - Second visit|The Church - Second visit - Name prompt]]
-- [[The Church - Green room hub|The Church - Second visit - Green room]]
-- [[The Church - Rap battle|The Church - Rap battle name prompt]]
-[[Start at The Church - Wrestling match|wrestle-opening-nameprompt]]
-- [[Jump to The Church - Player's wrasslin' hype speech|wrestle-player-speech-nameprompt]]
-- [[Jump to The Church - Choose ur weapon|wrestle-weapon-round]]
+[[Credits|EFJM - Credits]]
+
+This is a playtest build. Content and style may change before the final version of the game.
 {
   (set: $justWokeUp to true)
   (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
@@ -48,6 +25,7 @@ src/s4a_the_church_first_visit.tw2
 src/s4b_the_church_second_visit.tw2
 src/s4c_the_church_rap_battle.tw2
 src/s4d_the_church_wrestling_match.tw2
+src/s5_the_mountain.tw2
 src/css.tw2
 
 ::Twee2Settings [twee2]
