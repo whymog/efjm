@@ -9,11 +9,41 @@ $monospace[(live: 1s)[(if: time > 1s)[$dissolve[The year is 20XX. Wicked clown s
 
 [(live: 3s)[(if: time > 27s)[$dissolve[For Juggalos in Gatherville, getting into the spotlight means everything. Wicked emcees spit verses sharp as hatchets. Wrestlers leave their blood and spit in the ring. It's all for a shot at catching the eye of the Honchos, living comfy in their ivory trailers. They’ve got the cash to make anyone forget about the shit they’ve seen in Gatherville.(stop:)]]]]
 
-[(live: 3s)[(if: time > 34s)[$dissolve[There are a lot of scrappers and shitheads going for glory, but any one of them who wants a permanent spot on top has to pass a final test. One insane act to prove they’ve got the heart to be a legend. They must...(stop:)]]]]
+[(live: 3s)[(if: time > 34s)[$dissolve[There are a lot of scrappers and shitheads going for glory, but any one of them who wants a permanent spot on top has to pass a final test. One insane act to prove they’ve got the heart to be a legend. [[They must...|EFJM-image]](stop:)]]]]]
 
-[(live: 3s)[(if: time > 43s)[$dissolve[[[**ESCAPE FROM JUGGALO MOUNTAIN**|Act 1 Title Card]](stop:)]]]]]
+<style>
+tw-icon.undo {
+display: none;
+}
+tw-icon.redo {
+display: none;
+}
+</style>
+
+::EFJM-image
+<center><img src="./img/opening_crawl.png"></center>
+
+[(live: 1s)[(if: time > 10s)[(go-to: "Act 1 Title Card")]]]
+
+<style>
+tw-icon.undo {
+display: none;
+}
+tw-icon.redo {
+display: none;
+}
+</style>
 
 ::Act 1 Title Card
 =><=
 [(live: 0.3s)[(if: time > 2s)[$dissolve[<h1>Act I</h1>(stop:)]]]]
 [(live: 1s)[(if: time > 8s)[(go-to: "Mom's Tent - intro")]]]
+
+<style>
+tw-icon.undo {
+display: none;
+}
+tw-icon.redo {
+display: none;
+}
+</style>
