@@ -12,6 +12,11 @@ tw-link.visited {
   color: rgb(65, 105, 225);
 }
 
+tw-link:hover,
+tw-link.visited:hover {
+  color: #00bfff;
+}
+
 img {
   max-height: 60vh;
 }
