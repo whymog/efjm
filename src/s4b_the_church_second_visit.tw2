@@ -247,7 +247,7 @@ I kicked back in a big armchair with no legs and cracked a bottle of Moon Mist. 
 
 My mind was alive with the happy memories of training and [the way that the soda tasted after a hard practice]<sodaFlashbackTrigger|.
 
-(click: ?sodaFlashbackTrigger)[$dissolve[(if: $isWrestler is true)[I thought of meeting Anna during my first practice. I blocked a kick of hers and flipped her, which is something I didn’t even realize I’d learned to do by watching matches.
+<div class ="flashback">(click: ?sodaFlashbackTrigger)[$dissolve[(if: $isWrestler is true)[I thought of meeting Anna during my first practice. I blocked a kick of hers and flipped her, which is something I didn’t even realize I’d learned to do by watching matches.
 
 She wasn’t phased. She just stood right back up and said, “Holy shit! I’ve gotta learn to do that!”
 
@@ -255,9 +255,7 @@ She wouldn’t leave my side for the next few hours as we both struggled to recr
 
 As I was drinking my Faygo at the end of the day, I heard her say, “You better be nice or my friend will come flip your ass upside down,” to some other little girl.
 
-I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I gulped down the fizzy soda.
-
-I capped the bottle and set it back down next to me. I didn’t wanna go all in on the sugar high and crash during the battle.]
+I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I [gulped down the fizzy soda.]<fbEndTrigger|]
 \(else:)[I thought of meeting Anna during my first practice. We got paired up to freestyle against each other right off the bat and Anna started out with a blistering verse.
 
 “You’re a motherfucking fuck and your lines fucking suck. I’ll chop your head off and feed it to a duck.”
@@ -270,7 +268,9 @@ For the rest of the practice, we ran around proclaiming ourselves the Duck Duo a
 
 As I was drinking my Faygo at the end of the day, I heard her say, “Yeah, she and I really do lots of murders. So you better watch it,” to some other little girl.
 
-I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I gulped down the fizzy soda.]
+I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I [gulped down the fizzy soda.]<fbEndTrigger|]]]</div>
+
+(click: ?fbEndTrigger)[$dissolve[Back in reality, I capped the bottle of Faygo and set it back down next to me. I didn’t wanna go all in on the sugar high and crash during the battle.
 
 [[I looked around the green room for something else to do|The Church - Second visit - Green room hub]].]]
 
