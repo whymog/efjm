@@ -73,17 +73,12 @@ I thought about poking my nose into The Stash for a free score on my own terms..
 > [[“Fine, great. I’ll play drug mule for you and Anna, just leave me alone.”|RM-DopemanDan-leave-alone]]
 > [[“That doesn’t sound like Anna, but whatever. Hand ‘em over. Free drugs is free drugs.”|RM-DopemanDan-free-drugs]]
 
-<!-- TODO: either adds “drugs” to inventory -->
-
 ::RM-DopemanDan-leave-alone
 I snatched the bag out of Dan’s hand, and stepped aside to push by him yet again. This time he didn’t try to stop me.
 
 “See? Was that so hard? Maybe next time you just take Dopeman at his word and save the attitude for somebody deserves it.”
 
-I was already past him, and waved my hand dismissively without looking back. “Yeah sure Dan, sorry or whatever. I’ll see ya around.”
-
-> [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
-> [[Head to the junk heap|RM-junkheap-entrance]]
+I was already past him, and waved my hand dismissively without looking back. “Yeah sure Dan, sorry or whatever. I’ll see ya [[around|RM-drugs-second-thoughts]].”
 
 ::RM-DopemanDan-free-drugs
 Dan cackled. “Hell yeah! Now you’re talking words Dopeman understands.” He thrust the bag forward, and I took it.
@@ -98,12 +93,42 @@ I unrolled the top and peeked inside. “Wow. This is, uh, a pretty full bag.”
 
   Dan tapped the side of his nose with his finger. “Trip in peace, my ‘lette. Dopeman ain’t never snitched on nobody.”
 
-  I nodded, and made my way deeper into the Roach Market.
-
-  > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
-  > [[Head to the junk heap|RM-junkheap-entrance]]
+  I nodded, and made my way [[deeper|RM-drugs-second-thoughts]] into the Roach Market.
   ]
 ]
+
+::RM-drugs-second-thoughts
+I rounded a corner as I headed away from Dan (who was already starting to nod off again in his camp chair) and passed by a metal barrel overflowing with garbage.
+
+There were dozens just like this one all over Tent City: emptied out weekly by order of the Honchos once upon a time, now left to sit until some ninja got fed up and dumped ‘em out someplace — usually straight into the river that bent around Gatherville. Juggalo altruism had its limits.
+
+(click: "limits")[$dissolve[Most of what spilled onto the ground from this barrel looked to be paper bags discarded after other ninjas’ trips to The Stash.
+
+My backpack was still hung unzipped from my hand, my own paper bag sitting at the top where I stuffed it just moments ago. Free drugs is free drugs, yeah, but now I wasn't so sure if I wanted to tote this around all night like a schoolkid handed a bag lunch.
+
+> [[I jammed the unwanted bag o’ drugs into the already jam-packed trash can|RM-drugs-toss]].
+> [[Who am I kidding? I’d give up my drugs when Jaysus took ‘em from my cold, dead hands|RM-drugs-keep]]]].
+
+<!-- holding this code in case I change my mind again about how to end the scene
+<drugsToss|(click:?drugsToss)[(replace: ?drugsKeep)[](display: "RM-drugs-toss")]
+<drugsKeep|]](click:?drugsKeep)[(replace: ?drugsToss)[](display: "RM-drugs-keep")]
+-->
+
+::RM-drugs-toss
+//Sorry Anna. Maybe leave a note next time, and not just a drug-filled bag.//
+
+I zipped my backpack shut again, happy to be rid of that shit I never asked for as I headed onward.
+
+> [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
+> [[Head to the junk heap|RM-junkheap-entrance]]
+
+::RM-drugs-keep
+Besides, these were from Anna... if she’d gone to the trouble to get ‘em to me, it had to be for a reason. Right?
+
+I pressed on, zipping my pack shut and hoping I might find more answers elsewhere.
+
+> [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
+> [[Head to the junk heap|RM-junkheap-entrance]]
 
 <!-- If using debug menu shortcuts, prompts player to enter their name before beginning Auntie's gift shop sequence -->
 ::RM-giftshop-entrance-nameprompt
@@ -172,7 +197,7 @@ I didn’t really have much to trade with. You could find a soft spot in Auntie 
   (transition: "dissolve") +(transition-time: 3s)[
     <br>
     I set my sights on the…<br>
-    > [[Dice set.|RM-giftshop-start-trade]](click: "Dice set.")[(set:$gameOfChance to "dice")]<br>
+    > [[Dice set.|RM-giftshop-start-trade]](click: "Dice set.")[(set:$gameOfChance to "dice set")]<br>
     > [[Dominoes.|RM-giftshop-start-trade]](click: "Dominoes.")[(set:$gameOfChance to "dominoes")]<br>
     > [[Pen knife.|RM-giftshop-start-trade]](click: "Pen knife.")[(set:$gameOfChance to "pen knife")]
   ]

@@ -4,15 +4,29 @@ Escape from Juggalo Mountain - twee2 Version
 ::Title Screen <200,101>
 Escape from Juggalo Mountain
 
-[[Begin|Jail Cell (Unlit) - hub]]
-[[Credits|EFJM - Credits]]
+[[Begin|Jail Cell (Unlit) - name character]]
+[[Start from Outside Port-a-potty|Outside Port-a-potty]]
+[[Opening Crawl|Opening crawl]]
+[[Start a Mom's Tent - table|Mom's Tent - name prompt table]]
+[[Start at Mom's Tent - letter|Mom's Tent - name prompt letter]]
+[[Start at the Chase|Tent City - Intro]]
+- [[Chase 2a: Rip's Rydas|Tent City - Rip's Rydas]]
+- [[Chase 2b: Ornery Kids|Tent City - Ornery Kids]]
+- [[Chase 3: Dogs|Tent City - Pack of stray dogs]]
+- [[Chase 4: Fence|Tent City - Fence]]
+- [[Chase Good Finale: Neden militia|Tent City - Neden militia finale]]
+- [[Chase Bad Finale: Leo showdown|Tent City - Leo finale]]
+[[Start at The Gutter|The Gutter - Intro]]
+- [[Jump to the Roach Market|RM-first-entrance-nameprompt]]
+- [[Jump to Auntie’s gift shop|RM-giftshop-entrance-nameprompt]]
+- [[Jump to the junk heap|RM-junkheap-entrance-nameprompt]]
+[[Start at The Church - First visit|The Church - First visit - Name prompt]]
+[[Start at The Church - Rap battle|The Church - Rap battle name prompt]]
+[[Start at The Church - Wrestling match|wrestle-opening-nameprompt]]
+- [[Jump to The Church - Player's wrasslin' hype speech|wrestle-player-speech-nameprompt]]
+- [[Jump to The Church - Choose ur weapon|wrestle-weapon-round]]
 
-This is a playtest build. Content and style may change before the final version of the game.
-{
-  (set: $justWokeUp to true)
-  (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
-  (set: $monospace to (css: 'font-family: "VT323", "Courier New", "Courier", monospace; font-size: 36px; color: #33BB44;'))
-}
+(set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
 
 ::StoryIncludes
 src/s1a_portapotty.tw2
@@ -25,27 +39,8 @@ src/s4a_the_church_first_visit.tw2
 src/s4b_the_church_second_visit.tw2
 src/s4c_the_church_rap_battle.tw2
 src/s4d_the_church_wrestling_match.tw2
-src/s5_the_mountain.tw2
 src/css.tw2
 
 ::Twee2Settings [twee2]
 Twee2::build_config.story_format = 'Harlowe2'
 @story_start_name = 'Title Screen'
-
-::EFJM - Credits
-Thanks for playing our weird game!
-
-**Created by**
-Nick Cummings
-Nathan Harrison
-Ben Morgan
-
-**Art by**
-Sarah Morgan
-
-**Special Thanks**
-Meemaw and Pep Pep
-
-**Playtesters**
-Violent J
-Shaggy 2 Dope
