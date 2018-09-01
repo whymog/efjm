@@ -26,7 +26,7 @@ It was a primo spot, and Dan went so far as to sleep there every night to make s
 
 Today he was half-dozing in a camp chair out front, but he [[perked up as I went by|RM-DopemanDan-greeting]].
 
-(set: $roachEntrance to "later")
+(set: $roachEntrance to "later")(set: $scooterSeen to false)
 
 <!-- Scene for the second and any subsequent returns to the Roach Market sequence -->
 ::RM-later-entrance
@@ -282,7 +282,7 @@ Scrawled in pencil along the bottom of the sign was the table’s motto: “<i>L
 
 ::RM-junkheap-goodshit
 There was a [[small tin|RM-junkheap-tin]] with a hand-painted Hatchetman logo, a couple old [[video games|RM-junkheap-games]], a worn-down [[jewelry box|RM-junkheap-jewelry]], a stack of [[yellowing zines|RM-junkheap-zines]], some [[puppets|RM-junkheap-puppets]], a case of [[cassette tapes|RM-junkheap-tapes]], and a box of [[dog-eared paperback books|RM-junkheap-books]]. None of it looked like anything I needed, but then again I’ve always loved pawing through other people’s stuff.
-(if: $junkHeapItemsSeen is > 6)[<br>I noticed a rusted up old scooter that I [[hadn't seen for a while|RM-junkheap-flashback]].<br>]
+(if: $scooterSeen is true)[<br>Leo's rusted up old scooter was still there, but I was done thinking about him.<br>](else-if: $junkHeapItemsSeen is > 6)[<br>I noticed a rusted up old scooter that I [[hadn't seen for a while|RM-junkheap-flashback]].<br>]
 \
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
 
@@ -361,42 +361,44 @@ Honestly I was kinda hurt to see the box still on the table, but... whatever. To
 (set: $junkHeapItemsSeen to it +1)
 
 ::RM-junkheap-flashback
-I walked up to the scooter and just took it in for a bit. It wasn't in good shape, nothing in this pile could say that.
+I walked up to the scooter and just took it in for a bit. It wasn't in good shape. Then again, nothing in this pile was.
 
 It was beaten to hell, with rust gathering all over it. The light had been busted out long ago by some ninja looking for a quick thrill. I felt myself pulled back to the [first time I saw the scooter]<scooterTrigger|.
 
-<div class="flashback">(click: ?scooterTrigger)[$dissolve[It’s a couple years ago and I’m waiting outside of the school trailer. I’m waiting for Anna, as usual.
+<div class="flashback">(click: ?scooterTrigger)[$dissolve[It’s a couple years ago and I’m hanging around outside of the school trailer. I’m waiting for Anna, as usual.
 
-We’re gonna head out to the far fields – where you can actually see the river. The only lights are a Fed boat doing a routine patrol and the only people dudes who’ve wandered too far on a bad trip.
+We’re gonna head out to the far fields – to where you can actually see the river. The only lights are a Fed boat doing a routine patrol in the distance, and the only people dudes who’ve wandered too far on a bad trip.
 
-Leo comes roaring up on this tricked-out, midnight black scooter. It’s got pristine hatchet man decals and a fresh paint job. It’s so new that it seems like it’s sparkling all over.
+Leo comes roaring up on this tricked-out, midnight-black scooter. It’s got pristine hatchet man decals and a fresh paint job. It’s so new that it seems like it’s sparkling all over.
 
 He pulls up next to me, the engine thundering so loud I have to scream at him. “LOOK AT YOU, HUH? [SOME BIG DEAL NOW]<scooterTrigger2|?”]]
 
-(click: ?scooterTrigger2)[$dissolve[I knew it was what he wanted, but I thought that would make the conversation end sooner. He sidles up even closer and cuts the engine. “Pop took a job for the Honchos. Fixed up a few old vans,” he grinned, “We’re rolling in it this week.”
+(click: ?scooterTrigger2)[$dissolve[I knew it was what he wanted, but I thought that would make the conversation end sooner. He sidles up even closer and cuts the engine. “Pop took a job for the Honchos. Fixed up a few old vans.” He grinned. “We’re rolling in it this week.”
 
-Before I can even respond, he says, “Wanna live like a queen today?”
+Before I can even respond, he says, “Wanna [live like a queen today]<scooterTrigger3|?”]]
 
-I know what he wants. We all know what boys want from now until the end of time. It’s not like I’m naive or that I don’t want some version of love too. It felt like every opportunity to say yes might be my last chance.
+(click: ?scooterTrigger3)[$dissolve[I know what he wants. We all know what boys want from now until the end of time. It’s not like I’m naive or that I don’t want some version of love too. It felt like every opportunity to say yes might be my last chance.
 
-So I said yes, more to finding out what was next than to him in particular, and we rode off together into the beginning of our story.
+So I said yes — more to finding out what was next than to him in particular — and we rode off together into the beginning of our story.
 
-I thought I’d see Anna with a big frown, watching me through the scooter dust. But, when I looked [she wasn’t there]<scooterTrigger3|.]]
+I thought I’d see Anna with a big frown, watching me through the scooter dust. But when I looked, [she wasn’t there]<scooterTrigger4|.]]
 
-(click: ?scooterTrigger3)[$dissolve[When I found her the next day, she just wanted details. I barfed a flood of so much boring detail that it should’ve crushed us both. I started sketching his name on things in idle silences.
+(click: ?scooterTrigger4)[$dissolve[When I found her the next day, she just wanted details. I barfed a flood of so much boring detail that it should’ve crushed us both. I started sketching his name on things in idle silences.
 
-By the next week, she was tired of hearing about us. I started practicing alone before shows and moved my baggage over to the new relationship. Took a few looks at the old friendship before I tossed the keys and [closed the door]<scooterTrigger4|.]]
+By the next week, she was tired of hearing about us. I started practicing alone before shows and moved my baggage over to the new relationship. Took a few looks at the old friendship before I tossed the keys and [closed the door]<scooterTrigger5|.]]
 
-(click: ?scooterTrigger4)[$dissolve[When it ended with Leo three weeks later, I felt busted worse than a snowglobe hit with a baseball bat. It hadn’t taken long for his new ride to get dinged up and lose its shine. Some shithead scraped it for a laugh, later his buddies wanna take a joy ride and they took it into a ditch.
+(click: ?scooterTrigger5)[$dissolve[When it ended with Leo three weeks later, I felt busted worse than a snowglobe hit with a baseball bat. It hadn’t taken long for his new ride to get dinged up and lose its shine. Some shithead scraped it for a laugh. A few days later, his buddies took it for a joy ride and rode it straight into a ditch.
 
-It was the same with his personality – a tossed off nasty remark here, a selfish choice there. His good intentions peeled faster than the scooter’s cheap paint. [Nothing nice lasts in Gatherville]<scooterTrigger5|.]]
+It was the same with his personality – a tossed off nasty remark here, a selfish choice there. His good intentions peeled faster than the scooter’s cheap paint. [Nothing nice lasts in Gatherville]<scooterTrigger6|.]]
 
-(click: ?scooterTrigger5)[$dissolve[After we split, all the things I used to love, like (if: $isWrestler is true)[practicing my grapples](else:)[spitting rhymes over a tape loop], felt like they had their joy buried under an emotional goop.
+(click: ?scooterTrigger6)[$dissolve[After we split, all the things I used to love, like (if: $isWrestler is true)[practicing my grapples](else:)[spitting rhymes over a tape loop], felt joyless to me.
 
-I couldn’t access them in the same way, even if I forced myself through the motions. Everything I tried to write, even diary entries, turned into whiny sludge. I had become a shot of snot at the rim of a sink drain.
+I couldn’t enjoy them in the same way, even if I forced myself through the motions. Everything I tried to write, even diary entries, turned into whiny sludge. I had become a shot of snot at the rim of a sink drain.
 
-In a deserted spot one day, I came back to Anna and I oozed all my feelings out in one [disgusting squelch]<scooterTrigger6|.]]
+In a deserted spot one day, I came back to Anna and I oozed all my feelings out in one [disgusting squelch]<scooterTrigger7|.]]
 
-(click: ?scooterTrigger6)[$dissolve[When I finally looked up after spilling my guts, the understanding I saw on her face felt like a miracle. She hugged me, and it felt like we were eleven years old again – dancing the summer away.]]</div>
+(click: ?scooterTrigger7)[$dissolve[When I finally looked up after spilling my guts, the understanding I saw on her face felt like a miracle. She hugged me, and it felt like we were eleven years old again, dancing the summer away.]]</div>
 
 (click: "dancing the summer away")[$dissolve[I walked away from the scooter feeling [[happier than I'd expected|RM-junkheap-goodshit]].]]
+
+(set: $scooterSeen to true)
