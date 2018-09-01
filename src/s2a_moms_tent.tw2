@@ -114,7 +114,7 @@ Mom loves to keep notes. She writes down all kinds of things — keeps track of 
 It was a [to-do list]<listTrigger|. No real surprises there:
 (click: ?listTrigger)[$dissolve[<div style="padding-left: 2em;">- REMEMBER: working extra shifts for Jolene next Sat. & Sun.
 - Patch ripped wall in L.R.
-- Talk to Ron about budget – no more [wasting money at The Gutter]<listTrigger2|!!</div>]]
+- Talk to Ron about budget — no more [wasting money at The Gutter]<listTrigger2|!!</div>]]
 (click: ?listTrigger2)[$dissolve[And sure enough, there was [a line item for me]<listTrigger3|. It read:]]
 (click: ?listTrigger3)[$dissolve[<div style="padding-left: 2em;">- //Talk to $playerName about the house rules — NO MORE [SNEAKING OFF WITH ANNA]<listTrigger4| AFTER DARK!//</div>]]
 (click: ?listTrigger4)[$dissolve[Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].]]

@@ -178,7 +178,7 @@ I pushed myself up and rubbed my eyes. Looking around, I saw the old familiar gr
 
 (click: "the old familiar gravel path toward our part of Tent City")[(transition: "dissolve") +(transition-time: 3s)[Thank fucking god. I thought I could’ve been anywhere.
 
-Steadying myself, I stood up, tested my footing, and glanced around. Out of the corner of my eye, I saw it – a page that looked like it was torn out of my journal.]]
+Steadying myself, I stood up, tested my footing, and glanced around. Out of the corner of my eye, I saw it — a page that looked like it was torn out of my journal.]]
 
 (click: "a page")[(transition: "dissolve") +(transition-time: 3s)[It was taped to the inside of the toilet door. If it hadn’t been so hard to see in there, maybe I would’ve noticed it. But out here, under the floodlights, the bright-pink paper stood out clearly from the sun-drained teal plastic door.
 

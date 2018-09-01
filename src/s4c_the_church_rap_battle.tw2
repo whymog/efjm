@@ -34,7 +34,7 @@ Steve and I circled each other warily. Moon Mystic piped up, “Alright $stageNa
 
 >>["I’ll go first. I’m sick of looking at this dude already."]<playerFirst|
 >>["I’ll go second. This goofy motherfucker needs all the help he can get."]<steveFirst|
->>[[I didn’t even answer – just started into a blistering rap about dogs.|The Church - Rap battle - First verses dog rap]]
+>>[[I didn’t even answer — just started into a blistering rap about dogs.|The Church - Rap battle - First verses dog rap]]
 
 (click: ?playerFirst)[(go-to: "The Church - Rap battle - First verses player first")]
 (click: ?steveFirst)[(go-to: "The Church - Rap battle - First verses steve first")]
