@@ -22,6 +22,8 @@ What I didn't know was that:
 >>[[the world outside Gatherville was even worse. Jeff Bezos was the president and his powerful drones could only give you oral sex or cut off your head and they charged the same amount of money for either.|EFJM - ending]]
 
 ::EFJM - ending
-<center>//TO BE CONTINUED//</center>
+<h1>End Act I</h1>
+
+//To Be Continued[(live: 1s)[(if: time > 1s)[$dissolve[.(stop:)]]]][(live: 1s)[(if: time > 2s)[$dissolve[.(stop:)]]]][(live: 1s)[(if: time > 3s)[$dissolve[.?(stop:)]]]]//
 
 [(live: 1s)[(if: time > 5s)[$dissolve[(display: "EFJM - Credits")(stop:)]]]]
