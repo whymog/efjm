@@ -2,7 +2,7 @@
 Escape from Juggalo Mountain - Act I
 
 ::Title Screen <200,101>
-<center>Escape from Juggalo Mountain</center>
+Escape from Juggalo Mountain
 
 [[Start|Jail Cell (Unlit) - hub]]
 
@@ -36,19 +36,24 @@ Twee2::build_config.story_format = 'Harlowe2'
 ::EFJM - Credits
 Thanks for playing our weird game!
 
-A game by Nick Cummings, Ben Morgan, and Nathan Harrison
+**A game by**
+Nick Cummings, Ben Morgan, and Nathan Harrison
 
-Illustrations by Sarah Morgan
+**Illustrations by**
+Sarah Morgan
 
-Map of Juggalo Mountain and surrounding territories by Nick Cummings
+**Map of Juggalo Mountain and surrounding territories by**
+Nick Cummings
 
-Playtesting by Yelena Kolova and Dan Phipps
+**Playtesting by**
+Yelena Kolova and Dan Phipps
 
-Special thanks to:
-Sean Dunne
-Matt Gilles
-Nathan Rabin
-Ian McAfee
+**Special thanks to:**
+- Matt Gilles
+- Ian McAfee
+- Sean Dunne
+- Nathan Rabin
+
 
 [[back to main menu|Title Screen]]
 
