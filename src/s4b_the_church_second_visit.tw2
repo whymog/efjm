@@ -349,17 +349,18 @@ I kissed my index and middle fingers and raised them to the air in a [peace sign
 (set: $icpSeen to true)(set: $trophyNumberSeen to it +1)
 
 ::The Church - Second visit - Trophies ninjette
-“Take off the hat for this one lil ninja. This is the priestess of pain, the warrior woman who wins, the beat-ass beauty, the empress of compress, the dame of destruction, the better-not-call-me-bitch beatdown queen of the whole damn thing!”
+“Take off the hat for this one lil ninja. This is the (if: $isWrestler is true)[priestess of pain, the warrior woman who wins, the beat-ass beauty, the empress of compress, the dame of destruction, the better-not-call-me-bitch beatdown queen of the whole damn thing!]
+\(else:)[greatest rapper in the history of this shithole.]”
 
 I paused to catch my breath and cross myself using Ninjette’s signature hand motion. To my surprise, Lil Phatty did actually [remove his hat]<ninjetteTrigger|.
 
-(click: ?ninjetteTrigger)[$dissolve[“Around ten years ago, Ninjette was a novelty act. No woman had risen up to the Honcho level in the history of Gatherville. They would just trot her out to hoot and holler at her bits during matches with amateurs or joke wrestlers. But, one day, she got on a bill with an up-and-coming dude who had never been pinned. She knocked his ass to the ground like a strong wind does to a bad tarp.
+(click: ?ninjetteTrigger)[$dissolve[“Around ten years ago, Ninjette was a novelty act. No woman had risen up to the Honcho level in the history of Gatherville. They would just trot her out to hoot and holler at her bits during (if: $isWrestler is true)[matches with amateurs or joke wrestlers](else:)[battles with amateur emcees and corny motherfuckers]. But, one day, she got on a bill with an up-and-coming dude who had never been (if: $isWrestler is true)[pinned](else:)[beaten]. She (if: $isWrestler is true)[knocked his ass to the ground](else:)[rapped his ass of the stage] like a strong wind ripping down an old tarp.
 
-The Honchos tried to invalidate her win and say it was all a stunt. But, she asked for any challenger and she knocked ‘em all down, even [the reigning champ]<ninjetteTrigger2|.]]
+The Honchos tried to invalidate her win and say it was all a stunt. But, she asked for any challenger and she took 'em all out, even [the reigning champ]<ninjetteTrigger2|.]]
 
-(click: ?ninjetteTrigger2)[$dissolve[It turns out, she’d been forced to throw all of her earlier matches and she had just gotten sick of it. She was my hero when I was a kid. Other folks let me down, but Ninjette never did.
+(click: ?ninjetteTrigger2)[$dissolve[It turns out, she’d been forced to throw all of her earlier (if: $isWrestler is true)[matches](else:)[battles] and she had just gotten sick of it. She was my hero when I was a kid. Other folks let me down, but Ninjette never did.
 
-I was there for every match, screaming my lungs out. As soon as Ninjette got taken in with the Honchos to the Trailer Park, I got my Mom to sign me up for junior performers. I knew I was next.
+Any time she was on stage, I was there screaming my lungs out. Right when Ninjette finally got taken to the Trailer Park to chill with the Honchos, I got my Mom to sign me up for junior performers. I knew I was next.
 
 [[Of course, that’s right when they added the mountain too.”|The Church - Second visit - Trophies hub]]]]
 
