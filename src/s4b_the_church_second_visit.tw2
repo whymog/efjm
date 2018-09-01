@@ -30,7 +30,7 @@ I could still remember keenly the night that this place ate my dreams. Now it ha
 (set: $churchSecondWindowSeen to false)(set: $frontDoorVisited to false)
 
 ::The Church - Second visit - Outside hub
-I knew the regular crowd would all wanna stare. I knew Kiki would have her pointed questions. They could have whatever they wanted. I just needed one thing – a way into the mountain.
+I knew the regular crowd would all wanna stare. I knew Kiki would have her pointed questions. They could have whatever they wanted. I just needed one thing — a way into the mountain.
 \
 (if: $churchSecondWindowSeen is false)[
 >>[[I went to see what I could spy through the window|The Church - Second visit - Window]].]\
@@ -56,7 +56,7 @@ I could taste the sweat and blood, smell the iron. These fuckers had been holdin
 ::The Church - Second visit - Window rapping
 It was a rap battle tonight. Perfect. My head bobbed and my mind filled with verses. I could taste the dangerous dust under my tongue that could lock it up, but I forced that down.
 
-My body was only producing venom tonight – straight bile. Those phony ass emcees that only hung around this place for the ‘lettes and the drink tickets wouldn’t know what hit ‘em.
+My body was only producing venom tonight — straight bile. Those phony ass emcees that only hung around this place for the ‘lettes and the drink tickets wouldn’t know what hit ‘em.
 
 [[Ante up|The Church - Second visit - Outside hub]].
 
@@ -170,7 +170,7 @@ She sat down on the couch, clicked the walkie-talkie off, and [[patted the chair
 (if: $kikiBounceTalk is false)[
 >>[[“Kiki, I’ve gotta tell you why I bounced last year.”|The Church - Second visit - Kiki bounced]]]\
 (if: $kikiChampTalk is false)[
->>[[“What’s the deal with the chump – uh, I mean, champ – I’m up against?”|The Church - Second visit - Kiki champ]]]\
+>>[[“What’s the deal with the chump — uh, I mean, champ — I’m up against?”|The Church - Second visit - Kiki champ]]]\
 (if: $kikiAnnaTalk is false)[
 >>[[“You seen Anna recently?”|The Church - Second visit - Kiki anna]]]]
 \(else:)[Kiki looked at me and I could tell our time to chat was up. She rose and opened the door for me.
