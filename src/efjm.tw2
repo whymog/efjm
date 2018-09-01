@@ -1,13 +1,14 @@
 ::StoryTitle
-Escape from Juggalo Mountain - twee2 Version
+Escape from Juggalo Mountain - Act I
 
 ::Title Screen <200,101>
 Escape from Juggalo Mountain
 
-[[Begin|Jail Cell (Unlit) - hub]]
+[[Start|Jail Cell (Unlit) - hub]]
+
 [[Credits|EFJM - Credits]]
 
-This is a playtest build. Content and style may change before the final version of the game.
+[[Content warnings|Content warnings]]
 {
   (set: $justWokeUp to true)
   (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s))
@@ -35,17 +36,31 @@ Twee2::build_config.story_format = 'Harlowe2'
 ::EFJM - Credits
 Thanks for playing our weird game!
 
-**Created by**
-Nick Cummings
-Nathan Harrison
-Ben Morgan
+**A game by**
+Nick Cummings, Ben Morgan, and Nathan Harrison
 
-**Art by**
+**Illustrations by**
 Sarah Morgan
 
-**Special Thanks**
-Meemaw and Pep Pep
+**Map of Juggalo Mountain and surrounding territories by**
+Nick Cummings
 
-**Playtesters**
-Violent J
-Shaggy 2 Dope
+**Playtesting by**
+Yelena Kolova and Dan Phipps
+
+**Special thanks to:**
+- Matt Gilles
+- Ian McAfee
+- Sean Dunne
+- Nathan Rabin
+
+
+[[back to main menu|Title Screen]]
+
+::Content warnings
+This game contains:
+* strong language
+* sexual harassment
+* substance abuse
+
+[[back to main menu|Title Screen]]
