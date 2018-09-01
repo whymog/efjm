@@ -48,8 +48,11 @@ If you're unable to get `twee2` to build to Harlowe2 for any reason, you can exp
 # Credits
 
 A game by Nick Cummings, Ben Morgan, and Nathan Harrison
+
 Illustrations by Sarah Morgan
+
 Map of Juggalo Mountain and surrounding territories by Nick Cummings
+
 Playtesting by Yelena Kolova and Dan Phipps
 
 Special thanks to:
