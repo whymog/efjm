@@ -56,4 +56,5 @@ Special thanks to:
 
 * Sean Dunne
 * Matt Gilles
+* Ian McAfee
 * Nathan Rabin
