@@ -285,10 +285,10 @@ It was easy enough to pick through: whenever the heap ran out of flat surfaces, 
 Everybody wanted or needed something from the heap sooner or later, and only real assholes violated that pact and made a mess of it.
 
 (if: $junkHeapSeen is true)[I didn't see anything new since my last visit:
->>[[But I just wanted to skim through again|RM-junkheap-stuff]].
->>[[So I headed to The Stash|RM-DopemanDan-return]].
->>[[So I headed to The Gutter|The Gutter - Outside $gutterOutside]].
->>[[So I headed to Auntie’s gift shop|RM-giftshop-entrance]].
+> [[But I just wanted to skim through again|RM-junkheap-stuff]].
+> [[So I headed to The Stash|RM-DopemanDan-return]].
+> [[So I headed to The Gutter|The Gutter - Outside $gutterOutside]].
+> [[So I headed to Auntie’s gift shop|RM-giftshop-entrance]].
 ](else:)[[[I quickly skimmed through the dregs—|RM-junkheap-stuff]]]
 
 ::RM-junkheap-stuff

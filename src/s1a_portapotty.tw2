@@ -5,9 +5,9 @@
 
 Well...darkness and shit.]]
 
->> [[I blinked my eyes, still heavy from sleep|Jail Cell (Unlit) - look - fail]].
->> [[I felt around for something concrete|Jail Cell (Unlit) - feel]].
->> [[I sniffed the stagnant air|Jail Cell (Unlit) - smell]].
+> [[I blinked my eyes, still heavy from sleep|Jail Cell (Unlit) - look - fail]].
+> [[I felt around for something concrete|Jail Cell (Unlit) - feel]].
+> [[I sniffed the stagnant air|Jail Cell (Unlit) - smell]].
 
 ::Jail Cell (Unlit) - look - fail <30,500>
 My eyelids hung heavy. They felt like paperweights over eyes as dry as sandpaper. I couldn't see shit.
@@ -39,8 +39,8 @@ Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
 
 |section5)[No good. Still couldn't see anything. Except for...
 
-[>> [a faint beam of moonlight draped across the cell walls.]<trigger5a|]<prompt5a|
-[>> [a glint of metal on the floor.]<trigger5b|]<prompt5b|]
+[> [a faint beam of moonlight draped across the cell walls.]<trigger5a|]<prompt5a|
+[> [a glint of metal on the floor.]<trigger5b|]<prompt5b|]
 
 |section6)[The light from the moon snuck in through a small grate above my head. It shined a faint light across the cell walls and onto the corner of the floor, where it caught the glint of something shiny.
 
@@ -118,10 +118,10 @@ The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true
 
 There was a (if: $triedDoor is true)[locked ]door right in front of me. The (if: $waterDrained is true)[empty ]basin was rooted to the wall on my left(if:$waterDrained is false)[, still full of translucent water]. And the floor was covered in scattered slips of paper and shreds of cloth.
 
-(if: $triedDoor is false)[>> [[I tried the door|Jail Cell (Lit) - door]]].\
-(if: $triedDoor is true)[>> [[The door to my cell was still locked tight|Jail Cell (Lit) - door]]].
-(if: $waterDrained is false)[>> [[I took a closer look at the basin|Jail Cell (Lit) - basin - full]]].\
-(if: $waterDrained is true)[>> [[I glanced at the basin again|Jail Cell (Lit) - basin - empty]]].
+(if: $triedDoor is false)[> [[I tried the door|Jail Cell (Lit) - door]]].\
+(if: $triedDoor is true)[> [[The door to my cell was still locked tight|Jail Cell (Lit) - door]]].
+(if: $waterDrained is false)[> [[I took a closer look at the basin|Jail Cell (Lit) - basin - full]]].\
+(if: $waterDrained is true)[> [[I glanced at the basin again|Jail Cell (Lit) - basin - empty]]].
 
 ::Jail Cell (Lit) - door <349,776>
 {
