@@ -122,7 +122,9 @@ I bit off another mouthful of turnip as quick as I could and plugged my nostrils
 The crowd was full of whispers and laughter. I hadn’t gotten them on my side yet, but I had their attention. As the foul turnip taste faded from my mouth, I [[heard the bell ring to start the first round.|wrestle-first-round]]]]]]]]]]]]
 
 ::wrestle-first-round
-At the sound of the bell, Carol tore out of her corner like a rabid wolverine out of its cave. She dropped her turnip sack and leaped at me with both arms extended. I was only able to barely scramble out of the way as I yelped. //God damn, I knew I should’ve taken more time to warm up.// I hadn’t been in the ring in a year and I was still shaking the dust off my muscle memory.
+At the sound of the bell, Carol tore out of her corner like a rabid wolverine out of its cave. She dropped her turnip sack and leaped at me with both arms extended. I was only able to barely scramble out of the way as I yelped.
+
+//God damn, I knew I should’ve taken more time to warm up.// I hadn’t been in the ring in a year and I was still shaking the dust off my muscle memory.
 
 (click: "shaking the dust")[$dissolve[As I recovered from the near-miss, Carol reappeared at my side and barrelled me into a corner. As she hit me, I felt my muscles helping her move me while my brain screamed at them to stop. Mountain matches were a shoot — real hits only — and I mostly trained for scripted fights with winners and losers booked in advance.
 
@@ -138,10 +140,12 @@ I was furious and disgusted, but I kept it together. While Carol was grandstandi
 
 (click: "Two!")[$dissolve[Just before he opened his mouth to end the count at three, I took my free arm and fiercely elbowed Carol right in the tit. She yowled and I jumped up, pushing her onto her back. I stood up, briefly triumphant and stared into her eyes as her shock turned to rage. Full of the fury of battle, I howled right at her.
 
-[[“Game on cave bitch!”|wrestle-first-round-cont]]]]]]]]]]
+[[“Game on, cave bitch!”|wrestle-first-round-cont]]]]]]]]]]
 
 ::wrestle-first-round-cont
-Carol pounced into the center of the ring and twisted her sack of turnips tight around her knuckles and started, spinning it faster and faster in front of her to create a horrible burlap cyclone. As she spun, she howled and moved towards me in an effort to pin me in the corner of the ring. Moon Mystic cried out, “It’s the dreaded sack spin!” I had to react quickly.
+Carol pounced into the center of the ring and twisted her sack of turnips tight around her knuckles and started, spinning it faster and faster in front of her to create a horrible burlap cyclone.
+
+As she spun, she howled and moved towards me in an effort to pin me in the corner of the ring. Moon Mystic cried out, “It’s the dreaded sack spin!” I had to react quickly.
 
 [[I acted confused and put some distance between me and Carol.|wrestle-first-round-confused]]
 [[I snuck around Carol and struck at her back.|wrestle-first-round-sneak]]
