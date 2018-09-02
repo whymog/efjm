@@ -1,10 +1,10 @@
-# EfJM
+# Escape from Juggalo Mountain: Act I
 
-Stay tuned.
+A visual novel built with [Twine](http://twinery.org/) about coming of age in a separatist society. With face paint.
 
 # Setup
 
-EfJM requires [twee2](https://github.com/Dan-Q/twee2), an open-source, command-line tool for compiling [Twine](http://twinery.org/) games. However, as of this writing, the `twee2` ruby gem is outdated, so the game won't compile to Harlowe2 (our preferred Twine story format) correctly.
+_Escape from Juggalo Mountain: Act I_ requires [twee2](https://github.com/Dan-Q/twee2), an open-source, command-line tool for compiling [Twine](http://twinery.org/) games. However, as of this writing, the `twee2` ruby gem is outdated, so the game won't compile to Harlowe2 (our preferred Twine story format) correctly.
 
 To get around this, you'll need to clone the latest version of `twee2` and install it manually, using these instructions (adapted from this helpful [comment](https://github.com/Dan-Q/twee2/issues/36#issuecomment-383277996)):
 
@@ -44,3 +44,20 @@ Or if you'd like `twee2` to keep an eye out for changes as you make them, you ca
 This instructs `twee2` to build the game from the `src/efjm.tw2` file (which imports all other game modules) and outputs it to a separate `build/` directory, which is git-ignored. It also ensures the game is built for the Harlowe2 story format.
 
 If you're unable to get `twee2` to build to Harlowe2 for any reason, you can export to whatever story format you like. However, you'll need to import your HTML-output game into Twine, open it up in the editor, and change the story format there to Harlowe2 and rebuild it before the game will work properly. This is a bummer, since it means you won't be able to use `twee2 watch` to automatically rebuild your game as you're working on it, but life's full of little compromises.
+
+# Credits
+
+A game by Nick Cummings, Ben Morgan, and Nathan Harrison
+
+Illustrations by Sarah Morgan
+
+Map of Juggalo Mountain and surrounding territories by Nick Cummings
+
+Playtesting by Yelena Kolova and Dan Phipps
+
+Special thanks to:
+
+* Sean Dunne
+* Matt Gilles
+* Ian McAfee
+* Nathan Rabin

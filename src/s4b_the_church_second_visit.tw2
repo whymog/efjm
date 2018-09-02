@@ -247,7 +247,7 @@ I kicked back in a big armchair with no legs and cracked a bottle of Moon Mist. 
 
 My mind was alive with the happy memories of training and [the way that the soda tasted after a hard practice]<sodaFlashbackTrigger|.
 
-(click: ?sodaFlashbackTrigger)[$dissolve[(if: $isWrestler is true)[I thought of meeting Anna during my first practice. I blocked a kick of hers and flipped her, which is something I didn’t even realize I’d learned to do by watching matches.
+<div class ="flashback">(click: ?sodaFlashbackTrigger)[$dissolve[(if: $isWrestler is true)[I thought of meeting Anna during my first practice. I blocked a kick of hers and flipped her, which is something I didn’t even realize I’d learned to do by watching matches.
 
 She wasn’t phased. She just stood right back up and said, “Holy shit! I’ve gotta learn to do that!”
 
@@ -255,9 +255,7 @@ She wouldn’t leave my side for the next few hours as we both struggled to recr
 
 As I was drinking my Faygo at the end of the day, I heard her say, “You better be nice or my friend will come flip your ass upside down,” to some other little girl.
 
-I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I gulped down the fizzy soda.
-
-I capped the bottle and set it back down next to me. I didn’t wanna go all in on the sugar high and crash during the battle.]
+I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I [gulped down the fizzy soda.]<fbEndTrigger|]
 \(else:)[I thought of meeting Anna during my first practice. We got paired up to freestyle against each other right off the bat and Anna started out with a blistering verse.
 
 “You’re a motherfucking fuck and your lines fucking suck. I’ll chop your head off and feed it to a duck.”
@@ -270,7 +268,9 @@ For the rest of the practice, we ran around proclaiming ourselves the Duck Duo a
 
 As I was drinking my Faygo at the end of the day, I heard her say, “Yeah, she and I really do lots of murders. So you better watch it,” to some other little girl.
 
-I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I gulped down the fizzy soda.]
+I was concerned about backing up that threat, but I still couldn’t stop myself from grinning as I [gulped down the fizzy soda.]<fbEndTrigger|]]]</div>
+
+(click: ?fbEndTrigger)[$dissolve[Back in reality, I capped the bottle of Faygo and set it back down next to me. I didn’t wanna go all in on the sugar high and crash during the battle.
 
 [[I looked around the green room for something else to do|The Church - Second visit - Green room hub]].]]
 
@@ -349,17 +349,18 @@ I kissed my index and middle fingers and raised them to the air in a [peace sign
 (set: $icpSeen to true)(set: $trophyNumberSeen to it +1)
 
 ::The Church - Second visit - Trophies ninjette
-“Take off the hat for this one lil ninja. This is the priestess of pain, the warrior woman who wins, the beat-ass beauty, the empress of compress, the dame of destruction, the better-not-call-me-bitch beatdown queen of the whole damn thing!”
+“Take off the hat for this one lil ninja. This is the (if: $isWrestler is true)[priestess of pain, the warrior woman who wins, the beat-ass beauty, the empress of compress, the dame of destruction, the better-not-call-me-bitch beatdown queen of the whole damn thing!]
+\(else:)[greatest rapper in the history of this shithole.]”
 
 I paused to catch my breath and cross myself using Ninjette’s signature hand motion. To my surprise, Lil Phatty did actually [remove his hat]<ninjetteTrigger|.
 
-(click: ?ninjetteTrigger)[$dissolve[“Around ten years ago, Ninjette was a novelty act. No woman had risen up to the Honcho level in the history of Gatherville. They would just trot her out to hoot and holler at her bits during matches with amateurs or joke wrestlers. But, one day, she got on a bill with an up-and-coming dude who had never been pinned. She knocked his ass to the ground like a strong wind does to a bad tarp.
+(click: ?ninjetteTrigger)[$dissolve[“Around ten years ago, Ninjette was a novelty act. No woman had risen up to the Honcho level in the history of Gatherville. They would just trot her out to hoot and holler at her bits during (if: $isWrestler is true)[matches with amateurs or joke wrestlers](else:)[battles with amateur emcees and corny motherfuckers]. But, one day, she got on a bill with an up-and-coming dude who had never been (if: $isWrestler is true)[pinned](else:)[beaten]. She (if: $isWrestler is true)[knocked his ass to the ground](else:)[rapped his ass of the stage] like a strong wind ripping down an old tarp.
 
-The Honchos tried to invalidate her win and say it was all a stunt. But, she asked for any challenger and she knocked ‘em all down, even [the reigning champ]<ninjetteTrigger2|.]]
+The Honchos tried to invalidate her win and say it was all a stunt. But, she asked for any challenger and she took 'em all out, even [the reigning champ]<ninjetteTrigger2|.]]
 
-(click: ?ninjetteTrigger2)[$dissolve[It turns out, she’d been forced to throw all of her earlier matches and she had just gotten sick of it. She was my hero when I was a kid. Other folks let me down, but Ninjette never did.
+(click: ?ninjetteTrigger2)[$dissolve[It turns out, she’d been forced to throw all of her earlier (if: $isWrestler is true)[matches](else:)[battles] and she had just gotten sick of it. She was my hero when I was a kid. Other folks let me down, but Ninjette never did.
 
-I was there for every match, screaming my lungs out. As soon as Ninjette got taken in with the Honchos to the Trailer Park, I got my Mom to sign me up for junior performers. I knew I was next.
+Any time she was on stage, I was there screaming my lungs out. Right when Ninjette finally got taken to the Trailer Park to chill with the Honchos, I got my Mom to sign me up for junior performers. I knew I was next.
 
 [[Of course, that’s right when they added the mountain too.”|The Church - Second visit - Trophies hub]]]]
 

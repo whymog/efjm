@@ -385,7 +385,7 @@ He said nothing.
 ::The Gutter - Bar - Toe game start
 “How about a game?” I said, gesturing to the $gameOfChance. Toe grunted and his shadow fell over me. This was a good sign.
 
-[[I set the $gameOfChance on the bar.|The Gutter - Bar - Toe $gameOfChance]]
+[[I put the $gameOfChance on the bar.|The Gutter - Bar - Toe $gameOfChance]]
 
 ::The Gutter - Bar - Toe dominoes
 I didn’t have time to play a full game, so I convinced Toe that you play dominoes by spelling your name without knocking it over. He built a decent T and O before he started to sweat.
@@ -892,13 +892,6 @@ I sat down for a second. Just needed to clear my head. But, like everything else
 
 (click: "I realized")[(display: "The Gutter - Bathroom - Menu")]
 
-<style>
-.flashback
-{
-  padding-left: 2em;
-  font-style: italic;
-}
-</style>
 ::The Gutter - Bathroom - Second visit
 I locked myself in the 'Lette's room again with the door stopper. I took a moment to just close my eyes and breathe. Each second of silence was as refreshing and sweet as a big scoop of vanilla ice cream.
 
