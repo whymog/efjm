@@ -37,7 +37,7 @@ As Moon Mystic finished, an enormous, muscled woman roared out onto the stage al
 
 (click:?stageNameLink)[$dissolve[I was filled with adrenaline as I stepped out into the spotlight, but I tried not to rush. My leotard was a little grungy looking. It definitely could have used a wash and an iron, but it still had power. Right in the middle of the black spandex was a skull Anna had sketched and my mom had sewed.
 
-As I entered the ring, Moon Mystic passed the mic to Carol and quickly moved out of the way. Carol fixed the crowd with a powerful glare for a full fifteen seconds before [[launching into her speech.|wrestle-carol-speech]]]]
+As I entered the ring, Moon Mystic passed the mic to Carol and quickly moved out of the way. Carol fixed the crowd with a powerful glare for a full fifteen seconds before [[launching into her speech|wrestle-carol-speech]].]]
 
 ::wrestle-carol-speech
 “Me been’ thinkin’ in cave and me angry! This puny girl not even good for Carol food! Me eat girl anyway! Me eat her up with strong jaw! Praise strong jaw of Carol!”
@@ -48,7 +48,7 @@ Carol shook the ropes and produced an absolutely foul looking turnip from her sa
 
 The crowd repeated Carol’s chant back to her as she dropped the mic and threw more disgusting but alarmingly firm turnips to the crowd. When they quieted, it seemed like she still had plenty left.
 
-Moon Mystic picked up the mic and [[handed it to me with a reluctant grin.|wrestle-player-speech]]]]
+Moon Mystic picked up the mic and [[handed it to me with a reluctant grin|wrestle-player-speech]].]]
 
 ::wrestle-player-speech-nameprompt
 { (set: $stageName to (prompt: "Enter wrestler name:", ""))
@@ -86,8 +86,8 @@ I didn’t even blink at Carol or give her a second of my attention before I pop
 <br>
 There was a moderate amount of whoops and applause, but nothing like what Carol had received. I could tell the crowd was still trying to figure me out. I had nothing to throw, but I had to do something crazy to make a lasting impression.
 
-[[I stood up on the top rope and screamed at people to throw turnips at me.|wrestle-scream-at-crowd]]
-[[I stole a stray turnip from the crowd and tried to eat it savagely.|wrestle-eat-turnip]]
+[[I stood up on the top rope and screamed at people to throw turnips at me|wrestle-scream-at-crowd]].
+[[I stole a stray turnip from the crowd and tried to eat it savagely|wrestle-eat-turnip]].
 
 ::wrestle-scream-at-crowd
 I scrambled onto the top rope and screamed, “You turnip-loving cowards ain’t got shit! Hit me with your best shot, chumps!” I beat my chest furiously and roared into the crowd.
@@ -147,8 +147,8 @@ Carol pounced into the center of the ring and twisted her sack of turnips tight 
 
 As she spun, she howled and moved towards me in an effort to pin me in the corner of the ring. Moon Mystic cried out, “It’s the dreaded sack spin!” I had to react quickly.
 
-[[I acted confused and put some distance between me and Carol.|wrestle-first-round-confused]]
-[[I snuck around Carol and struck at her back.|wrestle-first-round-sneak]]
+[[I acted confused and put some distance between me and Carol|wrestle-first-round-confused]].
+[[I snuck around Carol and struck at her back|wrestle-first-round-sneak]].
 
 ::wrestle-first-round-confused
 At the last moment before Carol’s sack cyclone closed in, I ducked and ran to the side. Carol turned to face me, but I kept my distance. I let my jaw slack and my eyes widen with panic. I moved away wildly and at the exact last second possible to keep myself safe. I wanted to give her the idea that her weird spinning was putting me off balance.
@@ -165,14 +165,14 @@ As [[I caught my breath|wrestle-first-round-breather]], Carol didn’t even purs
 ::wrestle-first-round-response
 Carol rose from the mat with a new look of caution in her eyes. She tossed her sack to the side, cracked her knuckles, and circled me like a predator. It seemed like she could lunge at any moment. I could feel my adrenaline responding to the new danger. I knew my next response would be key.
 
-[[I feinted at Carol to goad her into attacking.|wrestle-first-round-feint]]
-[[No time to hesitate. I brought the fucking pain.|wrestle-first-round-dropkick]]
+[[I feinted at Carol to goad her into attacking|wrestle-first-round-feint]].
+[[No time to hesitate. I brought the fucking pain|wrestle-first-round-dropkick]].
 
 ::wrestle-first-round-breather
 Carol was soon back on the attack, grinning menacingly and swinging her nasty bag of turnips. Now that she’d gotten a good hit in, she was even egging me on with the other hand and smirking. I needed a new strategy. I tried to think back to Kiki’s advice before the match.
 
-[[I acted confused and put some distance between me and Carol.|wrestle-first-round-dodge]]
-[[I tried to steal the sack and slip between Carol’s legs.|wrestle-first-round-steal]]
+[[I acted confused and put some distance between me and Carol|wrestle-first-round-dodge]].
+[[I tried to steal the sack and slip between Carol’s legs|wrestle-first-round-steal]].
 
 ::wrestle-first-round-feint
 As Carol circled, I quickly feinted towards her with both hands out in a grab. She took the bait and lunged forwards to challenge.
@@ -281,4 +281,4 @@ Carol still lay flopped on the mat, as limp and greasy as her own bag of turnips
 
 Moon Mystic jogged over from ringside, ducked through the ropes, and made to grab my hand as he reached me. I didn’t even let him get there. I snatched the mic from his hand, raised up my own fist, and howled, //“YOURRR CHAMPION: **$stageName!**”//
 
-The crowd’s roar rolled like a wave, lifting me up. Moon Mystic just laughed, clapping and nodding his head as [[the crowd stomped a rhythm as one.|The Church - Mountain intro]]]]]]]]
+The crowd’s roar rolled like a wave, lifting me up. Moon Mystic just laughed, clapping and nodding his head as [[the crowd stomped a rhythm as one|The Church - Mountain intro]].]]]]]]

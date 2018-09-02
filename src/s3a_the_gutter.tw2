@@ -378,14 +378,14 @@ He said nothing.
 (click: "nothing")[$dissolve[I passed the time staring at a dusty, empty shelf behind Toe labeled "GAMES". Still not a fucking peep.]]
 
 (click: "peep")[(if: (text: $gameOfChance)'s length > 1)[$dissolve[I [[pulled out the $gameOfChance|The Gutter - Bar - Toe game start]]].]
-\(else:)[$dissolve[...I got [[bored.|The Gutter - Bar hub]]]]]
+\(else:)[$dissolve[...I got [[bored|The Gutter - Bar hub]].]]]
 
 (set: $spokeToToe to true)
 
 ::The Gutter - Bar - Toe game start
 “How about a game?” I said, gesturing to the $gameOfChance. Toe grunted and his shadow fell over me. This was a good sign.
 
-[[I put the $gameOfChance on the bar.|The Gutter - Bar - Toe $gameOfChance]]
+[[I put the $gameOfChance on the bar|The Gutter - Bar - Toe $gameOfChance]].
 
 ::The Gutter - Bar - Toe dominoes
 I didn’t have time to play a full game, so I convinced Toe that you play dominoes by spelling your name without knocking it over. He built a decent T and O before he started to sweat.
@@ -713,7 +713,7 @@ We both burst out screaming in unison,
 Donnie frantically hooked in his laptop and queued up the chorus. It blasted out triumphant. Everyone in the bar perked up. The boys were definitively back. The kids on the pool table looked extremely annoyed.
 
 [[“Pump up the jams Donnie! Hit ‘em with it!”|The Gutter - Jukebox - Song finale]]
-[[“Whoa dude, reel it back in. I need answers.|The Gutter - Jukebox - No answers]]
+[[“Whoa dude, reel it back in. I need answers|The Gutter - Jukebox - No answers]].
 
 ::The Gutter - Jukebox - Free fallin choices
 Donnie’s eyes lit up and he stared straight at me. “Your friend, she’s a good girl, you said? Crazy about Elvis? Loves horses and her boyfriend too?”
@@ -741,7 +741,7 @@ AND I’M FREEEEEEEEE
 Donnie frantically hooked in his laptop and cued up the chorus. It blasted out triumphant. Everyone in the bar perked up. We’d all been free-fallin’ at some point in life. Some of us never stopped. The kids on the pool table looked extremely annoyed.
 
 [[“Pump up the jams, Donnie! Hit ‘em with it!”|The Gutter - Jukebox - Song finale]]
-[[“Whoa dude, reel it back in. I need answers.|The Gutter - Jukebox - No answers]]
+[[“Whoa dude, reel it back in. I need answers|The Gutter - Jukebox - No answers]].
 
 ::The Gutter - Jukebox - Believin choices
 Donnie’s eyes lit up and he stared straight at me. “Maybe? Did she take the midnight train going anywhere?”
@@ -796,8 +796,8 @@ And yup — as I turned the handle and swung the door, the bathroom stood empty.
 
 Next best thing to a lock if you were cheap as fuck. And anyway, bartender still needed to be able to make sure ninjas weren't getting wet and wild on the fucking shitter.
 
-(click: "wet and wild on the fucking shitter")[As soon as I turned away from the door, I (live: 2s)[(if: time < 20s)[$dissolve[[[started puking into the toilet.|The Gutter - Bathroom - Toilet puke]]]]
-\(else-if: time > 20s)[$dissolve[[[started puking on myself.|The Gutter - Bathroom - Sink puke]](stop:)]]]]
+(click: "wet and wild on the fucking shitter")[As soon as I turned away from the door, I (live: 2s)[(if: time < 20s)[$dissolve[[[started puking into the toilet|The Gutter - Bathroom - Toilet puke]].]]
+\(else-if: time > 20s)[$dissolve[[[started puking on myself|The Gutter - Bathroom - Sink puke]].(stop:)]]]]
 
 (set: $mirrorSeen to false)(set: $toiletflashbackSeen to false)(set: $bathroomVisited to true)
 
