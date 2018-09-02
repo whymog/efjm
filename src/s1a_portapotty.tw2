@@ -187,25 +187,25 @@ Steadying myself, I stood up, tested my footing, and glanced around. Out of the 
 ::Outside - Note
 The note was signed, but I already knew who wrote it by the loopy lettering of the purple gel-pen on the paper.
 
-[(live: 1s)[(if: time > 1s)[$dissolve[<div style="padding-left: 2em; font-style: italic;">Hey,
+<div style="padding-left: 2em; font-style: italic;">[(live: 1s)[(if: time > 1s)[$dissolve[Hey,
 
-You just woke up from being blacked the fuck out, so you probably don’t remember how you got here. Well, here’s the deal: I told you that I was sick of this shit, this fucked-up life we’re all living here. I told you I was leaving, one way or another.
+You just woke up from being blacked the fuck out, so you probably don’t remember how you got here. Well, here’s the deal: I told you that I was sick of this shit, this fucked-up life we’re all living here. I told you I was leaving, [one way or another]<pottyTrigger1|.(stop:)]]]]
 
-And HERE’s the fucked up part: <span style="text-decoration: underline;">You tried to stop me.</span>
+(click: ?pottyTrigger1)[$dissolve[And HERE’s the fucked up part: <span style="text-decoration: underline;">You tried to stop me.</span>
 
 $playerName, you’re the only person in this shit town I care about anymore. So when you turned your back on me like that? It fucking hurt.
 
-I put you in here for your own safety. Once you’ve cooled off and sobered up and had a chance to stare at yourself in the mirror for a good long while, I hope you’ll understand why I had to leave.
+I put you in here for your own safety. Once you’ve cooled off and sobered up and had a chance to stare at yourself in the mirror for a good long while, I hope you’ll [understand why I had to leave]<pottyTrigger2|.]]
 
-I don’t have time to get into it now, but I’ll leave a longer letter for you at your place. If you still even give half a shit about me, maybe it’ll finally change your stubborn-ass mind.
+(click: ?pottyTrigger2)[$dissolve[I don’t have time to get into it now, but I’ll leave a longer letter for you at your place. If you still even give half a shit about me, maybe it’ll finally change your stubborn-ass mind.
 
 I hope I see you again, $playerName, but it sure as hell won’t be here.
 
 XOXO,
-Anna</div>
-My hands were shaking as I read the note. Where the fuck did Anna go? What did I do? I drink sometimes, sure, but it’s not like me to black the fuck out.
+[Anna]<pottyTrigger3|]]</div>
+(click: ?pottyTrigger3)[$dissolve[My hands were shaking as I read the note. Where the fuck did Anna go? What did I do? I drink sometimes, sure, but it’s not like me to black the fuck out.
 
-I was angry.(stop:)]]]]
+I was angry.]]
 (click: "I was angry")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 2em;">I was hurt.</span>]]
 (click: "I was hurt")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 4em;">I was scared.</span>]]
 (click: "I was scared")[(transition: "dissolve") +(transition-time: 3s)[<span style="padding-left: 6em;">I was tired.</span>]]
