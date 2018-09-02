@@ -23,9 +23,9 @@ There wasn’t anything going on yet today, but it seemed like they were prepari
 
 (click: "always something at the Church")[$dissolve[It couldn’t hurt to look around for signs of Anna.
 
->>[[I went to see what I could spy through the window|The Church - First visit - Window]].
->>[[I walked up to the front door|The Church - First visit - Front door]].
->>[[I decided to try the back door|The Church - First visit - Back door]].
+> [[I went to see what I could spy through the window|The Church - First visit - Window]].
+> [[I walked up to the front door|The Church - First visit - Front door]].
+> [[I decided to try the back door|The Church - First visit - Back door]].
 \]]
 
 (set: $dissolve to (transition: 'dissolve') + (transition-time: 3s)) (set: $churchStatus to "Hub")(set: $churchInvestigated to 0)(set: $churchBackDoorSeen to false)(set: $churchFrontDoorSeen to false)(set: $churchWindowSeen to false)
@@ -39,11 +39,11 @@ There wasn’t anything going on yet today, but it seemed like they were prepari
 \(else:)[I kept looking around the Church for any useful information.
 \
 (if: $churchWindowSeen is false)[
->>[[I went to see what I could spy through the window|The Church - First visit - Window]].]\
+> [[I went to see what I could spy through the window|The Church - First visit - Window]].]\
 (if: $churchFrontDoorSeen is false)[
->>[[I walked up to the front door|The Church - First visit - Front door]].]\
+> [[I walked up to the front door|The Church - First visit - Front door]].]\
 (if: $churchBackDoorSeen is false)[
->>[[I decided to try the back door|The Church - First visit - Back door]].]]
+> [[I decided to try the back door|The Church - First visit - Back door]].]]
 
 ::The Church - First visit - Window
 I could see some people setting up the stage and the bleachers inside, but I couldn’t tell what they had planned for tonight. It just looked like a lot of frantic movement.

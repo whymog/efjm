@@ -33,10 +33,10 @@ I could still remember keenly the night that this place ate my dreams. Now it ha
 I knew the regular crowd would all wanna stare. I knew Kiki would have her pointed questions. They could have whatever they wanted. I just needed one thing — a way into the mountain.
 \
 (if: $churchSecondWindowSeen is false)[
->>[[I went to see what I could spy through the window|The Church - Second visit - Window]].]\
+> [[I went to see what I could spy through the window|The Church - Second visit - Window]].]\
 (if: $frontDoorVisited is false)[
->>[[I looked at the crowd filing in through the front door|The Church - Second visit - Front door]].]
->>[[I went straight for the back door to start this fucking show|The Church - Second visit - Back door]].
+> [[I looked at the crowd filing in through the front door|The Church - Second visit - Front door]].]
+> [[I went straight for the back door to start this fucking show|The Church - Second visit - Back door]].
 
 ::The Church - Second visit - Window
 I peered through the window and saw the fully assembled stage. Some people were finding their seats. I heard the mournful hum of feedback as someone tested a mic. The show was getting ready to start.
@@ -133,10 +133,10 @@ I could see they hadn’t changed the crimson shag rugs and barely nailed togeth
 
 Also didn’t seem like they wanted to chat. Kiki had been kinder than I expected, but I knew that wouldn’t be the case throughout the building. [I needed time to myself to get ready anyway]<greenRoomTrigger4|.]]
 
-(click: ?greenRoomTrigger4)[$dissolve[>>[[I went to find Kiki and catch up|The Church - Second visit - Kiki]].
->>[[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].
->>[[I glanced over the trophies|The Church - Second visit - Trophies]].
->>[[I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].]]
+(click: ?greenRoomTrigger4)[$dissolve[> [[I went to find Kiki and catch up|The Church - Second visit - Kiki]].
+> [[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].
+> [[I glanced over the trophies|The Church - Second visit - Trophies]].
+> [[I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].]]
 
 (set: $faygoFlashbackSeen to false)(set: $talkedToKiki to false)(set: $trophiesSeen to false)
 
@@ -144,12 +144,12 @@ Also didn’t seem like they wanted to chat. Kiki had been kinder than I expecte
 It was almost time for the (if: $isWrestler is true)[match](else:)[battle]. I looked around the green room to make sure I'd done everything I wanted to do.
 \
 (if: $talkedToKiki is false)[
->>[[I went to find Kiki and catch up|The Church - Second visit - Kiki]].]\
+> [[I went to find Kiki and catch up|The Church - Second visit - Kiki]].]\
 (if: $faygoFlashbackSeen is false)[
->>[[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].]\
+> [[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].]\
 (if: $trophiesSeen is false)[
->>[[I glanced over the trophies|The Church - Second visit - Trophies]].]
->>[[I had everything wrapped up. I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].
+> [[I glanced over the trophies|The Church - Second visit - Trophies]].]
+> [[I had everything wrapped up. I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].
 
 ::The Church - Second visit - Kiki
 I found Kiki in an empty dressing room down a hallway from the green room. The Church had a few of these rooms in case a real star came down, but that was only a few times a year at most.
@@ -168,11 +168,11 @@ She sat down on the couch, clicked the walkie-talkie off, and [[patted the chair
 (if: $kikiConvo is < 3)[“What’s on your mind, Double L?” Kiki asked. “We don’t have a ton of time before you’re on, but you know I can always spare a second for my Little ‘Lette.”
 \
 (if: $kikiBounceTalk is false)[
->>[[“Kiki, I’ve gotta tell you why I bounced last year.”|The Church - Second visit - Kiki bounced]]]\
+> [[“Kiki, I’ve gotta tell you why I bounced last year.”|The Church - Second visit - Kiki bounced]]]\
 (if: $kikiChampTalk is false)[
->>[[“What’s the deal with the chump — uh, I mean, champ — I’m up against?”|The Church - Second visit - Kiki champ]]]\
+> [[“What’s the deal with the chump — uh, I mean, champ — I’m up against?”|The Church - Second visit - Kiki champ]]]\
 (if: $kikiAnnaTalk is false)[
->>[[“You seen Anna recently?”|The Church - Second visit - Kiki anna]]]]
+> [[“You seen Anna recently?”|The Church - Second visit - Kiki anna]]]]
 \(else:)[Kiki looked at me and I could tell our time to chat was up. She rose and opened the door for me.
 
 As I was getting up to leave, she said, "Show's gonna start soon and I have to get Mystic stuffed into his ceremonial gear. It's not a quick task. It was great catching up LL. [[I'll see ya out there under the lights."|The Church - Second visit - Green room hub]]]
@@ -228,8 +228,8 @@ Kiki looked down at the floor for a minute as she did some kind of deep breathin
 
 “Why do you ask? I though the two of y’all would never be too far apart. Did you really lose touch?”
 
->>[[“Yeah. I’m tracking her right now, actually. She said she found a way to sneak out through the mountain.”|The Church - Second visit - Kiki anna 2]]
->>[[Yeah, but it’s no big deal. Let’s talk about something else."|The Church - Second visit - Kiki hub]]
+> [[“Yeah. I’m tracking her right now, actually. She said she found a way to sneak out through the mountain.”|The Church - Second visit - Kiki anna 2]]
+> [[Yeah, but it’s no big deal. Let’s talk about something else."|The Church - Second visit - Kiki hub]]
 
 (set: $kikiAnnaTalk to true)(set: $kikiConvo to it +1)
 
@@ -279,8 +279,8 @@ I was concerned about backing up that threat, but I still couldn’t stop myself
 ::The Church - Second visit - Trophies
 The trophies and photos were all lined up on an old bookshelf whose shelf-height was charmingly varied to fit the years of celebratory junk. One of the kids from the junior performers program was hanging around the shelf and he looked upset.
 
->>[[I didn’t have time to fix some little shithead’s problems. I spun on my heels and dipped|The Church - Second visit - Green room hub]].
->>[[I crouched down to the kid’s level, as if we came here to learn together|The Church - Second visit - Trophies 2]].
+> [[I didn’t have time to fix some little shithead’s problems. I spun on my heels and dipped|The Church - Second visit - Green room hub]].
+> [[I crouched down to the kid’s level, as if we came here to learn together|The Church - Second visit - Trophies 2]].
 
 ::The Church - Second visit - Trophies 2
 I spent a few minutes just scanning the shelves until I finally said, “So which one is your favorite?”
@@ -313,11 +313,11 @@ I laughed as I said, “Alright Lil Phatty, [[here’s Gatherville 101 for your 
 (if: $trophyNumberSeen is < 3)[Lil Phatty only did a deeper pout and fiddled with his cap, but he stayed glued to the spot.
 \
 (if: $thrillaKillaSeen is false)[
->>[[I pointed at the photo of Thrilla Killa|The Church - Second visit - Trophies thrilla killa]].]\
+> [[I pointed at the photo of Thrilla Killa|The Church - Second visit - Trophies thrilla killa]].]\
 (if: $icpSeen is false)[
->>[[I pointed at the shrine to Violent J and Shaggy 2 Dope|The Church - Second visit - Trophies ICP]].]\
+> [[I pointed at the shrine to Violent J and Shaggy 2 Dope|The Church - Second visit - Trophies ICP]].]\
 (if: $ninjetteSeen is false)[
->>[[I lovingly picked up Ninjette’s championship trophy|The Church - Second visit - Trophies ninjette]].]]
+> [[I lovingly picked up Ninjette’s championship trophy|The Church - Second visit - Trophies ninjette]].]]
 \(else:)[“Ok lil ninja,” I shrugged, “I think that’s [[pretty much it for the intro|The Church - Second visit - Trophies join party]]. That should at least be as much as Steve could keep in his hella tiny brain to quiz you with.”]
 
 ::The Church - Second visit - Trophies thrilla killa
