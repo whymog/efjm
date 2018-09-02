@@ -392,7 +392,7 @@ It was beaten to hell, with rust gathering all over it. The light had been buste
 
 <div class="flashback">(click: ?scooterTrigger)[$dissolve[It’s a couple years ago and I’m hanging around outside of the school trailer. I’m waiting for Anna, as usual.
 
-We’re gonna head out to the far fields – to where you can actually see the river. The only lights are a Fed boat doing a routine patrol in the distance, and the only people dudes who’ve wandered too far on a bad trip.
+We’re gonna head out to the far fields — to where you can actually see the river. The only lights are a Fed boat doing a routine patrol in the distance, and the only people dudes who’ve wandered too far on a bad trip.
 
 Leo comes roaring up on this tricked-out, midnight-black scooter. It’s got pristine hatchet man decals and a fresh paint job. It’s so new that it seems like it’s sparkling all over.
 
@@ -414,7 +414,7 @@ By the next week, she was tired of hearing about us. I started practicing alone 
 
 (click: ?scooterTrigger5)[$dissolve[When it ended with Leo three weeks later, I felt busted worse than a snowglobe hit with a baseball bat. It hadn’t taken long for his new ride to get dinged up and lose its shine. Some shithead scraped it for a laugh. A few days later, his buddies took it for a joy ride and rode it straight into a ditch.
 
-It was the same with his personality – a tossed off nasty remark here, a selfish choice there. His good intentions peeled faster than the scooter’s cheap paint. [Nothing nice lasts in Gatherville]<scooterTrigger6|.]]
+It was the same with his personality — a tossed off nasty remark here, a selfish choice there. His good intentions peeled faster than the scooter’s cheap paint. [Nothing nice lasts in Gatherville]<scooterTrigger6|.]]
 
 (click: ?scooterTrigger6)[$dissolve[After we split, all the things I used to love, like (if: $isWrestler is true)[practicing my grapples](else:)[spitting rhymes over a tape loop], felt joyless to me.
 
