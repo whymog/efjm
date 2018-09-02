@@ -1,3 +1,5 @@
+![Escape from Juggalo Mountain title](./src/img/title_screen_image 'Logo Title Text')
+
 # Escape from Juggalo Mountain: Act I
 
 A visual novel built with [Twine](http://twinery.org/) about coming of age in a separatist society. With face paint.
