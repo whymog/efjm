@@ -21,7 +21,7 @@ display: none;
 </style>
 
 ::EFJM-image
-<center><img src="./img/opening_crawl.png"></center>
+<img src="./img/opening_crawl.png">
 
 [(live: 1s)[(if: time > 10s)[(go-to: "Act 1 Title Card")]]]
 
