@@ -1,4 +1,4 @@
-![Escape from Juggalo Mountain title](./src/img/title_screen_image 'Logo Title Text')
+![Escape from Juggalo Mountain title](src/img/title_screen_image 'Logo Title Text')
 
 # Escape from Juggalo Mountain: Act I
 
