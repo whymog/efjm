@@ -200,7 +200,7 @@ Kiki gripped my shoulders and I looked her straight in the eye. “Double L, bab
 
 (click: ?kikiBounce5)[$dissolve[Kiki paused for a moment and then punched my arm to accentuate. “If they try to slow you down, I’ll show ‘em the door straight to hell.”
 
-[[I smiled as much as I could, did a big sniffle and composed myself, then changed the subject.|The Church - Second visit - Kiki hub]]]]
+[[I smiled as much as I could, did a big sniffle and composed myself, then changed the subject|The Church - Second visit - Kiki hub]].]]
 
 (set: $kikiBounceTalk to true)(set: $kikiConvo to it +1)
 
@@ -329,7 +329,7 @@ Official story is that he got to the top straight from being the wickedest fucki
 
 But now, he just lets the talent do the talking. He’s probably sitting on a velvet toilet seat eating ham and pineapple rings.
 
-[[Probably best not to repeat any of this. He pays a lot of dudes all over.|The Church - Second visit - Trophies hub]]]]
+[[Probably best not to repeat any of this. He pays a lot of dudes all over|The Church - Second visit - Trophies hub]].]]
 
 (set: $thrillaKillaSeen to true)(set: $trophyNumberSeen to it +1)
 
