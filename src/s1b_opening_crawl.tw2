@@ -32,6 +32,9 @@ display: none;
 tw-icon.redo {
 display: none;
 }
+img {
+  max-height: 80vh;
+}
 </style>
 
 ::Act 1 Title Card
