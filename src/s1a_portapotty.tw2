@@ -118,10 +118,10 @@ The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true
 
 There was a (if: $triedDoor is true)[locked ]door right in front of me. The (if: $waterDrained is true)[empty ]basin was rooted to the wall on my left(if:$waterDrained is false)[, still full of translucent water]. And the floor was covered in scattered slips of paper and shreds of cloth.
 
-(if: $triedDoor is false)[> [[I tried the door|Jail Cell (Lit) - door]]].\
-(if: $triedDoor is true)[> [[The door to my cell was still locked tight|Jail Cell (Lit) - door]]].
-(if: $waterDrained is false)[> [[I took a closer look at the basin|Jail Cell (Lit) - basin - full]]].\
-(if: $waterDrained is true)[> [[I glanced at the basin again|Jail Cell (Lit) - basin - empty]]].
+(if: $triedDoor is false)[> [[I tried the door|Jail Cell (Lit) - door]].]\
+(if: $triedDoor is true)[> [[The door to my cell was still locked tight|Jail Cell (Lit) - door]].]
+(if: $waterDrained is false)[> [[I took a closer look at the basin|Jail Cell (Lit) - basin - full]].]\
+(if: $waterDrained is true)[> [[I glanced at the basin again|Jail Cell (Lit) - basin - empty]].]
 
 ::Jail Cell (Lit) - door <349,776>
 {
@@ -132,11 +132,11 @@ There was a (if: $triedDoor is true)[locked ]door right in front of me. The (if:
 |lockedDoorSection)[
 (if: $triedDoor is false)[(set: $triedDoor to true)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
 
-[[I glanced around the room again|Jail Cell (Lit) - hub]] ].\
+[[I glanced around the room again|Jail Cell (Lit) - hub]].]\
 \
 |unlockDoorSection)[After a momentary effort, the key slid in.
 
-[[I turned it|Jail Cell - exit]] ].\
+[[I turned it|Jail Cell - exit]].]\
 \
 (click: ?trigger1)[(show: ?lockedDoorSection)]\
 (click: ?trigger2)[(show: ?unlockDoorSection)]
