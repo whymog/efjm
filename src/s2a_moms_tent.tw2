@@ -23,6 +23,7 @@
 (click: "bungee cable") [(transition: "dissolve")[[[//Home Shit Home.//|Mom's Tent - intro 2]]]]
 
 ::Mom's Tent - intro 2
+<img src="./img/moms_tent.png">
 I reached out for the latch and hesitated. Mom hadn’t been home much lately, but all the same, I really wasn't sure I was up for the inevitable argument if she saw me coming home like this. But I didn't have a choice — I needed to find the letter that Anna left for me.
 
 Sun was long gone. Ron would no doubt be stumbling in before too much longer. No time like the present.
@@ -175,7 +176,7 @@ In the folds of the journal, I could see [a piece of paper]<paperReveal|.
 
 (click: ?paperReveal)[$dissolve[It was [the map that I had drawn]<mapReveal| when I was just starting to go out on my own.]]
 
-(click: ?mapReveal)[$dissolve[MAP IMG GOES HERE
+(click: ?mapReveal)[$dissolve[<img src="./img/map.png">
 
 Damn, this place used to seem so huge and exciting, like our own wicked-ass playground.
 
