@@ -204,9 +204,11 @@ I didn’t really have much to trade with. You could find a soft spot in Auntie 
 ]}
 
 ::RM-giftshop-tradecomplete
-She was also hollering at me without turning around as soon as I set foot inside.
+{
+  (set: $allRustlasScenes to (a: "some old west showgirls sang `“`//I wouldn’t let his pecker near my butt.//`”`", "Sugar Wolf autographed a pair of tomahawks with a marker.", "Sugar Wolf poked his head in and out of the mystifying outhouse at 69 Prickley Pecker Lane.", "Dirty Sanchez told Big Baby Chips `“`I can’t wait to pee on //your// head.`”`", "a pallid cowboy assassin named Ghost used his laser eyes to disintegrate a shitter.", "Sugar Wolf, dressed like an adult baby and tied to a truss, got beat with a riding crop.", "poor Fred Freckels got swept away by an avalanche and whimpered `“`Oh, for the love of //chili!//`”`", "Sugar Wolf slapped the shit out of Big Baby’s thugs with his elastic `“`pimp hand.`”`", "the sign guy updated the population number for Mud Bug yet again."))
+}She was also hollering at me without turning around as soon as I set foot inside.
 
-“You already got what ya came for, $playerName, now git! No window-shoppin’ for folks with nothin’ to trade. Besides, this right here is my favorite part.” Auntie let out a low chuckle as she watched Sugar Wolf and Big Baby Chips fight for the future of Mud Bug in //Big Money Rustlas//.
+“You already got what ya came for, $playerName, now git! No window-shoppin’ for folks with nothin’ to trade. Besides, this right here is my favorite part.” Auntie let out a low chuckle as (either: ...$allRustlasScenes)
 
 > [[Head back to The Gutter|The Gutter - Outside $gutterOutside]]
 > [[Head to the junk heap|RM-junkheap-entrance]]
