@@ -3,7 +3,7 @@ I felt a twinge of guilt as I broke through the tarp. Mom would understand, but 
 
 Shit. I’d have to try and make up for it later, once I ditched Leo and caught back up with Anna.
 
-(click: "ditched Leo")[I squeezed my way between the backsides of other tents pushed close together, trying to avoid the footpaths that divided Tarp City into wobbly rows. I reached the point where another path crossed perpendicular to Mom’s row, and stopped for a moment before darting across.
+(click: "ditched Leo")[I squeezed my way between the backsides of other tents pushed close together, trying to avoid the footpaths that divided Tent City into wobbly rows. I reached the point where another path crossed perpendicular to Mom’s row and stopped for a moment before darting across.
 
 “Time to step out of the shadows, sister.”
 
@@ -190,7 +190,7 @@ I nodded, and made my way over to the crate. I sat down and watched as the kids 
 ::Tent City - Ornery Kids - act dumb
 “Oh, geez. That was your can? Sorry, I just thought it was trash. Wait—” I interrupted myself, “You can play a game with a can?” I hammed it up as much as I could, acting like I hadn’t played and invented dozens of can-games when I was little.
 
-“Pshh, grown-ups don’t know anything,” sighed another kid. “You can use a can for all kinds of games, dumbo! Look: two teams, both of ‘em hide, and you try to throw in your rocks without the other team seein’ ya.” The girl demonstrated by hiding behind a bunch of charred lumbering and arcing some stones toward the wooden plank where the can had sat.
+“Pshh, grown-ups don’t know anything,” sighed another kid. “You can use a can for all kinds of games, dumbo! Look: two teams, both of ‘em hide, and you try to throw in your rocks without the other team seein’ ya.” The girl demonstrated by hiding behind a bunch of charred lumber and arcing some stones toward the wooden plank where the can had sat.
 
 “Wow. That’s so cool! Just rocks and a can.” I shook my head. “I had no idea. Well, I gotta keep going. Is it alright if I tell that game to some kids I know?”
 
@@ -279,7 +279,7 @@ Nothing. Tough crowd.
 
 I held still for what felt like an agonizingly long time. I was only too aware that Leo was still out in the tarps somewhere, on my trail.
 
-At last, the dog took a few steps closer to sniff my hand, then nuzzled & licked it. The mood of the pack shifted to match that of my new friend, and I found myself surrounded by dozens of wagging tails and lolling tongues happily letting me [[pass on my way|Tent City - Fence]].
+At last, the dog took a few steps closer to sniff my hand, then nuzzled and licked it. The mood of the pack shifted to match that of my new friend, and I found myself surrounded by dozens of wagging tails and lolling tongues happily letting me [[pass on my way|Tent City - Fence]].
 
 ::Tent City - Pack of stray dogs - brandish axe
 “Hey! Mutts! You know what this is?” I slipped my axe off the belt loop it hung from and held it high, catching some stray light and glinting.
@@ -364,7 +364,7 @@ I tensed and tried to make myself as thin as I could, but it didn’t matter: it
   (if: $badChoices < 3)[(set: $tentCityFinale to "Neden militia finale")]
   (else:)[(set: $tentCityFinale to "Leo finale")]
 }\
-My multi-tool had a couple of blades, in addition to a pretty tough pair of scissors/wire-cutters. I sawed through the plastic coating of the cable first with one of the blades, then went to work on the cable itself.
+My multitool had a couple of blades, in addition to a pretty tough pair of scissors/wire-cutters. I sawed through the plastic coating of the cable first with one of the blades, then went to work on the cable itself.
 
 It took a few passes, but at last the cable snapped and the lock fell to the ground. The gate squeaked a bit as I eased through it, then [[set off through the next section of the Tarps beyond|Tent City - $tentCityFinale]].
 
@@ -421,7 +421,7 @@ I tensed, but nodded.
 
 (click: "I tensed, but nodded")[“The fucker’s name,” she said, and grinned. “More fun to play with a little dickhead when you know what its name is.”
 
-I croaked out “Leo”, and they parted to let me through. I scrambled out of Tent City and [[into the seedier shadows surrounding the Gutter|The Gutter - Outside approach]]. For a second I thought I heard something like a woman singing “Leo-Leo-Leooo!” drifting on the wind, but then it was gone.]
+I croaked out “Leo,” and they parted to let me through. I scrambled out of Tent City and [[into the seedier shadows surrounding the Gutter|The Gutter - Outside approach]]. For a second I thought I heard something like a woman singing “Leo-Leo-Leooo!” drifting on the wind, but then it was gone.]
 
 ::Tent City - Neden militia finale - shoulder through
 “Whatever,” I mumbled, flipping my hood up and pulling the drawstring tight. I balled up my hands into fists, screwed myself tense, and tried to lead with the spikes sewn into my jacket as I shouldered into the short one blocking my way.
