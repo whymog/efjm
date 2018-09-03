@@ -21,7 +21,7 @@ I’m told people in other places go to churches for one big thing, one day a we
 
 It was the place to dream about becoming a star or watch someone else’s dreams eat shit. If it was boring that night, there was always someone hungry to jaw about the latest rumor or cause a scene hooting for the underdog.
 
-Most important, the Church stood right in front of the Mountain. Everybody knew it was [the only way in]<churchIntroTrigger|.
+Most important, the Church stood right in front of the Mountain. Everybody knew it was the only way in. If Anna was really going through the Mountain, this was the [only way to follow]<churchIntroTrigger|.
 
 (click: ?churchIntroTrigger)[$dissolve[I used to practice at this place every week. Sometimes every day. The building loomed over me like a tall shadow of the past.
 
@@ -405,4 +405,4 @@ When I was 5 or 6, Mom took me to my first junior performers class. She had no i
 
 (click: ?stageTrigger)[$dissolve[So, when I jumped on stage and screamed that my name was $stageName, she fell over laughing. It clearly had an impact, so the name stuck.
 
-When I reached the final curtain before the stage, I stopped and (if: $isWrestler is true)[[[waited for Moon Mystic to do his intros|wrestle-opening]].](else:)[[[waited for Moon Mystic to do his intros|The Church - Rap battle]]]]]
+When I reached the final curtain before the stage, I stopped and (if: $isWrestler is true)[[[waited for Moon Mystic to do his intros|wrestle-opening]].](else:)[[[waited for Moon Mystic to do his intros|The Church - Rap battle]].]]]

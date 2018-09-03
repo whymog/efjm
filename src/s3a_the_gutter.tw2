@@ -221,7 +221,7 @@ He had almost everything “tricked” out, including:
 ::The Gutter - Golf cart - Wheels
 Old clown-painted Barbie and Ken heads were glued around the rims of each wheel. The face painting was... oddly detailed.
 
-(if: $multitool is true)[I used the multitool to unscrew a few crucial wheel bolts. Just a (link: "little goof")[(set: $wheelDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I used the multitool to unscrew a few crucial wheel bolts. Just a (link: "little goof")[(set: $wheelDamage to true)(set: $cartDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $wheelsSeen to true)
 
@@ -331,8 +331,8 @@ And alone, down at the end of the bar, sat (link: "Ron")[my fucking stepdad Ron]
 
 ::The Gutter - Inside hub
 I squinted through the Gutter's signature haze, trying to spot my next destination.
-
-{(if: $toeBeaten is false)[> [[I approached the bar|The Gutter - Bar $barStatus]].]}
+(if: $toeBeaten is false)[
+> [[I approached the bar|The Gutter - Bar $barStatus]].]
 > (if: $talkedToRon is true)[[[I walked over to challenge my dipshit step dad to a pool game|The Gutter - Ron - Pool request]]]
 \(else:)[[[I sighed and walked over to Ron|The Gutter - Ron]]].
 > (if: $teensOnTable is false)[[[I checked out the pool table|The Gutter - Pool table - Clear]]]
@@ -349,7 +349,7 @@ The bar was a big plank laid on top of some empty kegs with a couple of stools s
 
 Toe, the bartender, was huge and bald, built like a statue, and he had painted a permanent, dark frown on his face.
 
-He wasn't great for conversation, but he sure knew the names of all the alchohol and how to mix them with Faygo.
+He wasn't great for conversation, but he sure knew the names of each of the major alchohols and how to mix them with Faygo.
 
 Belinda and Darryl, regulars I knew from Ron's awful stories and visits to pull my mom outta here, were posted up at the bar getting blitzed. They were here so often that they didn't even paint up before a wild night out anymore.
 
@@ -398,7 +398,7 @@ I could tell he didn’t know how to finish. When he knocked the dominoes over, 
 
 (set: $toeBeaten to true)
 
-::The Gutter - Bar - Toe dice
+::The Gutter - Bar - Toe dice set
 Toe pulled a couple of cups from below the bar. He held his own on the first couple of rounds, but soon he began wincing every time I screamed “LIAR!” and proved correct. After a few more rounds, he swept the cups off the table and huffed.
 
 “I guess that’s the game,” I said.
@@ -449,8 +449,8 @@ Belinda pulled out an extremely large revolver and pointed it right in my face.
 
 “But if you reach for the whiskey again, you’re reaching for the grave.”
 
-[[I backed off|The Gutter - Bar - Belinda]].
-[[I did a good joke and reached for the whiskey again|The Gutter - Bar - Death]].
+> [[I backed off|The Gutter - Bar - Belinda]].
+> [[I did a good joke and reached for the whiskey again|The Gutter - Bar - Death]].
 
 ::The Gutter - Bar - Belinda church
 “Probably your dipshit stepdad locked the door when he shouldn’t have. It’s happened before. I would guess you’re the only one who’s noticed, not a lot of fresh challengers these days. Either way you know Ron’s useless ass ain’t gonna fix it. They should really give someone else those keys.”
@@ -487,7 +487,7 @@ Darryl shook his head. “Eh, he never says much. About the only thing he ever d
 
 “What kind of games?” I asked.
 
-“Oh, anything. He had a collection, but some little shits recently stole most of it. Probably it's all getting sold off at The Gutter, but Toe doesn't get out much.
+“Oh, anything. He had a collection, but some little shits recently stole most of it. Probably it's all getting sold off at The Roach Market, but Toe doesn't get out much.
 
 It’s gotten to the point where he’s only got the stuff for pool and he won’t give it up to anybody.”
 
@@ -796,15 +796,15 @@ And yup — as I turned the handle and swung the door, the bathroom stood empty.
 
 Next best thing to a lock if you were cheap as fuck. And anyway, bartender still needed to be able to make sure ninjas weren't getting wet and wild on the fucking shitter.
 
-(click: "wet and wild on the fucking shitter")[As soon as I turned away from the door, I (live: 2s)[(if: time < 20s)[$dissolve[[[started puking into the toilet|The Gutter - Bathroom - Toilet puke]].]]
-\(else-if: time > 20s)[$dissolve[[[started puking on myself|The Gutter - Bathroom - Sink puke]].(stop:)]]]]
+(click: "wet and wild on the fucking shitter")[As soon as I turned away from the door, I (live: 2s)[(if: time < 25s)[$dissolve[[[started puking into the toilet|The Gutter - Bathroom - Toilet puke]].]]
+\(else-if: time > 25s)[$dissolve[[[started puking on myself|The Gutter - Bathroom - Sink puke]].(stop:)]]]]
 
 (set: $mirrorSeen to false)(set: $toiletflashbackSeen to false)(set: $bathroomVisited to true)
 
 ::The Gutter - Bathroom - Toilet puke
 I barely propped the toilet lid open fast enough to hit the mark. I barfed a strong, hateful stream into the bowl.
 
-When I was finished I was gasping, like I’d been punched in the gut. This night was all too much. Anna gone, maybe dead already. I’ve been drugged, chased, and now I’ve gotta ask my questions with puke on my breath.
+When I was finished I was gasping, like I’d been punched in the gut. This night was all too much. Anna gone, maybe dead already. I’d been drugged, chased, and now I had to ask my questions with puke on my breath.
 
 I wiped my mouth with the back of my hand. When this was over, I was gonna need a high the length of I-55 to deal.
 
@@ -813,7 +813,7 @@ I wiped my mouth with the back of my hand. When this was over, I was gonna need 
 ::The Gutter - Bathroom - Sink puke
 I spewed all over the floor, splashing on my feet, before I finally found the sink. I nearly filled it up with whatever needed out of me.
 
-When I was finished I was gasping, like I’d been punched in the gut. This night was all too much. Anna gone, maybe dead already. I’ve been drugged, chased, and now I’ve gotta ask my questions with puke on my shoes.
+When I was finished I was gasping, like I’d been punched in the gut. This night was all too much. Anna gone, maybe dead already. I’d been drugged, chased, and now I had to ask my questions with puke on my shoes.
 
 I wiped my mouth with the back of my hand. When this was over, I was gonna need a high the length of I-55 to deal.
 
@@ -842,7 +842,7 @@ I looked up suddenly when I heard a voice.
 
 (click: "give me a goddamn hand")[$dissolve[The stranger laughed, “A hand? HA! That’s richer than the fuckos in those nice trailers." The face got even nastier, contorting its mouth into a demonic scowl.]]
 
-(click: "demonic scowl")[$dissolve[It screamed at me like a high wind assaults a tarp, "How about you stop sobbing in the potty and find your friend? Are you gonna crumble this time, you no-good bitch? You fucking idiot! How are you gonna handle when it all comes down? When the rubber hits the road?”]]
+(click: "demonic scowl")[$dissolve[It screamed at me with a full and powerful rage, "How about you stop sobbing in the potty and find your friend? Are you gonna crumble this time, you no-good bitch? You fucking idiot! How are you gonna handle when it all comes down? When the rubber hits the road?”]]
 
 (click: "rubber hits the road")[$dissolve[My jaw slacked and my mouth went dry. I held my hand up and watched it tremble for a moment. But then, like Jaysus settling the bubbles in a shook-up bottle of Rock N' Rye, my muscles went calm.]]
 
