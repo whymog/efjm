@@ -30,6 +30,7 @@ I could still remember keenly the night that this place ate my dreams. Now it ha
 (set: $churchSecondWindowSeen to false)(set: $frontDoorVisited to false)
 
 ::The Church - Second visit - Outside hub
+<img src="./img/the_church.png">
 I knew the regular crowd would all wanna stare. I knew Kiki would have her pointed questions. They could have whatever they wanted. I just needed one thing — a way into the mountain.
 \
 (if: $churchSecondWindowSeen is false)[
