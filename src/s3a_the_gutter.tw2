@@ -228,14 +228,14 @@ Old clown-painted Barbie and Ken heads were glued around the rims of each wheel.
 ::The Gutter - Golf cart - Defense
 Ron had removed the entire protective top shell of the car for clearer 360° views, and he had duct-taped barbed wire around the frame in odd places.
 
-(if: $multitool is true)[I used the blade of the multitool to cut the tape and carefully set the wire in a pile in the driver’s seat. I crossed my fingers for (link: "Total Ass Destruction")[(set: $defenseDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I used the multitool's scissors to cut the tape and carefully set the wire in a pile in the driver’s seat. I crossed my fingers for (link: "Total Ass Destruction")[(set: $defenseDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $defenseSeen to true)
 
 ::The Gutter - Golf cart - Horn
 The horn played a sample of Violent J screaming //“WHAT IS A JUGGALO?!”// at an ear-piercing volume.
 
-(if: $multitool is true)[I quickly used the multitool blade to cut the line leading from the horn to the old mp3 player. (link: "Haha eat shit Ron")[(set: $hornDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
+(if: $multitool is true)[I quickly used the multitool's scissors to snip the line leading from the horn to the old mp3 player. (link: "Haha eat shit Ron")[(set: $hornDamage to true)(go-to: "The Gutter - Golf cart")].](else:)[[[back|The Gutter - Golf cart]]]
 
 (set: $cartPartsSeen to it +1)(set: $hornSeen to true)
 
