@@ -191,7 +191,7 @@ A dice set.<br> (click: "dice set")[<div style="margin-left: 50px;">Toe had a co
 Some dominoes.<br> (click: "dominoes")[<div style="margin-left: 50px;">I wasn’t sure if Toe had ever seen dominoes— or even knew how to play. Advantage: me.</div>]
 A pen knife.<br> (click: "pen knife")[<div style="margin-left: 50px;">When Ron got drunk enough, sometimes he used to challenge me to games of five-finger fillet. Mostly I think he just wanted a way see me bleed that he could blame on me being stupid.
 
-But like I said: he <i>used to</i> do that. I practiced to spite the asshole, and I got good enough to beat him every time. The last time he tried to keep up with me, he ended up with a left thumb that never worked quite right ever again.</div>]
+But like I said: he //used to// do that. I practiced to spite the asshole, and I got good enough to beat him every time. The last time he tried to keep up with me, he ended up with a left thumb that never worked quite right ever again.</div>]
 <br>
 I didn’t really have much to trade with. You could find a soft spot in Auntie sometimes, but it was tricky. I knew I better play it safe and only ask for one thing.(click: " one thing")[
   (transition: "dissolve") +(transition-time: 3s)[
@@ -204,9 +204,11 @@ I didn’t really have much to trade with. You could find a soft spot in Auntie 
 ]}
 
 ::RM-giftshop-tradecomplete
-She was also hollering at me without turning around as soon as I set foot inside.
+{
+  (set: $allRustlasScenes to (a: "some old west showgirls sang `“`//I wouldn’t let his pecker near my butt.//`”`", "Sugar Wolf autographed a pair of tomahawks with a marker.", "Sugar Wolf poked his head in and out of the mystifying outhouse at 69 Prickley Pecker Lane.", "Dirty Sanchez told Big Baby Chips `“`I can’t wait to pee on //your// head.`”`", "a pallid cowboy assassin named Ghost used his laser eyes to disintegrate a shitter.", "Sugar Wolf, dressed like an adult baby and tied to a truss, got beat with a riding crop.", "poor Fred Freckels got swept away by an avalanche and whimpered `“`Oh, for the love of //chili!//`”`", "Sugar Wolf slapped the shit out of Big Baby’s thugs with his elastic `“`pimp hand.`”`", "the sign guy updated the population number for Mud Bug yet again."))
+}She was also hollering at me without turning around as soon as I set foot inside.
 
-“You already got what ya came for, $playerName, now git! No window-shoppin’ for folks with nothin’ to trade. Besides, this right here is my favorite part.” Auntie let out a low chuckle as <i>`[insert randomly rolled event from Big Money Rustlas here]`</i>.
+“You already got what ya came for, $playerName, now git! No window-shoppin’ for folks with nothin’ to trade. Besides, this right here is my favorite part.” Auntie let out a low chuckle as (either: ...$allRustlasScenes)
 
 > [[Head back to The Gutter|The Gutter - Outside $gutterOutside]]
 > [[Head to the junk heap|RM-junkheap-entrance]]
@@ -285,10 +287,10 @@ It was easy enough to pick through: whenever the heap ran out of flat surfaces, 
 Everybody wanted or needed something from the heap sooner or later, and only real assholes violated that pact and made a mess of it.
 
 (if: $junkHeapSeen is true)[I didn't see anything new since my last visit:
->>[[But I just wanted to skim through again.|RM-junkheap-stuff]]
->>[[So I headed to The Stash.|RM-DopemanDan-return]]
->>[[So I headed to The Gutter.|The Gutter - Outside $gutterOutside]]
->>[[So I headed to Auntie’s gift shop.|RM-giftshop-entrance]]
+> [[But I just wanted to skim through again|RM-junkheap-stuff]].
+> [[So I headed to The Stash|RM-DopemanDan-return]].
+> [[So I headed to The Gutter|The Gutter - Outside $gutterOutside]].
+> [[So I headed to Auntie’s gift shop|RM-giftshop-entrance]].
 ](else:)[[[I quickly skimmed through the dregs—|RM-junkheap-stuff]]]
 
 ::RM-junkheap-stuff
@@ -297,7 +299,7 @@ Everybody wanted or needed something from the heap sooner or later, and only rea
 [<div style="margin-left: 40px;">[Bent folding chairs sporting dried bloodstains—]<junkList3| </div>(click: ?junkList3)
 [<div style="margin-left: 60px;">[Old-school Psychopathic t-shirts and Hatchet Gear ninjas had gotten too fat or skinny for—]<junkList4| </div>(click: ?junkList4)
 [<div style="margin-left: 80px;">[Rows and rows of cracked commemorative bongs with airbrushed Wicked Clown artwork (“<i>Violent J, 1972-20XX, Rest In Paint</i>”)]<junkList5| </div>(click: ?junkList5)[(transition: "dissolve") +(transition-time: 3s)[
-Then I got to the big table in the back corner, with a handwritten sign set on it labeled “<b>GOOD SHIT, YO</b>” in black-marker block letters — the one that started it all. Some rando stealth-ass ninja set up the very first table in the middle of the night with a bunch of dope shit, and that same table had been reserved for the cream of the shit-crop ever since.
+Then I got to the big table in the back corner, with a handwritten sign set on it labeled “<b>GOOD SHIT, YO</b>” in black-marker block letters — the one that started it all. Some rando, stealth-ass ninja set up the very first table in the middle of the night with a bunch of dope shit, and that same table had been reserved for the cream of the shit-crop ever since.
 
 Scrawled in pencil along the bottom of the sign was the table’s motto: “<i>Leave good shit, take good shit.</i>”
 
@@ -307,7 +309,7 @@ Scrawled in pencil along the bottom of the sign was the table’s motto: “<i>L
 
 ::RM-junkheap-goodshit
 There was a [[small tin|RM-junkheap-tin]] with a hand-painted Hatchetman logo, a couple old [[video games|RM-junkheap-games]], a worn-down [[jewelry box|RM-junkheap-jewelry]], a stack of [[yellowing zines|RM-junkheap-zines]], some [[puppets|RM-junkheap-puppets]], a case of [[cassette tapes|RM-junkheap-tapes]], and a box of [[dog-eared paperback books|RM-junkheap-books]]. None of it looked like anything I needed, but then again I’ve always loved pawing through other people’s stuff.
-(if: $scooterSeen is true)[<br>Leo's rusted up old scooter was still there, but I was done thinking about him.<br>](else-if: $junkHeapItemsSeen is > 6)[<br>I noticed a rusted up old scooter that I [[hadn't seen for a while|RM-junkheap-flashback]].<br>]
+(if: $scooterSeen is true)[<br>Leo's rusted up old scooter was still there, but I was done thinking about him.<br>](else-if: $junkHeapItemsSeen is > 6)[<br>After I finished poking around the Good Shit table, I noticed a rusted up old scooter nearby that I [[hadn't seen for a while|RM-junkheap-flashback]].<br>]
 \
 > [[Head to Auntie’s gift shop|RM-giftshop-entrance]]
 
@@ -392,7 +394,7 @@ It was beaten to hell, with rust gathering all over it. The light had been buste
 
 <div class="flashback">(click: ?scooterTrigger)[$dissolve[It’s a couple years ago and I’m hanging around outside of the school trailer. I’m waiting for Anna, as usual.
 
-We’re gonna head out to the far fields – to where you can actually see the river. The only lights are a Fed boat doing a routine patrol in the distance, and the only people dudes who’ve wandered too far on a bad trip.
+We’re gonna head out to the far fields — to where you can actually see the river. The only lights are a Fed boat doing a routine patrol in the distance, and the only people dudes who’ve wandered too far on a bad trip.
 
 Leo comes roaring up on this tricked-out, midnight-black scooter. It’s got pristine hatchet man decals and a fresh paint job. It’s so new that it seems like it’s sparkling all over.
 
@@ -414,7 +416,7 @@ By the next week, she was tired of hearing about us. I started practicing alone 
 
 (click: ?scooterTrigger5)[$dissolve[When it ended with Leo three weeks later, I felt busted worse than a snowglobe hit with a baseball bat. It hadn’t taken long for his new ride to get dinged up and lose its shine. Some shithead scraped it for a laugh. A few days later, his buddies took it for a joy ride and rode it straight into a ditch.
 
-It was the same with his personality – a tossed off nasty remark here, a selfish choice there. His good intentions peeled faster than the scooter’s cheap paint. [Nothing nice lasts in Gatherville]<scooterTrigger6|.]]
+It was the same with his personality — a tossed off nasty remark here, a selfish choice there. His good intentions peeled faster than the scooter’s cheap paint. [Nothing nice lasts in Gatherville]<scooterTrigger6|.]]
 
 (click: ?scooterTrigger6)[$dissolve[After we split, all the things I used to love, like (if: $isWrestler is true)[practicing my grapples](else:)[spitting rhymes over a tape loop], felt joyless to me.
 

@@ -1,9 +1,10 @@
 ::Tent City - Intro
+<img src="./img/tent_city.png">
 I felt a twinge of guilt as I broke through the tarp. Mom would understand, but Ron would be sure to give her hell while he fixed the busted tarp for the umpteenth time.
 
 Shit. I’d have to try and make up for it later, once I ditched Leo and caught back up with Anna.
 
-(click: "ditched Leo")[I squeezed my way between the backsides of other tents pushed close together, trying to avoid the footpaths that divided Tarp City into wobbly rows. I reached the point where another path crossed perpendicular to Mom’s row, and stopped for a moment before darting across.
+(click: "ditched Leo")[I squeezed my way between the backsides of other tents pushed close together, trying to avoid the footpaths that divided Tent City into wobbly rows. I reached the point where another path crossed perpendicular to Mom’s row and stopped for a moment before darting across.
 
 “Time to step out of the shadows, sister.”
 
@@ -27,10 +28,10 @@ He paused.
 
 "Only question now is, which show will your soul see?”
 
-(if: $recruiterTriedExcuse is false)[>> [[Make an excuse|Tent City - Three Rings recruiter - make excuse]]]
->> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]
-(if: $recruiterTalkedShit is false)[>> [[Talk shit|Tent City - Three Rings recruiter - talk shit]]]
->> [[Take tract|Tent City - Three Rings recruiter - take tract]]]
+(if: $recruiterTriedExcuse is false)[> [[Make an excuse|Tent City - Three Rings recruiter - make excuse]]]
+> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]
+(if: $recruiterTalkedShit is false)[> [[Talk shit|Tent City - Three Rings recruiter - talk shit]]]
+> [[Take tract|Tent City - Three Rings recruiter - take tract]]]
 
 ::Tent City - Three Rings recruiter - make excuse
 “Uhh, I don’t wanna waste your time, man," I stammered. "My mom keeps me on a pretty short leash. She doesn’t like the look of y’all to begin with, and I’m out past curfew already.”
@@ -39,10 +40,10 @@ He leaned in even closer, and I caught the scent of gin-spiked Moon Mist wafting
 
 I sighed. Clearly he wasn't buying my bullshit.
 
->> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]\
+> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]\
 (if: $recruiterTalkedShit is false)[
->> [[Talk shit|Tent City - Three Rings recruiter - talk shit]]]
->> [[Take tract|Tent City - Three Rings recruiter - take tract]]
+> [[Talk shit|Tent City - Three Rings recruiter - talk shit]]]
+> [[Take tract|Tent City - Three Rings recruiter - take tract]]
 {
   (set: $badChoices to it +1)
   (set: $recruiterTriedExcuse to true)
@@ -65,9 +66,9 @@ Preacher-man cackled, and he rasped back: “'You can call me a weirdo, call me 
 He shook his head slowly and sadly. “Just fillin’ my ears with the Magician’s lies, as He whispers them with your tongue. Hate me if you must, sister, but I been stuck in your path for a reason.”
 
 \(if: $recruiterTriedExcuse is false)[
->> [[Make an excuse|Tent City - Three Rings recruiter - make excuse]]]
->> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]
->> [[Take tract|Tent City - Three Rings recruiter - take tract]]
+> [[Make an excuse|Tent City - Three Rings recruiter - make excuse]]]
+> [[Quote verse|Tent City - Three Rings recruiter - quote verse]]
+> [[Take tract|Tent City - Three Rings recruiter - take tract]]
 {
   (set: $badChoices to it +1)
   (set: $recruiterTalkedShit to true)
@@ -89,10 +90,10 @@ I tried to blend in as I made my way through one of the tidier sections of the t
 
 (click: "looked like trouble")[Sure enough, down the street I spotted a goon from the neighborhood’s foot patrol, Rip’s Rydas. He’d zeroed in on me and was making a beeline my way. He hadn’t even made it halfway over to me, and already I could see the dude’s gin blossoms were looking red & angry.
 
->> [[Beg for help|Tent City - Rip's Rydas - beg for help]]
->> [[Ask directions|Tent City - Rip's Rydas - ask directions]]
->> [[Play trick|Tent City - Rip's Rydas - play trick]]
->> [[Just bolt|Tent City - Rip's Rydas - just bolt]]]
+> [[Beg for help|Tent City - Rip's Rydas - beg for help]]
+> [[Ask directions|Tent City - Rip's Rydas - ask directions]]
+> [[Play trick|Tent City - Rip's Rydas - play trick]]
+> [[Just bolt|Tent City - Rip's Rydas - just bolt]]]
 {
   (set: $rydaBegForHelp to false)
   (set: $rydaAskDirections to false)
@@ -108,9 +109,9 @@ I tried to blend in as I made my way through one of the tidier sections of the t
 “What, Leo? Big Leo?” he interrupted, getting defensive. “I know that Leo; he ain’t a psycho loser! I means, maybe he’s messed up on something — you knows how he is. Youse wait here with me, and when Leo shows up we gets this shit figured out.”
 \
 (if: $rydaAskDirections is false)[
->> [[Ask directions|Tent City - Rip's Rydas - ask directions]]]
->> [[Play trick|Tent City - Rip's Rydas - play trick]]
->> [[Just bolt|Tent City - Rip's Rydas - just bolt]]
+> [[Ask directions|Tent City - Rip's Rydas - ask directions]]]
+> [[Play trick|Tent City - Rip's Rydas - play trick]]
+> [[Just bolt|Tent City - Rip's Rydas - just bolt]]
 {
   (set: $badChoices to it +1)
   (set: $rydaBegForHelp to true)
@@ -124,9 +125,9 @@ I tried to blend in as I made my way through one of the tidier sections of the t
 My mind blanked out completely. Jesus, getting this guy started was clearly a mistake.
 \
 (if: $rydaBegForHelp is false)[
->> [[Beg for help|Tent City - Rip's Rydas - beg for help]]]
->> [[Play trick|Tent City - Rip's Rydas - play trick]]
->> [[Just bolt|Tent City - Rip's Rydas - just bolt]]
+> [[Beg for help|Tent City - Rip's Rydas - beg for help]]]
+> [[Play trick|Tent City - Rip's Rydas - play trick]]
+> [[Just bolt|Tent City - Rip's Rydas - just bolt]]
 {
   (set: $badChoices to it +1)
   (set: $rydaAskDirections to true)
@@ -153,10 +154,10 @@ I was halfway through when I almost tripped over a shiny tin can sitting on a bl
 
 “That was for our game, assface!” one of the kids in front said. “Now we gotta start all over.”
 
->> [[Boss around|Tent City - Ornery Kids - boss around]]
->> [[Play along|Tent City - Ornery Kids - play along]]
->> [[Act dumb|Tent City - Ornery Kids - act dumb]]
->> [[Tattle tale|Tent City - Ornery Kids - tattle tale]]]
+> [[Boss around|Tent City - Ornery Kids - boss around]]
+> [[Play along|Tent City - Ornery Kids - play along]]
+> [[Act dumb|Tent City - Ornery Kids - act dumb]]
+> [[Tattle tale|Tent City - Ornery Kids - tattle tale]]]
 {
   (set: $kidsBossedAround to false)
   (set: $kidsTattleTold to false)
@@ -167,10 +168,10 @@ I was halfway through when I almost tripped over a shiny tin can sitting on a bl
 
 The kid in front crossed his arms and didn’t budge. “You don’t scare us. There’s just one of you, and we know how to mess you up.” He looked to a couple of the kids behind him. “Go get the can set up again while we deal with this juggaho.”
 
->> [[Play along|Tent City - Ornery Kids - play along]]
->> [[Act dumb|Tent City - Ornery Kids - act dumb]]
+> [[Play along|Tent City - Ornery Kids - play along]]
+> [[Act dumb|Tent City - Ornery Kids - act dumb]]
 \(if: $kidsTattleTold is false)[
->> [[Tattle tale|Tent City - Ornery Kids - tattle tale]]]
+> [[Tattle tale|Tent City - Ornery Kids - tattle tale]]]
 {
   (set: $badChoices to it +1)
   (set: $kidsBossedAround to true)
@@ -190,7 +191,7 @@ I nodded, and made my way over to the crate. I sat down and watched as the kids 
 ::Tent City - Ornery Kids - act dumb
 “Oh, geez. That was your can? Sorry, I just thought it was trash. Wait—” I interrupted myself, “You can play a game with a can?” I hammed it up as much as I could, acting like I hadn’t played and invented dozens of can-games when I was little.
 
-“Pshh, grown-ups don’t know anything,” sighed another kid. “You can use a can for all kinds of games, dumbo! Look: two teams, both of ‘em hide, and you try to throw in your rocks without the other team seein’ ya.” The girl demonstrated by hiding behind a bunch of charred lumbering and arcing some stones toward the wooden plank where the can had sat.
+“Pshh, grown-ups don’t know anything,” sighed another kid. “You can use a can for all kinds of games, dumbo! Look: two teams, both of ‘em hide, and you try to throw in your rocks without the other team seein’ ya.” The girl demonstrated by hiding behind a bunch of charred lumber and arcing some stones toward the wooden plank where the can had sat.
 
 “Wow. That’s so cool! Just rocks and a can.” I shook my head. “I had no idea. Well, I gotta keep going. Is it alright if I tell that game to some kids I know?”
 
@@ -208,9 +209,9 @@ The little girl stuck her chin out. “My mommy’s dead, assface. We play out h
 “Yeah!” agreed the other kid, the boy who’d piped up first. “Now how about you pick up your ass and go get that can?”
 
 \(if: $kidsBossedAround is false)[
->> [[Boss around|Tent City - Ornery Kids - boss around]]]
->> [[Play along|Tent City - Ornery Kids - play along]]
->> [[Act dumb|Tent City - Ornery Kids - act dumb]]
+> [[Boss around|Tent City - Ornery Kids - boss around]]]
+> [[Play along|Tent City - Ornery Kids - play along]]
+> [[Act dumb|Tent City - Ornery Kids - act dumb]]
 {
   (set: $badChoices to it +1)
   (set: $kidsTattleTold to true)
@@ -223,11 +224,11 @@ I tore a belt loop on my pants, forcing my way through a tumble of scrap wood An
 
 (click: "the sign of movement")[A bunch of rangy dogs were circling in a clearing where the backsides of a half-dozen tents all faced one another. A ramshackle fort made of broken pallets and covered in kids’ graffiti sat in the center, and a flank of meat dangled from a nail in a roof-beam, just out of reach of the dogs. They turned at the sound of me dragging myself out of the tunnel, and after a moment of hesitation, began closing in on me instead.
 
->> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]
->> [[Throw fake-out|Tent City - Pack of stray dogs - throw fake-out]]
->> [[Growl savagely|Tent City - Pack of stray dogs - growl savagely]]
->> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
-(if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]]
+> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]
+> [[Throw fake-out|Tent City - Pack of stray dogs - throw fake-out]]
+> [[Growl savagely|Tent City - Pack of stray dogs - growl savagely]]
+> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
+(if: $hatchet is true)[> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]]
 {
   (set: $dogsFakedOut to false)
   (set: $dogsGrowledAt to false)
@@ -247,11 +248,11 @@ A couple of heads turned, but otherwise none of them moved. In another second, a
 
 Shit.
 
->> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]\
+> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]\
 (if: $dogsGrowledAt is false)[
->> [[Growl savagely|Tent City - Pack of stray dogs - growl savagely]]]
->> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
-(if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]
+> [[Growl savagely|Tent City - Pack of stray dogs - growl savagely]]]
+> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
+(if: $hatchet is true)[> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]
 {
   (set: $badChoices to it +1)
   (set: $dogsFakedOut to true)
@@ -264,11 +265,11 @@ I dropped to all fours, snarled, then gave ‘em my best howl. “Arrrooooouuuuu
 
 Nothing. Tough crowd.
 
->> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]\
+> [[Yank flank|Tent City - Pack of stray dogs - yank flank]]\
 (if: $dogsFakedOut is false)[
->> [[Throw fake-out|Tent City - Pack of stray dogs - throw fake-out]]]
->> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
-(if: $hatchet is true)[>> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]
+> [[Throw fake-out|Tent City - Pack of stray dogs - throw fake-out]]]
+> [[Speak softly|Tent City - Pack of stray dogs - speak softly]]
+(if: $hatchet is true)[> [[Brandish axe|Tent City - Pack of stray dogs - brandish axe]]]
 {
   (set: $badChoices to it +1)
   (set: $dogsGrowledAt to true)
@@ -279,7 +280,7 @@ Nothing. Tough crowd.
 
 I held still for what felt like an agonizingly long time. I was only too aware that Leo was still out in the tarps somewhere, on my trail.
 
-At last, the dog took a few steps closer to sniff my hand, then nuzzled & licked it. The mood of the pack shifted to match that of my new friend, and I found myself surrounded by dozens of wagging tails and lolling tongues happily letting me [[pass on my way|Tent City - Fence]].
+At last, the dog took a few steps closer to sniff my hand, then nuzzled and licked it. The mood of the pack shifted to match that of my new friend, and I found myself surrounded by dozens of wagging tails and lolling tongues happily letting me [[pass on my way|Tent City - Fence]].
 
 ::Tent City - Pack of stray dogs - brandish axe
 “Hey! Mutts! You know what this is?” I slipped my axe off the belt loop it hung from and held it high, catching some stray light and glinting.
@@ -297,12 +298,12 @@ I frowned and moved closer.
 
 (click: "moved closer")[I saw the fence was made from a bit of everything. Chain-link, barbed wire, wooden posts, and a salvaged wrought-iron gate secured with what looked like a bike lock.
 
->> [[Climb over|Tent City - Fence - climb over]]
->> [[Crawl under|Tent City - Fence - crawl under]]
->> [[Kick down|Tent City - Fence - kick down]]
->> [[Squeeze through|Tent City - Fence - squeeze through]]\
+> [[Climb over|Tent City - Fence - climb over]]
+> [[Crawl under|Tent City - Fence - crawl under]]
+> [[Kick down|Tent City - Fence - kick down]]
+> [[Squeeze through|Tent City - Fence - squeeze through]]\
 (if: $multitool is true)[
->> [[Snip cable|Tent City - Fence - snip cable]]]]
+> [[Snip cable|Tent City - Fence - snip cable]]]]
 {
   (set: $fenceClimbed to false)
   (set: $fenceSqueezed to false)
@@ -315,11 +316,11 @@ I jammed my boots into the holes in the chain-link, and started making my way up
 
 I hopped down and tried to think of another way.
 
->> [[Crawl under|Tent City - Fence - crawl under]]
->> [[Kick down|Tent City - Fence - kick down]]\
+> [[Crawl under|Tent City - Fence - crawl under]]
+> [[Kick down|Tent City - Fence - kick down]]\
 (if: $fenceSqueezed is false)[
->> [[Squeeze through|Tent City - Fence - squeeze through]]]
-(if: $multitool is true)[>> [[Snip cable|Tent City - Fence - snip cable]]]
+> [[Squeeze through|Tent City - Fence - squeeze through]]]
+(if: $multitool is true)[> [[Snip cable|Tent City - Fence - snip cable]]]
 {
   (set: $fenceClimbed to true)
   (set: $badChoices to it +1)
@@ -349,11 +350,11 @@ The cable from the bike lock wasn’t wound as tightly as it should have been. T
 I tensed and tried to make myself as thin as I could, but it didn’t matter: it was my bony bits that held me back. I was able to force myself almost all the way through, but no way was my head gonna fit. Eventually I had to give up and admit that the gap only looked wide enough to squeeze through.
 \
 (if: $fenceClimbed is false)[
->> [[Climb over|Tent City - Fence - climb over]]]
->> [[Crawl under|Tent City - Fence - crawl under]]
->> [[Kick down|Tent City - Fence - kick down]]\
+> [[Climb over|Tent City - Fence - climb over]]]
+> [[Crawl under|Tent City - Fence - crawl under]]
+> [[Kick down|Tent City - Fence - kick down]]\
 (if: $multitool is true)[
->> [[Snip cable|Tent City - Fence - snip cable]]]
+> [[Snip cable|Tent City - Fence - snip cable]]]
 {
   (set: $fenceSqueezed to true)
   (set: $badChoices to it +1)
@@ -364,7 +365,7 @@ I tensed and tried to make myself as thin as I could, but it didn’t matter: it
   (if: $badChoices < 3)[(set: $tentCityFinale to "Neden militia finale")]
   (else:)[(set: $tentCityFinale to "Leo finale")]
 }\
-My multi-tool had a couple of blades, in addition to a pretty tough pair of scissors/wire-cutters. I sawed through the plastic coating of the cable first with one of the blades, then went to work on the cable itself.
+My multitool had a couple of blades, in addition to a pretty tough pair of scissors/wire-cutters. I sawed through the plastic coating of the cable first with one of the blades, then went to work on the cable itself.
 
 It took a few passes, but at last the cable snapped and the lock fell to the ground. The gate squeaked a bit as I eased through it, then [[set off through the next section of the Tarps beyond|Tent City - $tentCityFinale]].
 
@@ -385,10 +386,10 @@ Peering over the girl I ran into, I saw four or five other tough-looking women c
 
 “Hey! Hey! Don’t just look at them, lookin’ right over my fuckin’ head. You look at me! Look at me in my eyes!”
 
->> [[Act cool|Tent City - Neden militia finale - act cool]]
->> [[Spill guts|Tent City - Neden militia finale - spill guts]]
->> [[Shoulder through|Tent City - Neden militia finale - shoulder through]]
->> [[Tell joke|Tent City - Neden militia finale - tell joke]]]]
+> [[Act cool|Tent City - Neden militia finale - act cool]]
+> [[Spill guts|Tent City - Neden militia finale - spill guts]]
+> [[Shoulder through|Tent City - Neden militia finale - shoulder through]]
+> [[Tell joke|Tent City - Neden militia finale - tell joke]]]]
 {
   (set: $militiaActedCool to false)
   (set: $militiaShouldered to false)
@@ -401,10 +402,10 @@ One of the taller ones in the back smiled. “Oh, we take plenty of shit, sister
 
 Shit. I had next to nothing, which they wouldn’t like, and what shit I did have I wasn’t giving up, which they’d like even less.
 
->> [[Spill guts|Tent City - Neden militia finale - spill guts]]\
+> [[Spill guts|Tent City - Neden militia finale - spill guts]]\
 (if: $militiaShouldered is false)[
->> [[Shoulder through|Tent City - Neden militia finale - shoulder through]]]
->> [[Tell joke|Tent City - Neden militia finale - tell joke]]
+> [[Shoulder through|Tent City - Neden militia finale - shoulder through]]]
+> [[Tell joke|Tent City - Neden militia finale - tell joke]]
 {
   (set: $militiaActedCool to true)
   (set: $badChoices to it +1)
@@ -421,7 +422,7 @@ I tensed, but nodded.
 
 (click: "I tensed, but nodded")[“The fucker’s name,” she said, and grinned. “More fun to play with a little dickhead when you know what its name is.”
 
-I croaked out “Leo”, and they parted to let me through. I scrambled out of Tent City and [[into the seedier shadows surrounding the Gutter|The Gutter - Outside approach]]. For a second I thought I heard something like a woman singing “Leo-Leo-Leooo!” drifting on the wind, but then it was gone.]
+I croaked out “Leo,” and they parted to let me through. I scrambled out of Tent City and [[into the seedier shadows surrounding the Gutter|The Gutter - Outside approach]]. For a second I thought I heard something like a woman singing “Leo-Leo-Leooo!” drifting on the wind, but then it was gone.]
 
 ::Tent City - Neden militia finale - shoulder through
 “Whatever,” I mumbled, flipping my hood up and pulling the drawstring tight. I balled up my hands into fists, screwed myself tense, and tried to lead with the spikes sewn into my jacket as I shouldered into the short one blocking my way.
@@ -435,9 +436,9 @@ She didn’t budge, or even flinch. She just laughed, and sounded fucking deligh
 “Sorry, sorry — that was fucking stupid. Like, fatally stupid, and that’s… not the kind of stupid I need to be today.”
 \
 (if: $militiaActedCool is false)[
->> [[Act cool|Tent City - Neden militia finale - act cool]]]
->> [[Spill guts|Tent City - Neden militia finale - spill guts]]
->> [[Tell joke|Tent City - Neden militia finale - tell joke]]]
+> [[Act cool|Tent City - Neden militia finale - act cool]]]
+> [[Spill guts|Tent City - Neden militia finale - spill guts]]
+> [[Tell joke|Tent City - Neden militia finale - tell joke]]]
 {
   (set: $militiaShouldered to true)
   (set: $badChoices to it +1)
@@ -467,8 +468,8 @@ I’d blown most of my lead trying dead ends and bad ideas, and now I found myse
 
 My eyes darted over the alley for anything I might put to use. Whatever I came up with, it was probably going to be my only shot.
 
->> (link: "I saw something papery hanging from an extension cable slung over the alley, and plenty of debris on the ground")[(set: $leoRevenge to "something papery")(go-to: "Tent City - Leo finale - choice made")]
->> (link: "I saw a glint of coppery metal on a wall, a half-filled rain-barrel, and a pothole")[(set: $leoRevenge to "something coppery")(go-to: "Tent City - Leo finale - choice made")]
+> (link: "I saw something papery hanging from an extension cable slung over the alley, and plenty of debris on the ground")[(set: $leoRevenge to "something papery")(go-to: "Tent City - Leo finale - choice made")]
+> (link: "I saw a glint of coppery metal on a wall, a half-filled rain-barrel, and a pothole")[(set: $leoRevenge to "something coppery")(go-to: "Tent City - Leo finale - choice made")]
 
 ::Tent City - Leo finale - choice made
 Desperate, but it was a plan.

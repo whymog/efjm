@@ -5,14 +5,14 @@
 
 Well...darkness and shit.]]
 
->> [[I blinked my eyes, still heavy from sleep.|Jail Cell (Unlit) - look - fail]]
->> [[I felt around for something concrete.|Jail Cell (Unlit) - feel]]
->> [[I sniffed the stagnant air.|Jail Cell (Unlit) - smell]]
+> [[I blinked my eyes, still heavy from sleep|Jail Cell (Unlit) - look - fail]].
+> [[I felt around for something concrete|Jail Cell (Unlit) - feel]].
+> [[I sniffed the stagnant air|Jail Cell (Unlit) - smell]].
 
 ::Jail Cell (Unlit) - look - fail <30,500>
 My eyelids hung heavy. They felt like paperweights over eyes as dry as sandpaper. I couldn't see shit.
 
-[[I tried rubbing my face. No good.|Jail Cell (Unlit) - hub]]
+[[I tried rubbing my face. No good|Jail Cell (Unlit) - hub]].
 
 ::Jail Cell (Unlit) - feel <201,504>
 My arms flopped clumsily at my sides. They felt like rubber.
@@ -39,8 +39,8 @@ Without hesitating, I [splashed my face and rubbed my eyes hard]<trigger4|.]
 
 |section5)[No good. Still couldn't see anything. Except for...
 
-[>> [a faint beam of moonlight draped across the cell walls.]<trigger5a|]<prompt5a|
-[>> [a glint of metal on the floor.]<trigger5b|]<prompt5b|]
+[> [a faint beam of moonlight draped across the cell walls.]<trigger5a|]<prompt5a|
+[> [a glint of metal on the floor.]<trigger5b|]<prompt5b|]
 
 |section6)[The light from the moon snuck in through a small grate above my head. It shined a faint light across the cell walls and onto the corner of the floor, where it caught the glint of something shiny.
 
@@ -73,7 +73,7 @@ Shit. That’s all I could pick up on. Someone literally lost their shit in here
 
 I panicked, because I still couldn’t tell where it was. And now, like some Edgar Allan Poe thing, there was a Telltale Shit lurking under the floor.
 
-[[I held my breath and tried not to vom all over myself.|Jail Cell (Unlit) - hub]]
+[[I held my breath and tried not to vom all over myself|Jail Cell (Unlit) - hub]].
 
 (set: $sniffedAir to true)
 
@@ -95,17 +95,22 @@ I stared into the mirror and nearly had a heart attack.
   (if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I need to get out of here|Jail Cell (Lit) - hub]].
     <!-- what this code does is check the ending of the custom $playerName string to hopefully append the correct pluralization to it -->
     {
-      (if: $playerName's last is "s")[
-        (set: $playerNamePlural to ($playerName + "es"))
-      ]
-      (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
-        (set: $playerNamePlural to ($playerName + "es"))
-      ]
-      (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
-        (set: $playerNamePlural to ($playerName + "es"))
+      (if: $playerName's length < 3)[
+        (set: $playerNamePlural to ($playerName + "s"))
       ]
       (else:)[
-        (set: $playerNamePlural to ($playerName + "s"))
+        (if: $playerName's last is "s")[
+          (set: $playerNamePlural to ($playerName + "es"))
+        ]
+        (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
+          (set: $playerNamePlural to ($playerName + "es"))
+        ]
+        (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
+          (set: $playerNamePlural to ($playerName + "es"))
+        ]
+        (else:)[
+          (set: $playerNamePlural to ($playerName + "s"))
+        ]
       ]
     }]
   (else:)[Wait, [[that's not right|Jail Cell (Lit) - naming complete]].]
@@ -118,10 +123,10 @@ The lighter's dancing flame illuminated my surroundings. (if: $triedDoor is true
 
 There was a (if: $triedDoor is true)[locked ]door right in front of me. The (if: $waterDrained is true)[empty ]basin was rooted to the wall on my left(if:$waterDrained is false)[, still full of translucent water]. And the floor was covered in scattered slips of paper and shreds of cloth.
 
-(if: $triedDoor is false)[>> [[I tried the door.|Jail Cell (Lit) - door]]]\
-(if: $triedDoor is true)[>> [[The door to my cell was still locked tight.|Jail Cell (Lit) - door]]]
-(if: $waterDrained is false)[>> [[I took a closer look at the basin.|Jail Cell (Lit) - basin - full]]]\
-(if: $waterDrained is true)[>> [[I glanced at the basin again.|Jail Cell (Lit) - basin - empty]]]
+(if: $triedDoor is false)[> [[I tried the door|Jail Cell (Lit) - door]].]\
+(if: $triedDoor is true)[> [[The door to my cell was still locked tight|Jail Cell (Lit) - door]].]
+(if: $waterDrained is false)[> [[I took a closer look at the basin|Jail Cell (Lit) - basin - full]].]\
+(if: $waterDrained is true)[> [[I glanced at the basin again|Jail Cell (Lit) - basin - empty]].]
 
 ::Jail Cell (Lit) - door <349,776>
 {
@@ -132,11 +137,11 @@ There was a (if: $triedDoor is true)[locked ]door right in front of me. The (if:
 |lockedDoorSection)[
 (if: $triedDoor is false)[(set: $triedDoor to true)No good. The door wouldn't budge.](else:)[Still no good. I had to find a way to get it open.]
 
-[[I glanced around the room again.|Jail Cell (Lit) - hub]] ]\
+[[I glanced around the room again|Jail Cell (Lit) - hub]].]\
 \
 |unlockDoorSection)[After a momentary effort, the key slid in.
 
-[[I turned it.|Jail Cell - exit]] ]\
+[[I turned it|Jail Cell - exit]].]\
 \
 (click: ?trigger1)[(show: ?lockedDoorSection)]\
 (click: ?trigger2)[(show: ?unlockDoorSection)]
@@ -160,7 +165,7 @@ I [[grabbed it|Jail Cell (Lit) - hub]] and took another look around.]]\
 ::Jail Cell (Lit) - basin - empty <70,885>
 The basin was empty. A reddish stain ran along the edge of the bowl.
 
-[[I took another look around.|Jail Cell (Lit) - hub]]
+[[I took another look around|Jail Cell (Lit) - hub]].
 
 ::Jail Cell - exit <345,1001>
 With a soft //thnck//, the lock turned.
@@ -169,7 +174,7 @@ I tried to swallow, but my throat was parched.
 My heart was pounding.
 My head was swimming.
 
-[[I tried the door.|Outside Port-a-potty]]
+[[I tried the door|Outside Port-a-potty]].
 
 ::Outside Port-a-potty <347,1130>
 The door lurched open, and I fell face-first into the dirt and gravel. The glare of the floodlights was blinding, and my balance was gone.
@@ -178,7 +183,7 @@ I pushed myself up and rubbed my eyes. Looking around, I saw the old familiar gr
 
 (click: "the old familiar gravel path toward our part of Tent City")[(transition: "dissolve") +(transition-time: 3s)[Thank fucking god. I thought I could’ve been anywhere.
 
-Steadying myself, I stood up, tested my footing, and glanced around. Out of the corner of my eye, I saw it – a page that looked like it was torn out of my journal.]]
+Steadying myself, I stood up, tested my footing, and glanced around. Out of the corner of my eye, I saw it — a page that looked like it was torn out of my journal.]]
 
 (click: "a page")[(transition: "dissolve") +(transition-time: 3s)[It was taped to the inside of the toilet door. If it hadn’t been so hard to see in there, maybe I would’ve noticed it. But out here, under the floodlights, the bright-pink paper stood out clearly from the sun-drained teal plastic door.
 

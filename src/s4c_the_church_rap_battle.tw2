@@ -4,7 +4,7 @@
 }(else:)[No, [[that's not right|The Church - Rap battle name prompt]].]
 
 ::The Church - Rap battle
-Moon Mystic’s voice boomed over the PA. “Where my juggalos at tonight?! Where my fine juggalettes? All my down ass ninjas in the house go woop woop!”
+Moon Mystic’s voice boomed over the PA. “Where my juggalos at tonight?! Where my fine juggalettes? All my down-ass ninjas in the house go woop woop!”
 
 (click: "woop woop")[$dissolve[The crowd responded with a hearty “WOOP WOOP!”
 
@@ -27,14 +27,14 @@ Moon Mystic’s voice boomed again, “And now, the fighter. Going for the mount
 
 As I moved to pick my mic up from where it was coiled on the stage floor, some stupid-ass juggalo in the crowd called out, “Yo, I ain’t ever seen this bitch. She ain’t got it!” Steve popped a mile-wide grin and there was some laughter in the crowd.]]
 
-(click: "laughter in the crowd")[$dissolve[I quickly snatched up the mic and blasted back, “Yeah ninja, that ain’t a surprise. Looks to me like a lot of ‘lettes try to avoid you all together.” An immediate “OOOOOOH” from the crowd was my delicious reward. Steve’s grin dropped and he picked his mic up as well. [[Time to do some fuckin' raps|The Church - Rap battle - First verses]].]]
+(click: "laughter in the crowd")[$dissolve[I quickly snatched up the mic and blasted back, “Yeah ninja, that ain’t a surprise. Looks to me like a lot of ‘lettes try to avoid you altogether.” An immediate “OOOOOOH” from the crowd was my delicious reward. Steve’s grin dropped and he picked his mic up as well. [[Time to do some fuckin' raps|The Church - Rap battle - First verses]].]]
 
 ::The Church - Rap battle - First verses
 Steve and I circled each other warily. Moon Mystic piped up, “Alright $stageName, as the challenger, you pick who goes first.”
 
->>["I’ll go first. I’m sick of looking at this dude already."]<playerFirst|
->>["I’ll go second. This goofy motherfucker needs all the help he can get."]<steveFirst|
->>[[I didn’t even answer – just started into a blistering rap about dogs.|The Church - Rap battle - First verses dog rap]]
+> ["I’ll go first. I’m sick of looking at this dude already."]<playerFirst|
+> ["I’ll go second. This goofy motherfucker needs all the help he can get."]<steveFirst|
+> [[I didn’t even answer — just started into a blistering rap about dogs|The Church - Rap battle - First verses dog rap]].
 
 (click: ?playerFirst)[(go-to: "The Church - Rap battle - First verses player first")]
 (click: ?steveFirst)[(go-to: "The Church - Rap battle - First verses steve first")]

@@ -21,7 +21,7 @@ I’m told people in other places go to churches for one big thing, one day a we
 
 It was the place to dream about becoming a star or watch someone else’s dreams eat shit. If it was boring that night, there was always someone hungry to jaw about the latest rumor or cause a scene hooting for the underdog.
 
-Most important, the Church stood right in front of the Mountain. Everybody knew it was [the only way in]<churchIntroTrigger|.
+Most important, the Church stood right in front of the Mountain. Everybody knew it was the only way in. If Anna was really going through the Mountain, this was the [only way to follow]<churchIntroTrigger|.
 
 (click: ?churchIntroTrigger)[$dissolve[I used to practice at this place every week. Sometimes every day. The building loomed over me like a tall shadow of the past.
 
@@ -30,13 +30,14 @@ I could still remember keenly the night that this place ate my dreams. Now it ha
 (set: $churchSecondWindowSeen to false)(set: $frontDoorVisited to false)
 
 ::The Church - Second visit - Outside hub
-I knew the regular crowd would all wanna stare. I knew Kiki would have her pointed questions. They could have whatever they wanted. I just needed one thing – a way into the mountain.
+<img src="./img/the_church.png">
+I knew the regular crowd would all wanna stare. I knew Kiki would have her pointed questions. They could have whatever they wanted. I just needed one thing — a way into the mountain.
 \
 (if: $churchSecondWindowSeen is false)[
->>[[I went to see what I could spy through the window|The Church - Second visit - Window]].]\
+> [[I went to see what I could spy through the window|The Church - Second visit - Window]].]\
 (if: $frontDoorVisited is false)[
->>[[I looked at the crowd filing in through the front door|The Church - Second visit - Front door]].]
->>[[I went straight for the back door to start this fucking show|The Church - Second visit - Back door]].
+> [[I looked at the crowd filing in through the front door|The Church - Second visit - Front door]].]
+> [[I went straight for the back door to start this fucking show|The Church - Second visit - Back door]].
 
 ::The Church - Second visit - Window
 I peered through the window and saw the fully assembled stage. Some people were finding their seats. I heard the mournful hum of feedback as someone tested a mic. The show was getting ready to start.
@@ -56,7 +57,7 @@ I could taste the sweat and blood, smell the iron. These fuckers had been holdin
 ::The Church - Second visit - Window rapping
 It was a rap battle tonight. Perfect. My head bobbed and my mind filled with verses. I could taste the dangerous dust under my tongue that could lock it up, but I forced that down.
 
-My body was only producing venom tonight – straight bile. Those phony ass emcees that only hung around this place for the ‘lettes and the drink tickets wouldn’t know what hit ‘em.
+My body was only producing venom tonight — straight bile. Those phony ass emcees that only hung around this place for the ‘lettes and the drink tickets wouldn’t know what hit ‘em.
 
 [[Ante up|The Church - Second visit - Outside hub]].
 
@@ -72,7 +73,7 @@ I could feel a strong, desperate energy in the dark edges of the building, where
 (set: $frontDoorVisited to true)
 
 ::The Church - Second visit - Back door
-The door was rusted to shit and there was hardly any light in the back of the Church. I could see what I thought were maybe some feral cats or racoons galloping off into the weeds as I approached.
+The door was rusted to shit and there was hardly any light in the back of the Church. I could see what I thought were maybe some feral cats or raccoons galloping off into the weeds as I approached.
 
 I had to wiggle Ron’s key around a little bit, but it worked. The door busted open and light soaked the ground. I could hear someone shouting as I stepped inside.
 
@@ -104,7 +105,7 @@ As soon as the hug ended, I started [[spilling my guts like a broken Furby|The C
 ::The Church - Second visit - Green room intro 2
 “I know I don’t deserve this. All you’ve ever given me is support and I haven’t been able to give it back. I fucked up. I should’ve said something before I peaced. I-”
 
-Kiki touched my arm and the look in her eyes calmed the storm raging in my brain. “Double L, I’ve missed you so much girl. But shut the fuck up. We don’t turn our back on family just cause they split to find their own way for a second.”
+Kiki touched my arm and the look in her eyes calmed the storm raging in my brain. “Double L, I’ve missed you so much, girl. But shut the fuck up. We don’t turn our back on family just ‘cause they split to find their own way for a second.”
 
 She paused, gathering the strength to lift me up to where [she knew I needed to be]<greenRoomIntroTrigger4|.
 
@@ -114,7 +115,7 @@ I managed to choke out a meek “thank you.” Kiki pulled away and [got back do
 
 (click: ?greenRoomIntroTrigger5)[$dissolve[Her eyes danced over the clipboard as she broke down the event:
 
-“If you’re going for the mountain, then you’ll be on right at the end. You’ll be up against whoever is the highest in the standings, so I hope you’ve been practicing girl. I kept your locker up and everything. Don’t make me look crazy.”
+“If you’re going for the mountain, then you’ll be on right at the end. You’ll be up against whoever is the highest in the standings, so I hope you’ve been practicing, girl. I kept your locker up and everything. Don’t make me look crazy.”
 
 Kiki punched me on the shoulder. “You don’t have to tell me why you came back, but if you’ve got a minute while you’re prepping, you know I love [a good comeback story]<greenRoomIntroTrigger6|.”]]
 
@@ -133,10 +134,10 @@ I could see they hadn’t changed the crimson shag rugs and barely nailed togeth
 
 Also didn’t seem like they wanted to chat. Kiki had been kinder than I expected, but I knew that wouldn’t be the case throughout the building. [I needed time to myself to get ready anyway]<greenRoomTrigger4|.]]
 
-(click: ?greenRoomTrigger4)[$dissolve[>>[[I went to find Kiki and catch up|The Church - Second visit - Kiki]].
->>[[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].
->>[[I glanced over the trophies|The Church - Second visit - Trophies]].
->>[[I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].]]
+(click: ?greenRoomTrigger4)[$dissolve[> [[I went to find Kiki and catch up|The Church - Second visit - Kiki]].
+> [[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].
+> [[I glanced over the trophies|The Church - Second visit - Trophies]].
+> [[I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].]]
 
 (set: $faygoFlashbackSeen to false)(set: $talkedToKiki to false)(set: $trophiesSeen to false)
 
@@ -144,12 +145,12 @@ Also didn’t seem like they wanted to chat. Kiki had been kinder than I expecte
 It was almost time for the (if: $isWrestler is true)[match](else:)[battle]. I looked around the green room to make sure I'd done everything I wanted to do.
 \
 (if: $talkedToKiki is false)[
->>[[I went to find Kiki and catch up|The Church - Second visit - Kiki]].]\
+> [[I went to find Kiki and catch up|The Church - Second visit - Kiki]].]\
 (if: $faygoFlashbackSeen is false)[
->>[[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].]\
+> [[I grabbed some Faygo and posted up on a nice looking chair|The Church - Second visit - Faygo]].]\
 (if: $trophiesSeen is false)[
->>[[I glanced over the trophies|The Church - Second visit - Trophies]].]
->>[[I had everything wrapped up. I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].
+> [[I glanced over the trophies|The Church - Second visit - Trophies]].]
+> [[I had everything wrapped up. I found my locker and got ready to go into battle|The Church - Second visit - Preparation]].
 
 ::The Church - Second visit - Kiki
 I found Kiki in an empty dressing room down a hallway from the green room. The Church had a few of these rooms in case a real star came down, but that was only a few times a year at most.
@@ -168,14 +169,14 @@ She sat down on the couch, clicked the walkie-talkie off, and [[patted the chair
 (if: $kikiConvo is < 3)[“What’s on your mind, Double L?” Kiki asked. “We don’t have a ton of time before you’re on, but you know I can always spare a second for my Little ‘Lette.”
 \
 (if: $kikiBounceTalk is false)[
->>[[“Kiki, I’ve gotta tell you why I bounced last year.”|The Church - Second visit - Kiki bounced]]]\
+> [[“Kiki, I’ve gotta tell you why I bounced last year.”|The Church - Second visit - Kiki bounced]]]\
 (if: $kikiChampTalk is false)[
->>[[“What’s the deal with the chump – uh, I mean, champ – I’m up against?”|The Church - Second visit - Kiki champ]]]\
+> [[“What’s the deal with the chump — uh, I mean, champ — I’m up against?”|The Church - Second visit - Kiki champ]]]\
 (if: $kikiAnnaTalk is false)[
->>[[“You seen Anna recently?”|The Church - Second visit - Kiki anna]]]]
+> [[“You seen Anna recently?”|The Church - Second visit - Kiki anna]]]]
 \(else:)[Kiki looked at me and I could tell our time to chat was up. She rose and opened the door for me.
 
-As I was getting up to leave, she said, "Show's gonna start soon and I have to get Mystic stuffed into his ceremonial gear. It's not a quick task. It was great catching up LL. [[I'll see ya out there under the lights."|The Church - Second visit - Green room hub]]]
+As I was getting up to leave, she said, "Show's gonna start soon and I have to get Mystic stuffed into his ceremonial gear. It's not a quick task. It was great catching up, LL. [[I'll see ya out there under the lights."|The Church - Second visit - Green room hub]]]
 
 ::The Church - Second visit - Kiki bounced
 Kiki leaned in to indicate she was ready to listen. I fussed with the arm of the chair as I spoke, conjuring my memories through fidgets.
@@ -200,7 +201,7 @@ Kiki gripped my shoulders and I looked her straight in the eye. “Double L, bab
 
 (click: ?kikiBounce5)[$dissolve[Kiki paused for a moment and then punched my arm to accentuate. “If they try to slow you down, I’ll show ‘em the door straight to hell.”
 
-[[I smiled as much as I could, did a big sniffle and composed myself, then changed the subject.|The Church - Second visit - Kiki hub]]]]
+[[I smiled as much as I could, did a big sniffle and composed myself, then changed the subject|The Church - Second visit - Kiki hub]].]]
 
 (set: $kikiBounceTalk to true)(set: $kikiConvo to it +1)
 
@@ -228,8 +229,8 @@ Kiki looked down at the floor for a minute as she did some kind of deep breathin
 
 “Why do you ask? I though the two of y’all would never be too far apart. Did you really lose touch?”
 
->>[[“Yeah. I’m tracking her right now, actually. She said she found a way to sneak out through the mountain.”|The Church - Second visit - Kiki anna 2]]
->>[[Yeah, but it’s no big deal. Let’s talk about something else."|The Church - Second visit - Kiki hub]]
+> [[“Yeah. I’m tracking her right now, actually. She said she found a way to sneak out through the mountain.”|The Church - Second visit - Kiki anna 2]]
+> [[Yeah, but it’s no big deal. Let’s talk about something else."|The Church - Second visit - Kiki hub]]
 
 (set: $kikiAnnaTalk to true)(set: $kikiConvo to it +1)
 
@@ -240,7 +241,7 @@ Kiki looked like she’d taken a folding chair to the gut, which I’d seen her 
 
 I jumped in. “Kiki…what if it’s real? What if the mountain really is a way out instead of just a way up?”
 
-“I told you to stop.” Kiki slumped in her chair, “It’s not for me, Double L. I’ve worked hard to build my spot here and I’m not jumping for anyone. Not even for you. I can wish you luck and I can show you love, but [[we gotta talk about something else."|The Church - Second visit - Kiki hub]]
+“I told you to stop.” Kiki slumped in her chair. “It’s not for me, Double L. I’ve worked hard to build my spot here and I’m not jumping for anyone. Not even for you. I can wish you luck and I can show you love, but [[we gotta talk about something else."|The Church - Second visit - Kiki hub]]
 
 ::The Church - Second visit - Faygo
 I kicked back in a big armchair with no legs and cracked a bottle of Moon Mist. As soon as that delightful Faygo sugar fizz hit my tongue, it invaded my senses.
@@ -279,8 +280,8 @@ I was concerned about backing up that threat, but I still couldn’t stop myself
 ::The Church - Second visit - Trophies
 The trophies and photos were all lined up on an old bookshelf whose shelf-height was charmingly varied to fit the years of celebratory junk. One of the kids from the junior performers program was hanging around the shelf and he looked upset.
 
->>[[I didn’t have time to fix some little shithead’s problems. I spun on my heels and dipped|The Church - Second visit - Green room hub]].
->>[[I crouched down to the kid’s level, as if we came here to learn together|The Church - Second visit - Trophies 2]].
+> [[I didn’t have time to fix some little shithead’s problems. I spun on my heels and dipped|The Church - Second visit - Green room hub]].
+> [[I crouched down to the kid’s level, as if we came here to learn together|The Church - Second visit - Trophies 2]].
 
 ::The Church - Second visit - Trophies 2
 I spent a few minutes just scanning the shelves until I finally said, “So which one is your favorite?”
@@ -313,11 +314,11 @@ I laughed as I said, “Alright Lil Phatty, [[here’s Gatherville 101 for your 
 (if: $trophyNumberSeen is < 3)[Lil Phatty only did a deeper pout and fiddled with his cap, but he stayed glued to the spot.
 \
 (if: $thrillaKillaSeen is false)[
->>[[I pointed at the photo of Thrilla Killa|The Church - Second visit - Trophies thrilla killa]].]\
+> [[I pointed at the photo of Thrilla Killa|The Church - Second visit - Trophies thrilla killa]].]\
 (if: $icpSeen is false)[
->>[[I pointed at the shrine to Violent J and Shaggy 2 Dope|The Church - Second visit - Trophies ICP]].]\
+> [[I pointed at the shrine to Violent J and Shaggy 2 Dope|The Church - Second visit - Trophies ICP]].]\
 (if: $ninjetteSeen is false)[
->>[[I lovingly picked up Ninjette’s championship trophy|The Church - Second visit - Trophies ninjette]].]]
+> [[I lovingly picked up Ninjette’s championship trophy|The Church - Second visit - Trophies ninjette]].]]
 \(else:)[“Ok lil ninja,” I shrugged, “I think that’s [[pretty much it for the intro|The Church - Second visit - Trophies join party]]. That should at least be as much as Steve could keep in his hella tiny brain to quiz you with.”]
 
 ::The Church - Second visit - Trophies thrilla killa
@@ -329,12 +330,12 @@ Official story is that he got to the top straight from being the wickedest fucki
 
 But now, he just lets the talent do the talking. He’s probably sitting on a velvet toilet seat eating ham and pineapple rings.
 
-[[Probably best not to repeat any of this. He pays a lot of dudes all over.|The Church - Second visit - Trophies hub]]]]
+[[Probably best not to repeat any of this. He pays a lot of dudes all over|The Church - Second visit - Trophies hub]].]]
 
 (set: $thrillaKillaSeen to true)(set: $trophyNumberSeen to it +1)
 
 ::The Church - Second visit - Trophies ICP
-“Oh man, where do I even start? If you don’t know these guys, I’m really depressed dude. You’ve at least seen them, right?”
+“Oh man, where do I even start? If you don’t know these guys, I’m really depressed, dude. You’ve at least seen them, right?”
 
 Lil Phatty [quickly nodded]<icpTrigger|.
 
@@ -354,11 +355,11 @@ I kissed my index and middle fingers and raised them to the air in a [peace sign
 
 I paused to catch my breath and cross myself using Ninjette’s signature hand motion. To my surprise, Lil Phatty did actually [remove his hat]<ninjetteTrigger|.
 
-(click: ?ninjetteTrigger)[$dissolve[“Around ten years ago, Ninjette was a novelty act. No woman had risen up to the Honcho level in the history of Gatherville. They would just trot her out to hoot and holler at her bits during (if: $isWrestler is true)[matches with amateurs or joke wrestlers](else:)[battles with amateur emcees and corny motherfuckers]. But, one day, she got on a bill with an up-and-coming dude who had never been (if: $isWrestler is true)[pinned](else:)[beaten]. She (if: $isWrestler is true)[knocked his ass to the ground](else:)[rapped his ass of the stage] like a strong wind ripping down an old tarp.
+(click: ?ninjetteTrigger)[$dissolve[“Around ten years ago, Ninjette was a novelty act. No woman had risen up to the Honcho level in the history of Gatherville. They would just trot her out to hoot and holler at her bits during (if: $isWrestler is true)[matches with amateurs or joke wrestlers](else:)[battles with amateur emcees and corny motherfuckers]. But, one day, she got on a bill with an up-and-coming dude who had never been (if: $isWrestler is true)[pinned](else:)[beaten]. She (if: $isWrestler is true)[knocked his ass to the ground](else:)[rapped his ass off the stage] like a strong wind ripping down an old tarp.
 
-The Honchos tried to invalidate her win and say it was all a stunt. But, she asked for any challenger and she took 'em all out, even [the reigning champ]<ninjetteTrigger2|.]]
+The Honchos tried to invalidate her win and say it was all a stunt. But she asked for any challenger and she took 'em all out, even [the reigning champ]<ninjetteTrigger2|.]]
 
-(click: ?ninjetteTrigger2)[$dissolve[It turns out, she’d been forced to throw all of her earlier (if: $isWrestler is true)[matches](else:)[battles] and she had just gotten sick of it. She was my hero when I was a kid. Other folks let me down, but Ninjette never did.
+(click: ?ninjetteTrigger2)[$dissolve[It turns out she’d been forced to throw all of her earlier (if: $isWrestler is true)[matches](else:)[battles] and she had just gotten sick of it. She was my hero when I was a kid. Other folks let me down, but Ninjette never did.
 
 Any time she was on stage, I was there screaming my lungs out. Right when Ninjette finally got taken to the Trailer Park to chill with the Honchos, I got my Mom to sign me up for junior performers. I knew I was next.
 
@@ -374,7 +375,7 @@ Lil Phatty moved close to me and crossed his arms in the posse pose to indicate 
 (click: ?phattyJoin)[(transition: "pulse")[[[**Lil Phatty has joined the party!**|The Church - Second visit - Trophies leave party]]]]
 
 ::The Church - Second visit - Trophies leave party
-“Actually, nah, fuck this shit. I’m gonna go pour old hot dog juice all over Steve’s shit. I’m out sis. You’re alright for a lette. Don’t step to me on the stage though.”
+“Actually, nah, fuck this shit. I’m gonna go pour old hot dog juice all over Steve’s shit. I’m out, sis. You’re alright for a ‘lette. Don’t step to me on the stage though.”
 
 Lil Phatty scuttled away, almost immediately [disappearing behind some chairs that were taller than him]<phattyLeave|.
 
@@ -399,10 +400,10 @@ Then, I heard Kiki calling my name. The [[name I’d given up|The Church - Secon
 Hold on. [[My stage name was...|The Church - Second visit - Stage name choice]]]
 
 ::The Church - Second visit - To the stage
-“$stageName to the stage! You’re on Double L!” Kiki was waving me forward like she was trying to help land a helicopter. I walked past her and into the cramped, musty hallway that led to the stage.
+“$stageName to the stage! You’re on, Double L!” Kiki was waving me forward like she was trying to help land a helicopter. I walked past her and into the cramped, musty hallway that led to the stage.
 
 When I was 5 or 6, Mom took me to my first junior performers class. She had no idea that I had been sneaking into church shows for [at least a year]<stageTrigger|.
 
-(click: ?stageTrigger)[$dissolve[So, when I jumped on stage and screamed that my name was $stageName, she fell over laughing. It clearly had an impact, so the name stuck.
+(click: ?stageTrigger)[$dissolve[So when I jumped on stage and screamed that my name was $stageName, she fell over laughing. It clearly had an impact, so the name stuck.
 
-When I reached the final curtain before the stage, I stopped and (if: $isWrestler is true)[[[waited for Moon Mystic to do his intros|wrestle-opening]].](else:)[[[waited for Moon Mystic to do his intros|The Church - Rap battle]]]]]
+When I reached the final curtain before the stage, I stopped and (if: $isWrestler is true)[[[waited for Moon Mystic to do his intros|wrestle-opening]].](else:)[[[waited for Moon Mystic to do his intros|The Church - Rap battle]].]]]

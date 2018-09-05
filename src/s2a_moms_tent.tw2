@@ -23,6 +23,7 @@
 (click: "bungee cable") [(transition: "dissolve")[[[//Home Shit Home.//|Mom's Tent - intro 2]]]]
 
 ::Mom's Tent - intro 2
+<img src="./img/moms_tent.png">
 I reached out for the latch and hesitated. Mom hadn’t been home much lately, but all the same, I really wasn't sure I was up for the inevitable argument if she saw me coming home like this. But I didn't have a choice — I needed to find the letter that Anna left for me.
 
 Sun was long gone. Ron would no doubt be stumbling in before too much longer. No time like the present.
@@ -55,7 +56,7 @@ I pulled a can of Redpop out of the box, cracked it open, and took [[a seat at t
 ::Mom's Tent - beer
 Ron’s pissy beer of choice: “The Great Milenkale”. It tastes worse than it smells, but given that I literally woke up in a toilet, I wasn’t feeling too choosy.
 
-I snatched a tallboy, cracked it open, and pulled out [[a seat at the kitchen table|Mom's Tent - table]].
+I snatched the tallboy, cracked it open, and pulled out [[a seat at the kitchen table|Mom's Tent - table]].
 
 (set: $beerDrank to true)
 
@@ -78,13 +79,13 @@ Anna’s disappearance was all I could think about, but it felt good to sit stil
 I sighed, took another swig, and stared around the room.
 \
 [(live: 1s)[(if: time > 2s)[$dissolve[(if: $tableDetailsSeen is 3)[
->>[[I kept staring into the distance until I realized I was looking straight at the support beam|Mom's Tent - support beam]].]\
+> [[I kept staring into the distance until I realized I was looking straight at the support beam|Mom's Tent - support beam]].]\
 (if: $cigarettesViewed is false)[
->>[[Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent - cigarettes]].]\
+> [[Cigarette butts galore. Looked like Mom was stressing hard again|Mom's Tent - cigarettes]].]\
 (if: $platesViewed is false)[
->>[[The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent - plates]].]\
+> [[The table was set with a couple of plates. One was littered with bones and gristle and streaked with barbecue sauce|Mom's Tent - plates]].]\
 (if: $notepadViewed is false)[
->>[[Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].](stop:)]]]]
+> [[Mom’s trademark yellow notepad was sitting out, turned to a new page|Mom's Tent - notepad]].](stop:)]]]]
 
 ::Mom's Tent - cigarettes
 I saw another heap of stubbed-out cigarettes and a couple of empty fifths stacked in the center of the kitchen table. Mom and Ron must’ve been having another one of their long, idiotic arguments over who-knows-what — or maybe Ron had some of his shithead buddies over to watch this year’s Bloodymania match.
@@ -105,8 +106,8 @@ Wings, huh? Ron’s favorite. Mom must’ve been feeling generous. I’ll never 
 ::Mom's Tent - notepad
 Mom loves to keep notes. She writes down all kinds of things — keeps track of our finances, plans meals way in advance for those rare occasions where we’re able to make something proper. This page was dated with what I hoped was still today’s date.
 
->>[[I looked aside|Mom's Tent - table hub]]. I wouldn't want her looking through <i>my</i> shit.
->>As I turned away, I couldn’t help but notice [[my name at the bottom of the page|Mom's Tent - notepad 2]].
+> [[I looked aside|Mom's Tent - table hub]]. I wouldn't want her looking through <i>my</i> shit.
+> As I turned away, I couldn’t help but notice [[my name at the bottom of the page|Mom's Tent - notepad 2]].
 (set: $notepadViewed to true)
 (set: $tableDetailsSeen to it +1)
 
@@ -114,7 +115,7 @@ Mom loves to keep notes. She writes down all kinds of things — keeps track of 
 It was a [to-do list]<listTrigger|. No real surprises there:
 (click: ?listTrigger)[$dissolve[<div style="padding-left: 2em;">- REMEMBER: working extra shifts for Jolene next Sat. & Sun.
 - Patch ripped wall in L.R.
-- Talk to Ron about budget – no more [wasting money at The Gutter]<listTrigger2|!!</div>]]
+- Talk to Ron about budget — no more [wasting money at The Gutter]<listTrigger2|!!</div>]]
 (click: ?listTrigger2)[$dissolve[And sure enough, there was [a line item for me]<listTrigger3|. It read:]]
 (click: ?listTrigger3)[$dissolve[<div style="padding-left: 2em;">- //Talk to $playerName about the house rules — NO MORE [SNEAKING OFF WITH ANNA]<listTrigger4| AFTER DARK!//</div>]]
 (click: ?listTrigger4)[$dissolve[Great. The one time I disappear without a trace, she’s somehow [[sober enough to notice|Mom's Tent - table hub]].]]
@@ -175,7 +176,7 @@ In the folds of the journal, I could see [a piece of paper]<paperReveal|.
 
 (click: ?paperReveal)[$dissolve[It was [the map that I had drawn]<mapReveal| when I was just starting to go out on my own.]]
 
-(click: ?mapReveal)[$dissolve[MAP IMG GOES HERE
+(click: ?mapReveal)[$dissolve[<img src="./img/map.png">
 
 Damn, this place used to seem so huge and exciting, like our own wicked-ass playground.
 
@@ -184,8 +185,8 @@ It looked so sad and small now. Every place seemed like somewhere I might [[neve
 ::Mom's Tent - poster choice
 I put the map away and looked up at my room again. My eyes came to rest on a poster hanging over my bed. It read:
 
->>(link: "DOUBLE TROUBLE: Wicked Wrestlin’ Federation Invitational")[(set: $isWrestler to true)(go-to: "Mom's Tent - poster thoughts")]
->>(link: "Open Mic Battle Royale - TONIGHT ONLY")[(set: $isRapper to true)(go-to: "Mom's Tent - poster thoughts")]
+> (link: "DOUBLE TROUBLE: Wicked Wrestlin’ Federation Invitational")[(set: $isWrestler to true)(go-to: "Mom's Tent - poster thoughts")]
+> (link: "Open Mic Battle Royale - TONIGHT ONLY")[(set: $isRapper to true)(go-to: "Mom's Tent - poster thoughts")]
 
 ::Mom's Tent - poster thoughts
 I gazed up at the poster and a sepia tone layered itself over my heart. I remembered meeting Anna (if: $isRapper is true)[on the mic](else:)[in the ring] and it made my heart sing and hurt in equal measure.
@@ -258,8 +259,8 @@ And I heard something that made my heart nearly pop out of my chest.
 
 (click: "get out")[With my hands trembling,
 
->>(link: "I swiped the multitool off my desk.")[(set: $multitool to true)(go-to: "Mom's Tent - tool obtained")]
->>(link: "I snatched my trusty hatchet off the floor.")[(set: $hatchet to true)(go-to: "Mom's Tent - tool obtained")]
+> (link: "I swiped the multitool off my desk.")[(set: $multitool to true)(go-to: "Mom's Tent - tool obtained")]
+> (link: "I snatched my trusty hatchet off the floor.")[(set: $hatchet to true)(go-to: "Mom's Tent - tool obtained")]
 ]
 
 ::Mom's Tent - tool obtained

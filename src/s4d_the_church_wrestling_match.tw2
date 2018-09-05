@@ -37,7 +37,7 @@ As Moon Mystic finished, an enormous, muscled woman roared out onto the stage al
 
 (click:?stageNameLink)[$dissolve[I was filled with adrenaline as I stepped out into the spotlight, but I tried not to rush. My leotard was a little grungy looking. It definitely could have used a wash and an iron, but it still had power. Right in the middle of the black spandex was a skull Anna had sketched and my mom had sewed.
 
-As I entered the ring, Moon Mystic passed the mic to Carol and quickly moved out of the way. Carol fixed the crowd with a powerful glare for a full fifteen seconds before [[launching into her speech.|wrestle-carol-speech]]]]
+As I entered the ring, Moon Mystic passed the mic to Carol and quickly moved out of the way. Carol fixed the crowd with a powerful glare for a full fifteen seconds before [[launching into her speech|wrestle-carol-speech]].]]
 
 ::wrestle-carol-speech
 “Me been’ thinkin’ in cave and me angry! This puny girl not even good for Carol food! Me eat girl anyway! Me eat her up with strong jaw! Praise strong jaw of Carol!”
@@ -48,7 +48,7 @@ Carol shook the ropes and produced an absolutely foul looking turnip from her sa
 
 The crowd repeated Carol’s chant back to her as she dropped the mic and threw more disgusting but alarmingly firm turnips to the crowd. When they quieted, it seemed like she still had plenty left.
 
-Moon Mystic picked up the mic and [[handed it to me with a reluctant grin.|wrestle-player-speech]]]]
+Moon Mystic picked up the mic and [[handed it to me with a reluctant grin|wrestle-player-speech]].]]
 
 ::wrestle-player-speech-nameprompt
 { (set: $stageName to (prompt: "Enter wrestler name:", ""))
@@ -86,8 +86,8 @@ I didn’t even blink at Carol or give her a second of my attention before I pop
 <br>
 There was a moderate amount of whoops and applause, but nothing like what Carol had received. I could tell the crowd was still trying to figure me out. I had nothing to throw, but I had to do something crazy to make a lasting impression.
 
-[[I stood up on the top rope and screamed at people to throw turnips at me.|wrestle-scream-at-crowd]]
-[[I stole a stray turnip from the crowd and tried to eat it savagely.|wrestle-eat-turnip]]
+[[I stood up on the top rope and screamed at people to throw turnips at me|wrestle-scream-at-crowd]].
+[[I stole a stray turnip from the crowd and tried to eat it savagely|wrestle-eat-turnip]].
 
 ::wrestle-scream-at-crowd
 I scrambled onto the top rope and screamed, “You turnip-loving cowards ain’t got shit! Hit me with your best shot, chumps!” I beat my chest furiously and roared into the crowd.
@@ -96,7 +96,7 @@ The crowd responded with a fresh round of back-talk and hollering. A few seconds
 
 (click: "rising")[$dissolve[The final barrage of turnips was the largest and fastest. Trying to dodge or swat them all was hopeless; I spun around the first few but took the next turnip square in the shoulder. It hurt, but I tried not to show it. I moved to catch the final turnip squarely in my palm, and it made a satisfying //thwack// when I caught it. I grinned as the crowd brayed wildly.
 
-(click: "wildly")[$dissolve[I whirled in place and launched the turnip at Carol like a kid whipping a bottle at a passing car. It hit her straight in the gut and she fell to one knee to recover. Through her grimace, I saw her eyes light up with a terrible fury. It was worth it to hear the howl of the crowd reach a fever pitch. As Carol got to her feet, I [[heard the bell ring to start the first round.|wrestle-first-round]]]]]]
+(click: "wildly")[$dissolve[I whirled in place and launched the turnip at Carol like a kid whipping a bottle at a passing car. It hit her straight in the gut and she fell to one knee to recover. Through her grimace, I saw her eyes light up with a terrible fury. It was worth it to hear the howl of the crowd reach a fever pitch. As Carol got to her feet, I [[heard the bell ring to start the first round|wrestle-first-round]].]]]]
 
 ::wrestle-eat-turnip
 I dropped the mic and rushed down into the crowd and found a gangly dude in a tank-top near the ring holding a turnip. “Borrowing this,” I yelled as I stole it. I scrambled back into the ring before he could say more than “//Hey!//”
@@ -119,7 +119,7 @@ I bit off another mouthful of turnip as quick as I could and plugged my nostrils
 
 (click: "HUNGRY!")[$dissolve[I flashed a manic grin and turned back to face Carol. She barely reacted, but her eyes seemed more set and focused than before. She was sizing me up as a more serious threat.
 
-The crowd was full of whispers and laughter. I hadn’t gotten them on my side yet, but I had their attention. As the foul turnip taste faded from my mouth, I [[heard the bell ring to start the first round.|wrestle-first-round]]]]]]]]]]]]
+The crowd was full of whispers and laughter. I hadn’t gotten them on my side yet, but I had their attention. As the foul turnip taste faded from my mouth, I [[heard the bell ring to start the first round|wrestle-first-round]].]]]]]]]]]]
 
 ::wrestle-first-round
 At the sound of the bell, Carol tore out of her corner like a rabid wolverine out of its cave. She dropped her turnip sack and leaped at me with both arms extended. I was only able to barely scramble out of the way as I yelped.
@@ -147,15 +147,15 @@ Carol pounced into the center of the ring and twisted her sack of turnips tight 
 
 As she spun, she howled and moved towards me in an effort to pin me in the corner of the ring. Moon Mystic cried out, “It’s the dreaded sack spin!” I had to react quickly.
 
-[[I acted confused and put some distance between me and Carol.|wrestle-first-round-confused]]
-[[I snuck around Carol and struck at her back.|wrestle-first-round-sneak]]
+[[I acted confused and put some distance between me and Carol|wrestle-first-round-confused]].
+[[I snuck around Carol and struck at her back|wrestle-first-round-sneak]].
 
 ::wrestle-first-round-confused
 At the last moment before Carol’s sack cyclone closed in, I ducked and ran to the side. Carol turned to face me, but I kept my distance. I let my jaw slack and my eyes widen with panic. I moved away wildly and at the exact last second possible to keep myself safe. I wanted to give her the idea that her weird spinning was putting me off balance.
 
 (click: "balance")[$dissolve[Finally, Carol had enough of pushing me around the ring. As we pushed towards one corner, she quickly lunged with the bag. That was my moment. I ducked and pushed under her legs so I could pop up behind her and pull her into a devastating suplex. As I dropped Carol hard on the mat, I could hear her gasp from the impact, but it also sounded like she was a little surprised.
 
-As Carol caught her breath, [[I stood on the ropes and raised my arms to the crowd’s eruptions.|wrestle-first-round-response]]]]
+As Carol caught her breath, [[I stood on the ropes and raised my arms to the crowd’s eruptions|wrestle-first-round-response]].]]
 
 ::wrestle-first-round-sneak
 At the last moment before Carol’s sack cyclone closed in, I hit the ropes and tried to bounce behind Carol quickly. As I got closer, I made to throw an elbow into her vulnerable spine. Carol anticipated the move and quickly swung around and hit me clean in the gut with the sack. I flung back into a corner with a thud and all the air went out of me.
@@ -165,14 +165,14 @@ As [[I caught my breath|wrestle-first-round-breather]], Carol didn’t even purs
 ::wrestle-first-round-response
 Carol rose from the mat with a new look of caution in her eyes. She tossed her sack to the side, cracked her knuckles, and circled me like a predator. It seemed like she could lunge at any moment. I could feel my adrenaline responding to the new danger. I knew my next response would be key.
 
-[[I feinted at Carol to goad her into attacking.|wrestle-first-round-feint]]
-[[No time to hesitate. I brought the fucking pain.|wrestle-first-round-dropkick]]
+[[I feinted at Carol to goad her into attacking|wrestle-first-round-feint]].
+[[No time to hesitate. I brought the fucking pain|wrestle-first-round-dropkick]].
 
 ::wrestle-first-round-breather
 Carol was soon back on the attack, grinning menacingly and swinging her nasty bag of turnips. Now that she’d gotten a good hit in, she was even egging me on with the other hand and smirking. I needed a new strategy. I tried to think back to Kiki’s advice before the match.
 
-[[I acted confused and put some distance between me and Carol.|wrestle-first-round-dodge]]
-[[I tried to steal the sack and slip between Carol’s legs.|wrestle-first-round-steal]]
+[[I acted confused and put some distance between me and Carol|wrestle-first-round-dodge]].
+[[I tried to steal the sack and slip between Carol’s legs|wrestle-first-round-steal]].
 
 ::wrestle-first-round-feint
 As Carol circled, I quickly feinted towards her with both hands out in a grab. She took the bait and lunged forwards to challenge.
@@ -204,7 +204,7 @@ I ducked and pushed under her legs so I could pop up behind her and pull her int
 ::wrestle-first-round-steal
 I watched the sack closely as it rotated and, when it was by Carol’s legs, I made a dive for it. I tried to do it all in one smooth motion, but I couldn’t get a grip on the sack.
 
-As I fumbled, Carol snatched me with her other hand and held me aloft. The last thing I remember is the scratch of the burlap as it [[thudded into the side of my head.|wrestle-first-round-KO]]
+As I fumbled, Carol snatched me with her other hand and held me aloft. The last thing I remember is the scratch of the burlap as it [[thudded into the side of my head|wrestle-first-round-KO]].
 
 ::wrestle-first-round-KO
 When I regained consciousness, I was surrounded by total darkness. I felt my body to make sure I was still intact — all good there — and slowly stood up. A small lantern suddenly illuminated the darkness.
@@ -213,14 +213,14 @@ When I regained consciousness, I was surrounded by total darkness. I felt my bod
 
 //“You got **snaked!**”// he shrieked. //“I was just starting to enjoy that shit! Are you kidding me? You gotta get back in there, sis.”//
 
-With that, he snapped his bony fingers and I blacked out again. [[When I woke up, I was back in the ring.|wrestle-first-round]]]]
+With that, he snapped his bony fingers and I blacked out again. [[When I woke up, I was back in the ring|wrestle-first-round]].]]
 
 ::wrestle-weapon-round
 The spotlight moved to a table on the concrete floor right outside the ring. Carol and I rushed over as everyone in the crowd hooted and hollered to push for their weapon of choice. I eyed the table[[’|wrestle-weapon-table]]s contents carefully and grabbed:
 
->>[[a bat with the tip covered in barbed wire|wrestle-weapon-bat]]
->>[[a very firm metal folding chair|wrestle-weapon-chair]]
->>[[the big fuckin’ ladder next to the table|wrestle-weapon-ladder]]
+> [[a bat with the tip covered in barbed wire|wrestle-weapon-bat]]
+> [[a very firm metal folding chair|wrestle-weapon-chair]]
+> [[the big fuckin’ ladder next to the table|wrestle-weapon-ladder]]
 
 ::wrestle-weapon-bat
 I grabbed the badass-looking bat and shimmied back under the ropes into the ring. Carol spent a long time browsing the options on the table, but ended up with a metal trash-can lid.
@@ -229,7 +229,7 @@ I grabbed the badass-looking bat and shimmied back under the ropes into the ring
 
 Carol bull rushed me with the trash-can lid [held up like a shield—]<trashCan|
 
-(click: ?trashCan)[(replace: ?trashCan)[held up like a shield— but I timed my swing perfectly. My whole body shook at the impact and Carol practically flew back across the ring. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]]]]]
+(click: ?trashCan)[(replace: ?trashCan)[held up like a shield— but I timed my swing perfectly. My whole body shook at the impact and Carol practically flew back across the ring. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count|wrestle-victory]].]]]]
 
 ::wrestle-weapon-chair
 I grabbed the metal folding chair and shimmied back under the ropes into the ring. Carol spent a long time browsing the options on the table, but ended up with a traffic cone.
@@ -238,7 +238,7 @@ I grabbed the metal folding chair and shimmied back under the ropes into the rin
 
 Carol rushed me [swinging the traffic cone—]<trafficCone|
 
-(click: ?trafficCone)[(replace: ?trafficCone)[swinging the traffic cone— but I held the chair up to defend and pushed her back and off her balance. As she wobbled, I swept her legs with the chair. I could hear a crack as the metal chair hit her knees. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]]]]]
+(click: ?trafficCone)[(replace: ?trafficCone)[swinging the traffic cone— but I held the chair up to defend and pushed her back and off her balance. As she wobbled, I swept her legs with the chair. I could hear a crack as the metal chair hit her knees. When she landed, she didn’t get up. [[I rushed over and quickly pinned her shoulders as Moon Mystic began to count|wrestle-victory]].]]]]
 
 ::wrestle-weapon-ladder
 I grabbed the huge fuckin’ ladder and, with some effort, hucked it into the ring and shimmed in after. I quickly began setting up the ladder. Carol spent a long time browsing the options on the table, but ended up with a fluorescent light tube.
@@ -249,7 +249,7 @@ As Carol approached me menacingly with the tube, I began climbing the ladder. Ca
 
 (click: "one shot")[$dissolve[As the ladder fell, I jumped and extended my elbow. The swirl of dust and glass from the tube glittered around me as my elbow plummeted down onto Carol and nailed her to the mat. She didn’t get up.
 
-[[I quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]]]]]
+[[I quickly pinned her shoulders as Moon Mystic began to count|wrestle-victory]].]]]]
 
 ::wrestle-weapon-table
 //Man, **FUCK** your system! Can't keep $stageName on a leash!!//
@@ -264,7 +264,7 @@ As Carol rushed me with the gun, I slapped it down onto the table. The gun jamme
 
 (click: ?tableWeapon)[(replace: ?tableWeapon)[circled around her back— and body slammed her straight through the table with a satisfying crunch. When we landed in a pile of table fibers, Carol didn’t get up.
 
-[[I quickly pinned her shoulders as Moon Mystic began to count.|wrestle-victory]]]]]]
+[[I quickly pinned her shoulders as Moon Mystic began to count|wrestle-victory]].]]]]
 
 ::wrestle-victory
 [**“One!”**]<wrestleCount1| (click:?wrestleCount1)[$dissolve[
@@ -281,4 +281,4 @@ Carol still lay flopped on the mat, as limp and greasy as her own bag of turnips
 
 Moon Mystic jogged over from ringside, ducked through the ropes, and made to grab my hand as he reached me. I didn’t even let him get there. I snatched the mic from his hand, raised up my own fist, and howled, //“YOURRR CHAMPION: **$stageName!**”//
 
-The crowd’s roar rolled like a wave, lifting me up. Moon Mystic just laughed, clapping and nodding his head as [[the crowd stomped a rhythm as one.|The Church - Mountain intro]]]]]]]]
+The crowd’s roar rolled like a wave, lifting me up. Moon Mystic just laughed, clapping and nodding his head as [[the crowd stomped a rhythm as one|The Church - Mountain intro]].]]]]]]
