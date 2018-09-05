@@ -95,17 +95,22 @@ I stared into the mirror and nearly had a heart attack.
   (if: (text: $playerName)'s length > 0)[Right. My name is $playerName. And [[I need to get out of here|Jail Cell (Lit) - hub]].
     <!-- what this code does is check the ending of the custom $playerName string to hopefully append the correct pluralization to it -->
     {
-      (if: $playerName's last is "s")[
-        (set: $playerNamePlural to ($playerName + "es"))
-      ]
-      (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
-        (set: $playerNamePlural to ($playerName + "es"))
-      ]
-      (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
-        (set: $playerNamePlural to ($playerName + "es"))
+      (if: $playerName's length < 3)[
+        (set: $playerNamePlural to ($playerName + "s"))
       ]
       (else:)[
-        (set: $playerNamePlural to ($playerName + "s"))
+        (if: $playerName's last is "s")[
+          (set: $playerNamePlural to ($playerName + "es"))
+        ]
+        (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "s"))[
+          (set: $playerNamePlural to ($playerName + "es"))
+        ]
+        (else-if: ($playerName's last is "h") and ($playerName's 2ndlast is "c"))[
+          (set: $playerNamePlural to ($playerName + "es"))
+        ]
+        (else:)[
+          (set: $playerNamePlural to ($playerName + "s"))
+        ]
       ]
     }]
   (else:)[Wait, [[that's not right|Jail Cell (Lit) - naming complete]].]
