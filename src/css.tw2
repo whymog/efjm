@@ -9,13 +9,21 @@
 }
 
 tw-link,
-tw-link.visited {
+tw-link.visited,
+a:link,
+a:visited {
   color: rgb(65, 105, 225);
 }
 
 tw-link:hover,
-tw-link.visited:hover {
+tw-link.visited:hover,
+a:hover,
+a:active {
   color: #00bfff;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
