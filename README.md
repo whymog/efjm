@@ -20,9 +20,13 @@ gem install twee2-0.5.0.gem
 _February 2023 Update_: The version of ruby specified in twee2's `.ruby-version` file, 2.1.5, cannot be built or run successfully on modern Mac OSes (Intel or otherwise). Here's what worked for me:
 
 1. Install [`rbenv`](https://github.com/rbenv/rbenv)
-2. Use ruby 2.7.7 to build the twee2 gem (`rbenv local 2.7.7` to set the local version)
-3. Copy the gemfile into the root `/efjm` directory
-4. Using the same 2.7.7 version of ruby, run `gem install twee2-0.5.0.gem`
+2. In twee2's `twee2.gemspec` file, change the following line:  
+   `spec.add_runtime_dependency 'bundler', '~> 1.6'`  
+   to:  
+   `spec.add_runtime_dependency 'bundler', '~> 2.1.4'`
+3. Use ruby 2.7.7 to build the twee2 gem (`rbenv local 2.7.7` to set the local version)
+4. Copy the gemfile into the root `/efjm` directory
+5. Using the same 2.7.7 version of ruby, run `gem install twee2-0.5.0.gem`
 
 To confirm this worked, try running `twee2 formats`. If it installed correctly, you should see `Harlowe2` in the list of results.
 
