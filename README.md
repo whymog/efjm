@@ -1,4 +1,4 @@
-![Escape from Juggalo Mountain title](src/img/title_screen_image.png 'Logo Title Text')
+![Escape from Juggalo Mountain title](src/img/title_screen_image.png "Logo Title Text")
 
 # Escape from Juggalo Mountain: Act I
 
@@ -16,6 +16,13 @@ cd twee2/
 gem build twee2.gemspec
 gem install twee2-0.5.0.gem
 ```
+
+_February 2023 Update_: The version of ruby specified in twee2's `.ruby-version` file, 2.1.5, cannot be built or run successfully on modern Mac OSes (Intel or otherwise). Here's what worked for me:
+
+1. Install [`rbenv`](https://github.com/rbenv/rbenv)
+2. Use ruby 2.7.7 to build the twee2 gem (`rbenv local 2.7.7` to set the local version)
+3. Copy the gemfile into the root `/efjm` directory
+4. Using the same 2.7.7 version of ruby, run `gem install twee2-0.5.0.gem`
 
 To confirm this worked, try running `twee2 formats`. If it installed correctly, you should see `Harlowe2` in the list of results.
 
@@ -59,7 +66,7 @@ Playtesting by Yelena Kolova and Dan Phipps
 
 Special thanks to:
 
-* Sean Dunne
-* Matt Gilles
-* Ian McAfee
-* Nathan Rabin
+- Sean Dunne
+- Matt Gilles
+- Ian McAfee
+- Nathan Rabin
